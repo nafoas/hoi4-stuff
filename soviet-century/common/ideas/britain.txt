@@ -5054,6 +5054,8 @@ idea_three_nations_industry = {
 
 
 	
+}
+
 	# TECHNOLOGY
 	tank_manufacturer = { 
 	
@@ -5322,9 +5324,8 @@ idea_three_nations_industry = {
 			
 			traits = { flamboyant_tough_guy }			
 		}
-		
-		
-	
+	}
+
 	foreign_minister = {
 	
 		britain_fom_dominic_cummings = {
@@ -5341,8 +5342,8 @@ idea_three_nations_industry = {
 			
 			traits = { international_schemer }			
 		}
-		
-	
+	}
+
 	industry_minister = {
 		
 		britain_ind_anthony_bamford = {
@@ -5359,9 +5360,8 @@ idea_three_nations_industry = {
 			
 			traits = { corrupt_kleptocrat }			
 		}
-		
-	
-	
+	}
+
 	national_security_minister = {
 	
 		britain_nsm_ben_wallace = {
@@ -5378,9 +5378,8 @@ idea_three_nations_industry = {
 			
 			traits = { isolationist }			
 		}
-		
-	
-	
+	}
+
 	intelligence_minister = {
 	
 		britain_inm_mikko_vehvilainen = {
@@ -5397,11 +5396,6 @@ idea_three_nations_industry = {
 			
 			traits = { novice_mastermind }			
 		}
-		
-
 	}
-	
-}
-
 
 }

@@ -16,4 +16,3 @@ continuous_focus_position = {
 }
 
 
-}

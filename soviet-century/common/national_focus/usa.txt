@@ -6777,7 +6777,7 @@ focus_tree = {
 		available = {
 		 
 		}
-		prerequisite = (
+		prerequisite = {
 			focus = USA_take_mexico
 		}
 		prerequisite = {
