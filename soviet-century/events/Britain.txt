@@ -481,93 +481,93 @@ country_event = {
 
 #Ireland - UK asks for Ulster back
 country_event = {
-	id = britain.7
-	title = britain.7.t
-	desc = britain.7.d
-	picture = event_northern_ireland_negotiations
-	
-	is_triggered_only = yes
-	
-	option = {    #Yes
-		name = britain.7.o1
-	    hidden_effect = {
-		    ULS = {
-		        country_event = { days = 2 id = britain.11 } 
-		    }
-		}
-		if = {
-		    limit = {
-			    NOT = {
-				    ENG = {
-					    has_country_flag = british_republic
+		id = britain.7
+		title = britain.7.t
+		desc = britain.7.d
+		picture = event_northern_ireland_negotiations
+		
+		is_triggered_only = yes
+		
+		option = {    #Yes
+			name = britain.7.o1
+			hidden_effect = {
+				ULS = {
+					country_event = { days = 2 id = britain.11 } 
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						ENG = {
+							has_country_flag = british_republic
+						}
+					}
+				}
+				ENG = {
+					set_cosmetic_tag = ENG_Ulster
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							OR = {
+								tag = ULS
+								tag = IRE
+							}
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.90
 					}
 				}
 			}
-			ENG = {
-			    set_cosmetic_tag = ENG_Ulster
+			ai_chance = {
+				factor = 30
 			}
 		}
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-					    tag = ULS
-						tag = IRE
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.90
-		        }
-		    }
-		}
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {    #No
-		name = britain.7.o2
-		ENG = {
-		    remove_from_faction = IRE
-		}
-		ENG = {
-		    remove_from_faction = ULS
-		}
-		IRE = {
-		    declare_war_on = { target = ENG type = annex_everything }
-		}
-		set_global_flag = uk_betrayed_us
-	    hidden_effect = {
-		    ULS = {
-		        country_event = { days = 2 id = britain.12 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 1 id = britain.13 }
-		        country_event = { months = 5 id = britain.307 }
-		        country_event = { months = 5 id = britain.308 } 
-		    }
-		}
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = IRE
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.91
-		        }
-		    }
-		}
-		ai_chance = {
-			factor = 70
+		
+		option = {    #No
+			name = britain.7.o2
+			ENG = {
+				remove_from_faction = IRE
+			}
+			ENG = {
+				remove_from_faction = ULS
+			}
+			IRE = {
+				declare_war_on = { target = ENG type = annex_everything }
+			}
+			set_global_flag = uk_betrayed_us
+			hidden_effect = {
+				ULS = {
+					country_event = { days = 2 id = britain.12 } 
+				}
+			}
+			hidden_effect = {
+				ENG = {
+					country_event = { days = 1 id = britain.13 } 
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = IRE
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.91
+					}
+				}
+			}
+			ai_chance = {
+				factor = 70
+			}
 		}
 	}
-}
 
 #Ireland - UK proposes Irish unification
 country_event = {
@@ -711,69 +711,70 @@ country_event = {
 
 #Ulster - UK and Ireland agree to UK annexing us
 country_event = {
-	id = britain.11
-	title = britain.11.t
-	desc = britain.11.d
-	picture = uk_ireland_agree
-	
-	is_triggered_only = yes
-	
-	option = {    #Yes
-		name = britain.11.o1
-	    ENG = {
-		    annex_country = { target = ULS }
+		id = britain.11
+		title = britain.11.t
+		desc = britain.11.d
+		picture = uk_ireland_agree
+		
+		is_triggered_only = yes
+		
+		option = {    #Yes
+			name = britain.11.o1
+			ENG = {
+				annex_country = { target = ULS }
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.96
+					}
+				}
+			}
+			ai_chance = {
+				factor = 95
+			}
 		}
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.96
-		        }
-		    }
-		}
-		ai_chance = {
-			factor = 95
+		
+		option = {    #No
+			name = britain.11.o2
+			ENG = {
+				remove_from_faction = ULS 
+			}
+			ULS = {
+				declare_war_on = { target = ENG type = annex_everything }
+			}
+			hidden_effect = {
+				ENG = {
+					country_event = { days = 1 id = britain.19 } 
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							OR = {
+								tag = ENG
+								tag = ULS
+							}
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.97
+					}
+				}
+			}
+			ai_chance = {
+				factor = 5
+			}
 		}
 	}
-	
-	option = {    #No
-		name = britain.11.o2
-		ENG = {
-		    remove_from_faction = ULS 
-		}
-		ULS = {
-		    declare_war_on = { target = ENG type = annex_everything }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 1 id = britain.19 } 
-		        country_event = { months = 5 id = britain.306 }
-		    }
-		}
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-					    tag = ENG
-						tag = ULS
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.97
-		        }
-		    }
-		}
-		ai_chance = {
-			factor = 5
-		}
-	}
-}
 
 #Ulster - Ireland defends us against UK
 country_event = {
@@ -1132,229 +1133,99 @@ country_event = {
 
 #Election after false flag
 country_event = {
-	id = britain.23
-	title = britain.23.t
-	desc = britain.23.d
-	picture = false_flag_election
-	
-	is_triggered_only = yes
-	
-	option = {   #Britain First
-		name = britain.23.o1
-		set_politics = {
-	        ruling_party = fascist
-	        elections_allowed = no
-        }
-		add_popularity = {
-			ideology = fascist
-			popularity = 0.2
-	    }
-		add_nationalist_to_coalition = yes
-		set_country_flag = britain_first_wins_election
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.102
-		        }
-		    }
-		}
-		hidden_effect = {
-			remove_ideas = britain_sic_michael_gove
-			remove_ideas = britain_fom_damian_green
-			remove_ideas = britain_ind_philip_hammond
-			remove_ideas = britain_nsm_amber_rudd
-			remove_ideas = britain_inm_john_sawers
-			add_ideas = britain_sic_jayda_fransen
-			add_ideas = britain_fom_michael_mclaughlin
-			add_ideas = britain_ind_alan_ayling
-			add_ideas = britain_nsm_mark_collett
-			add_ideas = britain_inm_mikko_vehvilainen
-		}
-		custom_effect_tooltip = britain_bf_ministers_tooltip
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 14 id = britain.280 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 65 id = britain.281 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 487 id = britain.283 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 1826 id = britain.289 } 
-		    }
-		}
-		ai_chance = {
-			base = 10
-			modifier = {
-				NOT = {
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = DEFAULT
+		id = britain.23
+		title = britain.23.t
+		desc = britain.23.d
+		picture = false_flag_election
+		
+		is_triggered_only = yes
+		
+		option = {   #Britain First
+			name = britain.23.o1
+			set_politics = {
+				ruling_party = fascist
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascist
+				popularity = 0.2
+			}
+			set_country_flag = britain_first_wins_election
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
 					}
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = ENG_FASH_RULE
+					news_event = {
+						hours = 4
+						id = news.102
 					}
 				}
-				factor = 0
+			}
+			ai_chance = {
+				base = 10
+				modifier = {
+					NOT = {
+						has_game_rule = {
+							rule = ENG_ai_behavior
+							option = DEFAULT
+						}
+						has_game_rule = {
+							rule = ENG_ai_behavior
+							option = ENG_FASH_RULE
+						}
+					}
+					factor = 0
+				}
 			}
 		}
-	}
-	
-	option = {   #British National Party
-		name = britain.23.o2
-		set_politics = {
-	        ruling_party = nationalist
-	        elections_allowed = no
-        }
-		add_popularity = {
-			ideology = nationalist
-			popularity = 0.2
-	    }
-		add_fash_to_coalition = yes
-		set_country_flag = bnp_wins_election
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.103
-		        }
-		    }
-		}
-		hidden_effect = {
-			remove_ideas = britain_sic_michael_gove
-			remove_ideas = britain_fom_damian_green
-			remove_ideas = britain_ind_philip_hammond
-			remove_ideas = britain_nsm_amber_rudd
-			remove_ideas = britain_inm_john_sawers
-			add_ideas = britain_sic_adam_walker
-			add_ideas = britain_fom_arthur_kemp
-			add_ideas = britain_ind_jim_dowson
-			add_ideas = britain_nsm_tommy_robinson
-			add_ideas = britain_inm_andrew_brons
-		}
-		custom_effect_tooltip = britain_bnp_ministers_tooltip
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 14 id = britain.280 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 65 id = britain.281 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 487 id = britain.283 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 1826 id = britain.290 } 
-		    }
-		}
-		ai_chance = {
-			base = 10
-			modifier = {
-				NOT = {
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = DEFAULT
+		
+		option = {   #British National Party
+			name = britain.23.o2
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.2
+			}
+			set_country_flag = bnp_wins_election
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
 					}
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = ENG_NAT_RULE
+					news_event = {
+						hours = 4
+						id = news.103
 					}
 				}
-				factor = 0
 			}
-		}
-	}
-	
-	option = {   #Phoenix Front
-		name = britain.23.o3
-		set_party_name = { ideology = fascist long_name = ENG_phoenix_front name = ENG_phoenix_front }
-		ENG_theresa_brasier = {
-			promote_character = national_socialist
-		}
-		set_politics = {
-	        ruling_party = fascist
-	        elections_allowed = no
-        }
-		add_popularity = {
-			ideology = fascist
-			popularity = 0.3
-	    }
-		add_nationalist_to_coalition = yes
-		set_cosmetic_tag = ENG_Phoenix
-		set_country_flag = phoenix_front_wins_election
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 28 id = britain.181 } 
-		    }
-		}
-		hidden_effect = {
-			remove_ideas = britain_sic_michael_gove
-			remove_ideas = britain_fom_damian_green
-			remove_ideas = britain_ind_philip_hammond
-			remove_ideas = britain_nsm_amber_rudd
-			add_ideas = britain_sic_nick_griffin
-			add_ideas = britain_fom_dominic_cummings
-			add_ideas = britain_ind_anthony_bamford
-			add_ideas = britain_nsm_ben_wallace
-		}
-		custom_effect_tooltip = britain_phoenix_front_ministers_tooltip
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.104
-		        }
-		    }
-		}
-		ai_chance = {
-			base = 80
-			modifier = {
-				NOT = {
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = DEFAULT
+			ai_chance = {
+				base = 10
+				modifier = {
+					NOT = {
+						has_game_rule = {
+							rule = ENG_ai_behavior
+							option = DEFAULT
+						}
+						has_game_rule = {
+							rule = ENG_ai_behavior
+							option = ENG_NAT_RULE
+						}
 					}
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = ENG_PHOENIX_RULE
-					}
+					factor = 0
 				}
-				factor = 0
 			}
 		}
+		
+		
 	}
-}
 
 #British invite us into alliance
 country_event = {
@@ -1433,40 +1304,18 @@ country_event = {
 
 #Civil war with scotland
 country_event = {
-	id = britain.27
-	title = britain.27.t
-	desc = britain.27.d
-	picture = scotland_civil_war
-	
-	is_triggered_only = yes
-	
-	option = {   
-		name = britain.27.o1
-		SCO = {
-		    transfer_state = 120
-			transfer_state = 136
-			transfer_state = 133
-			transfer_state = 121
-			add_stability = 0.1
-			load_oob = "SCO_2000"
-		}
-		declare_war_on = { target = SCO type = annex_everything }
-		remove_ideas = idea_scottish_tensions
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.105
-		        }
-		    }
+		id = britain.27
+		title = britain.27.t
+		desc = britain.27.d
+		picture = oen_united_kingdom
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.27.o1
+			remove_ideas = idea_scottish_tensions
 		}
 	}
-}
 
 #Spain - marriage with British
 country_event = {
@@ -3445,43 +3294,30 @@ country_event = {
 
 #Monarchy abolished and corbyn removed from office
 country_event = {
-	id = britain.120
-	title = britain.120.t
-	desc = britain.120.d
-	picture = british_monarchy_abolished
-	
-	is_triggered_only = yes
-	
-	option = {   
-		name = britain.120.o1
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.128
-		        }
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 14 id = britain.240 } 
-		    }
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 30 id = britain.241 } 
-		    }
-		}
-		CAN = {
-			set_country_flag = CAN_monarchy_has_been_abolished
+		id = britain.120
+		title = britain.120.t
+		desc = britain.120.d
+		picture = british_monarchy_abolished
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.120.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.128
+					}
+				}
+			}
 		}
 	}
-}
 
 #American scientists arrive in britain
 country_event = {
@@ -3789,28 +3625,17 @@ country_event = {
 
 #Support for republic reaches new high
 country_event = {
-	id = britain.135
-	title = britain.135.t
-	desc = {
-        trigger = {
-            has_country_leader = { character = ENG_george_galloway }
-        }
-        text = britain.135.d1
-    }
-    desc = {
-        trigger = {
-            NOT = { has_country_leader = { character = ENG_george_galloway } }
-        }
-        text = britain.135.d2
-    }
-	picture = socialist_patriotism
-	
-	is_triggered_only = yes
-	
-	option = {   
-		name = britain.135.o1
+		id = britain.135
+		title = britain.135.t
+		desc = britain.135.d
+		picture = socialist_patriotism
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.135.o1
+		}
 	}
-}
 
 #Royal palaces stormed
 country_event = {
@@ -3880,38 +3705,30 @@ country_event = {
 
 #Royal family goes into exile
 country_event = {
-	id = britain.138
-	title = britain.138.t
-	desc = britain.138.d
-	picture = british_monarchy_abolished
-	
-	is_triggered_only = yes
-	
-	option = {   
-		name = britain.138.o1
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.139
-		        }
-		    }
-		}
-		CAN = {
-			set_country_flag = CAN_monarchy_has_been_abolished
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 15 id = britain.255 } 
-		    }
+		id = britain.138
+		title = britain.138.t
+		desc = britain.138.d
+		picture = british_monarchy_abolished
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.138.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.139
+					}
+				}
+			}
 		}
 	}
-}
 
 #Communist party consolidates power
 country_event = {
@@ -3957,80 +3774,71 @@ country_event = {
 
 #Communist party's maoist doctrine
 country_event = {
-	id = britain.142
-	title = britain.142.t
-	desc = britain.142.d
-	picture = maoist_doctrine
-	
-	is_triggered_only = yes
-	
-	option = {   
-		name = britain.142.o1
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.140
-		        }
-		    }
-			ENG = {
-		        country_event = { days = 7 id = britain.252 } 
-		    }
-		}
-	}
-}
-
-#Communist party stays with pro-Soviet doctrine
-country_event = {
-	id = britain.143
-	title = britain.143.t
-	desc = britain.143.d
-	picture = uk_union_state_pic
-	
-	is_triggered_only = yes
-	
-	option = {   
-		name = britain.143.o1
-		ENG = {
-		    country_event = { days = 7 id = britain.254 }
-		}
-	}
-}
-
-#Communist party goes alone against ussr and china
-country_event = {
-	id = britain.144
-	title = britain.144.t
-	desc = britain.144.d
-	picture = uk_union_state_pic
-	
-	is_triggered_only = yes
-	
-	option = {   
-		name = britain.144.o1
-		hidden_effect = {
-			every_country = {
-		        limit = {
-			        NOT = {
-				        tag = ENG
-				    }
-			    }
-			    news_event = {
-			        hours = 4
-			        id = news.141
-		        }
-		    }
-			ENG = {
-				country_event = { days = 7 id = britain.253 }
+		id = britain.142
+		title = britain.142.t
+		desc = britain.142.d
+		picture = maoist_doctrine
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.142.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.140
+					}
+				}
 			}
 		}
 	}
-}
+
+#Communist party stays with pro-Soviet doctrine
+country_event = {
+		id = britain.143
+		title = britain.143.t
+		desc = britain.143.d
+		picture = uk_union_state
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.143.o1
+		}
+	}
+
+#Communist party goes alone against ussr and china
+country_event = {
+		id = britain.144
+		title = britain.144.t
+		desc = britain.144.d
+		picture = uk_union_state
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.144.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.141
+					}
+				}
+			}
+		}
+	}
 
 #British-soviet training exercises begin
 country_event = {
@@ -4597,7 +4405,6 @@ country_event = {
 #2010 conservative leadership spill
 country_event = {
 	id = britain.166
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.166.t
 	desc = britain.166.d
 	picture = conservative_party
@@ -4641,7 +4448,7 @@ country_event = {
 #Parliament votes to shorten election term limits to 3 years
 country_event = {
 	id = britain.167
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
+	is_triggered_only = yes # Soviet Century: sets up the fork's 4-year election cycle; Soviet Century keeps its own election schedule
 	title = britain.167.t
 	desc = britain.167.d
 	picture = house_of_commons
@@ -4669,7 +4476,7 @@ country_event = {
 #2011 General Election
 country_event = {
 	id = britain.168
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
+	is_triggered_only = yes # Soviet Century: fork general election; replaces the government and cabinet, overriding Soviet Century's storyline
 	title = britain.168.t
 	desc = britain.168.d
 	picture = british_election
@@ -4846,7 +4653,7 @@ country_event = {
 #2014 General Election
 country_event = {
 	id = britain.169
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
+	is_triggered_only = yes # Soviet Century: fork general election; replaces the government and cabinet, overriding Soviet Century's storyline
 	title = britain.169.t
 	desc = britain.169.d
 	picture = british_election
@@ -5552,7 +5359,6 @@ country_event = {
 #2014 conservative leadership spill
 country_event = {
 	id = britain.174
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.174.t
 	desc = britain.174.d
 	picture = conservative_party
@@ -5715,7 +5521,6 @@ country_event = {
 #2012 labour leadership spill
 country_event = {
 	id = britain.177
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.177.t
 	desc = britain.177.d
 	picture = labour_party
@@ -5796,7 +5601,6 @@ country_event = {
 #2015 labour leadership spill
 country_event = {
 	id = britain.178
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.178.t
 	desc = britain.178.d
 	picture = labour_party
@@ -7025,798 +6829,454 @@ country_event = {
 
 #Remaining Windsors Arrive In Canada
 country_event = {
-	id = britain.222
-	title = britain.222.t
-	desc = britain.222.d
-	picture = exiles_arrive_in_canada
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.222.o1
-		set_country_flag = CAN_monarchy_exists_in_canada
-		custom_effect_tooltip = andrew_king_tt
-		ENG = { 
-		country_event = {
-			        hours = 24
-			        id = britain.223
-		        }
-		 }
-		 set_country_flag = CAN_andrew_leads_exiles
+		id = britain.222
+		title = britain.222.t
+		desc = britain.222.d
+		picture = exiles_arrive_in_canada
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = britain.222.o1
+			custom_effect_tooltip = andrew_king_tt
+			ENG = { 
+			country_event = {
+						hours = 24
+						id = britain.223
+					}
+			}
+		}
+		option = {
+			name = britain.222.o2
+			custom_effect_tooltip = edward_king_tt
+			ENG = { 
+			country_event = {
+						hours = 24
+						id = britain.224
+					}
+			}
+		}
 	}
-	option = {
-		name = britain.222.o2
-		set_country_flag = CAN_monarchy_exists_in_canada
-		custom_effect_tooltip = edward_king_tt
-		ENG = { 
-		country_event = {
-			        hours = 24
-			        id = britain.224
-		        }
-		 }
-		 set_country_flag = CAN_edward_leads_exiles
-	}
-}
 #Andrew Crowned
 country_event = {
-	id = britain.223
-	title = britain.223.t
-	desc = britain.223.d
-	picture = andrew_crowned
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.223.o1
-		add_stability = -0.01
-		set_country_flag = ENG_andrew
-		ENG_andrew_i = {
-			promote_character = absolute_monarchist
+		id = britain.223
+		title = britain.223.t
+		desc = britain.223.d
+		picture = andrew_crowned
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = britain.223.o1
+			add_stability = -0.01
+			set_country_flag = ENG_andrew
+			create_country_leader = {
+				name = "Edward IX"
+				picture = "Portrait_ENG_Andrew_First.dds"
+				ideology = absolute_monarchist
+				}
 		}
 	}
-}
 #Edward Crowned
 country_event = {
-	id = britain.224
-	title = britain.224.t
-	desc = britain.224.d
-	picture = edward_crowned
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.224.o1
-		add_stability = -0.01
-		set_country_flag = ENG_edward
-		ENG_edward_ix = {
-			promote_character = absolute_monarchist
+		id = britain.224
+		title = britain.224.t
+		desc = britain.224.d
+		picture = edward_crowned
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = britain.224.o1
+			add_stability = -0.01
+			set_country_flag = ENG_edward
+			create_country_leader = {
+				name = "Edward IX"
+				picture = "Portrait_ENG_Edward_Nineth.dds"
+				ideology = absolute_monarchist
+				}
 		}
 	}
-}
 
 #Andrew Returns To Britain
 country_event = {
-	id = britain.225
-	title = britain.225.t
-	desc = britain.225.d
-	picture = andrew_crowned
-	fire_only_once = yes
-	
-	trigger = {
+		id = britain.225
+		title = britain.225.t
+		desc = britain.225.d
+		picture = andrew_crowned
+		fire_only_once = yes
+		
+		trigger = {
 		has_completed_focus = ENG_execute_them
 		OR = {
-			has_government = monarchist
-			has_government = national_conservative
-			has_government = centrist
-			has_government = liberal
-			has_government = new_democrat
+		has_government = monarchist
+		has_government = national_conservative
+		has_government = centrist
+		has_government = liberal
+		has_government = new_democrat
 		}
 		has_country_flag = ENG_andrew
-	}
-	
-	option = {
-		name = britain.225.o1
-		add_political_power = 50
-		add_popularity = {
-		ideology = monarchist
-		popularity = 0.05
 		}
-		if = {
-			limit = { NOT = { has_government = monarchist } }
-			add_ideas = idea_king_edward_ix_andrew
-		}
-		hidden_effect = {
-			if = {
-				limit = { has_idea = idea_queen_elizabeth_humiliated }
-				remove_ideas = idea_queen_elizabeth_humiliated
+		
+		option = {
+			name = britain.225.o1
+			add_political_power = 50
+			add_popularity = {
+			ideology = monarchist
+			popularity = 0.05
 			}
-			
 			if = {
-				limit = { has_idea = idea_queen_elizabeth_ii }
-				remove_ideas = idea_queen_elizabeth_ii
+				limit = { NOT = { has_government = monarchist } }
+				add_ideas = idea_king_edward_ix_andrew
 			}
 		}
 	}
-}
 #Edward Returns To Britain
 country_event = {
-	id = britain.226
-	title = britain.226.t
-	desc = britain.226.d
-	picture = edward_crowned
-	fire_only_once = yes
-	
-	trigger = {
+		id = britain.226
+		title = britain.226.t
+		desc = britain.226.d
+		picture = edward_crowned
+		fire_only_once = yes
+		
+		trigger = {
 		has_completed_focus = ENG_execute_them
 		OR = {
-			has_government = monarchist
-			has_government = national_conservative
-			has_government = centrist
-			has_government = liberal
-			has_government = new_democrat
+		has_government = monarchist
+		has_government = national_conservative
+		has_government = centrist
+		has_government = liberal
+		has_government = new_democrat
 		}
 		has_country_flag = ENG_edward
-	}
-	
-	option = {
-		name = britain.226.o1
-		add_stability = 0.03
-		add_popularity = {
-		ideology = monarchist
-		popularity = 0.05
 		}
-		if = {
-			limit = { NOT = { has_government = monarchist } }
-			add_ideas = idea_king_edward_ix_edward
-		}
-		hidden_effect = {
-			if = {
-				limit = { has_idea = idea_queen_elizabeth_humiliated }
-				remove_ideas = idea_queen_elizabeth_humiliated
+		
+		option = {
+			name = britain.226.o1
+			add_stability = 0.03
+			add_popularity = {
+			ideology = monarchist
+			popularity = 0.05
 			}
-			
 			if = {
-				limit = { has_idea = idea_queen_elizabeth_ii }
-				remove_ideas = idea_queen_elizabeth_ii
+				limit = { NOT = { has_government = monarchist } }
+				add_ideas = idea_king_edward_ix_edward
 			}
 		}
 	}
-}
 #Britain becomes England
 country_event = {
-	id = britain.227
-	title = britain.227.t
-	desc = britain.227.d
-	picture = genoa_independence
-	
-	trigger = {
-		tag = ENG
-		NOT = {
-			has_country_flag = ENG_is_england
-			owns_state = 121
-			owns_state = 122
-		}
-		SCO = {
-			exists = yes
+		id = britain.227
+		title = britain.227.t
+		desc = britain.227.d
+		picture = genoa_independence
+		
+		trigger = {
+			tag = ENG
 			NOT = {
-				has_war_with = ROOT
+				has_country_flag = ENG_is_england
+				owns_state = 121
+			}
+			SCO = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+				}
 			}
 		}
-		WAL = {
-			exists = yes
-			NOT = {
-				has_war_with = ROOT
+		mean_time_to_happen = {
+			days = 7
+		}
+		
+		option = {
+			name = britain.227.o1
+			if = {
+				limit = {
+					has_cosmetic_tag = ENG_Republic
+				}
+				set_country_flag = ENG_would_be_republic
 			}
-		}
-		NOT = {
-			is_puppet_of = CAT
-		}
-		NOT = {
-			is_puppet_of = SPR
-		}
-		NOT = {
-			is_puppet_of = SPN
+			if = {
+				limit = {
+					has_cosmetic_tag = ENG_Phoenix
+				}
+				set_country_flag = ENG_would_be_phoenix
+			}
+			if = {
+				limit = {
+					has_cosmetic_tag = ENG_Ulster
+				}
+				set_country_flag = ENG_would_be_ulster
+			}
+			set_cosmetic_tag = ENG_england
+			set_country_flag = ENG_is_england
 		}
 	}
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	option = {
-		name = britain.227.o1
-		if = {
-			limit = {
-				has_cosmetic_tag = ENG_Republic
-			}
-			set_country_flag = ENG_would_be_republic
-		}
-		if = {
-			limit = {
-				has_cosmetic_tag = ENG_Phoenix
-			}
-			set_country_flag = ENG_would_be_phoenix
-		}
-		if = {
-			limit = {
-				has_cosmetic_tag = ENG_Ulster
-			}
-			set_country_flag = ENG_would_be_ulster
-		}
-		set_cosmetic_tag = ENG_england
-		set_country_flag = ENG_is_england
-	}
-}
 #England becomes the UK again
 country_event = {
-	id = britain.228
-	title = britain.228.t
-	desc = britain.228.d
-	picture = genoa_independence
-	
-	trigger = {
-		tag = ENG
-		OR = {
+		id = britain.228
+		title = britain.228.t
+		desc = britain.228.d
+		picture = genoa_independence
+		
+		trigger = {
+			tag = ENG
 			121 = {
 				is_owned_by = ENG
 			}
-			122 = {
-				is_owned_by = ENG
-			}
+			has_country_flag = ENG_is_england
 		}
-		has_country_flag = ENG_is_england
-	}
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	option = {
-		name = britain.228.o1
-		every_state = {
-			limit = {
-				is_core_of = SCO
-			}
-			add_core_of = ENG
+		mean_time_to_happen = {
+			days = 7
 		}
-		if = {
-			limit = {
-				has_country_flag = ENG_would_be_republic
+		
+		option = {
+			name = britain.228.o1
+			every_state = {
+				limit = {
+					is_core_of = SCO
+				}
+				add_core_of = ENG
 			}
-			set_cosmetic_tag = ENG_Republic
-		}
-		if = {
-			limit = {
-				has_country_flag = ENG_would_be_phoenix
-			}
-			set_cosmetic_tag = ENG_Phoenix
-		}
-		if = {
-			limit = {
-				has_country_flag = ENG_would_be_ulster
-			}
-			set_cosmetic_tag = ENG_Ulster
-		}
-		if = {
-			limit = {
-				NOT = {
+			if = {
+				limit = {
 					has_country_flag = ENG_would_be_republic
+				}
+				set_cosmetic_tag = ENG_Republic
+			}
+			if = {
+				limit = {
 					has_country_flag = ENG_would_be_phoenix
+				}
+				set_cosmetic_tag = ENG_Phoenix
+			}
+			if = {
+				limit = {
 					has_country_flag = ENG_would_be_ulster
 				}
+				set_cosmetic_tag = ENG_Ulster
 			}
-			drop_cosmetic_tag = yes
-		}
-		clr_country_flag = ENG_is_england
-	}
-}
-
-country_event = { #2011 Liberal Democrats Leadership Spill
-	id = britain.229
-	title = britain.229.t
-	desc = britain.229.d
-	picture = lib_dems_pic
-
-	trigger = {
-		tag = ENG
-		date > 2011.6.1
-		date < 2011.6.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = liberal
-			has_government = new_democrat
-			has_government = moderate_socialist
-		}
-	}
-
-	fire_only_once = yes
-
-	option = { #keep Nick Clegg
-		name = britain.229.o1
-	}
-
-	option = { #Navnit Dholakia
-		name = britain.229.o2
-		ENG_navnit_dholakia = {
-			promote_character = centrist_populist
-		}
-	}
-
-	option = { #Sarah Teather
-		name = britain.229.o3
-		ENG_sarah_teather = {
-			promote_character = centrist_ideology
-		}
-	}
-}
-
-country_event = { #2014 Liberal Democrats Leadership Spill
-	id = britain.230
-	title = britain.230.t
-	desc = britain.230.d
-	picture = lib_dems_pic
-
-	trigger = {
-		tag = ENG
-		date > 2014.12.1
-		date < 2014.12.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = liberal
-			has_government = new_democrat
-			has_government = moderate_socialist
-		}
-	}
-	fire_only_once = yes
-
-	option = { #keep current leader
-		name = britain.230.o1
-	}
-
-	option = { #Tim Farron
-		name = britain.230.o2
-		ENG_tim_farron = {
-			promote_character = christian_democrat
-		}
-	}
-
-	option = { #Sarah Olney
-		name = britain.230.o3
-		ENG_sarah_olney = {
-			promote_character = centrist_ideology
-		}
-	}
-}
-
-country_event = { #2017 Liberal Democrats Leadership Spill
-	id = britain.231
-	title = britain.231.t
-	desc = britain.231.d
-	picture = lib_dems_pic
-
-	trigger = {
-		tag = ENG
-		date > 2017.12.1
-		date < 2017.12.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = liberal
-			has_government = new_democrat
-			has_government = moderate_socialist
-		}
-	}
-
-	fire_only_once = yes
-
-	option = { #keep current leader
-		name = britain.231.o1
-	}
-
-	option = { #Jo Swinson
-		name = britain.231.o2
-		ENG_jo_swinson = {
-			promote_character = centrist_ideology
-		}
-	}
-
-	option = { #Luciana Berger
-		name = britain.231.o3
-		ENG_luciana_berger = {
-			promote_character = centrist_ideology
-		}
-	}
-}
-
-country_event = { #2021 Liberal Democrats Leadership Spill
-	id = britain.232
-	title = britain.232.t
-	desc = britain.232.d
-	picture = lib_dems_pic
-
-	trigger = {
-		tag = ENG
-		date > 2021.2.1
-		date < 2021.2.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = liberal
-			has_government = new_democrat
-			has_government = moderate_socialist
-		}
-	}
-
-	fire_only_once = yes
-
-	option = { #keep current leader
-		name = britain.232.o1
-	}
-
-	option = { #Ed Davey
-		name = britain.232.o2
-		ENG_ed_davey = {
-			promote_character = right_libertarian
-		}
-	}
-
-	option = { #Layla Moran
-		name = britain.232.o3
-		ENG_layla_moran = {
-			promote_character = centrist_ideology
-		}
-	}
-}
-
-country_event = { #2011 SDP Leadership Spill
-	id = britain.233
-	title = britain.233.t
-	desc = britain.233.d
-	picture = sdp_pic
-
-	trigger = {
-		tag = ENG
-		date > 2011.1.1
-		date < 2011.1.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = centrist
-			has_government = new_democrat
-			has_government = moderate_socialist
-		}
-	}
-
-	fire_only_once = yes
-
-	option = { #keep Shirley Williams
-		name = britain.233.o1
-	}
-
-	option = { #Charles Kennedy
-		name = britain.233.o2
-		ENG_charles_kennedy = {
-			promote_character = social_liberal
-		}
-		hidden_effect = {
-			ENG_shirley_williams = {
-				remove_country_leader_role = {
-					ideology = owenist
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ENG_would_be_republic
+						has_country_flag = ENG_would_be_phoenix
+						has_country_flag = ENG_would_be_ulster
+					}
 				}
+				drop_cosmetic_tag = yes
 			}
+			clr_country_flag = ENG_is_england
 		}
 	}
 
-	option = { #Chris Huhne
-		name = britain.233.o3
-		ENG_chris_huhne = {
-			promote_character = social_liberal
-		}
-		hidden_effect = {
-			ENG_shirley_williams = {
-				remove_country_leader_role = {
-					ideology = owenist
-				}
-			}
-		}
-	}
-}
-
-country_event = { #Resignation of Shirley Williams (is party leader/PM)
-	id = britain.234
-	title = britain.234.t
-	desc = britain.234.d
-	picture = shirley_williams_resigns
-
-	trigger = {
-		tag = ENG
-		date > 2014.1.1
-		date < 2014.1.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = centrist
-			has_government = liberal
-			has_government = new_democrat
-			has_government = moderate_socialist
-		}
-		has_country_leader = {
-			character = ENG_shirley_williams
-			ruling_only = no
+country_event = {
+		id = britain.229
+		title = britain.229.t
+		desc =  britain.229.d
+		picture = Starmer_10down
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.229.o1
 		}
 	}
 
-	fire_only_once = yes
-
-	option = { #F
-		name = britain.234.o1
-		add_popularity = {
-			ideology = liberal
-			popularity = -0.01
-		}
-		ENG_norman_lamb = {
-			promote_character = owenist
-		}
-		set_country_flag = britain_shirley_williams_retirement
-		hidden_effect = {
-			country_event = {
-				id = britain.237
-				days = 30
-			}
-		}
-	}
-}
-
-country_event = { #Resignation of Shirley Williams (is not party leader/PM)
-	id = britain.235
-	title = britain.235.t
-	desc = britain.235.d
-	picture = shirley_williams_resigns
-
-	trigger = {
-		tag = ENG
-		date > 2014.1.1
-		date < 2014.1.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = centrist
-			has_government = liberal
-			has_government = new_democrat
-			has_government = moderate_socialist
-		}
-		NOT = {
-		    has_country_leader = {
-				character = ENG_shirley_williams
-				ruling_only = no
-			}
+country_event = {
+		id = britain.230
+		title = britain.230.t
+		desc =  britain.230.d
+		picture = Wage_act
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.230.o1
 		}
 	}
 
-	fire_only_once = yes
-
-	option = { #Take this L
-		name = britain.235.o1
-		set_country_flag = britain_shirley_williams_retirement
-	}
-}
-
-country_event = { #2014 SDP Leadership Spill (Norman Lamb is not leader)
-	id = britain.236
-	title = britain.236.t
-	desc = britain.236.d
-	picture = sdp_pic
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = { #current leader
-		name = britain.236.o1
-	}
-
-	option = { #Vince Cable
-		name = britain.236.o2
-		ENG_vince_cable = {
-			promote_character = social_liberal
+country_event = {
+		id = britain.231
+		title = britain.231.t
+		desc =  britain.231.d
+		picture = dev2_uk
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.231.o1
 		}
 	}
 
-	option = { #Julia Goldsworthy
-		name = britain.236.o3
-		ENG_julia_goldsworthy = {
-			promote_character = owenist
-		}
-	}
-}
-
-country_event = { #2014 SDP Leadership Spill (Norman Lamb is leader)
-	id = britain.237
-	title = britain.237.t
-	desc = britain.237.d
-	picture = sdp_pic
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = { #Norman Lamb
-		name = britain.237.o1
-	}
-
-	option = { #Vince Cable
-		name = britain.237.o2
-		ENG_vince_cable = {
-			promote_character = social_liberal
+country_event = {
+		id = britain.232
+		title = britain.232.t
+		desc =  britain.232.d
+		picture = nationalise_uk
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.232.o1
 		}
 	}
 
-	option = { #Julia Goldsworthy
-		name = britain.237.o3
-		ENG_julia_goldsworthy = {
-			promote_character = owenist
-		}
-	}
-}
-
-country_event = { #2017 SDP Leadership Spill
-	id = britain.238
-	title = britain.238.t
-	desc = britain.238.d
-	picture = sdp_pic
-
-	trigger = {
-		tag = ENG
-		date > 2017.12.1
-		date < 2017.12.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = centrist
-			has_government = new_democrat
-			has_government = moderate_socialist
+country_event = {
+		id = britain.233
+		title = britain.233.t
+		desc = britain.233.d
+		picture = war_uk2
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.223.o1
 		}
 	}
 
-	fire_only_once = yes
-
-	option = { #keep current leader
-		name = britain.238.o1
-	}
-
-	option = { #Chris Leslie
-		name = britain.238.o2
-		ENG_chris_leslie = {
-			promote_character = owenist
+country_event = {
+		id = britain.234
+		title = britain.234.t
+		desc = britain.234.d
+		picture = uk_recovery
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.234.o1
 		}
 	}
 
-	option = { #Jess Phillips
-		name = britain.238.o3
-		ENG_jess_phillips = {
-			promote_character = social_liberal
-		}
-	}
-}
-
-country_event = { #2021 SDP Leadership Spill
-	id = britain.239
-	title = britain.239.t
-	desc = britain.239.d
-	picture = sdp_pic
-
-	trigger = {
-		tag = ENG
-		date > 2021.1.1
-		date < 2021.1.30
-		OR = {
-		    has_government = national_conservative
-		    has_government = centrist
-			has_government = new_democrat
-			has_government = moderate_socialist
+country_event = {
+		id =  britain.235
+		title =  britain.235.t
+		desc =   britain.235.d
+		picture = uk_National_education_system
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.235.o1
 		}
 	}
 
-	fire_only_once = yes
-
-	option = { #keep current leader
-		name = britain.239.o1
-	}
-
-	option = { #Angela Smith
-		name = britain.239.o2
-		ENG_angela_smith = {
-			promote_character = social_liberal
+country_event = {
+		id =  britain.236
+		title = britain.236.t
+		desc =  britain.236.d
+		picture = Northern_powerhouse
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.236.o1
 		}
 	}
 
-	option = { #Margaret Hodge
-		name = britain.239.o3
-		ENG_margaret_hodge = {
-			promote_character = owenist
+country_event = {
+		id =  britain.237
+		title =  britain.237.t
+		desc =  britain.237.d
+		picture = rich_pay
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.237.o1
 		}
 	}
-}
 
-country_event = { #ILP Fusions with the WRP
-	id = britain.240
-	title = britain.240.t
-	desc = britain.240.d
-	picture = ilp_wrp_fusion_pic
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.240.o1
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		set_party_name = { 
-			ideology = moderate_socialist 
-			name = ENG_ild
-			long_name = ENG_ild_long
+country_event = {
+		id =  britain.238
+		title =  britain.238.t
+		desc =  britain.238.d
+		picture = Green_jobs
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.238.o1
 		}
 	}
-}
 
-country_event = { #Trial of Corbyn - RevSoc
-	id = britain.241
-	title = britain.241.t
-	desc = britain.241.d
-	picture = trial_of_corbyn_revsoc
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.241.o1
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = -0.05
-		}
-		add_political_power = -25
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 7 id = britain.242 } 
-		    }
+country_event = {
+		id =   britain.239
+		title =   britain.239.t
+		desc =   britain.239.d
+		picture = Universal_credit
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =   britain.239.o1
 		}
 	}
-}
 
-country_event = { #McDonnell addresses the WRP
-	id = britain.242
-	title = britain.242.t
-	desc = britain.242.d
-	picture = mcdonnell_talks_to_wrp
-	
-	is_triggered_only = yes 
-
-	option = {
-		name = britain.242.o1
-	}
-}
-
-country_event = { #Lindsey German disagrees with foreign policy course
-	id = britain.243
-	title = britain.243.t 
-	desc = britain.243.d 
-	picture = lindsey_german_speaks
-
-	fire_only_once = yes
-	
-	trigger = {
-		tag = ENG
-		NOT = { has_completed_focus = ENG_british_workers_congress }
-		focus_progress = {
-			focus = ENG_british_workers_congress
-			progress > 0.15
+country_event = {
+		id =  britain.240
+		title =  britain.240.t
+		desc =  britain.240.d
+		picture = Austerity_uk
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.240.o1
 		}
 	}
-	
-	option = {
-		name = britain.243.o1
-		add_political_power = -15
+
+country_event = {
+		id =  britain.241
+		title =  britain.241.t
+		desc =  britain.241.d
+		picture = Trident_renew
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.241.o1
+		}
 	}
-}
+
+country_event = {
+		id = britain.242
+		title = britain.242.t
+		desc = britain.242.d
+		picture = welfare_social
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.242.o1
+		}
+	}
+
+country_event = {
+		id =  britain.243
+		title = britain.243.t
+		desc =  britain.243.d
+		picture = Steve_jobs_iphone
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = ENG
+			date > 2010.1.5
+			date < 2010.1.10
+		}
+		
+		option = {
+			name = britain.243.o1
+		}
+	}
 
 country_event = { #Len McCluskey wants greater Union representation
 	id = britain.244
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
+	is_triggered_only = yes # Soviet Century: renumbered duplicate of Soviet Century britain.519
 	title = britain.244.t 
 	desc = britain.244.d 
 	picture = len_mccluskey_talks
@@ -7837,635 +7297,343 @@ country_event = { #Len McCluskey wants greater Union representation
 	}
 }
 
-country_event = { #The Workers' Congress Ambush
-	id = britain.245
-	title = britain.245.t 
-	desc = britain.245.d 
-	picture = first_workers_congress_election
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.245.o1 #George Galloway retains power
-		add_political_power = 15
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.247 }
-			}
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 14 id = britain.276 }
-			}
-		}
-		ai_chance = {
-			factor = 40
-		}
-	}
-	
-	option = {
-		name = britain.245.o2 #Len McCluskey swings the vote with his Union reps
-		ENG_len_mccluskey = {
-			promote_character = syndicalism
-		}
-		remove_ideas = britain_sic_len_mccluskey
-		add_ideas = britain_sic_gail_cartmail
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.248 }
-			}
-		}
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = britain.245.o3 #Lindsey German does something
-		ENG_lindsey_german = {
-			promote_character = trotskyist
-		}
-		remove_ideas = britain_fom_lindsey_german
-		add_ideas = britain_fom_martin_smith
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.249 }
-			}
-		}
-		ai_chance = {
-			factor = 25
-		}
-	}
-
-	option = {
-		name = britain.245.o4 #John McDonnell is cool and good
-		ENG_john_mcdonnell = {
-			promote_character = trotskyist
-		}
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.03
-		}
-		remove_ideas = britain_ind_john_mcdonnell
-		add_ideas = britain_ind_paul_cockshott
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 7 id = britain.246 } 
-		    }
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.250 }
-			}
-		}
-		ai_chance = {
-			factor = 15
-		}
-	}
-}
-
-country_event = { #Jeremy Corbyn released
-	id = britain.246
-	title = britain.246.t 
-	desc = britain.246.d 
-	picture = corbyn_released
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = britain.246.o1
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.05
-		}
-		add_stability = 0.05
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 400 id = britain.251 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Galloway's Election
-	id = britain.247
-	title = britain.247.t 
-	desc = britain.247.d 
-	picture = revsoc_britain_election
-	
-	is_triggered_only = yes
-	
-	option = { #Galloway stays
-		name = britain.247.o1
-		add_political_power = 50
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = national_bolshevik
-			popularity = 0.02
-		}
-		ai_chance = {
-			factor = 90
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.256 }
-			}
-		}
-	}
-	
-	option = { #Ken Livingstone
-		name = britain.247.o2
-		ENG_ken_livingstone = {
-			promote_character = trotskyist
-		}
-		ai_chance = {
-			factor = 5
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.256 }
-			}
-		}
-	}
-	
-	option = { #Salma Yaqoob
-		name = britain.247.o3
-		ENG_salma_yaqoob = {
-			promote_character = trotskyist
-		}
-		ai_chance = {
-			factor = 5
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.256 }
-			}
-		}
-	}
-}
-
-country_event = { #Len McCluskey's election
-	id = britain.248
-	title = britain.248.t 
-	desc = britain.248.d
-	picture = revsoc_britain_election
-	
-	is_triggered_only = yes
-	
-	option = { #Five More Years with McCluskey
-		name = britain.248.o1
-		add_stability = 0.05
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		ai_chance = {
-			factor = 60
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.257 }
-			}
-		}
-	}
-
-	option = { #Tim Roache takes over
-		name = britain.248.o2
-		ENG_tim_roache = {
-			promote_character = trotskyist
-		}
-		add_popularity = {
-			ideology = new_democrat
-			popularity = 0.05
-		}
-		add_war_support = 0.05
-		ai_chance = {
-			factor = 15
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.257 }
-			}
-		}
-	}
-
-	option = { #Frances O'Grady
-		name = britain.248.o3
-		ENG_frances_ogrady = {
-			promote_character = syndicalism
-		}
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.05
-		}
-		ai_chance = {
-			factor = 25
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.257 }
-			}
-		}
-	}
-	
-	option = { #Paul Nowak
-		name = britain.248.o4
-		ENG_paul_nowak = {
-			promote_character = trotskyist
-		}
-		ai_chance = {
-			factor = 5
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.257 }
-			}
-		}
-	}
-}
-
-country_event = { #Lindsey German's election
-	id = britain.249
-	title = britain.249.t
-	desc = britain.249.d 
-	picture = revsoc_britain_election
-	
-	is_triggered_only = yes
-	
-	option = { #Lindsey German stays
-		name = britain.249.o1
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		add_war_support = -0.1
-		ai_chance = {
-			factor = 55
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.258 }
-			}
-		}
-	}
-	
-	option = { #Murad Qureshi
-		name = britain.249.o2
-		ENG_murad_qureshi = {
-			promote_character = syndicalism
-		}
-		add_popularity = {
-			ideology = new_democrat
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.05
-		}
-		add_war_support = -0.1
-		ai_chance = {
-			factor = 30
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.258 }
-			}
-		}
-	}
-	
-	option = { #Alex Callinicos 
-		name = britain.249.o3
-		ENG_alex_callinicos = {
-			promote_character = trotskyist
-		}
-		add_stability = -0.05
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = -0.05
-		}
-		add_war_support = 0.1
-		ai_chance = {
-			factor = 15
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.258 }
-			}
-		}
-	}
-}
-
-country_event = { #McDonnell's election
-	id = britain.250
-	title = britain.250.t
-	desc = britain.250.d
-	picture = revsoc_britain_election
-	
-	is_triggered_only = yes
-	
-	option = { #McDonnell stays on
-		name = britain.250.o1
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = communist
-			popularity = 0.05
-		}
-		add_stability = 0.05
-		ai_chance = {
-			factor = 50
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.259 }
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = ENG_return_of_corbyn
-				}
-					ENG = {
-						country_event = { days = 1 id = britain.274 }
-					}
-			}
-		}
-	}
-
-	option = { #Rebecca Long-Bailey
-		name = britain.250.o2
-		ENG_rebecca_long_bailey = {
-			promote_character = revolutionary_socialist_ideology
-		}
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = communist
-			popularity = 0.05
-		}
-		ai_chance = {
-			factor = 25
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.259 }
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = ENG_return_of_corbyn
-				}
-					ENG = {
-						country_event = { days = 1 id = britain.274 }
-					}
-			}
-		}
-	}
-	
-	option = { #Hannah Sell
-		name = britain.250.o3
-		ENG_hannah_sell = {
-			promote_character = trotskyist
-		}
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = communist
-			popularity = 0.05
-		}
-		ai_chance = {
-			factor = 10
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.259 }
-			}
-		}
-	}
-	
-	option = { #Derrek Hatton
-		name = britain.250.o4
-		ENG_derek_hatton = {
-			promote_character = trotskyist
-		}
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.02
-		}
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = communist
-			popularity = 0.02
-		}
-		ai_chance = {
-			factor = 15
-		}
-		hidden_effect = {
-			ENG = {
-				country_event = { days = 1826 id = britain.259 }
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = ENG_return_of_corbyn
-				}
-					ENG = {
-						country_event = { days = 1 id = britain.274 }
-					}
-			}
-		}
-	}
-}
-
-country_event = { #Corbyn in WRP?
-	id = britain.251
-	title = britain.251.t 
-	desc = britain.251.d 
-	picture = revsoc_britain_corbyn_returns
-	
-	is_triggered_only = yes 
-	
-	option = { #Let him in
-		name = britain.251.o1
-		set_country_flag = ENG_return_of_corbyn
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.1
-		}
-		add_political_power = -50
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = { #Lock him out
-		name = britain.251.o2
-		add_political_power = 5
-		ai_chance = {
-			factor = 50
-		}
-	}
-}
-
-country_event = { #Maoist party coup
-	id = britain.252
-	title = britain.252.t
-	desc = britain.252.d
-	picture = britain_maoist_party_coup
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-			
-	option = { #The Maoists win 
-		name = britain.252.o1
-		ENG_seumas_milne = {
-			promote_character = maoist
-		}
-	}
-}
-
-country_event = { #Neo-Brezhnevite party coup
-	id = britain.253
-	title = britain.253.t 
-	desc = britain.253.d 
-	picture = britain_brezhnevite_party_coup
-	
-	fire_only_once = yes
-	is_triggered_only = yes
+country_event = {
+		id = britain.245
+		title = britain.245.t
+		desc = britain.245.d
+		picture = wake_up
 		
-	option = { #The Brezhnevites win 
-		name = britain.253.o1
-		ENG_zane_carpenter = {
-			promote_character = stalinist
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.245.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
 		}
 	}
-}
 
-country_event = { #Revisionists purged
-	id = britain.254
-	title = britain.254.t 
-	desc = britain.254.d
-	picture = griffiths_triumphs_party_coups
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.254.o1
-		add_political_power = 75
+country_event = {
+		id = britain.246
+		title = britain.246.t
+		desc = britain.246.d
+		picture = secret_meeting
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.246.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
 	}
-}
 
-country_event = { #Trial of Corbyn - Communist
-	id = britain.255
-	title = britain.255.t
-	desc = britain.255.d 
-	picture = trial_of_corbyn_communist
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.255.o1
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = -0.1
+country_event = {
+		id = britain.247
+		title = britain.247.t
+		desc = britain.247.d
+		picture = The_fight_begins
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.247.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
 		}
-		add_stability = -0.05
 	}
-}
 
-country_event = { #Galloway's Election part 2
-	id = britain.256
-	title = britain.256.t 
-	desc = britain.256.d 
-	picture = revsoc_britain_election
-	
-	is_triggered_only = yes
-	
-	option = { #Long Live the Chairman
-		name = britain.256.o1
-		add_political_power = 50
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = communist
-			popularity = 0.5
+country_event = {
+		id = britain.248
+		title = britain.248.t
+		desc = britain.248.d
+		picture = Protesting_will_work
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.248.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
 		}
 	}
-}
 
-country_event = { #McCluskey's election part 2
-	id = britain.257
-	title = britain.257.t 
-	desc = britain.257.d 
-	picture = revsoc_britain_election
-	
-	is_triggered_only = yes
-	
-	option = { #The Chairman Remains
-		name = britain.257.o1
-		add_political_power = 50
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = 0.05
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-	
-	option = { #Brendan Barber
-		name = britain.257.o2
-		ENG_brendan_barber = {
-			promote_character = syndicalism
-		}
-		ai_chance = {
-			factor = 20
+country_event = {
+		id = britain.249
+		title = britain.249.t
+		desc = britain.249.d
+		picture = The_gears_move
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.249.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
 		}
 	}
-	
-	option = { #Dave Prentis
-		name = britain.257.o3
-		ENG_dave_prentis = {
-			promote_character = syndicalism
-		}
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.05
-		}
-		ai_chance = {
-			factor = 20
+
+country_event = {
+		id = britain.250
+		title = britain.250.t
+		desc = britain.250.d
+		picture = Battle_for_cable_street_2
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.250.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
 		}
 	}
-}
+
+country_event = {
+		id = britain.251
+		title = britain.251.t
+		desc = britain.251.d
+		picture = Westminister_burns
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.251.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
+	}
+
+country_event = {
+		id = britain.252
+		title = britain.252.t
+		desc = britain.252.d
+		picture = Braiser_taken
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.252.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
+	}
+
+country_event = {
+		id = britain.253
+		title = britain.253.t
+		desc = britain.253.d
+		picture = A_New_dawn_in_the_uk
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.253.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
+	}
+
+country_event = {
+		id = britain.254
+		title = britain.254.t
+		desc = britain.254.d
+		picture = The_Noose
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.254.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
+	}
+
+country_event = {
+		id = britain.255
+		title = britain.255.t
+		desc = britain.255.d
+		picture = HMP_belmarsh
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.255.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
+	}
+
+country_event = {
+		id = britain.256
+		title = britain.256.t
+		desc = britain.256.d
+		picture = Rebuild_UK
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.256.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
+	}
+
+country_event = {
+		id = britain.257
+		title = britain.257.t
+		desc = britain.257.d
+		picture = BT_tower_phoenix
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name = britain.257.o1
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							tag = ENG
+						}
+					}
+					news_event = {
+						hours = 4
+						id = news.144
+					}
+				}
+			}
+		}
+	}
 
 country_event = {
 		id = britain.258
@@ -8785,7 +7953,7 @@ country_event = { #McDonnell election part 2
 
 country_event = { #PM Benn gets a stroke
 	id = britain.260
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
+	is_triggered_only = yes # Soviet Century: renumbered duplicate of Soviet Century britain.534/536/538
 	title = britain.260.t 
 	desc = britain.260.d 
 	picture = pm_benn_gets_stroke
@@ -8815,7 +7983,7 @@ country_event = { #PM Benn gets a stroke
 
 country_event = { #Labour Leader Benn gets a stroke
 	id = britain.261
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
+	is_triggered_only = yes # Soviet Century: renumbered duplicate of Soviet Century britain.534/536/538
 	title = britain.261.t 
 	desc = britain.261.d 
 	picture = mp_benn_gets_stroke
@@ -8850,7 +8018,7 @@ country_event = { #Labour Leader Benn gets a stroke
 
 country_event = { #MP Benn gets a stroke
 	id = britain.262
-	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
+	is_triggered_only = yes # Soviet Century: renumbered duplicate of Soviet Century britain.534/536/538
 	title = britain.262.t 
 	desc = britain.262.d 
 	picture = mp_benn_gets_stroke
@@ -8938,792 +8106,453 @@ country_event = { #MP Benn resigns
 	}
 }
 
-country_event = { #PM Benn dies
-	id = britain.266
-	title = britain.266.t 
-	desc = britain.266.d 
-	picture = pm_benn_dies
-
-	trigger = {
-		tag = ENG
-		date > 2014.3.1
-		date < 2014.3.30
-		has_country_flag = ENG_benn_retires_pm
-	}
-	
-	fire_only_once = yes
-	
-	option = {
-		name = britain.266.o1
-		add_popularity = {
-			ideology = new_democrat
-			popularity = 0.03
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 5 id = britain.268 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Benn Dies
-	id = britain.267
-	title = britain.267.t 
-	desc = britain.267.d 
-	picture = pm_benn_dies
-
-	trigger = {
-		tag = ENG
-		date > 2014.3.1
-		date < 2014.3.30
-		has_country_flag = ENG_benn_retires_normie
-	}
-	
-	fire_only_once = yes
-
-	option = {
-		name = britain.267.o1
-		add_popularity = {
-			ideology = new_democrat
-			popularity = 0.03
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 5 id = britain.269 } 
-		    }
-		}
-	}
-}
-
-country_event = { #PM Benn's funeral
-	id = britain.268
-	title = britain.268.t 
-	desc = britain.268.d 
-	picture = tony_benns_funeral
-
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.268.o1
-	}
-}
-
-country_event = { #Benn's funeral
-	id = britain.269
-	title = britain.269.t 
-	desc = britain.269.d 
-	picture = tony_benns_funeral
-
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.269.o1
-	}
-}
-
-country_event = { #Benn Dies RevSoc
-	id = britain.270
-	title = britain.270.t 
-	desc = britain.270.d 
-	picture = pm_benn_dies
-
-	trigger = {
-		tag = ENG
-		date > 2014.3.1
-		date < 2014.3.30
-		has_government = revolutionary_socialist
-	}
-	
-	fire_only_once = yes
-	
-	option = {
-		name = britain.270.o1
-		ENG_jo_cox = {
-			promote_character = labourist
-		}
-	}
-}
-
-country_event = { #Benn dies Rightoid
-	id = britain.271
-	title = britain.271.t 
-	desc = britain.271.d 
-	picture = pm_benn_dies
-
-	trigger = {
-		tag = ENG
-		date > 2014.3.1
-		date < 2014.3.30
-		has_government = fascist
-		has_government = nationalist
-	}
-	
-	fire_only_once = yes
-	
-	option = {
-		name = britain.271.o1
-		ENG_jo_cox = {
-			promote_character = labourist
-		}
-	}
-}
-
-country_event = { #Benn dies Monarchist
-	id = britain.272
-	title = britain.272.t 
-	desc = britain.272.d 
-	picture = pm_benn_dies
-
-	trigger = {
-		tag = ENG
-		date > 2014.3.1
-		date < 2014.3.30
-		has_government = monarchist
-	}
-
-	fire_only_once = yes
-	
-	option = {
-		name = britain.272.o1
-		ENG_jo_cox = {
-			promote_character = labourist
-		}
-	}
-}
-
-country_event = { #Benn dies Communist
-	id = britain.273
-	title = britain.273.t 
-	desc = britain.273.d 
-	picture = pm_benn_dies
-
-	trigger = {
-		tag = ENG
-		date > 2014.3.1
-		date < 2014.3.30
-		has_government = communist
-	}
-
-	fire_only_once = yes
-	
-	option = {
-		name = britain.273.o1
-		ENG_jo_cox = {
-			promote_character = labourist
-		}
-	}
-}
-
-country_event = { #Corbyn Joins Workers' Congress
-	id = britain.274
-	title = britain.274.t
-	desc = britain.274.d
-	picture = revsoc_corbyn_in_congress
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.274.o1
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 700 id = britain.275 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Corbyn in the cabinet?
-	id = britain.275
-	title = britain.275.t 
-	desc = britain.275.d 
-	picture = revsoc_corbyn_in_cabinet
-	
-	is_triggered_only = yes 
-	
-	option = { #I guess we have to
-		name = britain.275.o1
-		set_country_flag = ENG_corbyn_in_cabinet
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = 0.1
-		}
-		add_political_power = -75
-		add_stability = -0.05
-		ai_chance = {
-			factor = 25
-		}
-	}
-	
-	option = { #What no let's not!
-		name = britain.275.o2
-		add_political_power = 35
-		ai_chance = {
-			factor = 75
-		}
-	}
-}
-
-country_event = { #George Galloway Secures Control over Party
-	id = britain.276
-	title = britain.276.t
-	desc = britain.276.d
-	picture = george_galloway_secures_control_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.276.o1
-		add_political_power = 50
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = -0.03
-		}
-		hidden_effect = {
-			remove_ideas = britain_fom_lindsey_german
-			remove_ideas = britain_ind_john_mcdonnell
-		}
-		add_ideas = britain_fom_arshad_ali
-		add_ideas = britain_ind_paul_cockshott
-		add_ideas = britain_nsm_keir_starmer
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 35 id = britain.277 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Ken Livingstone Reveals anti-Galloway Factions
-	id = britain.277
-	title = britain.277.t
-	desc = britain.277.d
-	picture = ken_livingstone_reveals_plotters_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.277.o1
-		add_stability = 0.03
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = -0.1
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 40 id = britain.278 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Right-Oppositionists Purged
-	id = britain.278
-	title = britain.278.t
-	desc = britain.278.d
-	picture = galloway_right_opposition_purged 
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.278.o1
-		add_political_power = 50
-		add_war_support = 0.05
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 413 id = britain.279 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Crypto-Reactionary Clique Expelled
-	id = britain.279
-	title = britain.279.t
-	desc = britain.279.d
-	picture = crypto_reactionary_bristol_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.279.o1
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = -0.01
-		}
-		hidden_effect = {
-			remove_ideas = britain_sic_len_mccluskey
-		}
-		add_ideas = britain_sic_george_monboit
-	}
-}
-
-country_event = { #Far Left Forced Underground
-	id = britain.280
-	title = britain.280.t
-	desc = britain.280.d
-	picture = far_left_purged_britain_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.280.o1
-		add_political_power = 35
-		add_popularity = {
-			ideology = moderate_socialist
-			popularity = -0.05
-		}
-		add_popularity = {
-			ideology = revolutionary_socialist
-			popularity = -0.05
-		}
-		add_popularity = {
-			ideology = communist
-			popularity = -0.04
-		}
-	}
-}
-
-country_event = { #Meetings in the Opposition
-	id = britain.281
-	title = britain.281.t
-	desc = britain.281.d
-	picture = closed_doors_meeting_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.281.o1
-		add_political_power = -15
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 7 id = britain.282 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Opposition Leaders Announce Free Democratic Party
-	id = britain.282
-	title = britain.282.t
-	desc = britain.282.d
-	picture = free_democratic_party_announcement_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.282.o1
-		add_political_power = -50
-		add_popularity = {
-			ideology = liberal
-			popularity = 0.15
-		}
-		set_party_name = { 
-			ideology = liberal 
-			name = ENG_free_democratic_party
-			long_name = ENG_free_democratic_party_long
-		}
-		ENG_tony_blair = {
-			promote_character = social_liberal
-		}
-	}
-}
-
-country_event = { #National Revolutionary Front sees growth in support
-	id = britain.283
-	title = britain.283.t
-	desc = britain.283.d
-	picture = national_revolutionary_front_growth_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.283.o1
-		add_popularity = {
-			ideology = national_bolshevik
-			popularity = 0.07
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 23 id = britain.284 } 
-		    }
-		}
-	}
-}
-
-country_event = { #Seumas Milne Sighted Attending NRF Meeting
-	id = britain.284
-	title = britain.284.t
-	desc = britain.284.d
-	picture = seumas_milne_at_nrf_meeting_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = { #Strike Now
-		name = britain.284.o1
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 2 id = britain.285 } 
-		    }
-		}
-	}
-	option = { #Continue investigation
-		name = britain.284.o2
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 8 id = britain.287 } 
-		    }
-		}
-	}
-}
-
-country_event = { #National Revolutionary Leadership Arrested
-	id = britain.285
-	title = britain.285.t
-	desc = britain.285.d
-	picture = national_revolutionary_front_arrested_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.285.o1
-		add_political_power = 25
-		add_popularity = {
-			ideology = national_bolshevik
-			popularity = -0.04
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 41 id = britain.286 } 
-		    }
-		}
-	}
-}
-
-country_event = { #NRF Gives Way to Communist Partisans
-	id = britain.286
-	title = britain.286.t
-	desc = britain.286.d
-	picture = britain_warsaw_pact
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.286.o1
-		add_stability = -0.1
-		add_popularity = {
-			ideology = communist
-			popularity = 0.08
-		}
-		ENG_seumas_milne = {
-			promote_character = maoist
-		}
-	}
-}
-
-country_event = { #Leftist Entryism in National Revolutionary Front Revealed 
-	id = britain.287
-	title = britain.287.t
-	desc = britain.287.d
-	picture = nrf_communist_entryism_britain_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.287.o1
-		add_stability = -0.01
-		add_popularity = {
-			ideology = national_bolshevik
-			popularity = 0.05
-		}
-		hidden_effect = {
-		    ENG = {
-		        country_event = { days = 4 id = britain.288 } 
-		    }
-		}
-	}
-}
-
-country_event = { #National Revolutionary Front Banned
-	id = britain.288
-	title = britain.288.t
-	desc = britain.288.d
-	picture = nrf_banned_britain_pic
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.288.o1
-		add_political_power = 35
-		add_stability = 0.05
-		add_popularity = {
-			ideology = national_bolshevik
-			popularity = -0.1 
-		}
-		add_popularity = {
-			ideology = communist
-			popularity = 0.01
-		}
-	}
-}
-
-country_event = { #Britain First Election
-	id = britain.289
-	title = britain.289.t
-	desc = britain.289.d
-	picture = empty_house_of_commons
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.289.o1
-		add_political_power = 10
-		add_popularity = {
-			ideology = fascist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = liberal
-			popularity = 0.03
-		}
-	}
-}
-
-country_event = { #BNP Election
-	id = britain.290
-	title = britain.290.t
-	desc = britain.290.d
-	picture = empty_house_of_commons
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.290.o1
-		add_political_power = 10
-		add_popularity = {
-			ideology = nationalist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = liberal
-			popularity = 0.02
-		}
-	}
-}
-
-country_event = { #Fiscal Probe into BNP Finances
-	id = britain.291
-	title = britain.291.t
-	desc = britain.291.d
-	picture = queen_storms_parliament
-
-	trigger = {
-		tag = ENG
-		date > 2014.8.1
-		date < 2014.8.30
-		OR = {
-		    has_government = nationalist
+country_event = {
+		id =  britain.266
+		title =  britain.266.t
+		desc =   britain.266.d
+		picture = marriage_taxbreaks
+		
+		is_triggered_only = yes
+		
+		option = {   
+			name =  britain.266.o1
 		}
 	}
 
-	fire_only_once = yes
+country_event = {
+			id =  britain.267
+			title =  britain.267.t
+			desc =   britain.267.d
+			picture = better_private
 
-	option = { #What is this nonsense, reject it!
-		name = britain.291.o1
-		add_political_power = 25
-		add_popularity = {
-			ideology = nationalist
-			popularity = -0.01
-		}
-		hidden_effect = {
-			country_event = {
-				id = britain.293
-				days = 14
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.267.o1
 			}
 		}
-	}
-	option = { #We have nothing to hide
-		name = britain.291.o2
-		add_political_power = -50
-		hidden_effect = {
-			country_event = {
-				id = britain.292
-				days = 21
+
+country_event = {
+			id =  britain.268
+			title =  britain.268.t
+			desc =   britain.268.d
+			picture = bigger_and_better_borders
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.268.o1
 			}
 		}
-	}
-}
 
-country_event = { #BNP Finances Check Out
-	id = britain.292
-	title = britain.292.t
-	desc = britain.292.d
-	picture = bnp_finances_check_out
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.292.o1
-		add_political_power = 15
-		add_popularity = {
-			ideology = nationalist
-			popularity = 0.05
-		}
-	}
-}
-
-country_event = { #Murmors on the Backbenches
-	id = britain.293
-	title = britain.293.t
-	desc = britain.293.d
-	picture = empty_house_of_commons
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.293.o1
-		add_political_power = -15
-		add_popularity = {
-			ideology = national_conservative
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = britain.294
-				days = 10
+country_event = {
+			id =  britain.269
+			title =  britain.269.t
+			desc =   britain.269.d
+			picture = UK_aid
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.269.o1
 			}
 		}
-	}
-}
 
-country_event = { #Barnbrook Challenges Nick Griffin for Leadership
-	id = britain.294
-	title = britain.294.t
-	desc = britain.294.d
-	picture = barnbrook_nick_griffin_challenge
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.294.o1
-		add_political_power = -35
-		add_popularity = {
-			ideology = national_conservative
-			popularity = 0.05
-		}
-		hidden_effect = {
-			country_event = {
-				id = britain.295
-				days = 14
+country_event = {
+			id =  britain.270
+			title =  britain.270.t
+			desc =   britain.270.d
+			picture = veterans_uk
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.270.o1
 			}
 		}
-	}
-}
 
-country_event = { #BNP Leadership Election
-	id = britain.295
-	title = britain.295.t
-	desc = britain.295.d
-	picture = bnp_leadership_election_picture
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.295.o1
-		add_political_power = 35
-		add_popularity = {
-			ideology = nationalist
-			popularity = 0.05
-		}
-		hidden_effect = {
-			country_event = {
-				id = britain.296
-				days = 1
+country_event = {
+			id =  britain.271
+			title =  britain.271.t
+			desc =   britain.271.d
+			picture = less_family_tax
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.271.o1
 			}
 		}
-		ai_chance = {
-			factor = 65
-		}
-	}
-	
-	option = {
-		name = britain.295.o2
-		add_political_power = 35
-		add_popularity = {
-			ideology = nationalist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = national_conservative
-			popularity = 0.05
-		}
-		hidden_effect = {
-			country_event = {
-				id = britain.297
-				days = 1
+
+country_event = {
+			id =  britain.272
+			title =  britain.272.t
+			desc =   britain.272.d
+			picture = better_funded_schools
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.272.o1
 			}
 		}
-		ai_chance = {
-			factor = 35
-		}
-	}
-}
 
-country_event = { #BNP Keeps Griffin
-	id = britain.296
-	title = britain.296.t
-	desc = britain.296.d
-	picture = bnp_election_griffin_wins
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.296.o1
-	}
-}
-
-country_event = { #BNP votes for Barnbrook
-	id = britain.297
-	title = britain.297.t
-	desc = britain.297.d
-	picture = bnp_election_barnbrook_wins
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = britain.297.o1
-		ENG_richard_barnbrook = {
-			promote_character = ultranationalist
-		}
-		hidden_effect = {
-			country_event = {
-				id = britain.298
-				days = 958
+country_event = {
+			id =  britain.273
+			title =  britain.273.t
+			desc =   britain.273.d
+			picture = better_prisons
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.273.o1
 			}
 		}
-	}
-}
+
+country_event = {
+			id =  britain.274
+			title =  britain.274.t
+			desc =   britain.274.d
+			picture = Not_in_The_EU
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.274.o1
+			}
+		}
+
+country_event = {
+			id =  britain.275
+			title =  britain.275.t
+			desc =   britain.275.d
+			picture = Care_for_elderly_and_Disabled
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.275.o1
+			}
+		}
+
+country_event = {
+			id =  britain.276
+			title =  britain.276.t
+			desc =   britain.276.d
+			picture = training_for_everyone
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.276.o1
+			}
+		}
+
+country_event = {
+			id =  britain.277
+			title =  britain.277.t
+			desc =   britain.277.d
+			picture = affordable_homes_for_all
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.277.o1
+			}
+		}
+
+country_event = {
+			id =  britain.278
+			title =  britain.278.t
+			desc =   britain.278.d
+			picture = libdems_transport_and_envro
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.278.o1
+			}
+		}
+
+country_event = {
+			id =  britain.279
+			title =  britain.279.t
+			desc =   britain.279.d
+			picture = Building_regulations
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.279.o1
+			}
+		}
+
+country_event = {
+			id =  britain.280
+			title =  britain.280.t
+			desc =   britain.280.d
+			picture = jobs_for_the_future
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.280.o1
+			}
+		}
+
+country_event = {
+			id =  britain.281
+			title =  britain.281.t
+			desc =   britain.281.d
+			picture = uk_points_system
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.281.o1
+			}
+		}
+
+country_event = {
+			id =  britain.282
+			title =  britain.282.t
+			desc =   britain.282.d
+			picture = david_owen_future_plans
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.282.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.283
+			title =  britain.283.t
+			desc =   britain.283.d
+			picture = Raise_minimum_wage
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.283.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.284
+			title =  britain.284.t
+			desc =   britain.284.d
+			picture = recruit_more_officers
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.284.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.285
+			title =  britain.285.t
+			desc =   britain.285.d
+			picture = employment_in_everywhere
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.285.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.286
+			title =  britain.286.t
+			desc =   britain.286.d
+			picture = fairer_welfare
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.286.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.287
+			title =  britain.287.t
+			desc =   britain.287.d
+			picture = EU_nationals_welcome
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.287.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.288
+			title =  britain.288.t
+			desc =   britain.288.d
+			picture = university_tuition
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.288.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.289
+			title =  britain.289.t
+			desc =   britain.289.d
+			picture = LGBT_community
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.289.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.290
+			title =  britain.290.t
+			desc =   britain.290.d
+			picture = nationalise_it_all
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.290.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.291
+			title =  britain.291.t
+			desc =   britain.291.d
+			picture = Meet_in_Cuba
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.291.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.292
+			title =  britain.292.t
+			desc =   britain.292.d
+			picture = EU_UK_relations
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.292.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.293
+			title =  britain.293.t
+			desc =   britain.293.d
+			picture = better_social_housing
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.293.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.294
+			title =  britain.294.t
+			desc =   britain.294.d
+			picture = Wind_energy
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.294.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.295
+			title =  britain.295.t
+			desc =   britain.295.d
+			picture = soldiers_cut_funding
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.295.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.296
+			title =  britain.296.t
+			desc =   britain.296.d
+			picture = legalise_weed
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.296.o1
+			}
+			
+			
+		}
+
+country_event = {
+			id =  britain.297
+			title =  britain.297.t
+			desc =   britain.297.d
+			picture = more_NHS_Funding
+			
+			is_triggered_only = yes
+			
+			option = {   
+				name =  britain.297.o1
+			}
+			
+			
+		}
 
 country_event = { #Barnbrook Accused of Softness
 	id = britain.298
@@ -9862,174 +8691,72 @@ country_event = { #BNP votes for West
 	}
 }
 
-country_event = { #Britain asks to join the Democratic League
-	id = britain.303
-	title = britain.303.t
-	desc = britain.303.d
-	picture = canada_rejects_agreement
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = { #sure
-		name = britain.303.o1
-		ai_chance = {
-			base = 100
-		}
-		add_to_faction = ENG
-		ENG = {
-			country_event = {
-				id = britain.304
+country_event = {
+			id = britain.303
+			title = britain.303.t
+			desc = britain.303.d
+			picture = New_zealand_Trade_talks	
+			is_triggered_only = yes	
+			option = {
+				name = britain.303.o1
 			}
 		}
-	}
 
-	option = { #no
-		name = britain.303.o2
-		ai_chance = {
-			base = 0
-		}
-	}
-}
-
-country_event = { #Canada Accepts
-	id = britain.304
-	title = britain.304.t
-	desc = britain.304.d
-	picture = canada_rejects_agreement
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = { #Yay!
-		name = britain.304.o1
-		hidden_effect = {
-		add_named_threat = { threat = 2	 name = ENG_joining_dem_legue }
-			every_country = {
-				news_event = {
-					hours = 4
-					id = news.153
-				}
+country_event = {
+			id = britain.304
+			title = britain.304.t
+			desc = britain.304.d
+			picture = Canada_trade_talks	
+			is_triggered_only = yes
+			option = {
+				name = britain.304.o1
 			}
 		}
-	}
-}
 
-country_event = { #Canada Refuses
-	id = britain.305
-	title = britain.305.t
-	desc = britain.305.d
-	picture = canada_rejects_agreement
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = { #:(
-		name = britain.305.o1
-	}
-}
+country_event = {
+			id = britain.305
+			title = britain.305.t
+			desc = britain.305.d
+			picture = Freedom_of_movement_CANZUK	
+			is_triggered_only = yes
+			option = {
+				name = britain.305.o1
+			}
+		}
 	
  #Ulster Peace Events
- country_event = { #Ulster Victory VS UK
- 	id = britain.306
- 	title = britain.306.t
- 	desc = britain.306.d
- 	picture = ulster_declares_war
-
- 	fire_only_once = yes
- 	is_triggered_only = yes
-
- 	trigger = {
- 		tag = ENG
- 		has_war_with = ULS
- 		NOT = { controls_state = 119 }
- 	}
-
- 	option ={
- 		name = britain.306.01
- 		white_peace = ULS
- 		hidden_effect = {
-			every_country = {
-			    news_event = {
-			        hours = 4
-			        id = news.330
-		        }
-		    }
-		}
- 	}
- }
-
- country_event = { #Ulster and Irish Victory VS UK
- 	id = britain.307
- 	title = britain.307.t
- 	desc = britain.307.d
- 	picture = irish_unification
-
- 	fire_only_once = yes
- 	is_triggered_only = yes
-
- 	trigger = {
- 		tag = ENG
- 		has_war_with = IRE
- 		NOT = { controls_state = 119 }
- 	}
-
- 	option ={
- 		name = britain.307.01
- 		white_peace = ULS
- 		white_peace = IRE
- 		hidden_effect = {
-			every_country = {
-			    news_event = {
-			        hours = 4
-			        id = news.331
-		        }
-		    }
-		}
- 	}
- }
-
- country_event = { #UK takes Ulster, Ireland White Peace
- 	id = britain.308
- 	title = britain.308.t
- 	desc = britain.308.d
- 	picture = protestant_coup
-
- 	fire_only_once = yes
- 	is_triggered_only = yes
-
- 	trigger = {
- 		tag = ENG
- 		has_war_with = IRE
- 		controls_state = 119
- 	}
-
- 	option ={
- 		name = britain.308.01
- 		white_peace = IRE
-		if = {
-			limit = {
-				NOT = {
-					has_cosmetic_tag = ENG_Republic
-				}
-			}
-			ENG = {
-				set_cosmetic_tag = ENG_Ulster
+ country_event = {
+			id = britain.306
+			title = britain.306.t
+			desc = britain.306.d
+			picture = CANZUK_Jobs	
+			is_triggered_only = yes
+			option = {
+				name = britain.306.o1
 			}
 		}
-		ENG = {
-			transfer_state = 119
+
+ country_event = {
+			id = britain.307
+			title = britain.307.t
+			desc = britain.307.d
+			picture = CANZUK_working_together
+			is_triggered_only = yes
+			option = {
+				name = britain.307.o1
+			}
 		}
-		hidden_effect = {
-			every_country = {
-			    news_event = {
-			        hours = 4
-			        id = news.332
-		        }
-		    }
+
+ country_event = {
+			id = britain.308
+			title = britain.308.t
+			desc = britain.308.d
+			picture = CANZUK_Future_Research
+			is_triggered_only = yes
+			option = {
+				name = britain.308.o1
+			}
 		}
- 	}
- }
 
  country_event = { #Ulster Victory VS UK and Ireland
  	id = britain.309
@@ -10126,34 +8853,16 @@ country_event = { #Canada Refuses
  	}
  }
 
- country_event = { #Borderfix Giving Ulster to Ireland
- 	id = britain.311
- 	title = britain.311.t
- 	desc = britain.311.d
- 	picture = uk_ireland_agree
-
- 	fire_only_once = yes
- 	mean_time_to_happen = {
-		days = 1
-	}
-
-	trigger = {
-		NOT = {
-			country_exists = ULS
-		}
-		tag = ENG
-		has_global_flag = irish_dominance
-		owns_state = 119
-		is_in_faction_with = IRE
-	}
-
-	option = { #Give Ulster to Ireland
-		name = britain.311.01
-		IRE = {
-			transfer_state = 119
+ country_event = {
+		id = britain.311
+		title = britain.311.t
+		desc = britain.311.d
+		picture = family_around_tv_for_phoenix
+		is_triggered_only = yes
+		option = {
+			name = britain.311.o1
 		}
 	}
-  }
   
   country_event = { #LANCE project
 	id = britain.1001

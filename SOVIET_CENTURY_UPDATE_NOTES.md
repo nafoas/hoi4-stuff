@@ -22,13 +22,31 @@ pointing at it, and load it after **Red World: Alien Nation**.
   text for its own events and focuses is in `localisation/english/replace/`, so it wins.
 
 ## Deliberate choices you may want to revisit
-- **The fork's annexation decisions and events stay disabled** (empty
-  `annexation_decisions.txt` / `Annexations.txt`), as in the original submod. Delete
-  those two files to get the fork's annexation system back.
-- **The fork's UK date-triggered elections no longer fire on their own**
-  (britain.166–169, 174, 177, 178, 244, 260–262), because they would run over Soviet
-  Century's British storyline. Delete the `is_triggered_only` line marked
-  "Soviet Century" in `events/Britain.txt` to restore any of them.
+- **The fork's annexation decisions and events are enabled** (Soviet Century's empty
+  override files were removed). The nine breakaway tags have no annexation decisions
+  of their own, because the fork doesn't know about them.
+- **British events: Soviet Century renumbered the old fork's events.** It moved them to
+  britain.507–574 / 740–744 and reused the old numbers (mostly britain.229–311) for its
+  own new events. The fork reused those same numbers for different events. All 82 events
+  Soviet Century wrote its own text for (78 British, 3 USA, 1 American State) are back
+  to Soviet Century's version, with its text in `localisation/english/replace/`. Six fork
+  events (britain.7, 11, 120, 142, 143, 144) are also back to Soviet Century's version,
+  because the fork's versions call the reused numbers and would land on Soviet Century's
+  events.
+- **The fork's own British date-triggered events** were checked one by one. Nothing in
+  Soviet Century calls them or depends on anything they set (flags, ideas, characters).
+  - Kept switched off (marked `# Soviet Century:` in `events/Britain.txt`):
+    - britain.244, 260, 261, 262: renumbered duplicates of Soviet Century's britain.519
+      (McCluskey meets Galloway) and 534/536/538 (Tony Benn rushed to hospital). Turning
+      them on would fire those stories twice.
+    - britain.168, 169 (2011/2014 general elections): these set the ruling party and the
+      fork's cabinet, and would override Soviet Century's storyline. Soviet Century has
+      its own elections (britain.170, 258, 565, 567, …).
+    - britain.167 (Parliamentary Vote on Terms): only sets up the fork's 4-year election
+      cycle that 168/169 belong to.
+  - Left on: britain.166, 174, 177, 178 (2010/2014 Conservative and 2012/2015 Labour
+    leadership elections). They only promote a party leader, call nothing else and don't
+    clash with Soviet Century.
 - `remote_file_id` was removed from `descriptor.mod`, since it belongs to the original
   author's Workshop item.
 
