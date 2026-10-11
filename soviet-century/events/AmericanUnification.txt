@@ -1,15 +1,30 @@
-﻿add_namespace = american_unification
+add_namespace = american_unification
 
 #Unite the US?
 country_event = {
 	id = american_unification.1
 	title = american_unification.1.t
 	desc = american_unification.1.d
+	
 	picture = nebraska_farm
 	
 	is_triggered_only = yes
     
     immediate = {
+		if = {
+			limit = { 
+				has_global_flag = CAN_supported_ar 
+				tag = USA
+			}
+			country_event = { id = canada_diplo.37 days = 2 }
+		}
+		if = {
+			limit = { 
+				has_global_flag = CAN_supported_mwa
+				tag = MWA
+			}
+			country_event = { id = canada_diplo.37 days = 2 }
+		}
         if = {
             limit = {
                 original_tag = USA
@@ -26,6 +41,9 @@ country_event = {
         if = {
             limit = {
                 original_tag = NEA
+                NOT = {
+                    has_cosmetic_tag = GAU
+                }
             } 
             hidden_effect = {
                 country_event = { days = 180 id = commonwealth.231 } 
@@ -41,11 +59,25 @@ country_event = {
         }
         if = {
             limit = {
+                original_tag = USA
+				has_country_leader = {
+					name = "Congress of Corporations"
+					ruling_only = yes
+				}
+            } 
+            hidden_effect = {
+                country_event = { days = 180 id = rw_american_republic.26 } 
+            }
+        }
+		
+        if = {
+            limit = {
                 has_country_leader = {
                     name = "Bernie Sanders"
                     ruling_only = yes
                 }
-                original_tag = GAU
+                original_tag = NEA
+                has_government = national_bolshevik
             } 
             hidden_effect = {
                 every_country = {
@@ -64,14 +96,15 @@ country_event = {
                 }
             }
         }
+		
         if = {
             limit = {
                 has_country_leader = {
                     name = "Bernie Sanders"
                     ruling_only = yes
                 }
-                original_tag = GAU
-                GAU = {
+                original_tag = NEA	
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -108,7 +141,10 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = NEA_empower_the_central_committee
+                has_country_leader = {
+                    name = "Central Committee"
+                    ruling_only = yes
+                }
             } 
             hidden_effect = {
                 every_country = {
@@ -244,7 +280,35 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = USA_conservative_policies
+                tag = MWA
+            } 
+            hidden_effect = {
+                every_country = {
+                    news_event = { id = heartlands_news.1} 
+                }
+            }
+        }
+        if = {
+            limit = {
+                tag = MWA
+                MWA = {
+				    is_ai = no
+				}
+            } 
+            hidden_effect = {
+                sound_effect = bentley_america_sound
+            }
+        }
+        if = {
+            limit = {
+                tag = USA
+                OR = {
+                    has_government = national_conservative
+                    has_government = liberal
+                }
+                NOT = {
+                    has_completed_focus = USA_a_legitimate_ruler
+                }
             } 
             hidden_effect = {
                 every_country = {
@@ -254,9 +318,13 @@ country_event = {
         }
         if = {
             limit = {
-                has_country_leader = {
-                    name = "Robert Bentley"
-                    ruling_only = yes
+                tag = USA
+                OR = {
+                    has_government = national_conservative
+                    has_government = liberal
+                }
+                NOT = {
+                    has_completed_focus = USA_a_legitimate_ruler
                 }
                 USA = {
 				    is_ai = no
@@ -338,7 +406,10 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = USA_the_president_knows_best
+                OR = {
+                    has_completed_focus = USA_the_president_knows_best
+                    has_country_flag = duke_puppet_leader
+                }
             } 
             hidden_effect = {
                 every_country = {
@@ -348,7 +419,10 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = USA_down_with_duke
+                OR = {
+                    has_completed_focus = USA_down_with_duke
+                    has_country_flag = ancona_puppet_leader
+                }
             } 
             hidden_effect = {
                 every_country = {
@@ -368,7 +442,8 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = USA_nationalist_policies
+                tag = USA
+                has_government = nationalist
             } 
             hidden_effect = {
                 every_country = {
@@ -378,9 +453,14 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = USA_continue_military_leadership
-                NOT = {
-                    has_completed_focus = USA_restore_the_elected_president
+                OR = {
+                    AND = {
+                        has_completed_focus = USA_continue_military_leadership
+                        NOT = {
+                            has_completed_focus = USA_restore_the_elected_president
+                        }
+                    }
+                    has_country_flag = milley_puppet_leader
                 }
             } 
             hidden_effect = {
@@ -416,7 +496,10 @@ country_event = {
         } 
         if = {
             limit = {
-                has_completed_focus = USA_power_to_the_corporations
+                OR = {
+                    has_completed_focus = USA_power_to_the_corporations
+                    has_country_flag = corporate_puppet_leader
+                }
             } 
             hidden_effect = {
                 every_country = {
@@ -426,7 +509,8 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = USA_one_man_one_nation
+                tag = USA
+                has_government = monarchist
             } 
             hidden_effect = {
                 every_country = {
@@ -463,7 +547,10 @@ country_event = {
         } 
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                OR = {
+                    has_completed_focus = AMC_the_presidents_plan
+                    is_puppet = yes
+                }
                 has_country_leader = {
                     name = "Sonia Sotomayor"
                     ruling_only = yes
@@ -514,7 +601,7 @@ country_event = {
         if = {
             limit = {
                 has_completed_focus = GAU_loyalists
-                GAU = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -536,7 +623,7 @@ country_event = {
         if = {
             limit = {
                 has_completed_focus = GAU_communists
-                GAU = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -559,7 +646,7 @@ country_event = {
         if = {
             limit = {
                 has_completed_focus = GAU_national_syndicalists
-                GAU = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -582,7 +669,7 @@ country_event = {
         if = {
             limit = {
                 has_completed_focus = GAU_general_robinson
-                GAU = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -605,7 +692,7 @@ country_event = {
         if = {
             limit = {
                 has_completed_focus = GAU_pastor_phelps
-                GAU = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -628,7 +715,7 @@ country_event = {
         if = {
             limit = {
                 has_completed_focus = GAU_madame_welch
-                GAU = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -657,7 +744,7 @@ country_event = {
                     name = "National People's Council"
                     ruling_only = yes
                 }
-                GAU = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -669,7 +756,7 @@ country_event = {
         if = {
             limit = {
                 has_country_leader = {
-                    name = "Richard Cheney"
+                    name = "Newt Gingrich"
                     ruling_only = yes
                 }
             } 
@@ -683,10 +770,10 @@ country_event = {
         if = {
             limit = {
                 has_country_leader = {
-                    name = "Richard Cheney"
+                    name = "Newt Gingrich"
                     ruling_only = yes
                 }
-                AMS = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -715,7 +802,7 @@ country_event = {
                     name = "Marion Robertson"
                     ruling_only = yes
                 }
-                AMS = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -744,7 +831,7 @@ country_event = {
                     name = "Kevin Strom"
                     ruling_only = yes
                 }
-                AMS = {
+                NEA = {
 				    is_ai = no
 				}
             } 
@@ -754,7 +841,7 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -771,7 +858,7 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -789,7 +876,7 @@ country_event = {
         } 
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -806,7 +893,7 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -824,7 +911,7 @@ country_event = {
         } 
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -841,7 +928,7 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -859,7 +946,7 @@ country_event = {
         } 
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -876,7 +963,7 @@ country_event = {
         }
         if = {
             limit = {
-                has_completed_focus = AMC_the_presidents_plan
+                tag = AMC
                 NOT = {
                     has_country_leader = {
                         name = "Sonia Sotomayor"
@@ -958,14 +1045,25 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		set_cosmetic_tag = USS
+		if = {
+			limit = {
+				tag = AMC
+			}
+			set_cosmetic_tag = AMC_USS
+		}
+		else = {
+			set_cosmetic_tag = USS
+		}
 		set_country_flag = the_united_states_are_back
         country_event = { days = 7 id = american_unification.2 } 
         trigger = {
             NOT = {
                 has_country_flag = invited_kevin_strom
-		has_country_flag = richard_spencer
-		has_country_flag = 4thRiech
+                has_cosmetic_tag = GAU
+                has_country_leader = {
+                    character = PCA_john_foster
+                    ruling_only = yes
+                }
             }
         }
     }
@@ -977,18 +1075,6 @@ country_event = {
         }
         set_country_flag = the_united_states_are_back
         country_event = { days = 7 id = american_unification.2 } 
-    }
-	option = { #richard spencer usa
-        name = american_unification.1.o3
-        ai_chance = {
-            factor = 0
-        }
-	set_cosmetic_tag = USS_spencer
-        set_country_flag = the_united_states_are_back
-        country_event = { days = 7  } 
-	 trigger = {
-		has_country_flag = richard_spencer
-        }
     }
 }
 
@@ -1004,26 +1090,81 @@ country_event = {
 	option = {   #North
 		name = american_unification.2.o1
 		country_event = { id = american_unification.3 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_country_leader = {
+						name = "Automotive Council"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Grand Trade Council"
+						ruling_only = yes
+					}
+					has_government = communist
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #East
 		name = american_unification.2.o2
 		country_event = { id = american_unification.4 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_government = revolutionary_socialist
+					has_government = moderate_socialist
+					has_government = new_democrat
+					has_government = liberal
+					has_government = centrist
+					has_government = national_conservative
+					has_government = national_bolshevik
+					has_government = nationalist
+					has_government = fascist
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #South
 		name = american_unification.2.o3
 		country_event = { id = american_unification.5 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					original_tag = USA
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #West
 		name = american_unification.2.o4
 		country_event = { id = american_unification.6 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_government = communist
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #Centre
 		name = american_unification.2.o5
 		country_event = { id = american_unification.7 }
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
@@ -1038,27 +1179,44 @@ country_event = {
 	
 	option = {   #Minneapolis
 		name = american_unification.3.o1
-		set_capital = 391
+		set_capital = { state = 391 }
 	}
 	
 	option = {   #Detroit
 		name = american_unification.3.o2
-		set_capital = 393
+		set_capital = { state = 393 }
 	}
 	
 	option = {   #Milwaukee
 		name = american_unification.3.o3
-		set_capital = 394
+		set_capital = { state = 394 }
 	}
 	
 	option = {   #Chicago
 		name = american_unification.3.o4
-		set_capital = 395
+		set_capital = { state = 395 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_country_leader = {
+						name = "Automotive Council"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Grand Trade Council"
+						ruling_only = yes
+					}
+					has_government = communist
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #Indianapolis
 		name = american_unification.3.o5
-		set_capital = 396
+		set_capital = { state = 396 }
 	}
     
     option = {   #go back
@@ -1078,28 +1236,65 @@ country_event = {
 	
 	option = {   #Boston
 		name = american_unification.4.o1
-		set_capital = 357
+		set_capital = { state = 357 }
 	}
 	
 	option = {   #New York
 		name = american_unification.4.o2
-		set_capital = 358
+		set_capital = { state = 358 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_country_leader = {
+						name = "Bill Gates"
+						ruling_only = yes
+					}
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #Philadelphia
 		name = american_unification.4.o3
-		set_capital = 360
+		set_capital = { state = 360 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_government = revolutionary_socialist
+					has_government = national_bolshevik
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #Washington
 		name = american_unification.4.o4
-		set_capital = 901
+		set_capital = { state = 901 }
 		add_political_power = -350
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_government = fascist
+					has_government = nationalist
+					has_government = national_conservative
+					has_government = centrist
+					has_government = liberal
+					has_government = new_democrat
+					has_government = moderate_socialist
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #Cleveland
 		name = american_unification.4.o5
-		set_capital = 261
+		set_capital = { state = 261 }
 	}
     
     option = {   #go back
@@ -1119,32 +1314,55 @@ country_event = {
 	
 	option = {   #Atlanta
 		name = american_unification.5.o1
-		set_capital = 365
+		set_capital = { state = 365 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_government = nationalist
+					has_government = fascist
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #Miami
 		name = american_unification.5.o2
-		set_capital = 366
+		set_capital = { state = 366 }
 	}
 	
 	option = {   #New Orleans
 		name = american_unification.5.o3
-		set_capital = 371
+		set_capital = { state = 371 }
 	}
 	
 	option = {   #Dallas
 		name = american_unification.5.o4
-		set_capital = 900
+		set_capital = { state = 900 }
 	}
 	
 	option = {   #Houston
 		name = american_unification.5.o5
-		set_capital = 375
+		set_capital = { state = 375 }
     }
     
     option = {   #Richmond
 		name = american_unification.5.o6
-		set_capital = 902
+		set_capital = { state = 362 }
+		add_victory_points = {
+			province = 3823
+			value = 3
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_government = fascist
+				}
+				add = 100
+			}	
+		}
 	}
     
     option = {   #go back
@@ -1164,27 +1382,36 @@ country_event = {
 	
 	option = {   #Los Angeles
 		name = american_unification.6.o1
-		set_capital = 378
+		set_capital = { state = 378 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				OR = {
+					has_government = communist
+				}
+				add = 100
+			}	
+		}
 	}
 	
 	option = {   #Seattle
 		name = american_unification.6.o2
-		set_capital = 386
+		set_capital = { state = 386 }
 	}
 	
 	option = {   #Salt Lake City
 		name = american_unification.6.o3
-		set_capital = 380
+		set_capital = { state = 380 }
 	}
 	
 	option = {   #Phoenix
 		name = american_unification.6.o4
-		set_capital = 377
+		set_capital = { state = 377 }
 	}
 	
 	option = {   #Portland
 		name = american_unification.6.o5
-		set_capital = 385
+		set_capital = { state = 385 }
 	}
     
     option = {   #go back
@@ -1204,27 +1431,31 @@ country_event = {
 	
 	option = {   #Denver
 		name = american_unification.7.o1
-		set_capital = 382
+		set_capital = { state = 382 }
 	}
 	
 	option = {   #Saint Louis
 		name = american_unification.7.o2
-		set_capital = 373
+		set_capital = { state = 373 }
 	}
 	
 	option = {   #Omaha
 		name = american_unification.7.o3
-		set_capital = 384
+		set_capital = { state = 384 }
 	}
 	
 	option = {   #Des Moines
 		name = american_unification.7.o4
-		set_capital = 392
+		set_capital = { state = 392 }
 	}
 	
 	option = {   #Tulsa
 		name = american_unification.7.o5
-		set_capital = 374
+		set_capital = { state = 374 }
+		add_victory_points = {
+			province = 1806
+			value = 6
+		}
 	}
     
     option = {   #go back
@@ -1249,7 +1480,7 @@ country_event = {
             country_event = {id = american_unification.9}
         }
         ai_chance = {
-            factor = 100
+            factor = 90
         }
     }
     option = { #fight for our land!
@@ -1259,7 +1490,7 @@ country_event = {
             country_event = {id = american_unification.10}
         }
         ai_chance = {
-            factor = 0
+            factor = 10
         }
     }
 }
@@ -1300,8 +1531,9 @@ country_event = {
     
     option = { #wrong choice
         name = american_unification.10.o1
+        custom_effect_tooltip = white_peace_tt
         create_wargoal = {
-            type = take_state_focus
+            type = annex_everything
             target = FROM
             generator = { 376 894 }
         }
@@ -1326,7 +1558,11 @@ country_event = {
             country_event = {id = american_unification.12}
         }
         ai_chance = {
-            factor = 100
+            base = 90
+            modifier = {
+                factor = 100
+                is_in_faction_with = FROM
+            }
         }
     }
     option = { #fight for our land!
@@ -1336,7 +1572,11 @@ country_event = {
             country_event = {id = american_unification.13}
         }
         ai_chance = {
-            factor = 0
+            base = 10
+            modifier = {
+                factor = 0
+                is_in_faction_with = FROM
+            }
         }
     }
 }
@@ -1377,8 +1617,9 @@ country_event = {
     
     option = { #wrong choice
         name = american_unification.13.o1
+        custom_effect_tooltip = white_peace_2_tt
         create_wargoal = {
-            type = take_state_focus
+            type = annex_everything
             target = FROM
             generator = { 463 1013 1014 }
         }
@@ -1404,7 +1645,7 @@ country_event = {
             country_event = {id = american_unification.15}
         }
         ai_chance = {
-            factor = 100
+            factor = 90
         }
     }
     option = { #fight for our land!
@@ -1414,7 +1655,7 @@ country_event = {
             country_event = {id = american_unification.16}
         }
         ai_chance = {
-            factor = 0
+            factor = 10
         }
     }
 }
@@ -1457,8 +1698,9 @@ country_event = {
     
     option = { #wrong choice
         name = american_unification.16.o1
+        custom_effect_tooltip = white_peace_2_tt
         create_wargoal = {
-            type = take_state_focus
+            type = annex_everything
             target = FROM
             generator = { 463 }
         }
@@ -1483,7 +1725,11 @@ country_event = {
             country_event = {id = american_unification.18}
         }
         ai_chance = {
-            factor = 100
+            base = 90
+            modifier = {
+                factor = 100
+                is_in_faction_with = FROM
+            }
         }
     }
     option = { #fight for our land!
@@ -1493,7 +1739,11 @@ country_event = {
             country_event = {id = american_unification.19}
         }
         ai_chance = {
-            factor = 0
+            base = 10
+            modifier = {
+                factor = 0
+                is_in_faction_with = FROM
+            }
         }
     }
 }
@@ -1514,7 +1764,6 @@ country_event = {
         add_state_core = 629
         add_state_core = 630
         add_state_core = 631
-        add_state_core = 727
     }
 }
 
@@ -1529,15 +1778,15 @@ country_event = {
     
     option = { #wrong choice
         name = american_unification.19.o1
+        custom_effect_tooltip = white_peace_2_tt
         create_wargoal = {
-            type = take_state_focus
+            type = annex_everything
             target = FROM
-            generator = { 629 630 631 727 }
+            generator = { 629 630 631 }
         }
         add_state_core = 629
         add_state_core = 630
         add_state_core = 631
-        add_state_core = 727
     }
 }
 
@@ -1557,7 +1806,7 @@ country_event = {
             country_event = {id = american_unification.21}
         }
         ai_chance = {
-            factor = 100
+            factor = 90
         }
     }
     option = { #fight for our land!
@@ -1567,7 +1816,7 @@ country_event = {
             country_event = {id = american_unification.22}
         }
         ai_chance = {
-            factor = 0
+            factor = 10
         }
     }
 }
@@ -1587,7 +1836,6 @@ country_event = {
         transfer_state = 629
         transfer_state = 630
         transfer_state = 631
-        transfer_state = 727
     }
 }
 
@@ -1602,15 +1850,15 @@ country_event = {
     
     option = { #wrong choice
         name = american_unification.22.o1
+        custom_effect_tooltip = white_peace_2_tt
         create_wargoal = {
-            type = take_state_focus
+            type = annex_everything
             target = FROM
-            generator = { 629 630 631 727 }
+            generator = { 629 630 631 }
         }
         add_state_core = 629
         add_state_core = 630
         add_state_core = 631
-        add_state_core = 727
     }
 }
 
@@ -1630,7 +1878,7 @@ country_event = {
             country_event = {id = american_unification.24}
         }
         ai_chance = {
-            factor = 100
+            factor = 90
         }
     }
     option = { #fight for our land!
@@ -1640,7 +1888,7 @@ country_event = {
             country_event = {id = american_unification.25}
         }
         ai_chance = {
-            factor = 0
+            factor = 10
         }
     }
 }
@@ -1683,7 +1931,7 @@ country_event = {
     option = { #wrong choice
         name = american_unification.25.o1
         create_wargoal = {
-            type = take_state_focus
+            type = annex_everything
             target = FROM
             generator = { 376 894 }
         }
@@ -1733,13 +1981,21 @@ country_event = {
     
     is_triggered_only = yes
     
-    option = { #They can keep it
+    option = { #Give them all of New Mexico
         name = american_unification.27.o1
+        TEX = {
+            transfer_state = 376
+        }
+        add_stability = 0.03
+        set_country_flag = west_texas_question_resolved
+    }
+    option = { #They can keep it
+        name = american_unification.27.o2
         add_stability = 0.01
         set_country_flag = west_texas_question_resolved
     }
     option = { #We want ALL of New Mexico
-        name = american_unification.27.o2
+        name = american_unification.27.o3
         transfer_state = 899
 		add_state_core = 899
         TEX = {
@@ -1785,34 +2041,98 @@ country_event = {
     
     option = { #Form it
         name = american_unification.29.o1
-            set_cosmetic_tag = NTI
-            add_state_core = 386
-            add_state_core = 385
-            add_state_core = 970
-            add_state_core = 971
-            add_state_core = 890
-            add_state_core = 387
-            add_state_core = 388
-            add_state_core = 381
-            add_state_core = 389
-	    add_state_core = 1016
-            add_state_core = 1016
-            add_state_core = 1018
+        set_cosmetic_tag = NTI
+        add_state_core = 386
+        add_state_core = 385
+        add_state_core = 970
+        add_state_core = 971
+        add_state_core = 890
+        add_state_core = 387
+        add_state_core = 388
+        add_state_core = 381
+        add_state_core = 389
+        add_state_core = 1018
+		hidden_effect = {
+		if = {
+		limit = {
+		tag = LIN
+		}
+         every_country = {
+           news_event = { id = NTInews.2} 
+                }
+            }
+		if = {
+		limit = {
+		tag = MOT
+		}
+         every_country = {
+           news_event = { id = NTInews.3} 
+                }
+            }
+		if = {
+		limit = {
+		tag = CSD
+		}
+         every_country = {
+           news_event = { id = NTInews.1} 
+                }
+            }
+		}
+        ai_chance = {
+            base = 100
+            modifier = {
+                tag = CSD
+                factor = 0
+            }
+        }
     }
     option = { #The cores are awesome but come on
         name = american_unification.29.o2
-            add_state_core = 386
-            add_state_core = 385
-            add_state_core = 970
-            add_state_core = 971
-            add_state_core = 890
-            add_state_core = 387
-            add_state_core = 388
-            add_state_core = 381
-            add_state_core = 389
-	    add_state_core = 1016
-            add_state_core = 1016
-            add_state_core = 1018
+        add_state_core = 386
+        add_state_core = 385
+        add_state_core = 970
+        add_state_core = 971
+        add_state_core = 890
+        add_state_core = 387
+        add_state_core = 388
+        add_state_core = 381
+        add_state_core = 389
+        add_state_core = 1018
+		hidden_effect = {
+		if = {
+		limit = {
+		tag = LIN
+		}
+         every_country = {
+           news_event = { id = NTInews.2} 
+                }
+            }
+		if = {
+		limit = {
+		tag = MOT
+		}
+         every_country = {
+           news_event = { id = NTInews.3} 
+                }
+            }
+		if = {
+		limit = {
+		tag = CSD
+		}
+         every_country = {
+           news_event = { id = NTInews.1} 
+                }
+            }
+		}
+        ai_chance = {
+            base = 100
+            modifier = {
+                NOT = {
+                    tag = CSD
+                }
+                factor = 0
+            }
+        }
     }
 }
 country_event = { #Autonomy For The American Indians?
@@ -1861,5 +2181,318 @@ country_event = {
         }
 		add_stability = -0.05
         set_country_flag = east_texas_question_resolved
+    }
+}
+#American Reunifier Negotiates for lost territories
+country_event = {
+	id = american_unification.32
+    title = american_unification.32.t
+    desc = american_unification.32.d
+    picture = democratic_activists_demand_change
+    
+    is_triggered_only = yes
+    
+    option = { #Give it back
+        name = american_unification.32.o1
+        every_owned_state = {
+            limit = {
+                OR = {
+                    NOT = {
+                        is_core_of = ROOT
+                    }
+                    state = 894
+                    state = 376
+                }
+                OR = {
+                    is_core_of = ILL
+				    is_core_of = GRL
+				    is_core_of = MOT
+				    is_core_of = UTA
+				    is_core_of = LIN
+				    is_core_of = ARI
+				    is_core_of = TEX
+				    is_core_of = PCA
+				    is_core_of = NEA
+				    is_core_of = USA
+				    is_core_of = MWA
+                }
+            }
+            transfer_state_to = FROM
+        }
+		FROM = {
+            country_event = american_unification.33
+        }
+        ai_chance = {
+            base = 75 #is afraid of early war with America
+        }
+    }
+    option = { #No
+        name = american_unification.32.o2
+        set_country_flag = refused_american_land_return
+		FROM = {
+            country_event = american_unification.34
+        }
+        ai_chance = {
+            base = 25
+            modifier = {
+                factor = 3
+                OR = {
+                    AND = {
+                        has_government = communist
+                        FROM = {
+                            NOT = {
+                                has_government = communist
+                            }
+                        }
+                    }
+                    AND = {
+                        has_government = revolutionary_socialist
+                        FROM = {
+                            NOT = {
+                                has_government = revolutionary_socialist
+                            }
+                        }
+                    }
+                    AND = {
+                        has_government = national_bolshevik
+                        FROM = {
+                            NOT = {
+                                has_government = national_bolshevik
+                            }
+                        }
+                    }
+                    AND = {
+                        has_government = monarchist
+                        FROM = {
+                            NOT = {
+                                has_government = monarchist
+                            }
+                        }
+                    }
+                    AND = {
+                        OR = {
+                            has_government = nationalist
+                            has_government = national_conservative
+                            has_government = centrist
+                            has_government = liberal
+                            has_government = new_democrat
+                            has_government = moderate_socialist
+                        }
+                        FROM = {
+                            NOT = {
+                                has_government = nationalist
+                                has_government = national_conservative
+                                has_government = centrist
+                                has_government = liberal
+                                has_government = new_democrat
+                                has_government = moderate_socialist
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#American Reunifier gets territories back
+country_event = {
+	id = american_unification.33
+    title = american_unification.33.t
+    desc = american_unification.33.d
+    picture = democratic_activists_demand_change
+    
+    is_triggered_only = yes
+    
+    option = { #Yay
+        name = american_unification.33.o1
+        
+    }
+}
+
+#American Reunifier does not get territories back
+country_event = {
+	id = american_unification.34
+    title = american_unification.34.t
+    desc = american_unification.34.d
+    picture = democratic_activists_demand_change
+    
+    is_triggered_only = yes
+    
+    option = { #War it is then
+        name = american_unification.34.o1
+        create_wargoal = {
+            target = FROM
+            type = annex_everything
+        }
+    }
+}
+
+#GRL - Unite the US?
+country_event = {
+	id = american_unification.100
+	title = american_unification.100.t
+	desc = american_unification.100.d
+	picture = great_lakes_restore_america
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GRL
+		CSD = {
+			OR = {
+				exists = no
+				is_subject_of = GRL
+			}
+		}
+		ILL = {
+			OR = {
+				exists = no
+				is_subject_of = GRL
+			}
+		}
+		AMC = {
+			OR = {
+				exists = no
+				is_subject_of = GRL
+			}
+		}
+		TEX = {
+			OR = {
+				exists = no
+				is_subject_of = GRL
+			}
+		}
+		MWA = { is_subject_of = GRL }
+		LIN = { is_subject_of = GRL }
+		MOT = { is_subject_of = GRL }
+		PCA = { is_subject_of = GRL }
+		USA = { is_subject_of = GRL }
+		NEA = { is_subject_of = GRL }
+		UTA = { is_subject_of = GRL }
+		ARI = { is_subject_of = GRL }
+		358 = { is_owned_by_ROOT_or_subject = yes }
+		901 = { is_owned_by_ROOT_or_subject = yes }
+		357 = { is_owned_by_ROOT_or_subject = yes }
+		378 = { is_owned_by_ROOT_or_subject = yes }
+		387 = { is_owned_by_ROOT_or_subject = yes }
+		375 = { is_owned_by_ROOT_or_subject = yes }
+		366 = { is_owned_by_ROOT_or_subject = yes }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { 
+					NOT = { country_exists = ILL }
+				}
+				every_state = {
+					limit = { is_core_of = ILL }
+					GRL = { add_state_core = PREV }
+				}
+			}
+			
+			if = {
+				limit = {
+					NEA = { is_subject_of = GRL }
+				}
+				every_state = {
+					limit = { is_core_of = NEA }
+					GRL = { add_state_core = PREV }
+				}
+			}
+		}
+	}
+    
+	option = { #The USA
+		name = american_unification.100.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = can_core_USA
+		set_country_flag = can_core_NEA
+		set_country_flag = can_core_ILL
+		set_country_flag = can_core_GRL
+		set_country_flag = can_core_MOT
+		set_country_flag = can_core_LIN
+		set_country_flag = can_core_UTA
+		set_country_flag = can_core_ARI
+		set_country_flag = can_core_PCA
+		set_country_flag = can_core_TEX
+		if = {
+			limit = {
+				OR = {
+					has_country_leader = {
+						name = "Mike Vanderboegh"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Matt Savino"
+						ruling_only = yes
+					}
+				}
+			}
+			set_cosmetic_tag = GRL_USS_USF
+		}
+		else_if = {
+			limit = {
+				has_country_leader = {
+					name = "David Brian Stone"
+					ruling_only = yes
+				}
+			}
+			set_cosmetic_tag = GRL_USS_CCR
+		}
+		else_if = {
+			limit = {
+				has_government = revolutionary_socialist
+			}
+			set_cosmetic_tag = GRL_USS_USRA
+		}
+		else_if = {
+			limit = {
+				has_country_leader = {
+					name = "Winona LaDuke"
+					ruling_only = yes
+				}
+			}
+			set_cosmetic_tag = GRL_USS_PFRA
+		}
+		else = {
+			set_cosmetic_tag = USS
+		}
+		every_country = {
+			limit = {	
+				is_subject_of = GRL
+				OR = {
+					tag = AMC
+					tag = NEA
+					tag = USA
+					tag = TEX
+					tag = MWA
+					tag = ILL
+					tag = UTA
+					tag = LIN
+					tag = ARI
+					tag = MOT
+					tag = CSD
+					tag = PCA
+				}
+			}
+			GRL = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			}
+		}
+		remove_ideas = idea_america_neutrality_statelet
+		set_country_flag = the_united_states_are_back
+        country_event = { days = 7 id = american_unification.2 } 
+    }
+	
+	option = { #No
+		name = american_unification.100.o2
+		add_war_support = 0.1
+		add_stability = 0.1
     }
 }

@@ -22,9 +22,25 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=neocommunist
+			ideology=malenkovist
 			expire="1.1.1.1"
 			id=-1
+		}
+	}
+	ENG_SF={
+		name="Solidarity Federation"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAT/Portrait_ENG_SF.dds"
+			}
+		}
+	}
+	ENG_Benjamin_Raymond={
+		name="Ben Raymond"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAT/Portrait_ENG_Benjamin_Raymond.dds"
+			}
 		}
 	}
 	ENG_paul_golding={
@@ -64,6 +80,14 @@ characters={
 			ideology=absolute_monarchist
 			expire="1.1.1.1"
 			id=-1
+		}
+	}
+	ENG_Henry_Ninth={
+		name="Henry IX"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/Portrait_ENG_Henry_Ninth.dds"
+			}
 		}
 	}
 	ENG_patrick_harrington={
@@ -156,6 +180,7 @@ characters={
 			}
 		}
 		country_leader = {
+			desc="POLITICS_SHIRLEY_WILLIAMS_DESC"
 			expire = "1.1.1.1"
 			ideology = owenist
 		}
@@ -206,10 +231,6 @@ characters={
 		country_leader = {
 			expire = "1.1.1.1"
 			ideology = fiscal_conservative
-		}
-		country_leader = {
-			expire = "1.1.1.1"
-			ideology = progressive_conservative
 		}
 	}
 	ENG_iain_duncan_smith={
@@ -407,10 +428,6 @@ characters={
 			expire = "1.1.1.1"
 			ideology = progressive
 		}
-		country_leader = {
-			expire = "1.1.1.1"
-			ideology = democratic_socialist
-		}
 	}
 	ENG_ken_loach={
 		name="Ken Loach"
@@ -533,7 +550,7 @@ characters={
 		}
 	}
 	ENG_layla_moran={
-		name="Layla_Moran"
+		name="Layla Moran"
 		portraits={
 			civilian={
 				large="gfx/leaders/ENG/Portrait_ENG_Layla_Moran.dds"
@@ -913,7 +930,7 @@ characters={
 		}
 		country_leader = {
 			expire = "1.1.1.1"
-			ideology = ultranationalist
+			ideology = post_fascist
 		}
 	}
 	ENG_robert_west={
@@ -934,10 +951,6 @@ characters={
 			civilian={
 				large="gfx/leaders/ENG/Portrait_ENG_Regency_Council.dds"
 			}
-		}
-		country_leader = {
-			expire = "1.1.1.1"
-			ideology = absolute_monarchist
 		}
 		country_leader = {
 			expire = "1.1.1.1"
@@ -1957,6 +1970,183 @@ characters={
 			maneuvering_skill=1
 			coordination_skill=1
 			legacy_id=-1
+		}
+	}
+
+	#Scientists
+	ENG_david_mcginley = {
+		name = "David McGinley"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_david_mcginley
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_resourceful }
+			skills = {
+				specialization_naval= 1
+			}
+		}
+	}
+
+	ENG_graham_hawkes = {
+		name = "Graham Hawkes"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_graham_hawkes
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_submarine_specialist }
+			skills = {
+				specialization_naval= 2
+			}
+		}
+	}
+
+	ENG_jonathan_lyle = {
+		name = "Jonathan Lyle"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_jonathan_lyle
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval= 2
+			}
+		}
+	}
+
+	ENG_john_allen = {
+		name = "John Allen"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_john_allen
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist }
+			skills = {
+				specialization_nuclear= 2
+			}
+		}
+	}
+
+	ENG_sue_ion = {
+		name = "Sue Ion"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_sue_ion
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear= 1
+			}
+		}
+	}
+
+	ENG_richard_knighton = {
+		name = "Richard Knighton"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_richard_knighton
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_fast_learner }
+			skills = {
+				specialization_air= 1
+			}
+		}
+	}
+
+	ENG_frances_saunders = {
+		name = "Frances Saunders"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_frances_saunders
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_guidance_systems_expert }
+			skills = {
+				specialization_air= 1
+			}
+		}
+	}
+
+	ENG_donald_spiers = {
+		name = "Donald Spiers"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_donald_spiers
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert }
+			skills = {
+				specialization_air= 2
+			}
+		}
+	}
+
+	ENG_alan_bond = {
+		name = "Alan Bond"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_alan_bond
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist }
+			skills = {
+				specialization_air= 2
+			}
+		}
+	}
+
+	ENG_lewis_booth = {
+		name = "Lewis Booth"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_lewis_booth
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_resourceful }
+			skills = {
+				specialization_land= 1
+			}
+		}
+	}
+
+	ENG_ian_king = {
+		name = "Ian King"
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_ian_king
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist }
+			skills = {
+				specialization_land= 2
+			}
 		}
 	}
 }

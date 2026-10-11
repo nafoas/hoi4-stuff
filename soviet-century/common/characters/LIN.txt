@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=fascist_ideology
+			ideology=klan_doctrine
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -40,16 +40,32 @@ characters={
 	}
 	LIN_richard_b._spencer={
 		name="Richard B. Spencer"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/LIN/Portrait_LIN_Richard_Spencer.dds"
 			}
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor11.dds"
+			}
+			army={
+				large="gfx/leaders/LIN/Portrait_LIN_Army_Richard_Spencer.dds"
+			}
 		}
 		country_leader={
 			desc="POLITICS_RICHARD_SPENCER_DESC"
-			ideology=revolutionary_nazi
+			ideology=pierceist_spencerist
 			expire="1.1.1.1"
 			id=-1
+		}
+		field_marshal={
+			traits={ politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
 		}
 	}
 	LIN_mike_crapo={
@@ -163,26 +179,6 @@ characters={
 			legacy_id=-1
 		}
 	}
-	LIN_richard_spencer={
-		name="Richard Spencer"
-		portraits={
-			army={
-				small="gfx/interface/ideas/advisors/europe/european_advisor11.dds"
-			}
-			army={
-				large="gfx/leaders/LIN/Portrait_LIN_Army_Richard_Spencer.dds"
-			}
-		}
-		field_marshal={
-			traits={ politically_connected }
-			skill=1
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
 	LIN_isaac_aguigui={
 		name="Isaac Aguigui"
 		portraits={
@@ -255,6 +251,27 @@ characters={
 			skill=1
 			attack_skill=2
 			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	LIN_richard_spencer={
+		name="Richard Spencer"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor11.dds"
+			}
+			army={
+				large="gfx/leaders/LIN/Portrait_LIN_Army_Richard_Spencer.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
 			legacy_id=-1

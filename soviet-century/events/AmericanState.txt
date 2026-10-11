@@ -1,4 +1,4 @@
-﻿add_namespace = pence
+add_namespace = pence
 
 #Mob rule
 country_event = {
@@ -68,7 +68,7 @@ country_event = {
 			every_country = {
 		        limit = {
 			        NOT = {
-				        tag = AMS
+				        tag = NEA
 				    }
 			    }
 			    news_event = {
@@ -102,7 +102,7 @@ country_event = {
 			every_country = {
 		        limit = {
 			        NOT = {
-				        tag = AMS
+				        tag = NEA
 				    }
 			    }
 			    news_event = {
@@ -136,7 +136,7 @@ country_event = {
 			every_country = {
 		        limit = {
 			        NOT = {
-				        tag = AMS
+				        tag = NEA
 				    }
 			    }
 			    news_event = {
@@ -192,7 +192,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = AMS
+		tag = NEA
 		has_completed_focus = AMS_corporatist_economics
 	}
 	
@@ -237,6 +237,7 @@ country_event = {
 			}
 	}
 }
+
 country_event = {
 	id = pence.6
 	title = pence.6.t
@@ -266,23 +267,99 @@ country_event = {
 	}
 	
 }
-country_event = {
+
+country_event = { #catholics purged from the army
 	id = pence.7
 	title = pence.7.t
 	desc = pence.7.d
-	picture = mike_pence_war
+	picture = american_military_commanders
 	
+	fire_only_once = yes
 	is_triggered_only = yes
-	option = {   
+	
+	option = { #promote protestants
 		name = pence.7.o1
-		set_country_flag = usa_refused
-			 create_wargoal = {
-			    type = annex_everything
-			    target = USA
-		    }
+		trigger = {
+			OR = {
+				has_country_flag = invited_dick_cheney
+				has_country_flag = invited_pat_robertson
+			}
+		}
+		retire_character = NEA_james_charles_kopp
+		retire_character = NEA_john_sharpe
+		retire_character = NEA_john_salvi
+		add_field_marshal_role = {
+			character = NEA_donald_spitz
+			traits = {
+				militias_leader
+			}
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		add_corps_commander_role = {
+			character = NEA_scott_seddon
+			traits = {
+				militias_leader
+			}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	option = {# promote nazis
+		name = pence.7.o2
+		trigger = {
+			has_country_flag = invited_kevin_strom
+		}
+		retire_character = NEA_james_charles_kopp
+		retire_character = NEA_john_sharpe
+		retire_character = NEA_john_salvi
+		add_field_marshal_role = {
+			character = NEA_ken_zrallack
+			traits = {
+				politically_connected
+			}
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+		add_corps_commander_role = {
+			character = NEA_leo_cullinan
+			traits = {
+				substance_addict
+			}
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		add_corps_commander_role = {
+			character = NEA_stephen_farrea
+			traits = {
+				harsh_leader
+			}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
 	}
 }
-country_event = {
+	country_event = {
 	id = pence.8
 	title = pence.8.t
 	desc = pence.8.d
@@ -302,7 +379,7 @@ country_event = {
 	}
 	
 }
-country_event = {
+	country_event = {
 	id = pence.9
 	title = pence.9.t
 	desc = pence.9.d
@@ -331,7 +408,7 @@ country_event = {
 	}
 	
 }
-country_event = {
+	country_event = {
 	id = pence.10
 	title = pence.10.t
 	desc = pence.10.d
@@ -350,7 +427,7 @@ country_event = {
 	}
 	
 }
-country_event = {
+	country_event = {
 	id = pence.11
 	title = pence.11.t
 	desc = pence.11.d

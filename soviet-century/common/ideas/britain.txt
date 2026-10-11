@@ -2,13 +2,10 @@ ideas = {
 
     country = {
 	    
-		
-
 		idea_queen_elizabeth_ii = {
 			allowed = {
 				always = no
 			}
-			
 			
 			removal_cost = -1
 			
@@ -44,7 +41,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = generic_fortify_the_borders
+			picture = scottish_tensions
 			
 			removal_cost = -1
 			
@@ -55,26 +52,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.05
 				political_power_gain = -0.1
-				conscription = -0.002
-			}
-		}
-		
-		idea_prime_minister_owen = {
-			allowed = {
-				always = no
-			}
-			
-			picture = prime_minister_owen
-			
-			removal_cost = -1
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			modifier = {
-				stability_factor = 0.03 
-				war_support_factor = 0.05
+				conscription_factor = -0.08
 			}
 		}
 		
@@ -256,13 +234,33 @@ ideas = {
 				industrial_capacity_factory = 0.1
 			}
 		}
+
+		idea_eng_less_welfare = {
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_deal_with_the_devil2
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				MONTHLY_POPULATION = -0.02
+				industrial_capacity_factory = -0.05
+			}
+		}
 		
 		idea_eng_more_welfare = {
 			allowed = {
 				always = no
 			}
 			
-			picture = generic_deal_with_the_devil2
+			picture = welfare_state
 			
 			removal_cost = -1
 			
@@ -335,6 +333,7 @@ ideas = {
 				army_morale_factor = -0.01
 				training_time_army_factor = -0.025
 				drift_defence_factor = 0.2
+				intelligence_agency_defense = 2.5
 			}
 		}
 		
@@ -362,7 +361,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = generic_pp_unity_bonus
+			picture = traditional_culture
 			
 			removal_cost = -1
 			
@@ -463,7 +462,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = YUG_federal_defense_council
+			picture = welfare_lite
 			
 			removal_cost = -1
 			
@@ -472,9 +471,9 @@ ideas = {
 			}
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.02
+				MONTHLY_POPULATION = 0.025
 				industrial_capacity_factory = 0.025
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.025
 			}
 		}
 		
@@ -483,7 +482,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = the_long_lance
+			picture = nuclear_power
 			
 			removal_cost = -1
 			
@@ -511,7 +510,7 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.1
-				MONTHLY_POPULATION = 0.02
+				MONTHLY_POPULATION = 0.025
 				industrial_capacity_factory = 0.05
 				conscription = 0.005
 			}
@@ -590,8 +589,28 @@ ideas = {
 			}
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.03
+				army_morale_factor = 0.025
+				MONTHLY_POPULATION = 0.05
+				stability_factor = 0.05
 				consumer_goods_factor = 0.05
+			}
+		}
+
+		idea_eng_union_friendships = {
+			allowed = {
+				always = no
+			}
+			
+			picture = strong_unions
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
 			}
 		}
 		
@@ -655,6 +674,9 @@ ideas = {
 				army_org_factor = -0.05
 				army_attack_factor = 0.1
 				conscription = 0.01
+				modifier_army_sub_unit_militia_defence_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.05
+				modifier_army_sub_unit_militia_speed_factor = 0.05
 			}
 		}
 		
@@ -832,7 +854,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.2
 				trade_opinion_factor = -0.3
 				industrial_capacity_factory = 0.1
-				conscription = -0.04
+				conscription_factor = -0.4
 				fascist_drift = 0.035
 				political_power_gain = 0.5
 			}
@@ -897,7 +919,11 @@ ideas = {
 			}
 			
 			modifier = {
-				research_speed_factor = 0.02
+				research_speed_factor = 0.035
+				training_time_army_factor = -0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				modifier_army_sub_unit_fascist_assault_battalion_attack_factor = 0.05
 			}
 		}
 		
@@ -1078,7 +1104,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = brittish_stoicism
+			picture = eng_the_sun_never_sets
 			
 			
 			removal_cost = -1
@@ -1173,11 +1199,12 @@ ideas = {
 			}
 			
 			research_bonus = {
-				computing_tech = -0.05
+				computing_tech = 0.05
 			}
 			
 			modifier = {
 				local_resources_factor = 0.05
+				factory_energy_consumption = -0.1
 			}
 		}
 		
@@ -1501,8 +1528,8 @@ ideas = {
 				fascist_drift = -0.01
 				nationalist_drift = -0.1
 				stability_factor = -0.1
-				trade_opinion_factor = -0.5
-				political_power_factor = 0.5
+				trade_opinion_factor = -0.25
+				political_power_factor = 0.15
 			}
 		}
 		
@@ -1521,7 +1548,7 @@ ideas = {
 			}
 			
 			modifier = {
-				political_power_factor = -0.5
+				political_power_factor = -0.15
 				communist_drift = 0.02
 				national_conservative_drift = 0.01
 				nationalist_drift = 0.01
@@ -1614,8 +1641,8 @@ ideas = {
 				decryption_power = 10
 				drift_defence_factor = 0.2
 				foreign_subversive_activites = -0.3
-				army_org_factor = 0.02 
-				research_speed_factor = 0.01
+				army_org_factor = 0.025
+				research_speed_factor = 0.015
 			}
 		}
 		
@@ -1657,7 +1684,7 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = -0.035
+				consumer_goods_factor = -0.05
 				conscription_factor = 0.05 
 				army_morale_factor = 0.05
 				drift_defence_factor = 0.2
@@ -1679,10 +1706,10 @@ ideas = {
 			}
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.03
-				consumer_goods_factor = 0.1
-				planning_speed = 0.05
-				political_power_gain = 0.1
+				MONTHLY_POPULATION = 0.05
+				consumer_goods_factor = 0.075
+				planning_speed = 0.1
+				political_power_gain = 0.15
 			}
 		}
 		
@@ -1691,7 +1718,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = YUG_all_yugoslavian_regiments
+			picture = generic_manpower_bonus
 			
 			
 			removal_cost = -1
@@ -1720,8 +1747,13 @@ ideas = {
 			}
 			
 			modifier = {
+				conscription = 0.01
+				training_time_factor = -0.1
 				army_org_factor = -0.1
+				modifier_army_sub_unit_militia_defence_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.05
 				army_morale_factor = 0.1
+				max_dig_in = 5
 			}
 		}
 		
@@ -1740,10 +1772,10 @@ ideas = {
 			}
 			
 			modifier = {
-				production_speed_bunker_factor = 0.35
+				production_speed_bunker_factor = 0.20
 				drift_defence_factor = 0.5
 				communist_drift = 0.02
-				trade_opinion_factor = -0.6
+				trade_opinion_factor = -0.5
 				army_morale_factor = 0.1
 			}
 		}
@@ -1765,6 +1797,7 @@ ideas = {
 			modifier = {
 				justify_war_goal_time = -0.5
 				planning_speed = 0.2
+				stability_factor = -0.05
 			}
 		}
 		
@@ -1794,7 +1827,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = generic_wall_line
+			picture = GFX_idea_work_monitored
 			
 			
 			removal_cost = -1
@@ -1806,6 +1839,7 @@ ideas = {
 			modifier = {
 				decryption_power = 10
 				crypto_strength = 1
+				intelligence_agency_defense = 5
 			}
 		}
 		
@@ -1814,7 +1848,7 @@ ideas = {
 				always = no
 			}
 			
-			picture = brittish_stoicism
+			picture = commonwealth_member
 			
 			
 			removal_cost = -1
@@ -1856,7 +1890,28 @@ ideas = {
 				planning_speed = 0.05
 			}
 		}
-		
+
+		idea_eng_the_final_battle = {
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			targeted_modifier = {
+    			tag = SOV
+    			attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+		}
+
 		idea_eng_british_war_council = {
 			allowed = {
 				always = no
@@ -2017,6 +2072,15 @@ ideas = {
 			allowed = {
 				always = no
 			}
+
+			cancel = {
+				OR = {
+					has_government = communist
+					has_government = revolutionary_socialist
+					has_government = national_bolshevik
+					has_government = monarchist #they become the leader, no need to keep idea
+				}
+			}
 			
 			picture = generic_production_bonus
 			
@@ -2036,6 +2100,15 @@ ideas = {
 			allowed = {
 				always = no
 			}
+
+			cancel = {
+				OR = {
+					has_government = communist
+					has_government = revolutionary_socialist
+					has_government = national_bolshevik
+					has_government = monarchist #they become the leader, no need to keep idea
+				}
+			}
 			
 			picture = generic_production_bonus
 			
@@ -2054,6 +2127,15 @@ ideas = {
 		idea_king_edward_ix_andrew = {
 			allowed = {
 				always = no
+			}
+
+			cancel = {
+				OR = {
+					has_government = communist
+					has_government = revolutionary_socialist
+					has_government = national_bolshevik
+					has_government = monarchist #they become the leader, no need to keep idea
+				}
 			}
 			
 			picture = neutrality_idea
@@ -2075,6 +2157,15 @@ ideas = {
 			allowed = {
 				always = no
 			}
+
+			cancel = {
+				OR = {
+					has_government = communist
+					has_government = revolutionary_socialist
+					has_government = national_bolshevik
+					has_government = monarchist #they become the leader, no need to keep idea
+				}
+			}
 			
 			picture = neutrality_idea
 			
@@ -2089,7 +2180,25 @@ ideas = {
 				stability_factor = 0.025
 			}
 		}
-		
+	
+	idea_prime_minister_owen = {
+			allowed = {
+				always = no
+			}
+			
+			picture = prime_minister_owen
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = 0.03 
+				war_support_factor = 0.05
+			}
+		}
 	idea_north_east_investment = {
 		allowed = {
 			always = no
@@ -2108,9 +2217,7 @@ ideas = {
 			industrial_capacity_factory = 0.025	
 		}
 	}
-
-
-		idea_midland_investment = {
+	idea_midland_investment = {
 			allowed = {
 				always = no
 			}
@@ -2131,10 +2238,7 @@ ideas = {
 				trade_council_power = 0.4	
 			}
 		}
-	
-
-
-		idea_southern_investment = {
+	idea_southern_investment = {
 			allowed = {
 				always = no
 			}
@@ -2155,8 +2259,7 @@ ideas = {
 				local_resources_factor = 0.05	
 			}
 		}
-		
-			idea_better_housing = {
+	idea_better_housing = {
 				allowed = {
 					always = no
 				}
@@ -2174,8 +2277,7 @@ ideas = {
 					stability_weekly = 0.01
 				}
 			}
-		
-				idea_democratic_reform = {
+	idea_democratic_reform = {
 					allowed = {
 						always = no
 					}
@@ -2193,8 +2295,7 @@ ideas = {
 						liberal_drift = 0.02
 					}
 				}
-			
-					idea_fixing_the_pound = {
+	idea_fixing_the_pound = {
 						allowed = {
 							always = no
 						}
@@ -2215,8 +2316,7 @@ ideas = {
 
 						}
 					}
-
-					idea_attracting_investors = {
+	idea_attracting_investors = {
 						allowed = {
 							always = no
 						}
@@ -2235,8 +2335,7 @@ ideas = {
 
 						}
 					}
-						
-					idea_scientific_research = {
+	idea_scientific_research = {
 						allowed = {
 							always = no
 						}
@@ -2256,7 +2355,7 @@ ideas = {
 
 						}
 					}
-					idea_free_movement = {
+	idea_free_movement = {
 						allowed = {
 							always = no
 						}
@@ -2276,9 +2375,8 @@ ideas = {
 							industrial_capacity_factory = 0.3
 
 						}
-					}	
-
-					idea_trade_debates = {
+					}
+	idea_trade_debates = {
 						allowed = {
 							always = no
 						}
@@ -2296,7 +2394,7 @@ ideas = {
 							global_building_slots_factor = 0.3
 						}
 					}
-					idea_shared_intelligence = {
+	idea_shared_intelligence = {
 						allowed = {
 							always = no
 						}
@@ -2317,8 +2415,8 @@ ideas = {
 							operative_slot = 1
 
 						}
-					}	
-					idea_mineral_imports_from_canada = {
+					}
+	idea_mineral_imports_from_canada = {
 						allowed = {
 							always = no
 						}
@@ -2336,8 +2434,8 @@ ideas = {
 							political_power_gain = 0.3
 
 						}
-					}	
-					idea_miltary_exersices = {
+					}
+	idea_miltary_exersices = {
 						allowed = {
 							always = no
 						}
@@ -2358,7 +2456,7 @@ ideas = {
 							intel_network_gain_factor = 0.5
 						}
 					}
-					idea_dismissing_parliament = {
+	idea_dismissing_parliament = {
 						allowed = {
 							always = no
 						}
@@ -2376,7 +2474,7 @@ ideas = {
 							stability_factor = 0.05
 						}
 					}
-					idea_the_first_address = {
+	idea_the_first_address = {
 						allowed = {
 							always = no
 						}
@@ -2390,7 +2488,7 @@ ideas = {
 							monarchist_drift = 0.04
 						}
 					}
-					idea_puppet_parliament = {
+	idea_puppet_parliament = {
 						allowed = {
 							always = no
 						}
@@ -2406,7 +2504,7 @@ ideas = {
 							stability_factor = 0.05
 						}
 					}
-					idea_Election_day = {
+	idea_Election_day = {
 						allowed = {
 							always = no
 						}
@@ -2424,7 +2522,7 @@ ideas = {
 							stability_factor = 0.05
 						}
 					}
-					idea_state_industries = {
+	idea_state_industries = {
 						allowed = {
 							always = no
 						}
@@ -2442,7 +2540,7 @@ ideas = {
 							production_speed_buildings_factor = 0.30
 						}
 					}
-					idea_workers_of_britain = {
+	idea_workers_of_britain = {
 						allowed = {
 							always = no
 						}
@@ -2463,7 +2561,7 @@ ideas = {
 							industrial_capacity_factory = 0.025
 						}
 					}
-					idea_strong_borders = {
+	idea_strong_borders = {
 						allowed = {
 							always = no
 						}
@@ -2484,7 +2582,7 @@ ideas = {
 							trade_opinion_factor = -0.5
 						}
 					}
-					idea_rebuild_mi5 = {
+	idea_rebuild_mi5 = {
 						allowed = {
 							always = no
 						}
@@ -2504,8 +2602,7 @@ ideas = {
 							training_time_army_factor = -0.15
 						}
 					}
-				
-					idea_torch_of_democracy = {
+	idea_torch_of_democracy = {
 						allowed = {
 							always = no
 						}
@@ -2528,7 +2625,7 @@ ideas = {
 							moderate_socialist_drift = 0.03
 						}
 					}
-					idea_gates_of_royalty = {
+	idea_gates_of_royalty = {
 						allowed = {
 							always = no
 						}
@@ -2549,9 +2646,7 @@ ideas = {
 
 						}
 					}
-		
-				
-					idea_the_english_fist = {
+	idea_the_english_fist = {
 						allowed = {
 							always = no
 						}
@@ -2572,7 +2667,7 @@ ideas = {
 
 						}
 					}
-					idea_scottish_army = {
+	idea_scottish_army = {
 						allowed = {
 							always = no
 						}
@@ -2594,7 +2689,7 @@ ideas = {
 
 						}
 					}
-					idea_support_democracy_groups = {
+	idea_support_democracy_groups = {
 						allowed = {
 							always = no
 						}
@@ -2617,7 +2712,7 @@ ideas = {
 
 						}
 					}
-					idea_United_isle = {
+	idea_United_isle = {
 						allowed = {
 							always = no
 						}
@@ -2638,7 +2733,7 @@ ideas = {
 
 						}
 					}
-					idea_nationalise_scheme = {
+	idea_nationalise_scheme = {
 						allowed = {
 							always = no
 						}
@@ -2659,7 +2754,7 @@ ideas = {
 
 						}
 					}
-					idea_a_new_system = {
+	idea_a_new_system = {
 						allowed = {
 							always = no
 						}
@@ -2680,7 +2775,7 @@ ideas = {
 
 						}
 					}
-					idea_braiser_britain = {
+	idea_braiser_britain = {
 						allowed = {
 							always = no
 						}
@@ -2703,7 +2798,7 @@ ideas = {
 
 						}
 					}
-					idea_phoenix_front = {
+	idea_phoenix_front = {
 						allowed = {
 							always = no
 						}
@@ -2723,7 +2818,7 @@ ideas = {
 							conscription = 0.002
 						}
 					}
-					idea_suspend_parliament = {
+	idea_suspend_parliament = {
 						allowed = {
 							always = no
 						}
@@ -2743,7 +2838,7 @@ ideas = {
 
 						}
 					}
-					idea_work_camps = {
+	idea_work_camps = {
 						allowed = {
 							always = no
 						}
@@ -2762,7 +2857,7 @@ ideas = {
 
 						}
 					}
-					idea_the_slave_trade = {
+	idea_the_slave_trade = {
 						allowed = {
 							always = no
 						}
@@ -2783,7 +2878,7 @@ ideas = {
 
 						}
 					}
-					idea_british_tradition = {
+	idea_british_tradition = {
 						allowed = {
 							always = no
 						}
@@ -2805,7 +2900,7 @@ ideas = {
 
 						}
 					}
-					idea_private_nhs = {
+	idea_private_nhs = {
 						allowed = {
 							always = no
 						}
@@ -2825,7 +2920,7 @@ ideas = {
 
 						}
 					}
-					idea_unlocking_the_market = {
+	idea_unlocking_the_market = {
 						allowed = {
 							always = no
 						}
@@ -2845,7 +2940,7 @@ ideas = {
 
 						}
 					}
-					idea_testing_the_irish = {
+	idea_testing_the_irish = {
 						allowed = {
 							always = no
 						}
@@ -2865,7 +2960,7 @@ ideas = {
 
 						}
 					}
-					idea_hacking = {
+	idea_hacking = {
 						allowed = {
 							always = no
 						}
@@ -2884,7 +2979,7 @@ ideas = {
 
 						}
 					}
-					idea_british_transformation = {
+	idea_british_transformation = {
 						allowed = {
 							always = no
 						}
@@ -2904,7 +2999,7 @@ ideas = {
 
 						}
 					}
-					idea_the_manchest_riots = {
+	idea_the_manchest_riots = {
 						allowed = {
 							always = no
 						}
@@ -2925,7 +3020,7 @@ ideas = {
 
 						}
 					}
-					idea_remove_public_services = {
+	idea_remove_public_services = {
 						allowed = {
 							always = no
 						}
@@ -2945,7 +3040,7 @@ ideas = {
 							production_speed_industrial_complex_factor = -0.1
 						}
 					}
-					idea_recruiting_the_rebels = {
+	idea_recruiting_the_rebels = {
 						allowed = {
 							always = no
 						}
@@ -2964,7 +3059,7 @@ ideas = {
 							drift_defence_factor = -0.25
 					}
 				}
-					idea_the_armed_forces = {
+	idea_the_armed_forces = {
 						allowed = {
 							always = no
 						}
@@ -2984,7 +3079,7 @@ ideas = {
 						conscription = 0.01
 					}
 				}
-					idea_million_mask_march = {
+	idea_million_mask_march = {
 						allowed = {
 							always = no
 						}
@@ -3006,8 +3101,7 @@ ideas = {
 					
 					}
 				}
-		
-					idea_taking_the_torch = {
+	idea_taking_the_torch = {
 						allowed = {
 							always = no
 						}
@@ -3029,7 +3123,7 @@ ideas = {
 								
 					}
 				}
-				idea_hunt_for_braiser = {
+	idea_hunt_for_braiser = {
 					allowed = {
 						always = no
 					}
@@ -3048,7 +3142,7 @@ ideas = {
 							
 				}
 			}
-			idea_Return_Public_Services = {
+	idea_Return_Public_Services = {
 				allowed = {
 					always = no
 				}
@@ -3069,7 +3163,7 @@ ideas = {
 					MONTHLY_POPULATION = 0.01
 			}
 		}
-		idea_feeding_the_weak = {
+	idea_feeding_the_weak = {
 			allowed = {
 				always = no
 			}
@@ -3109,8 +3203,7 @@ ideas = {
 			political_power_gain = -0.1
 	}
 }
-
-idea_new_speech = {
+	idea_new_speech = {
 	allowed = {
 		always = no
 	}
@@ -3131,7 +3224,7 @@ idea_new_speech = {
 		new_democrat_drift = 0.01
 }
 }
-idea_rebuilding_britain = {
+	idea_rebuilding_britain = {
 	allowed = {
 		always = no
 	}
@@ -3151,7 +3244,7 @@ idea_rebuilding_britain = {
 		industrial_capacity_factory = -0.02
 }
 }
-idea_restore_the_army = {
+	idea_restore_the_army = {
 	allowed = {
 		always = no
 	}
@@ -3171,7 +3264,7 @@ idea_restore_the_army = {
 		nationalist_drift = 0.005
 }
 }
-idea_allow_old_and_new_parties = {
+	idea_allow_old_and_new_parties = {
 	allowed = {
 		always = no
 	}
@@ -3193,7 +3286,7 @@ idea_allow_old_and_new_parties = {
 		moderate_socialist_drift = 0.03
 }
 }
-idea_help_the_veterans = {
+	idea_help_the_veterans = {
 	allowed = {
 		always = no
 	}
@@ -3213,7 +3306,7 @@ idea_help_the_veterans = {
 		political_power_gain = 0.05
 }
 }
-idea_the_economy_and_its_strength = {
+	idea_the_economy_and_its_strength = {
 	allowed = {
 		always = no
 	}
@@ -3233,7 +3326,7 @@ idea_the_economy_and_its_strength = {
 		industrial_capacity_factory = 0.025
 }
 }
-idea_european_british_empire = {
+	idea_european_british_empire = {
 	allowed = {
 		always = no
 	}
@@ -3258,8 +3351,7 @@ idea_european_british_empire = {
 		justify_war_goal_time = 0.1
 }
 }
-
-ENG_Send_In_The_Army = {
+	ENG_Send_In_The_Army = {
 	allowed = {
 		always = no
 	}
@@ -3279,7 +3371,7 @@ ENG_Send_In_The_Army = {
 		conscription = 0.005
 }
 }
-idea_sending_protesters_to_work = {
+	idea_sending_protesters_to_work = {
 	allowed = {
 		always = no
 	}
@@ -3298,7 +3390,7 @@ idea_sending_protesters_to_work = {
 		production_speed_industrial_complex_factor = -0.2
 }
 }
-idea_shared_ideas = {
+	idea_shared_ideas = {
 	allowed = {
 		always = no
 	}
@@ -3318,7 +3410,7 @@ idea_shared_ideas = {
 		industrial_capacity_factory = -0.025
 	}
 }
-idea_the_gears_move = {
+	idea_the_gears_move = {
 	allowed = {
 		always = no
 	}
@@ -3339,8 +3431,7 @@ idea_the_gears_move = {
 		training_time_army_factor = -0.035
 	}
 }
-
-idea_HMRIF = {
+	idea_HMRIF = {
 	allowed = {
 		always = no
 	}
@@ -3360,8 +3451,7 @@ idea_HMRIF = {
 
 	}
 }
-
-idea_low_taxes_for_oversea_business = {
+	idea_low_taxes_for_oversea_business = {
 	allowed = {
 		always = no
 	}
@@ -3383,7 +3473,7 @@ idea_low_taxes_for_oversea_business = {
 
 	}
 }
-idea_a_pointless_crown = {
+	idea_a_pointless_crown = {
 	allowed = {
 		always = no
 	}
@@ -3403,7 +3493,7 @@ idea_a_pointless_crown = {
 
 	}
 }
-idea_new_education = {
+	idea_new_education = {
 	allowed = {
 		always = no
 	}
@@ -3426,8 +3516,7 @@ idea_new_education = {
 
 	}
 }
-
-idea_The_peoples_guard = {
+	idea_The_peoples_guard = {
 	allowed = {
 		always = no
 	}
@@ -3449,8 +3538,7 @@ idea_The_peoples_guard = {
 
 	}
 }
-
-idea_ban_BF_and_BNP = {
+	idea_ban_BF_and_BNP = {
 	allowed = {
 		always = no
 	}
@@ -3470,9 +3558,7 @@ idea_ban_BF_and_BNP = {
 
 	}
 }
-
-
-idea_rebuild_british_industry = {
+	idea_rebuild_british_industry = {
 	allowed = {
 		always = no
 	}
@@ -3493,8 +3579,7 @@ idea_rebuild_british_industry = {
 
 	}
 }
-
-idea_encourage_self_reliance = {
+	idea_encourage_self_reliance = {
 	allowed = {
 		always = no
 	}
@@ -3514,8 +3599,7 @@ idea_encourage_self_reliance = {
 		production_speed_industrial_complex_factor = 0.05
 	}
 }
-
-idea_accept_ILP = {
+	idea_accept_ILP = {
 	allowed = {
 		always = no
 	}
@@ -3532,8 +3616,7 @@ idea_accept_ILP = {
 		moderate_socialist_drift = 0.02 
 	}
 }
-
-Nationalise_key_areas = {
+	Nationalise_key_areas = {
 	allowed = {
 		always = no
 	}
@@ -3553,8 +3636,7 @@ Nationalise_key_areas = {
 	
 	}
 }
-
-idea_new_health_service = {
+	idea_new_health_service = {
 	allowed = {
 		always = no
 	}
@@ -3572,8 +3654,7 @@ idea_new_health_service = {
 		MONTHLY_POPULATION = 0.025
 	}
 }
-
-idea_private_limited_industry = {
+	idea_private_limited_industry = {
 	allowed = {
 		always = no
 	}
@@ -3593,7 +3674,7 @@ idea_private_limited_industry = {
 
 	}
 }
-idea_modernise_NHS_and_services = {
+	idea_modernise_NHS_and_services = {
 	allowed = {
 		always = no
 	}
@@ -3613,7 +3694,7 @@ idea_modernise_NHS_and_services = {
 		consumer_goods_factor = 0.03
 	}
 }
-idea_Bulding_back_better = {
+	idea_Bulding_back_better = {
 	allowed = {
 		always = no
 	}
@@ -3633,8 +3714,7 @@ idea_Bulding_back_better = {
 		consumer_goods_factor = 0.03
 	}
 }
-
-idea_Nationalise_key_areas = {
+	idea_Nationalise_key_areas = {
 	allowed = {
 		always = no
 	}
@@ -3655,8 +3735,7 @@ idea_Nationalise_key_areas = {
 		production_speed_industrial_complex_factor = -0.2
 	}
 }
-
-idea_lower_business_taxes = {
+	idea_lower_business_taxes = {
 	allowed = {
 		always = no
 	}
@@ -3677,30 +3756,7 @@ idea_lower_business_taxes = {
 		production_speed_industrial_complex_factor = -0.2
 	}
 }
-
-idea_lower_business_taxes = {
-	allowed = {
-		always = no
-	}
-	
-	
-	
-	
-	removal_cost = -1
-	
-	allowed_civil_war = {
-		always = yes
-	}
-	
-	modifier = {
-		local_resources_factor = 0.05
-		research_speed_factor = 0.025
-		trade_opinion_factor = 0.4 
-
-	}
-}
-
-idea_update_mines_and_factories = {
+	idea_update_mines_and_factories = {
 	allowed = {
 		always = no
 	}
@@ -3718,8 +3774,7 @@ idea_update_mines_and_factories = {
 
 	}
 }
-
-idea_attract_more_investors = {
+	idea_attract_more_investors = {
 	allowed = {
 		always = no
 	}
@@ -3740,8 +3795,7 @@ idea_attract_more_investors = {
 
 	}
 }
-
-uk_uni_help = {
+	uk_uni_help = {
 	allowed = {
 		always = no
 	}
@@ -3761,8 +3815,7 @@ uk_uni_help = {
 		
 	}
 }
-
-idea_Agriculture_reform = {
+	idea_Agriculture_reform = {
 	allowed = {
 		always = no
 	}
@@ -3778,7 +3831,7 @@ idea_Agriculture_reform = {
 		production_speed_buildings_factor = 0.2
 	}
 }
-New_Industry_uk = {
+	New_Industry_uk = {
 
 
 	allowed = {
@@ -3799,8 +3852,7 @@ New_Industry_uk = {
 		stability_factor = 0.03 
 	}
 }
-
-Builing_back_better = {
+	Builing_back_better = {
 
 
 	allowed = {
@@ -3821,8 +3873,7 @@ Builing_back_better = {
 		stability_factor = 0.03 
 	}
 }
-
-idea_A_better_deal_for_businesses = {
+	idea_A_better_deal_for_businesses = {
 	allowed = {
 		always = no
 	}
@@ -3841,8 +3892,7 @@ idea_A_better_deal_for_businesses = {
 		production_speed_industrial_complex_factor = -0.2
 	}
 }
-
-idea_austerity_plan = {
+	idea_austerity_plan = {
 	allowed = {
 		always = no
 	}
@@ -3861,8 +3911,7 @@ idea_austerity_plan = {
 		production_speed_industrial_complex_factor = -0.2
 	}
 }
-
-idea_new_military_training = {
+	idea_new_military_training = {
 	allowed = {
 		always = no
 	}
@@ -3879,8 +3928,7 @@ idea_new_military_training = {
 		justify_war_goal_time = 0.3
 	}
 }
-
-idea_cut_nhs = {
+	idea_cut_nhs = {
 	allowed = {
 		always = no
 	}
@@ -3900,8 +3948,7 @@ idea_cut_nhs = {
 
 	}
 }
-
-idea_attract_big_investors = {
+	idea_attract_big_investors = {
 	allowed = {
 		always = no
 	}
@@ -3923,8 +3970,7 @@ idea_attract_big_investors = {
 
 	}
 }
-
-idea_increase_value_of_pound = {
+	idea_increase_value_of_pound = {
 	allowed = {
 		always = no
 	}
@@ -3945,8 +3991,7 @@ idea_increase_value_of_pound = {
 
 	}
 }
-
-idea_Arms_Deals = {
+	idea_Arms_Deals = {
 	allowed = {
 		always = no
 	}
@@ -3967,8 +4012,7 @@ idea_Arms_Deals = {
 
 	}
 }
-
-idea_lower_company_taxes = {
+	idea_lower_company_taxes = {
 	allowed = {
 		always = no
 	}
@@ -3992,7 +4036,7 @@ idea_lower_company_taxes = {
 
 	}
 }
-idea_new_military_funding = {
+	idea_new_military_funding = {
 	allowed = {
 		always = no
 	}
@@ -4011,8 +4055,7 @@ idea_new_military_funding = {
 		political_power_gain = 0.015
 	}
 }
-
-idea_new_new_congress = {
+	idea_new_new_congress = {
 	allowed = {
 		always = no
 	}
@@ -4031,8 +4074,7 @@ idea_new_new_congress = {
 		stability_factor = 0.05
 	}
 }
-
-idea_the_three_nation_plan = {
+	idea_the_three_nation_plan = {
 	allowed = {
 		always = no
 	}
@@ -4052,8 +4094,7 @@ idea_the_three_nation_plan = {
 		conscription_factor = -0.05
 	}
 }
-
-idea_modern_factories_and_Farms = {
+	idea_modern_factories_and_Farms = {
 	allowed = {
 		always = no
 	}
@@ -4069,8 +4110,7 @@ idea_modern_factories_and_Farms = {
 		MONTHLY_POPULATION = 0.5
 	}
 }
-
-idea_Dismantle_private_ownership = {
+	idea_Dismantle_private_ownership = {
 	allowed = {
 		always = no
 	}
@@ -4089,8 +4129,7 @@ idea_Dismantle_private_ownership = {
 		consumer_goods_factor = 0.20
 	}
 }
-
-idea_Welsh_Economy = {
+	idea_Welsh_Economy = {
 	allowed = {
 		always = no
 	}
@@ -4108,8 +4147,7 @@ idea_Welsh_Economy = {
 		consumer_goods_factor = -0.02
 	}
 }
-
-idea_welsh_job_market = {
+	idea_welsh_job_market = {
 	allowed = {
 		always = no
 	}
@@ -4128,29 +4166,7 @@ idea_welsh_job_market = {
 		MONTHLY_POPULATION = 0.05
 	}
 }
-
-idea_welsh_job_market = {
-	allowed = {
-		always = no
-	}
-
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-
-
-
-	modifier = {
-		consumer_goods_factor = 0.15
-		stability_factor = 0.10
-		MONTHLY_POPULATION = 0.01
-		industrial_capacity_factory = 0.15
-	}
-}
-
-idea_scottish_plan = {
+	idea_scottish_plan = {
 	allowed = {
 		always = no
 	}
@@ -4167,8 +4183,7 @@ idea_scottish_plan = {
 		compliance_growth = 0.05
 	}
 }
-
-idea_scottish_housing = {
+	idea_scottish_housing = {
 	allowed = {
 		always = no
 	}
@@ -4187,8 +4202,7 @@ idea_scottish_housing = {
 		MONTHLY_POPULATION = 0.01
 	}
 }
-
-arm_the_police = {
+	arm_the_police = {
 	allowed = {
 		always = no
 	}
@@ -4205,28 +4219,7 @@ arm_the_police = {
 		consumer_goods_factor = 0.07
 	}
 }
-
-arm_the_police = {
-	allowed = {
-		always = no
-	}
-
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-
-
-	modifier = {
-		stability_factor = 0.05
-		national_conservative_drift = -0.02
-		political_power_gain = 0.2
-
-	}
-}
-
-the_republic = {
+	the_republic = {
 	allowed = {
 		always = no
 	}
@@ -4248,8 +4241,7 @@ the_republic = {
 
 	}
 }
-
-idea_splendid_isolation = {
+	idea_splendid_isolation = {
 	allowed = {
 		always = no
 	}
@@ -4267,8 +4259,7 @@ idea_splendid_isolation = {
 
 	}
 }
-
-idea_local_union = {
+	idea_local_union = {
 	allowed = {
 		always = no
 	}
@@ -4287,8 +4278,7 @@ idea_local_union = {
 		production_speed_infrastructure_factor = 0.1
 	}
 }
-
-idea_trade_deal = {
+	idea_trade_deal = {
 	allowed = {
 		always = no
 	}
@@ -4307,8 +4297,7 @@ idea_trade_deal = {
 		min_export = -0.1
 	}
 }
-
-idea_british_marshall_lan = {
+	idea_british_marshall_lan = {
 	allowed = {
 		always = no
 	}
@@ -4327,8 +4316,7 @@ idea_british_marshall_lan = {
 		production_factory_max_efficiency_factor = 0.05
 	}
 }
-
-idea_shared_business = {
+	idea_shared_business = {
 	allowed = {
 		always = no
 	}
@@ -4347,8 +4335,7 @@ idea_shared_business = {
 		production_factory_max_efficiency_factor = 0.05
 	}
 }
-
-idea_british_recovery = {
+	idea_british_recovery = {
 	allowed = {
 		always = no
 	}
@@ -4367,8 +4354,7 @@ idea_british_recovery = {
 		consumer_goods_factor = 0.03
 	}
 }
-
-idea_laws_of_the_land = {
+	idea_laws_of_the_land = {
 	allowed = {
 		always = no
 	}
@@ -4386,8 +4372,7 @@ idea_laws_of_the_land = {
 		resistance_growth = -0.3
 	}
 }
-
-ENG_the_alliance = {
+	ENG_the_alliance = {
 	allowed = {
 		always = no
 	}
@@ -4404,8 +4389,7 @@ ENG_the_alliance = {
 		intelligence_agency_defense = 0.10
 	}
 }
-
-ENG_Nigels_Loyalty = {
+	ENG_Nigels_Loyalty = {
 	allowed = {
 		always = no
 	}
@@ -4423,8 +4407,7 @@ ENG_Nigels_Loyalty = {
 		army_core_defence_factor = 0.10
 	}
 }
-
-ENG_A_simple_reform = {
+	ENG_A_simple_reform = {
 	allowed = {
 		always = no
 	}
@@ -4444,8 +4427,7 @@ ENG_A_simple_reform = {
 		resistance_damage_to_garrison = -0.10
 	}
 }
-
-ENG_rebuild_party_system = {
+	ENG_rebuild_party_system = {
 	allowed = {
 		always = no
 	}
@@ -4463,8 +4445,7 @@ ENG_rebuild_party_system = {
 		stability_weekly = 0.01
 	}
 }
-
-ENG_People_want_revenge = {
+	ENG_People_want_revenge = {
 	allowed = {
 		always = no
 	}
@@ -4482,9 +4463,7 @@ ENG_People_want_revenge = {
 		stability_weekly = -0.01
 	}
 }
-
-
-idea_stop_extinction_of_brits = {
+	idea_stop_extinction_of_brits = {
 	allowed = {
 		always = no
 	}
@@ -4502,9 +4481,7 @@ idea_stop_extinction_of_brits = {
 		stability_weekly = 0.01
 	}
 }
-
-
-idea_deport_all_immigrants = {
+	idea_deport_all_immigrants = {
 	allowed = {
 		always = no
 	}
@@ -4525,10 +4502,7 @@ idea_deport_all_immigrants = {
 		communist_drift = -0.03
 	}
 }
-
-
-
-idea_rebuild_british_isle = {
+	idea_rebuild_british_isle = {
 	allowed = {
 		always = no
 	}
@@ -4547,9 +4521,7 @@ idea_rebuild_british_isle = {
 
 	}
 }
-
-
-idea_reform_police = {
+	idea_reform_police = {
 	allowed = {
 		always = no
 	}
@@ -4567,8 +4539,7 @@ idea_reform_police = {
 		decryption_power = 10
 	}
 }
-
-idea_rigged_elections = {
+	idea_rigged_elections = {
 	allowed = {
 		always = no
 	}
@@ -4588,8 +4559,7 @@ idea_rigged_elections = {
 		nationalist_drift = 0.04
 	}
 }
-
-idea_new_housing_market = {
+	idea_new_housing_market = {
 	allowed = {
 		always = no
 	}
@@ -4607,8 +4577,7 @@ idea_new_housing_market = {
 		stability_factor = 0.02
 	}
 }
-
-idea_Welfare_for_true_british = {
+	idea_Welfare_for_true_british = {
 	allowed = {
 		always = no
 	}
@@ -4629,8 +4598,7 @@ idea_Welfare_for_true_british = {
 		industrial_capacity_factory = 0.03
 	}
 }
-
-idea_money_for_english_isle = {
+	idea_money_for_english_isle = {
 	allowed = {
 		always = no
 	}
@@ -4651,8 +4619,7 @@ idea_money_for_english_isle = {
 
 	}
 }
-
-idea_mass_privatisation = {
+	idea_mass_privatisation = {
 	allowed = {
 		always = no
 	}
@@ -4674,8 +4641,7 @@ idea_mass_privatisation = {
 
 	}
 }
-
-idea_defence_spending = {
+	idea_defence_spending = {
 	allowed = {
 		always = no
 	}
@@ -4700,8 +4666,7 @@ idea_defence_spending = {
 		
 	}
 }
-
-idea_less_welfare = {
+	idea_less_welfare = {
 	allowed = {
 		always = no
 	}
@@ -4720,8 +4685,7 @@ idea_less_welfare = {
 		MONTHLY_POPULATION = -0.02
 	}
 }
-
-idea_oversea_investment = {
+	idea_oversea_investment = {
 	allowed = {
 		always = no
 	}
@@ -4742,8 +4706,7 @@ idea_oversea_investment = {
 		research_speed_factor = 0.05
 	}
 }
-
-idea_new_bank_of_england = {
+	idea_new_bank_of_england = {
 	allowed = {
 		always = no
 	}
@@ -4764,9 +4727,7 @@ idea_new_bank_of_england = {
 		conversion_cost_mil_to_civ_factor = 0.3
 	}
 }
-
-
-idea_reward_the_rich = {
+	idea_reward_the_rich = {
 	allowed = {
 		always = no
 	}
@@ -4786,8 +4747,7 @@ idea_reward_the_rich = {
 		
 	}
 }
-
-idea_secret_police = {
+	idea_secret_police = {
 	allowed = {
 		always = no
 	}
@@ -4807,8 +4767,7 @@ idea_secret_police = {
 		
 	}
 }
-
-idea_rescue_aid = {
+	idea_rescue_aid = {
 	allowed = {
 		always = no
 	}
@@ -4829,9 +4788,7 @@ idea_rescue_aid = {
 		
 	}
 }
-
-
-idea_scottish_aid = {
+	idea_scottish_aid = {
 	allowed = {
 		always = no
 	}
@@ -4852,8 +4809,7 @@ idea_scottish_aid = {
 		
 	}
 }
-
-idea_recover_scottish_industry = {
+	idea_recover_scottish_industry = {
 	allowed = {
 		always = no
 	}
@@ -4874,8 +4830,7 @@ idea_recover_scottish_industry = {
 		conversion_cost_mil_to_civ_factor = 0.3
 	}
 }
-
-idea_meeting_the_poor = {
+	idea_meeting_the_poor = {
 	allowed = {
 		always = no
 	}
@@ -4895,52 +4850,7 @@ idea_meeting_the_poor = {
 		political_power_gain = 0.5
 	}
 }
-
-idea_meeting_the_poor = {
-	allowed = {
-		always = no
-	}
-
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-
-	
-
-	modifier = {
-		production_factory_efficiency_gain_factor = 0.05
-		min_export = 0.5
-		industrial_capacity_factory = 0.1
-		industrial_capacity_dockyard = 0.1
-		production_speed_buildings_factor = 0.1
-		research_speed_factor = 0.05
-	}
-}
-
-
-idea_meeting_the_poor = {
-	allowed = {
-		always = no
-	}
-
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-
-	
-
-	modifier = {
-		consumer_goods_factor = 0.10
-		stability_factor = 0.15
-		MONTHLY_POPULATION = 0.05
-	}
-}
-
-idea_better_welfare = {
+	idea_better_welfare = {
 	allowed = {
 		always = no
 	}
@@ -4961,8 +4871,7 @@ idea_better_welfare = {
 		industrial_capacity_factory = 0.03
 	}
 }
-
-idea_reopen_parliament = {
+	idea_reopen_parliament = {
 	allowed = {
 		always = no
 	}
@@ -4985,8 +4894,7 @@ idea_reopen_parliament = {
 		conservative_acceptance = 15
 	}
 }
-
-idea_the_economy_problem = {
+	idea_the_economy_problem = {
 	allowed = {
 		always = no
 	}
@@ -5007,29 +4915,7 @@ idea_the_economy_problem = {
 		conversion_cost_mil_to_civ_factor = 0.3
 	}
 }
-
-idea_the_economy_problem = {
-	allowed = {
-		always = no
-	}
-
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-
-	
-
-	modifier = {
-		MONTHLY_POPULATION = 0.01
-		stability_factor = 0.02
-		political_power_gain = 0.1
-
-	}
-}
-
-idea_three_nations_industry = {
+	idea_three_nations_industry = {
 	allowed = {
 		always = no
 	}
@@ -5051,11 +4937,8 @@ idea_three_nations_industry = {
 
 	}
 }
-
-
-	
 }
-
+	
 	# TECHNOLOGY
 	tank_manufacturer = { 
 	
@@ -5066,7 +4949,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = tank_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = tank_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5092,7 +4975,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = naval_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = naval_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5118,7 +5001,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5132,14 +5015,14 @@ idea_three_nations_industry = {
 			traits = { light_aircraft_manufacturer }
 		}
 		
-		british_aerospace = {
+		ENG_bae_systems_aircraft = {
 			
-			picture = generic_air_manufacturer_3
+			picture = bae_systems
 
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = medium_aircraft_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = medium_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5160,7 +5043,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = heavy_aircraft_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = heavy_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5181,7 +5064,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = naval_aircraft_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = naval_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5194,7 +5077,28 @@ idea_three_nations_industry = {
 			
 			traits = { naval_aircraft_manufacturer }
 		}
-	}
+	
+	british_aerospace = {
+			
+			picture = generic_air_manufacturer_3
+
+			allowed = {
+			    original_tag = ENG
+				NOT = {
+					has_available_idea_with_traits = { idea = medium_aircraft_manufacturer limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+}
 
 	industrial_concern = {
 	
@@ -5205,7 +5109,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = industrial_concern limit = 1 }
+					has_allowed_idea_with_traits = { idea = industrial_concern limit = 1 }
 				}
 			}
 			
@@ -5219,7 +5123,46 @@ idea_three_nations_industry = {
 			traits = { industrial_concern }
 		}
 
-		marconi_electronic_systems = {
+		ENG_bae_systems_electronics = {
+			
+			picture = bae_systems
+
+			allowed = {
+			    original_tag = ENG
+				NOT = {
+					has_allowed_idea_with_traits = { idea = electronics_concern limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}
+
+		shell = {
+
+			picture = shell
+
+			allowed = {
+			    original_tag = ENG
+			}
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				synth_resources = 0.10
+			}
+
+			traits = { refinery_concern }
+		}
+	
+	marconi_electronic_systems = {
 			
 			picture = generic_electronics_concern_1
 
@@ -5239,7 +5182,7 @@ idea_three_nations_industry = {
 			
 			traits = { electronics_concern }
 		}
-	}
+}
 
 	materiel_manufacturer = {
 	
@@ -5252,7 +5195,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = motorized_equipment_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = motorized_equipment_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5273,7 +5216,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = infantry_equipment_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = infantry_equipment_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5294,7 +5237,7 @@ idea_three_nations_industry = {
 			allowed = {
 			    original_tag = ENG
 				NOT = {
-					has_available_idea_with_traits = { idea = artillery_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = artillery_manufacturer limit = 1 }
 				}
 			}
 			
@@ -5324,8 +5267,286 @@ idea_three_nations_industry = {
 			
 			traits = { flamboyant_tough_guy }			
 		}
+		
+		britain_sic_jayda_fransen = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = fascist
+				} 
+			}
+			
+			traits = { power_hungry_demagogue }			
+		}
+		
+		britain_sic_adam_walker = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = nationalist
+				} 
+			}
+			
+			traits = { flamboyant_tough_guy }			
+		}
+		
+		britain_sic_jacob_reesmogg = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = monarchist
+				} 
+			}
+			
+			traits = { autocratic_charmer }			
+		}
+		
+		britain_sic_nigel_farage = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = national_conservative
+				}
+				NOT = {
+					has_country_leader = {
+						name = "Nigel Farage"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { power_hungry_demagogue }
+		}
+		
+		britain_sic_michael_gove = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = national_conservative
+				} 
+			}
+			
+			traits = { silent_workhorse }			
+		}
+		
+		britain_sic_simon_hughes = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = centrist
+				} 
+			}
+			
+			traits = { power_hungry_demagogue }			
+		}
+		
+		britain_sic_shirley_williams = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = liberal
+				}
+				NOT = {
+					has_country_leader = {
+						name = "Shirley Williams"
+						ruling_only = yes
+					}
+				}
+				NOT = {
+					has_country_flag = britain_shirley_williams_retirement
+				}
+			}
+			
+			traits = { insignificant_layman }			
+		}
+		
+		britain_sic_gordon_brown = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = liberal
+				} 
+			}
+			
+			traits = { silent_workhorse }			
+		}
+		
+		britain_sic_jon_cruddas = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = new_democrat
+				}
+			}
+			
+			traits = { silent_workhorse }			
+		}
+		
+		britain_sic_angela_eagle = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = new_democrat
+				} 
+			}
+			
+			traits = { naive_optimist }			
+		}
+		
+		britain_sic_ken_livingstone = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+				} 
+			}
+			
+			traits = { flamboyant_tough_guy }			
+		}
+		
+		britain_sic_len_mccluskey = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				}
+				NOT = {
+					has_country_leader = {
+						name = "Len McCluskey"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { ambitious_union_boss }			
+		}
+		
+		britain_sic_gail_cartmail = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				}
+			}
+			
+			traits = { political_protege }			
+		}
+		
+		britain_sic_george_monboit = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				}
+			}
+			
+			traits = { insignificant_layman }			
+		}
+		
+		britain_sic_robert_crow = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				}
+			}
+			
+			traits = { ambitious_union_boss }			
+		}
+		
+		britain_sic_harpal_brar = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				}
+			}
+			
+			traits = { power_hungry_demagogue }			
+		}
+		
+		britain_sic_michael_chant = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				}
+			}
+			
+			traits = { silent_workhorse }			
+		}
+		
 	}
-
+	
 	foreign_minister = {
 	
 		britain_fom_dominic_cummings = {
@@ -5342,8 +5563,209 @@ idea_three_nations_industry = {
 			
 			traits = { international_schemer }			
 		}
+		
+		britain_fom_michael_mclaughlin = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = fascist
+				} 
+			}
+			
+			traits = { international_schemer }			
+		}
+		
+		britain_fom_arthur_kemp = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = nationalist
+				} 
+			}
+			
+			traits = { iron_fisted_brute }			
+		}
+		
+		britain_fom_nigel_farage = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = monarchist
+				} 
+			}
+			
+			traits = { ideological_crusader }			
+		}
+		
+		britain_fom_damian_green = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = national_conservative
+				} 
+			}
+			
+			traits = { apologetic_clerk }			
+		}
+		
+		britain_fom_jeremy_browne = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = centrist
+				} 
+			}
+			
+			traits = { ideological_crusader }			
+		}
+		
+		britain_fom_mike_gapes = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = liberal
+				} 
+			}
+			
+			traits = { apologetic_clerk }			
+		}
+		
+		britain_fom_peter_hain = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = new_democrat
+				} 
+			}
+			
+			traits = { apologetic_clerk }			
+		}
+		
+		britain_fom_margaret_beckett = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = moderate_socialist
+				} 
+			}
+			
+			traits = { ideological_crusader }			
+		}
+		
+		britain_fom_lindsey_german = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				}
+				NOT = {
+					has_country_leader = {
+						name = "Lindsey German"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { apologetic_clerk }			
+		}
+		
+		britain_fom_martin_smith = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				} 
+			}
+			
+			traits = { apologetic_clerk }			
+		}
+		
+		britain_fom_arshad_ali = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				} 
+			}
+			
+			traits = { great_compromiser }			
+		}
+		
+		britain_fom_liz_payne = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				} 
+			}
+			
+			traits = { ideological_crusader }			
+		}
+		
+		britain_fom_dermot_hudson = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				} 
+			}
+			
+			traits = { biased_intellectual }			
+		}
 	}
-
+	
 	industry_minister = {
 		
 		britain_ind_anthony_bamford = {
@@ -5360,8 +5782,181 @@ idea_three_nations_industry = {
 			
 			traits = { corrupt_kleptocrat }			
 		}
+		
+		britain_ind_alan_ayling = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = fascist
+				} 
+			}
+			
+			traits = { entrepreneurial_fink }			
+		}
+				
+		britain_ind_jim_dowson = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = nationalist
+				} 
+			}
+			
+			traits = { corrupt_kleptocrat }			
+		}
+		
+		britain_ind_rupert_murdoch = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = monarchist
+				} 
+			}
+			
+			traits = { entrepreneurial_fink }			
+		}
+		
+		britain_ind_philip_hammond = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = national_conservative
+				} 
+			}
+			
+			traits = { extreme_regulator }			
+		}
+		
+		britain_ind_david_laws = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = centrist
+				} 
+			}
+			
+			traits = { entrepreneurial_fink }			
+		}
+		
+		britain_ind_kenneth_clarke = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = liberal
+				} 
+			}
+			
+			traits = { administrative_genius }			
+		}
+		
+		britain_ind_andy_burnham = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = new_democrat
+				} 
+			}
+			
+			traits = { extreme_regulator }			
+		}
+		
+		britain_ind_john_mcdonnell = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+				}
+				NOT = {
+					has_country_leader = {
+						name = "John McDonnell"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { administrative_genius }			
+		}
+		
+		britain_ind_paul_cockshott = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				} 
+			}
+			
+			traits = { former_scientist }			
+		}
+		
+		britain_ind_ian_lavery = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = moderate_socialist
+					has_government = communist
+				} 
+			}
+			
+			traits = { resource_industrialist }			
+		}
+		
+		britain_ind_ella_rule = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				} 
+			}
+			
+			traits = { extreme_regulator }			
+		}
 	}
-
+	
 	national_security_minister = {
 	
 		britain_nsm_ben_wallace = {
@@ -5378,8 +5973,203 @@ idea_three_nations_industry = {
 			
 			traits = { isolationist }			
 		}
+		
+		britain_nsm_mark_collett = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = fascist
+				} 
+			}
+			
+			traits = { efficient_sociopath }			
+		}
+		
+		britain_nsm_tommy_robinson = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = nationalist
+				} 
+			}
+			
+			traits = { prince_of_terror }			
+		}
+		
+		britain_nsm_princess_anne = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = monarchist
+				} 
+			}
+			
+			traits = { compassionate_gentleman }			
+		}
+		
+		britain_nsm_amber_rudd = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = national_conservative
+				} 
+			}
+			
+			traits = { silent_lawyer }			
+		}
+		
+		britain_nsm_nick_harvey = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = centrist
+				} 
+			}
+			
+			traits = { compassionate_gentleman }			
+		}
+		
+		britain_nsm_chris_leslie = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = liberal
+				} 
+			}
+			
+			traits = { compassionate_gentleman }			
+		}
+		
+		britain_nsm_emily_thornberry = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = new_democrat
+				} 
+			}
+			
+			traits = { kind_hearted_activist }			
+		}
+		
+		britain_nsm_george_galloway = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = moderate_socialist
+				} 
+			}
+			
+			traits = { efficient_sociopath }			
+		}
+		
+		britain_nsm_clive_lewis = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = moderate_socialist
+				} 
+			}
+			
+			traits = { silent_lawyer }			
+		}
+		
+		britain_nsm_frank_sweeney = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				} 
+			}
+			
+			traits = { compassionate_gentleman }			
+		}
+		
+		britain_nsm_keir_starmer = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				} 
+			}
+			
+			traits = { paranoid_tyrant }			
+		}
+		
+		britain_nsm_arthur_scargill = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				} 
+			}
+			
+			traits = { efficient_sociopath }			
+		}
+		
+		britain_nsm_roy_greenslade = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				} 
+			}
+			
+			traits = { prince_of_terror }			
+		}
 	}
-
+	
 	intelligence_minister = {
 	
 		britain_inm_mikko_vehvilainen = {
@@ -5396,6 +6186,72 @@ idea_three_nations_industry = {
 			
 			traits = { novice_mastermind }			
 		}
+		
+		britain_inm_andrew_brons = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = nationalist
+				}
+			}
+			
+			traits = { novice_mastermind }			
+		}
+		
+		britain_inm_john_sawers = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = fascist
+					has_government = monarchist
+					has_government = national_conservative
+					has_government = centrist
+					has_government = liberal
+					has_government = new_democrat
+					has_government = moderate_socialist
+				}
+			}
+			
+			traits = { intelligence_director }			
+		}
+		
+		britain_inm_china_mieville = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = revolutionary_socialist
+				}
+			}
+			
+			traits = { novice_mastermind }			
+		}
+		
+		britain_inm_andrew_murray = {
+		
+		    allowed = {
+			    original_tag = ENG
+			}
+			
+			available = {
+			    OR = {
+					has_government = communist
+				}
+			}
+			
+			traits = { politician_with_connections }			
+		}
 	}
-
 }
+

@@ -524,7 +524,6 @@ country_event = {
 	}
 }
 
-
 #Texas refuses to become a state
 country_event = {
 	id = usa.7
@@ -619,9 +618,9 @@ country_event = {
 			factor = 100
 		}
 		random_owned_state = {
-		    remove_building = {
+		    damage_building = {
 				type = infrastructure
-				level = 1
+				damage = 1
 			}
 		}
 	}
@@ -877,7 +876,6 @@ country_event = {
 		OR = {
 		    has_country_flag = republicans_maintain_majority
 			has_country_flag = independence_union_gains_power
-			has_country_flag = liberty_front_gain_power
 		}
 		
 	}
@@ -928,7 +926,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = {   
+	option = {
+		hidden_effect = {
+		add_named_threat = { threat = -5 name = USA_davis_revenge }
+		}	
 		name = usa.21.o1
 		set_cosmetic_tag = CSA
 	}
@@ -1080,16 +1081,21 @@ country_event = {
 		}
 		add_political_power = -150
 		add_stability = 0.02
-		create_country_leader = {
-	        name = "Barack Obama"
-	        picture = "Portrait_USA_Barack_Obama.dds"
-	        ideology = centrist_ideology
+		
+		USA_barack_obama = {
+			promote_character = centrist_ideology
 		}
 		set_politics = {
 		ruling_party = centrist
 		}
-		add_ideas = usa_charlie_crist
-		
+		custom_effect_tooltip = USA_obamna_cabinet
+		hidden_effect = {
+			add_ideas = usa_charlie_crist
+			add_ideas = usa_fom_brian_mast
+			add_ideas = usa_ind_john_barrow
+			add_ideas = usa_nsm_joe_manchin
+			add_ideas = usa_inm_michael_morell
+		}
 		country_event = { id = usa.114 }
 		
 	}
@@ -1148,15 +1154,20 @@ country_event = {
 			popularity = 0.02
 		}
 		add_political_power = -50
-		create_country_leader = {
-	        name = "Steve Bannon"
-	        picture = "Portrait_USA_Steve_Bannon.dds"
-	        ideology = fascist_ideology
-        }
+		USA_steve_bannon = {
+			promote_character = fascist_ideology
+		}
         set_politics = {
 		ruling_party = fascist
 		}
-		add_ideas = usa_roy_moore
+		custom_effect_tooltip = USA_steve_bannon_cabinet
+		hidden_effect = {
+			add_ideas = usa_roy_moore
+			add_ideas = usa_fom_steve_womack
+			add_ideas = usa_ind_matt_gaetz
+			add_ideas = usa_nsm_steven_palazzo
+			add_ideas = usa_inm_cofer_black
+		}
 		country_event = { id = usa.115 }
 	}
 	
@@ -1215,15 +1226,20 @@ country_event = {
 		}
 		add_political_power = 100
 		add_stability = -0.08
-		create_country_leader = {
-	        name = "Mike Huckabee"
-	        picture = "Portrait_USA_Mike_Huckabee.dds"
-	        ideology = american_conservative
-        }
+		USA_mike_huckabee = {
+			promote_character = american_conservative
+		}
         set_politics = {
 		ruling_party = national_conservative
 		}
-		add_ideas = usa_jeff_sessions
+		custom_effect_tooltip = USA_mike_huckabee_cabinet
+		hidden_effect = {
+			add_ideas = usa_jeff_sessions
+			add_ideas = usa_fom_joe_wilson
+			add_ideas = usa_ind_elaine_chao
+			add_ideas = usa_nsm_steve_scalise
+			add_ideas = usa_inm_gina_haspel
+		}
 		country_event = { id = usa.116 }
 	}
 	
@@ -1282,15 +1298,20 @@ country_event = {
 		}
 		add_political_power = 200
 		add_stability = -0.1
-		create_country_leader = {
-	        name = "Bobby Jindal"
-	        picture = "Portrait_USA_Bobby_Jindal.dds"
-	        ideology = american_conservative
-        }
-         set_politics = {
+		USA_bobby_jindal = {
+			promote_character = american_conservative
+		}
+        set_politics = {
 		ruling_party = national_conservative
 		}
-		add_ideas = usa_william_mcraven
+		custom_effect_tooltip = USA_bobby_jindal_cabinet
+		hidden_effect = {
+			add_ideas = usa_william_mcraven
+			add_ideas = usa_fom_virgil_goode
+			add_ideas = usa_ind_elaine_chao
+			add_ideas = usa_nsm_steve_scalise
+			add_ideas = usa_inm_gina_haspel
+		}
 		country_event = { id = usa.117 }
 	}
 	
@@ -3189,6 +3210,7 @@ country_event = {
 	option = {   
 		name = usa.104.o1
 		hidden_effect = {
+		add_named_threat = { threat = 1	 name = USA_the_time_has_come }
 			every_country = {
 		        limit = {
 			        NOT = {
@@ -3759,7 +3781,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = {   
+	option = {
+		hidden_effect = {
+		add_named_threat = { threat = 5 name = USA_war_comming_soon }
+		}	
 		name = usa.137.o1
 	}
 	
@@ -4124,21 +4149,17 @@ country_event = {
 	
 	option = {   #Bypass succession, first lady becomes president
 		name = usa.154.o1
-		create_country_leader = {
-	        name = "Dianne Bentley"
-	        picture = "Portrait_USA_Dianne_Bentley.dds"
-	        ideology = american_conservative
-        }
+		USA_dianne_bentley = {
+			promote_character = american_conservative
+		}
 		set_country_flag = dianne_is_president
 	}
 	
 	option = {   #Vice President Omarosa Manigault becomes president
 		name = usa.154.o2
-		create_country_leader = {
-	        name = "Omarosa Manigault"
-	        picture = "Portrait_USA_Omarosa_Manigault.dds"
-	        ideology = fiscal_conservative
-        }
+		USA_omarosa_manigault = {
+			promote_character = american_conservative
+		}
 		set_country_flag = omarosa_is_president
 		add_ideas = usa_william_mcraven
 	}
@@ -4194,7 +4215,13 @@ country_event = {
 		tag = USA
 		date > 2018.5.1
 		date < 2018.5.30
-		has_country_flag = omarosa_is_president
+		OR = {
+			has_country_flag = omarosa_is_president
+			AND = {
+				has_government = national_conservative
+				is_puppet = yes
+			}
+		}
 	}
 	
 	option = {   #Omarosa Manigault
@@ -4232,6 +4259,9 @@ country_event = {
 		date > 2018.4.1
 		date < 2018.4.30
 		has_government = national_conservative
+		NOT = {
+			has_completed_focus = USA_a_legitimate_ruler
+		}
 	}
 	
 	option = {   #Joe Biden
@@ -4269,6 +4299,9 @@ country_event = {
 		date > 2018.11.1
 		date < 2018.11.30
 		has_government = national_conservative
+		NOT = {
+			has_completed_focus = USA_a_legitimate_ruler
+		}
 	}
 	
 	option = {   #Independence Union
@@ -4281,61 +4314,49 @@ country_event = {
 		    limit = {
 			    has_country_flag = president_dianne_candidate_sessions
 			}
-			create_country_leader = {
-	            name = "Jeff Sessions"
-	            picture = "Portrait_USA_Jeff_Sessions.dds"
-	            ideology = american_conservative
-            }
+			USA_jeff_sessions = {
+				promote_character = american_conservative
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = president_dianne_candidate_friedman
 			}
-			create_country_leader = {
-	            name = "David Friedman"
-	            picture = "Portrait_USA_David_Friedman.dds"
-	            ideology = american_conservative
-            }
+			USA_david_friedman = {
+				promote_character = american_conservative
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = president_dianne_candidate_carter
 			}
-			create_country_leader = {
-	            name = "James Carter"
-	            picture = "Portrait_USA_James_Carter.dds"
-	            ideology = american_conservative
-            }
+			USA_james_carter = {
+				promote_character = american_conservative
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = president_omarosa_candidate_neugebauer
 			}
-			create_country_leader = {
-	            name = "Robert Neugebauer"
-	            picture = "Portrait_USA_Robert_Neugebauer.dds"
-	            ideology = fiscal_conservative
-            }
+			USA_robert_neugebauer = {
+				promote_character = american_conservative
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = president_omarosa_candidate_long
 			}
-			create_country_leader = {
-	            name = "Gerald Long"
-	            picture = "Portrait_USA_Gerald_Long.dds"
-	            ideology = fiscal_conservative
-            }
+			USA_gerald_long = {
+				promote_character = american_conservative
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = president_omarosa_candidate_haley
 			}
-			create_country_leader = {
-	            name = "Nikki Haley"
-	            picture = "Portrait_USA_Nikki_Haley.dds"
-	            ideology = fiscal_conservative
-            }
+			USA_nikki_haley = {
+				promote_character = american_conservative
+			}
 		}
 	}
 	
@@ -4349,47 +4370,46 @@ country_event = {
 			ideology = liberal
 			popularity = 0.5
 		}
+		custom_effect_tooltip = USA_democratic_cabinet
+		hidden_effect = {
+			add_ideas = usa_cedric_richmond
+			add_ideas = usa_fom_abigail_spanberger
+			add_ideas = usa_ind_ted_turner
+			add_ideas = usa_nsm_ralph_northam
+			add_ideas = usa_inm_william_joseph_burns
+		}
 		if = {
 		    limit = {
 			    has_country_flag = candidate_biden
 			}
-			create_country_leader = {
-	            name = "Joseph Biden"
-	            picture = "Portrait_USA_Joseph_Biden.dds"
-	            ideology = old_american_democrats
-            }
+			USA_joseph_biden = {
+				promote_character = old_american_democrats
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = candidate_lynch
 			}
-			create_country_leader = {
-	            name = "Loretta Lynch"
-	            picture = "Portrait_USA_Loretta_Lynch.dds"
-	            ideology = old_american_democrats
-            }
+			USA_loretta_lynch = {
+				promote_character = old_american_democrats
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = candidate_kaine
 			}
-			create_country_leader = {
-	            name = "Timothy Kaine"
-	            picture = "Portrait_USA_Timothy_Kaine.dds"
-	            ideology = old_american_democrats
-            }
+			USA_timothy_kaine = {
+				promote_character = old_american_democrats
+			}
 		}
 		if = {
 		    limit = {
 			    has_country_flag = candidate_capito
 			}
-			create_country_leader = {
-	            name = "Shelley Capito"
-	            picture = "Portrait_USA_Shelley_Capito.dds"
-	            ideology = old_american_democrats
-            }
+			USA_shelley_capito = {
+				promote_character = old_american_democrats
+			}
 		}
-		add_ideas = usa_cedric_richmond
 	}
 }
 
@@ -4407,6 +4427,10 @@ country_event = {
 		date > 2018.5.1
 		date < 2018.5.30
 		has_country_flag = donald_rumsfeld_elected
+		has_country_leader = {
+			name = "Donald Rumsfeld"
+			ruling_only = yes
+		}
 	}
 	
 	option = {   #Lou Dobbs
@@ -4448,11 +4472,10 @@ country_event = {
 	
 	option = {   
 		name = usa.160.o1
-		create_country_leader = {
-	        name = "Lou Dobbs"
-	        picture = "Portrait_USA_Lou_Dobbs.dds"
-	        ideology = american_nationalist
-        }
+		USA_lou_dobbs = {
+			promote_character = american_nationalist
+		}
+		add_ideas = usa_karl_rove
 	}
 }
 
@@ -4474,11 +4497,10 @@ country_event = {
 	
 	option = {   
 		name = usa.161.o1
-		create_country_leader = {
-	        name = "Carly Fiorina"
-	        picture = "Portrait_USA_Carly_Fiorina.dds"
-	        ideology = american_nationalist
-        }
+		USA_carly_fiorina = {
+			promote_character = american_nationalist
+		}
+		add_ideas = usa_karl_rove
 	}
 }
 
@@ -4500,11 +4522,10 @@ country_event = {
 	
 	option = {   
 		name = usa.162.o1
-		create_country_leader = {
-	        name = "Roque De La Fuente"
-	        picture = "Portrait_USA_Roque_De_La_Fuente.dds"
-	        ideology = american_nationalist
-        }
+		USA_roque_de_la_fuente = {
+			promote_character = american_nationalist
+		}
+		add_ideas = usa_karl_rove
 	}
 }
 
@@ -4526,11 +4547,10 @@ country_event = {
 	
 	option = {   
 		name = usa.163.o1
-		create_country_leader = {
-	        name = "John Walters"
-	        picture = "Portrait_USA_John_Walters.dds"
-	        ideology = american_nationalist
-        }
+		USA_john_walters = {
+			promote_character = american_nationalist
+		}
+		add_ideas = usa_karl_rove
 	}
 }
 
@@ -4604,11 +4624,10 @@ country_event = {
 	
 	option = {   
 		name = usa.166.o1
-		create_country_leader = {
-	        name = "Wayne LaPierre"
-	        picture = "Portrait_USA_Wayne_LaPierre.dds"
-	        ideology = american_nationalist
-        }
+		USA_wayne_lapierre = {
+			promote_character = american_nationalist
+		}
+		add_ideas = usa_karl_rove
 	}
 }
 
@@ -4638,10 +4657,8 @@ country_event = {
 					has_country_flag = USA_monarchy_election
 				}
 			}
-			create_country_leader = {
-				name = "Council of Princes"
-				picture = "Portrait_USA_Congress_Of_Corporations.dds"
-				ideology = absolute_monarchist
+			USA_council_of_princes = {
+				promote_character = regency_monarchist
 			}
 		}
 		else = {
@@ -4737,17 +4754,8 @@ country_event = {
 		name = usa.170.o1
 		if = {
 			limit = { 
-				NOT = {
-					has_country_flag = USA_monarchy_election
-				}
+				has_country_flag = USA_monarchy_election
 			}
-			create_country_leader = {
-				name = "Douglas I"
-				picture = "Portrait_USA_Douglas_Hamilton.dds"
-				ideology = absolute_monarchist
-			}
-		}
-		else = {
 			add_ideas = idea_usa_douglas_the_first
 			hidden_effect = {
 				country_event = {
@@ -4755,6 +4763,9 @@ country_event = {
 					days = 100
 				}
 			}
+		}
+		USA_douglas_hamilton = {
+			promote_character = elective_monarchist
 		}
         set_party_name = { ideology = monarchist long_name = USA_hamilton_party name = USA_hamilton_party }
 		add_popularity = {
@@ -4779,17 +4790,8 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				NOT = {
-					has_country_flag = USA_monarchy_election
-				}
+				has_country_flag = USA_monarchy_election
 			}
-			create_country_leader = {
-				name = "William III"
-				picture = "Portrait_USA_Bill_Washington.dds"
-				ideology = absolute_monarchist
-			}
-		}
-		else = {
 			add_ideas = idea_usa_william_the_third
 			hidden_effect = {
 				country_event = {
@@ -4797,6 +4799,9 @@ country_event = {
 					days = 100
 				}
 			}
+		}
+		USA_bill_washington = {
+			promote_character = elective_monarchist
 		}
 		add_popularity = {
 			ideology = monarchist
@@ -4817,17 +4822,8 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				NOT = {
-					has_country_flag = USA_monarchy_election
-				}
+				has_country_flag = USA_monarchy_election
 			}
-			create_country_leader = {
-				name = "Robert I"
-				picture = "Portrait_USA_Robert_Lee.dds"
-				ideology = absolute_monarchist
-			}
-		}
-		else = {
 			add_ideas = idea_usa_robert_the_first
 			hidden_effect = {
 				country_event = {
@@ -4835,6 +4831,10 @@ country_event = {
 					days = 100
 				}
 			}
+			
+		}
+		USA_robert_lee = {
+			promote_character = elective_monarchist
 		}
         set_party_name = { ideology = monarchist long_name = USA_lee_party name = USA_lee_party }
 		add_popularity = {
@@ -4856,17 +4856,8 @@ country_event = {
 		}
         if = {
 			limit = { 
-				NOT = {
-					has_country_flag = USA_monarchy_election
-				}
+				has_country_flag = USA_monarchy_election
 			}
-			create_country_leader = {
-				name = "Lucian I"
-				picture = "Portrait_USA_Lucian_Truscott.dds"
-				ideology = absolute_monarchist
-			}
-		}
-		else = {
 			add_ideas = idea_usa_lucian_the_first
 			hidden_effect = {
 				country_event = {
@@ -4874,6 +4865,9 @@ country_event = {
 					days = 100
 				}
 			}
+		}
+		USA_lucian_truscott = {
+			promote_character = elective_monarchist
 		}
         set_party_name = { ideology = monarchist long_name = USA_jefferson_party name = USA_jefferson_party }
 		add_popularity = {
@@ -4960,7 +4954,7 @@ country_event = {
 		hidden_effect = {
 			USA = {
 				country_event = {
-					days = 30
+					days = 180
 					id = usa.175
 				}
 			}
@@ -4975,7 +4969,7 @@ country_event = {
 		hidden_effect = {
 			USA = {
 				country_event = {
-					days = 30
+					days = 180
 					id = usa.176
 				}
 			}
@@ -4990,7 +4984,7 @@ country_event = {
 		hidden_effect = {
 			USA = {
 				country_event = {
-					days = 30
+					days = 180
 					id = usa.177
 				}
 			}
@@ -5005,7 +4999,7 @@ country_event = {
 		hidden_effect = {
 			USA = {
 				country_event = {
-					days = 30
+					days = 180
 					id = usa.178
 				}
 			}
@@ -5020,7 +5014,7 @@ country_event = {
 		hidden_effect = {
 			USA = {
 				country_event = {
-					days = 30
+					days = 180
 					id = usa.179
 				}
 			}
@@ -5150,7 +5144,7 @@ country_event = {
 		add_stability = 0.03
 	}
 	
-	option = {   #Tucker Carlson
+	option = {   #Joe Exotic
 		name = usa.181.o2
 		ai_chance = {
 			factor = 20
@@ -5159,15 +5153,20 @@ country_event = {
 		ideology = centrist
 		popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Tucker Carlson"
-	        picture = "Portrait_USA_Tucker_Carlson.dds"
-	        ideology = centrist_ideology
+		USA_joe_exotic = {
+			promote_character = right_libertarian
 		}
 		set_politics = {
 		ruling_party = centrist
 		}
-		add_ideas = usa_david_boaz
+		custom_effect_tooltip = USA_joe_exotic_cabinet
+		hidden_effect = {
+			add_ideas = usa_david_boaz
+			add_ideas = usa_fom_john_mcaffee
+			add_ideas = usa_ind_scott_rigell
+			add_ideas = usa_nsm_john_monds
+			add_ideas = usa_inm_michael_morell
+		}
 	}
 	
 	option = {   #Sonny Perdue
@@ -5176,18 +5175,23 @@ country_event = {
 			factor = 30
 		}
 		add_popularity = {
-		ideology = national_conservative
-		popularity = 0.2
+			ideology = national_conservative
+			popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Sonny Perdue"
-	        picture = "Portrait_USA_Sonny_Perdue.dds"
-	        ideology = american_conservative
+		USA_sonny_perdue = {
+			promote_character = american_conservative
 		}
 		set_politics = {
 		ruling_party = national_conservative
 		}
-		add_ideas = usa_jeff_sessions
+		custom_effect_tooltip = USA_sonny_perdue_cabinet
+		hidden_effect = {
+			add_ideas = usa_jeff_sessions
+			add_ideas = usa_fom_virgil_goode
+			add_ideas = usa_ind_elaine_chao
+			add_ideas = usa_nsm_steve_scalise
+			add_ideas = usa_inm_gina_haspel
+		}
 	}
 	
 	option = {   #Roy Moore
@@ -5202,15 +5206,20 @@ country_event = {
 			ideology = fascist
 			popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Roy Moore"
-	        picture = "Portrait_USA_Roy_Moore.dds"
-	        ideology = fascist_ideology
-        }
+		USA_roy_moore = {
+			promote_character = fascist_ideology
+		}
         set_politics = {
 		ruling_party = fascist
 		}
-		add_ideas = usa_jody_hice
+		custom_effect_tooltip = USA_roy_moore_cabinet
+		hidden_effect = {
+			add_ideas = usa_jody_hice
+			add_ideas = usa_fom_steve_womack
+			add_ideas = usa_ind_matt_gaetz
+			add_ideas = usa_nsm_steven_palazzo
+			add_ideas = usa_inm_cofer_black
+		}
 	}
 
 	option = {   #Andrew Gillum
@@ -5225,15 +5234,21 @@ country_event = {
 			ideology = new_democrat
 			popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Andrew Gillum"
-	        picture = "Portrait_USA_Andrew_Gillum.dds"
-	        ideology = new_democrat_ideology
-        }
-         set_politics = {
+		USA_andrew_gillum = {
+			promote_character = labour_revisionist
+		}
+        set_politics = {
 		ruling_party = new_democrat
 		}
 		add_ideas = usa_bennie_thompson
+		custom_effect_tooltip = USA_andrew_gillum_cabinet
+		hidden_effect = {
+			add_ideas = usa_bennie_thompson
+			add_ideas = usa_fom_bobby_rush
+			add_ideas = usa_ind_andrew_gillum
+			add_ideas = usa_nsm_roy_barnes
+			add_ideas = usa_inm_william_joseph_burns
+		}
 	}
 	
 }
@@ -5267,15 +5282,20 @@ country_event = {
 		ideology = centrist
 		popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Tucker Carlson"
-	        picture = "Portrait_USA_Tucker_Carlson.dds"
-	        ideology = centrist_ideology
+		USA_joe_exotic = {
+			promote_character = right_libertarian
 		}
 		set_politics = {
 		ruling_party = centrist
 		}
-		add_ideas = usa_david_boaz
+		custom_effect_tooltip = USA_joe_exotic_cabinet
+		hidden_effect = {
+			add_ideas = usa_david_boaz
+			add_ideas = usa_fom_john_mcaffee
+			add_ideas = usa_ind_scott_rigell
+			add_ideas = usa_nsm_john_monds
+			add_ideas = usa_inm_michael_morell
+		}
 	}
 	
 	option = {   #Joe Manchin
@@ -5287,15 +5307,20 @@ country_event = {
 		ideology = national_conservative
 		popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Joseph Manchin III"
-	        picture = "Portrait_USA_Joe_Manchin.dds"
-	        ideology = american_conservative
+		USA_joe_manchin = {
+			promote_character = american_conservative
 		}
 		set_politics = {
 		ruling_party = national_conservative
 		}
-		add_ideas = usa_william_mcraven
+		custom_effect_tooltip = USA_joe_manchin_cabinet
+		hidden_effect = {
+			add_ideas = usa_william_mcraven
+			add_ideas = usa_fom_virgil_goode
+			add_ideas = usa_ind_elaine_chao
+			add_ideas = usa_nsm_steve_scalise
+			add_ideas = usa_inm_gina_haspel
+		}
 	}
 	
 	option = {   #Roy Moore
@@ -5310,15 +5335,20 @@ country_event = {
 			ideology = fascist
 			popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Roy Moore"
-	        picture = "Portrait_USA_Roy_Moore.dds"
-	        ideology = fascist_ideology
-        }
-         set_politics = {
+		USA_roy_moore = {
+			promote_character = fascist_ideology
+		}
+        set_politics = {
 		ruling_party = fascist
 		}
-		add_ideas = usa_jody_hice
+		custom_effect_tooltip = USA_roy_moore_cabinet
+		hidden_effect = {
+			add_ideas = usa_jody_hice
+			add_ideas = usa_fom_steve_womack
+			add_ideas = usa_ind_matt_gaetz
+			add_ideas = usa_nsm_steven_palazzo
+			add_ideas = usa_inm_cofer_black
+		}
 	}
 
 	option = {   #Elizabeth Warren
@@ -5336,7 +5366,14 @@ country_event = {
          set_politics = {
 		ruling_party = new_democrat
 		}
-		add_ideas = usa_bennie_thompson
+		custom_effect_tooltip = USA_elizabeth_warren_cabinet
+		hidden_effect = {
+			add_ideas = usa_bennie_thompson
+			add_ideas = usa_fom_bobby_rush
+			add_ideas = usa_ind_andrew_gillum
+			add_ideas = usa_nsm_roy_barnes
+			add_ideas = usa_inm_william_joseph_burns
+		}
 	}
 	
 }
@@ -5370,15 +5407,20 @@ country_event = {
 		ideology = centrist
 		popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "John Bel Edwards"
-	        picture = "Portrait_USA_John_Bel_Edwards.dds"
-	        ideology = centrist_ideology
+		USA_john_bel_edwards = {
+			promote_character = centrist_ideology
 		}
 		set_politics = {
 		ruling_party = centrist
 		}
-		add_ideas = usa_kathleen_blanco
+		custom_effect_tooltip = USA_john_bel_edwards_cabinet
+		hidden_effect = {
+			add_ideas = usa_kathleen_blanco
+			add_ideas = usa_fom_jim_cooper
+			add_ideas = usa_ind_stephanie_murphy
+			add_ideas = usa_nsm_sanford_bishop
+			add_ideas = usa_inm_michael_morell
+		}
 	}
 	
 	option = {   #FUNNY NASCAR MAN VROOM VROOM
@@ -5390,15 +5432,20 @@ country_event = {
 		ideology = national_conservative
 		popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Dale Earnhardt Sr."
-	        picture = "Portrait_USA_Dale_Earnhardt.dds"
-	        ideology = american_conservative
+		USA_dale_earnhardt = {
+			promote_character = american_conservative
 		}
 		set_politics = {
 		ruling_party = national_conservative
 		}
-		add_ideas = usa_william_mcraven
+		custom_effect_tooltip = USA_dale_earnhardt_cabinet
+		hidden_effect = {
+			add_ideas = usa_william_mcraven
+			add_ideas = usa_fom_bobby_jindal
+			add_ideas = usa_ind_elaine_chao
+			add_ideas = usa_nsm_steve_scalise
+			add_ideas = usa_inm_gina_haspel
+		}
 	}
 	
 	option = {   #Michael Hill
@@ -5413,15 +5460,20 @@ country_event = {
 			ideology = fascist
 			popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Michael Hill"
-	        picture = "Portrait_USA_Michael_Hill.dds"
-	        ideology = fascist_ideology
-        }
-         set_politics = {
+		USA_michael_hill = {
+			promote_character = neo_confederate
+		}
+        set_politics = {
 		ruling_party = fascist
 		}
-		add_ideas = usa_roy_moore
+		custom_effect_tooltip = USA_mike_hill_cabinet
+		hidden_effect = {
+			add_ideas = usa_roy_moore
+			add_ideas = usa_fom_steve_womack
+			add_ideas = usa_ind_matt_gaetz
+			add_ideas = usa_nsm_steven_palazzo
+			add_ideas = usa_inm_cofer_black
+		}
 	}
 
 	option = {   #Andrew Gillum
@@ -5436,15 +5488,20 @@ country_event = {
 			ideology = new_democrat
 			popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Andrew Gillum"
-	        picture = "Portrait_USA_Andrew_Gillum.dds"
-	        ideology = new_democrat_ideology
-        }
-         set_politics = {
+		USA_andrew_gillum = {
+			promote_character = labour_revisionist
+		}
+        set_politics = {
 		ruling_party = new_democrat
 		}
-		add_ideas = usa_bennie_thompson
+		custom_effect_tooltip = USA_andrew_gillum_cabinet
+		hidden_effect = {
+			add_ideas = usa_bennie_thompson
+			add_ideas = usa_fom_bobby_rush
+			add_ideas = usa_ind_andrew_gillum
+			add_ideas = usa_nsm_roy_barnes
+			add_ideas = usa_inm_william_joseph_burns
+		}
 	}
 	
 }
@@ -5478,15 +5535,20 @@ country_event = {
 		ideology = centrist
 		popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "John Bel Edwards"
-	        picture = "Portrait_USA_John_Bel_Edwards.dds"
-	        ideology = centrist_ideology
+		USA_john_bel_edwards = {
+			promote_character = centrist_ideology
 		}
 		set_politics = {
 		ruling_party = centrist
 		}
-		add_ideas = usa_kathleen_blanco
+		custom_effect_tooltip = USA_john_bel_edwards_cabinet
+		hidden_effect = {
+			add_ideas = usa_kathleen_blanco
+			add_ideas = usa_fom_jim_cooper
+			add_ideas = usa_ind_stephanie_murphy
+			add_ideas = usa_nsm_sanford_bishop
+			add_ideas = usa_inm_michael_morell
+		}
 	}
 	
 	option = {   #General McRaven
@@ -5498,15 +5560,20 @@ country_event = {
 		ideology = national_conservative
 		popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "William McRaven"
-	        picture = "Portrait_USA_William_McRaven.dds"
-	        ideology = american_conservative
+		USA_william_mcraven = {
+			promote_character = american_conservative
 		}
 		set_politics = {
 		ruling_party = national_conservative
 		}
-		add_ideas = usa_jeff_sessions
+		custom_effect_tooltip = USA_william_mcraven_cabinet
+		hidden_effect = {
+			add_ideas = usa_jeff_sessions
+			add_ideas = usa_fom_bobby_jindal
+			add_ideas = usa_ind_elaine_chao
+			add_ideas = usa_nsm_steve_scalise
+			add_ideas = usa_inm_gina_haspel
+		}
 	}
 	
 	option = {   #Roy Moore
@@ -5521,15 +5588,20 @@ country_event = {
 			ideology = fascist
 			popularity = 0.2
 		}
-		create_country_leader = {
-	        name = "Roy Moore"
-	        picture = "Portrait_USA_Roy_Moore.dds"
-	        ideology = fascist_ideology
-        }
-         set_politics = {
+		USA_roy_moore = {
+			promote_character = fascist_ideology
+		}
+        set_politics = {
 		ruling_party = fascist
 		}
-		add_ideas = usa_jody_hice
+		custom_effect_tooltip = USA_roy_moore_cabinet
+		hidden_effect = {
+			add_ideas = usa_jody_hice
+			add_ideas = usa_fom_steve_womack
+			add_ideas = usa_ind_matt_gaetz
+			add_ideas = usa_nsm_steven_palazzo
+			add_ideas = usa_inm_cofer_black
+		}
 	}
 
 	option = {   #Elizabeth Warren
@@ -5547,7 +5619,14 @@ country_event = {
          set_politics = {
 		ruling_party = new_democrat
 		}
-		add_ideas = usa_bennie_thompson
+		custom_effect_tooltip = USA_elizabeth_warren_cabinet
+		hidden_effect = {
+			add_ideas = usa_bennie_thompson
+			add_ideas = usa_fom_bobby_rush
+			add_ideas = usa_ind_andrew_gillum
+			add_ideas = usa_nsm_roy_barnes
+			add_ideas = usa_inm_william_joseph_burns
+		}
 	}
 	
 }
@@ -5555,7 +5634,14 @@ country_event = {
 country_event = {
 	id = usa.185
 	title = usa.185.t
-	desc = usa.185.d
+	desc = {
+		text = usa.185.d
+		trigger = { has_idea = usa_mitch_mcconnell }
+	}
+	desc = {
+		text = usa.185.d_2
+		trigger = { NOT = { has_idea = usa_mitch_mcconnell } }
+	}
 	picture = rummy
 	
 	fire_only_once = yes
@@ -5603,11 +5689,9 @@ country_event = {
 	
 	option = {   
 		name = usa.186.o1
-		create_country_leader = {
-	        name = "Mitch McConnell"
-	        picture = "Portrait_USA_Mitch_McConnell.dds"
-	        ideology = american_nationalist
-        }
+		USA_mitch_mcconnell = {
+			promote_character = american_nationalist
+		}
         add_ideas = usa_richard_burr
 	}
 }
@@ -5629,10 +5713,8 @@ country_event = {
 		ideology = centrist
 		popularity = 0.08
 		}
-		create_country_leader = {
-	        name = "Barack Obama"
-	        picture = "Portrait_USA_Barack_Obama.dds"
-	        ideology = centrist_ideology
+		USA_barack_obama = {
+			promote_character = centrist_ideology
 		}
 		set_party_name = { ideology = centrist long_name = USA_federalist_party name = USA_federalist_party }
 	}
@@ -5825,7 +5907,51 @@ country_event = {
 	
 	option = {
 		name = usa.195.o1
+		ai_chance = {
+			base = 30
+			modifier = {
+				NOT = {
+					has_game_rule = {
+						rule = USA_ai_behavior
+						option = DEFAULT
+					}
+					has_game_rule = {
+						rule = USA_ai_behavior
+						option = RUM_WIN
+					}
+				}
+				factor = 0
+			}
+		}
 		add_political_power = -50
+		hidden_effect = {
+			country_event = {
+				id = usa.196
+				days = 5
+			}
+		}
+	}
+	
+	option = {
+		name = usa.195.o2
+		ai_chance = {
+			base = 50
+			modifier = {
+				NOT = {
+					has_game_rule = {
+						rule = USA_ai_behavior
+						option = DEFAULT
+					}
+					has_game_rule = {
+						rule = USA_ai_behavior
+						option = CHENEY_WIN
+					}
+				}
+				factor = 0
+			}
+		}
+		add_political_power = -50
+		set_country_flag = USA_cheney_is_vp
 		hidden_effect = {
 			country_event = {
 				id = usa.196
@@ -5908,6 +6034,48 @@ country_event = {
 		add_popularity = {
 		ideology = fascist
 		popularity = 0.03
+		}
+	}
+}
+
+#2014 - Death of Paul Emery Washington For Other Paths
+country_event = {
+	id = usa.199
+	title = usa.199.t
+	desc = usa.199.d
+	picture = washington_governor_mansion
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 2014.5.1
+		has_country_leader = {
+			name = "Paul I"
+			ruling_only = no
+		}
+		NOT = {
+			has_completed_focus = USA_a_legitimate_ruler
+		}
+	}
+	
+	option = { #What a bunch of lunatics...
+		name = usa.199.o1
+		add_popularity = {
+			ideology = monarchist
+			popularity = -0.03
+		}
+		set_country_flag = USA_washington_dead
+		add_country_leader_role = {
+			character = USA_bill_washington
+			promote_leader = yes
+			country_leader = {
+				ideology = absolute_monarchist
+				expire = "2030.1.1.1"
+			 }
+		}
+		ai_chance = {
+			factor = 100
 		}
 	}
 }

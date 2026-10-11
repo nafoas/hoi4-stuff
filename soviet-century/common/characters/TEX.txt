@@ -7,8 +7,8 @@ characters={
 			}
 		}
 		country_leader={
+				traits = { trait_theocratic_fascist }
 			ideology=fascist_ideology
-			traits={ trait_theocratic_fascist }
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -21,9 +21,9 @@ characters={
 			}
 		}
 		country_leader={
+				traits = { trait_texan_nationalist }
 			desc="POLITICS_RICK_PERRY_DESC"
-			traits={ trait_texan_nationalist }
-			ideology=paleoconservative
+			ideology=ultranationalist
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -36,7 +36,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=regency_monarchist
+			ideology=absolute_monarchist
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -62,8 +62,8 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=fiscal_conservative
-			traits={ trait_dixiecrat }
+				traits = { trait_dixiecrat }
+			ideology=christian_democracy
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -76,21 +76,21 @@ characters={
 			}
 		}
 		country_leader={
+				traits = { trait_tea_party }
 			ideology=right_libertarian
-			traits={ trait_tea_party }
 			expire="1.1.1.1"
 			id=-1
 		}
 	}
-	TEX_ross_perot={
-		name="Ross Perot"
+	TEX_jose_r._rodriguez={
+		name="Jose R. Rodriguez"
 		portraits={
 			civilian={
-				large="gfx/leaders/TEX/Portrait_TEX_Ross_Perot.dds"
+				large="gfx/leaders/TEX/Portrait_TEX_Jose_Rodriguez.dds"
 			}
 		}
 		country_leader={
-			ideology=reformism
+			ideology=old_american_democrats
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -129,7 +129,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=luxemburgism
+			ideology=libertarian_socialist
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -142,125 +142,8 @@ characters={
 			}
 		}
 		country_leader={
+				traits = { trait_the_reverend }
 			ideology=marxist
-			traits={ trait_the_reverend }
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_david_koresh={
-		name="David Koresh"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_David_Koresh.dds"
-			}
-		}
-		country_leader={
-			ideology=national_bolshevik_ideology
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_jim_jones_jr={
-		name="Jim Jones Jr."
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_Jim_jones_JR.dds"
-			}
-		}
-		country_leader={
-			ideology=marxist
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_stephen_jones={
-		name="Stephen Jones"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_Stephen_Jones.dds"
-			}
-		}
-		country_leader={
-			ideology=marxist
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_antonio_burr={
-		name="Antonio I"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_TEX_Antonio_Burr.dds"
-			}
-		}
-		country_leader={
-			ideology=absolute_monarchist
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_dick_burr={
-		name="Richard Burr"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_TEX_Richard_Burr.dds"
-			}
-		}
-		country_leader={
-			ideology=semi_constitutional_monarchist
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_sherri_burr={
-		name="Sherri Burr"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_TEX_Sherri_Burr.dds"
-			}
-		}
-		country_leader={
-			ideology=semi_constitutional_monarchist
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_rand_paul={
-		name="Rand Paul"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_TEX_Rand_Paul.dds"
-			}
-		}
-		country_leader={
-			ideology=right_libertarian
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_greg_abbott={
-		name="Greg Abbott"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_TEX_Greg_Abbott.dds"
-			}
-		}
-		country_leader={
-			ideology=american_conservative
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	TEX_larry_kilgore={
-		name="Larry Kilgore"
-		portraits={
-			civilian={
-				large="gfx/leaders/TEX/Portrait_TEX_Larry_Kilgore.dds"
-			}
-		}
-		country_leader={
-			ideology=ultranationalist
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -443,6 +326,137 @@ characters={
 			maneuvering_skill=1
 			coordination_skill=1
 			legacy_id=-1
+		}
+	}
+
+	TEX_ross_perot={
+		name="Ross Perot"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_TEX_Ross_Perot.dds"
+			}
+		}
+		country_leader={
+			ideology=reformism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_david_koresh={
+		name="David Koresh"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_David_Koresh.dds"
+			}
+		}
+		country_leader={
+			ideology=national_bolshevik_ideology
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_jim_jones_jr={
+		name="Jim Jones Jr."
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_Jim_jones_JR.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_stephen_jones={
+		name="Stephen Jones"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_Stephen_Jones.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_antonio_burr={
+		name="Antonio I"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_TEX_Antonio_Burr.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_dick_burr={
+		name="Richard Burr"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_TEX_Richard_Burr.dds"
+			}
+		}
+		country_leader={
+			ideology=semi_constitutional_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_sherri_burr={
+		name="Sherri Burr"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_TEX_Sherri_Burr.dds"
+			}
+		}
+		country_leader={
+			ideology=semi_constitutional_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_rand_paul={
+		name="Rand Paul"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_TEX_Rand_Paul.dds"
+			}
+		}
+		country_leader={
+			ideology=right_libertarian
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_greg_abbott={
+		name="Greg Abbott"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_TEX_Greg_Abbott.dds"
+			}
+		}
+		country_leader={
+			ideology=american_conservative
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	TEX_larry_kilgore={
+		name="Larry Kilgore"
+		portraits={
+			civilian={
+				large="gfx/leaders/TEX/Portrait_TEX_Larry_Kilgore.dds"
+			}
+		}
+		country_leader={
+			ideology=ultranationalist
+			expire="1.1.1.1"
+			id=-1
 		}
 	}
 }

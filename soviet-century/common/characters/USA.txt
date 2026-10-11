@@ -7,8 +7,8 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=fascist_ideology
-			traits={ trait_the_duke_usa  }
+				traits = { trait_the_duke_usa }
+			ideology=american_fascist
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -21,8 +21,8 @@ characters={
 			}
 		}
 		country_leader={
+				traits = { trait_king_of_america }
 			ideology=absolute_monarchist
-			traits={ trait_king_of_america  }
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -48,6 +48,7 @@ characters={
 			}
 		}
 		country_leader={
+			desc="POLITICS_ROBERT_BENTLEY_DESC"
 			ideology=american_conservative
 			expire="1.1.1.1"
 			id=-1
@@ -58,46 +59,6 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/USA/Portrait_USA_David_Nolan.dds"
-			}
-		}
-		country_leader={
-			ideology=right_libertarian
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	USA_john_mcafee={
-		name="John McAfee"
-		portraits={
-			civilian={
-				large="gfx/leaders/USA/Portrait_John_McAfree.dds"
-			}
-		}
-		country_leader={
-			ideology=right_libertarian
-			traits={ trait_libertarian_hedonist }
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	USA_austin_peterson={
-		name="Austin Peterson"
-		portraits={
-			civilian={
-				large="gfx/leaders/USA/Portrait_austin_petersen.dds"
-			}
-		}
-		country_leader={
-			ideology=right_libertarian
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-	USA_brandon_herrera={
-		name="Brandon Herrera"
-		portraits={
-			civilian={
-				large="gfx/leaders/USA/Portrait_Brandon_Herrera.dds"
 			}
 		}
 		country_leader={
@@ -179,8 +140,8 @@ characters={
 			}
 		}
 		country_leader={
+				traits = { trait_defence_expert }
 			desc="POLITICS_DONALD_RUMSFELD_DESC"
-			traits={ trait_defence_expert }
 			ideology=american_nationalist
 			expire="1.1.1.1"
 			id=-1
@@ -194,8 +155,8 @@ characters={
 			}
 		}
 		country_leader = {
+				traits = { trait_son_of_the_father }
 			expire = "1.1.1.1"
-			traits={ trait_son_of_the_father }
 			ideology = american_nationalist
 		}
 	}
@@ -451,6 +412,42 @@ characters={
 			ideology = american_nationalist
 		}
 	}
+	USA_richard_bruce_cheney={
+		name="Richard Bruce Cheney"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Richard_Cheney.dds"
+			}
+		}
+		country_leader = {
+			expire = "1.1.1.1"
+			ideology = american_nationalist
+		}
+	}
+	USA_mary_landrieu={
+		name="Mary Landrieu"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Mary_Landrieu.png"
+			}
+		}
+		country_leader = {
+			expire = "1.1.1.1"
+			ideology = centrist_populist
+		}
+	}
+	USA_john_edwards = {
+		name="John Edwards"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_John_Edwards.png"
+			}
+		}
+		country_leader = {
+			expire = "1.1.1.1"
+			ideology = old_american_democrats
+		}
+	}
 	USA_council_of_princes={
 		name="Council of Princes"
 		portraits={
@@ -486,10 +483,6 @@ characters={
 			expire = "1.1.1.1"
 			ideology = elective_monarchist
 		}
-		country_leader = {
-			expire = "1.1.1.1"
-			ideology = absolute_monarchist
-		}
 	}
 	USA_robert_lee={
 		name="Robert I"
@@ -515,11 +508,11 @@ characters={
 			ideology = elective_monarchist
 		}
 	}
-	USA_tucker_carlson={
-		name="Tucker Carlson"
+	USA_joe_exotic={
+		name="Joe Exotic"
 		portraits={
 			civilian={
-				large="gfx/leaders/USA/Portrait_USA_Tucker_Carlson.dds"
+				large="gfx/leaders/USA/Portrait_USA_Joe_Exotic.png"
 			}
 		}
 		country_leader = {
@@ -537,6 +530,10 @@ characters={
 		country_leader = {
 			expire = "1.1.1.1"
 			ideology = american_conservative
+		}
+		country_leader = {
+			expire = "1.1.1.1"
+			ideology = american_nationalist
 		}
 	}
 	USA_roy_moore={
@@ -564,7 +561,7 @@ characters={
 		}
 	}
 	USA_joe_manchin={
-		name="Joseph Manchin III"
+		name="Joe Manchin"
 		portraits={
 			civilian={
 				large="gfx/leaders/USA/Portrait_USA_Joe_Manchin.dds"
@@ -608,7 +605,7 @@ characters={
 		}
 		country_leader = {
 			expire = "1.1.1.1"
-			ideology = fascist_ideology
+			ideology = neo_confederate
 		}
 	}
 	USA_mitch_mcconnell={
@@ -636,6 +633,71 @@ characters={
 			id=-1
 		}
 	}
+	USA_kenneth_lay={
+		name="Kenneth Lay"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Kenneth_Lay.png"
+			}
+		}
+		country_leader={
+			ideology=corporate
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_howard_lutnick={
+		name="Howard Lutnick"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Howard_Lutnick.png"
+			}
+		}
+		country_leader={
+			ideology=corporate
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_howard_lutnick={
+		name="Howard Lutnick"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Howard_Lutnick.png"
+			}
+		}
+		country_leader={
+			ideology=corporate
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_jamie_dimon={
+		name="Jamie Dimon"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Jamie_Dimon.png"
+			}
+		}
+		country_leader={
+			ideology=corporate
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_alex_karp={
+		name="Alex Karp"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Alex_Karp.png"
+			}
+		}
+		country_leader={
+			ideology=corporate
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
 	USA_frank_ancona={
 		name="Frank Ancona"
 		portraits={
@@ -644,13 +706,34 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=clerical_fascist
+			ideology=klan_doctrine
 			expire="1.1.1.1"
 			id=-1
 		}
 	}
+	USA_frank_ancona_army={
+		name="Frank Ancona"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor7.dds"
+			}
+			civilian={
+				large="gfx/leaders/USA/Portrait_Frank_Ancona_2.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
 	USA_joseph_votel={
 		name="Joseph Votel"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/USA/Portrait_USA_Joseph_Votel.dds"
@@ -679,6 +762,14 @@ characters={
 		country_leader = {
 			expire = "1.1.1.1"
 			ideology = progressive
+		}
+	}
+	USA_leopoldo_cintra_frias={
+		name="Leopoldo Cintra Frías"
+		portraits={
+			civilian={
+				large="gfx/leaders/CUB/Portrait_Leopoldo_Cintra_Frias.dds"
+			}
 		}
 	}
 	usa_william_mcraven={
@@ -792,6 +883,7 @@ characters={
 	}
 	USA_mark_a._milley={
 		name="Mark A. Milley"
+		can_be_captured = no
 		portraits={
 			army={
 				small="gfx/interface/ideas/advisors/usa/usa_army_chief_mark_milley.dds"
@@ -1338,10 +1430,10 @@ characters={
 		}
 		portraits={
 			army={
-				small="gfx/interface/ideas/advisors/USA/usa_navy_chief_john_richardson.dds"
+				small="gfx/interface/ideas/advisors/usa/usa_navy_chief_john_richardson.dds"
 			}
 			navy={
-				small="gfx/interface/ideas/advisors/USA/usa_navy_chief_john_richardson.dds"
+				small="gfx/interface/ideas/advisors/usa/usa_navy_chief_john_richardson.dds"
 			}
 			army={
 				large="gfx/leaders/USA/Portrait_John_Richardson.dds"
@@ -1408,7 +1500,7 @@ characters={
 					army_commando_3 
 				}
 		}
-		name="usa_high_command_hugh_shelton"
+		name=usa_high_command_hugh_shelton
 		portraits={
 			army={
 				small="GFX_idea_usa_high_command_hugh_shelton"
@@ -1426,7 +1518,7 @@ characters={
 					air_air_superiority_3 
 				}
 		}
-		name="usa_air_chief_t_michael_moseley"
+		name= usa_air_chief_t_michael_moseley
 		portraits={
 			army={
 				small="GFX_idea_usa_air_chief_t_michael_moseley"
@@ -1444,7 +1536,7 @@ characters={
 					army_infantry_2 
 				}
 		}
-		name="usa_high_command_michael_hayden"
+		name= usa_high_command_michael_hayden
 		portraits={
 			army={
 				small="GFX_idea_usa_high_command_michael_hayden"
@@ -1462,7 +1554,7 @@ characters={
 					army_logistics_2 
 				}
 		}
-		name="usa_high_command_duncan_mcnabb"
+		name= usa_high_command_duncan_mcnabb
 		portraits={
 			army={
 				small="GFX_idea_usa_high_command_duncan_mcnabb"
@@ -1481,11 +1573,367 @@ characters={
 					air_close_air_support_2 
 				}
 		}
-		name="usa_air_chief_paul_selva"
+		name= usa_air_chief_paul_selva
 		portraits={
 			army={
 				small="GFX_idea_usa_air_chief_paul_selva"
 			}
+		}
+	}
+
+	USA_ken_gregg={
+		name="Ken Gregg"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor7.dds"
+			}
+			civilian={
+				large="gfx/leaders/USA/Portrait_Ken_Gregg.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	USA_ron_edwards={
+		name="Ron Edwards"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor7.dds"
+			}
+			civilian={
+				large="gfx/leaders/USA/Portrait_Ron_Edwards.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	USA_frazier_glenn_miller_jr={
+		name="Frazier Glenn Miller Jr"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor7.dds"
+			}
+			civilian={
+				large="gfx/leaders/USA/Portrait_Frazier_Glenn_Miller_Jr.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	USA_chris_barker={
+		name="Chris Barker"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor7.dds"
+			}
+			civilian={
+				large="gfx/leaders/USA/Portrait_Chris_Barker.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	USA_jeremy_parker={
+		name="Jeremy Parker"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor7.dds"
+			}
+			civilian={
+				large="gfx/leaders/USA/Portrait_Jeremy_Parker.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	USA_ray_larsen={
+		name="Ray Larsen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/europe/european_advisor7.dds"
+			}
+			civilian={
+				large="gfx/leaders/USA/Portrait_Ray_Larsen.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	#Scientists
+	USA_alexandra_techet = {
+		name = "Alexandra Techet"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_alexandra_techet
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_resourceful }
+			skills = {
+				specialization_naval = 1
+			}
+		}
+	}
+
+	USA_nathan_a_moore = {
+		name = "Nathan A. Moore"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_nathan_a_moore
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	USA_frank_bowman = {
+		name = "Frank Bowman"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_frank_bowman
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_submarine_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	USA_harold_palmer_smith_jr = {
+		name = "Harold Palmer Smith Jr."
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_harold_palmer_smith_jr
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	USA_dennis_spurgeon = {
+		name = "Dennis Spurgeon"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_dennis_spurgeon
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+
+	USA_taylor_wilson = {
+		name = "Taylor Wilson"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_taylor_wilson
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_fast_learner }
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+
+	USA_michael_eismann = {
+		name = "Michael Eismann"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_michael_eismann
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_guidance_systems_expert }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	USA_sean_kirkpatrick = {
+		name = "Sean M. Kirkpatrick"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_sean_kirkpatrick
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_bright }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	USA_johnnie_wilson = {
+		name = "Johnnie E. Wilson"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_johnnie_wilson
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist }
+			skills = {
+				specialization_land = 1
+			}
+		}
+	}
+
+	USA_john_coburn = {
+		name = "John G. Coburn"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_john_coburn
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_resourceful }
+			skills = {
+				specialization_land = 1
+			}
+		}
+	}
+
+	USA_merdith_w_b_temple = {
+		name = "Merdith W. B. Temple"
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_merdith_w_b_temple
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist }
+			skills = {
+				specialization_land = 1
+			}
+		}
+	}
+
+	USA_john_mcafee={
+		name="John McAfee"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_John_McAfree.dds"
+			}
+		}
+		country_leader={
+			ideology=right_libertarian
+			traits={ trait_libertarian_hedonist }
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_austin_peterson={
+		name="Austin Peterson"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_austin_petersen.dds"
+			}
+		}
+		country_leader={
+			ideology=right_libertarian
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_brandon_herrera={
+		name="Brandon Herrera"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_Brandon_Herrera.dds"
+			}
+		}
+		country_leader={
+			ideology=right_libertarian
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_tucker_carlson={
+		name="Tucker Carlson"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Tucker_Carlson.dds"
+			}
+		}
+		country_leader = {
+			expire = "1.1.1.1"
+			ideology = right_libertarian
 		}
 	}
 }

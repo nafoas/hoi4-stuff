@@ -1,207 +1,7 @@
 ideas = {
 
     country = {
-		#my Mod
-		idea_ams_catholic_education = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = catholic_values
-			
-			modifier = {
-				research_speed_factor = 0.05
-				political_power_gain = 0.1
-				fascist_drift = 0.01
-				
-			}
-		}
-		idea_AMS_intergration_of_the_kkk = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = FRA_scw_intervention_nationalists_focus
-			
-			modifier = { 
-				army_morale_factor = 0.1
-				fascist_drift = 0.01
-				political_power_gain = -0.3
-			}
-		}
-		idea_ams_gods_army = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = corrupt_military
-			
-			modifier = {
-				army_org_factor = 0.05
-				training_time_army_factor = -0.15
-				army_morale_factor = 0.1
-				conscription = 0.02
-
-			}
-		}
-		idea_ams_black_tax = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = catholic_values
-			
-			modifier = {
-				stability_factor = -0.15
-				consumer_goods_factor = -0.10	
-				
-			}
-		}
-		idea_ams_moral_television = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = FRA_army_of_aggression_focus
-			
-			modifier = {
-				fascist_drift = 0.03
-				political_power_gain = 0.1 
-				
-			}
-		}
-		idea_ams_censorship_board = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = FRA_army_of_aggression_focus
-			
-			modifier = {
-				centrist_drift = -0.03
-				national_conservative_drift = -0.03
-				liberal_drift = -0.03
-				new_democrat_drift = -0.03
-				moderate_socialist_drift = -0.03
-				revolutionary_socialist_drift = -0.03
-				communist_drift = -0.03
-			}
-		}
-		idea_ams_project_power = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = air_war_plans_division_focus
-			
-			modifier = {
-				justify_war_goal_time = -0.4
-				
-				
-			}
-		}
-	idea_ams_patriotic_education = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = catholic_values
-			
-			modifier = {
-				research_speed_factor = 0.05
-				political_power_gain = 0.1
-				nationalist_drift = 0.01
-				
-			}
-		}
-		idea_ams_family_values = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = catholic_values
-			
-			modifier = {
-				MONTHLY_POPULATION = 0.01
-				consumer_goods_factor = -0.03	
-				
-			}
-		}
-		idea_ams_prepare_for_war = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = catholic_values
-			
-			modifier = {
-				conscription = 0.01
-				consumer_goods_factor = -0.10
-				industrial_capacity_factory = 0.025
-				production_speed_buildings_factor = 0.30
-			}
-		}
-		#my mod end
+		
 		idea_ams_corporatist_economics = {
 			allowed = {
 				always = no
@@ -304,7 +104,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				nationalist_drift = 0.01
+				nationalist_drift = 0.04
 				fascist_drift = 0.01
 				national_conservative_drift = 0.01 
 				centrist_drift = 0.01
@@ -840,7 +640,908 @@ ideas = {
 				
 			}
 		}
+	
+	idea_ams_catholic_education = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.1
+				fascist_drift = 0.01
+				
+			}
+		}
+	idea_AMS_intergration_of_the_kkk = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = { 
+				army_morale_factor = 0.1
+				fascist_drift = 0.01
+				political_power_gain = -0.3
+			}
+		}
+	idea_ams_gods_army = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = corrupt_military
+			
+			modifier = {
+				army_org_factor = 0.05
+				training_time_army_factor = -0.15
+				army_morale_factor = 0.1
+				conscription = 0.02
+
+			}
+		}
+	idea_ams_black_tax = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = -0.10	
+				
+			}
+		}
+	idea_ams_moral_television = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+				fascist_drift = 0.03
+				political_power_gain = 0.1 
+				
+			}
+		}
+	idea_ams_censorship_board = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+				centrist_drift = -0.03
+				national_conservative_drift = -0.03
+				liberal_drift = -0.03
+				new_democrat_drift = -0.03
+				moderate_socialist_drift = -0.03
+				revolutionary_socialist_drift = -0.03
+				communist_drift = -0.03
+			}
+		}
+	idea_ams_project_power = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = air_war_plans_division_focus
+			
+			modifier = {
+				justify_war_goal_time = -0.4
+				
+				
+			}
+		}
+	idea_ams_patriotic_education = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.1
+				nationalist_drift = 0.01
+				
+			}
+		}
+	idea_ams_family_values = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.01
+				consumer_goods_factor = -0.03	
+				
+			}
+		}
+	idea_ams_prepare_for_war = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				conscription = 0.01
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.30
+			}
+		}
+}
+	
+	second_in_command = {
+		pence_sic_rick_santorum = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Mike Pence"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { religious_leader }			
+		}
+		
+		pence_sic_will_williams = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Kevin Strom"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { power_hungry_demagogue }			
+		}
+		
+		pence_sic_michael_peroutka = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Marion Robertson"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { autocratic_charmer }			
+		}
+				
+		pence_sic_callista_gingrich = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Newt Gingrich"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { insignificant_layman }			
+		}
+		
+		pence_sic_john_difronzo = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Social Development Council"
+						ruling_only = yes
+					}
+				}
+				NOT = {
+					has_country_flag = AMS_no_nose_dead
+				}
+			}
+			
+			traits = { autocratic_charmer }			
+		}
+		
+		pence_sic_salvatore_delaurentis = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Social Development Council"
+						ruling_only = yes
+					}
+				}
+				has_country_flag = AMS_no_nose_dead
+			}
+			
+			traits = { flamboyant_tough_guy }			
+		}
+		
+		pence_sic_james_marcello = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Rudy Fratto"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { corporate_suit }			
+		}
 	}
+	
+	foreign_minister = {
+	
+		pence_fom_michael_voris = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Mike Pence"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { ideological_crusader }			
+		}
+		
+		pence_fom_billy_roper = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Kevin Strom"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { iron_fisted_brute }			
+		}
+		
+		pence_fom_jay_sekulow = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Marion Robertson"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { biased_intellectual }			
+		}
+		
+		pence_fom_frank_gaffney = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Newt Gingrich"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { ideological_crusader }			
+		}
+		
+		pence_fom_peter_difronzo = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Social Development Council"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { great_compromiser }			
+		}
+		
+		pence_fom_dennis_hastert = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Rudy Fratto"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { international_schemer }			
+		}
+	}
+	
+	industry_minister = {
+		pence_ind_mike_braun = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Mike Pence"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { resource_industrialist }			
+		}
+		
+		pence_ind_paul_craig_roberts = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Kevin Strom"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { entrepreneurial_fink }			
+		}
+		
+		pence_ind_larry_pratt = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Marion Robertson"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { private_military_specialist }			
+		}
+		
+		pence_ind_mike_turner = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Newt Gingrich"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { corrupt_kleptocrat }			
+		}
+		
+		pence_ind_salvatore_laurentis = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Social Development Council"
+						ruling_only = yes
+					}
+				}
+				NOT = {
+					has_country_flag = AMS_no_nose_dead
+				}
+			}
+			
+			traits = { corrupt_kleptocrat }			
+		}
+		
+		pence_ind_salvatore_cataudella = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Social Development Council"
+						ruling_only = yes
+					}
+				}
+				has_country_flag = AMS_no_nose_dead
+			}
+			
+			traits = { corrupt_kleptocrat }			
+		}
+		
+		pence_ind_edward_m_burke = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Rudy Fratto"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { entrepreneurial_fink }			
+		}
+	}
+	
+	national_security_minister = {
+		pence_nsm_brett_kavanaugh = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Mike Pence"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { silent_lawyer }			
+		}
+		
+		pence_nsm_donald_spitz = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Kevin Strom"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { paranoid_tyrant }			
+		}
+		
+		pence_nsm_winsome_sears = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Marion Robertson"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { isolationist }			
+		}
+		
+		pence_nsm_william_bennett = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Newt Gingrich"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { compromise_choice }			
+		}
+		
+		pence_nsm_albert_vena = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Social Development Council"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { efficient_sociopath }			
+		}
+		
+		pence_nsm_james_inendo = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Rudy Fratto"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { prince_of_terror }			
+		}
+	}
+	
+	intelligence_minister = {
+		pence_inm_greg_pence = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Mike Pence"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { politician_with_connections }			
+		}
+		
+		pence_inm_rick_tyler = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Kevin Strom"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { novice_mastermind }			
+		}
+		
+		pence_inm_gordon_klingenschmitt = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Marion Robertson"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { naval_intelligence_specialist }			
+		}
+		
+		pence_inm_jim_woolsey = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Newt Gingrich"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { intelligence_director }			
+		}
+		
+		pence_inm_joe_andriacchi = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Social Development Council"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { novice_mastermind }			
+		}
+		
+		pence_inm_sam_mccann = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			available = {
+			    OR = {
+					has_country_leader = {
+						name = "Rudy Fratto"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { politician_with_connections }			
+		}
+	}
+	
+	army_chief = {
+		pence_michael_williams = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			traits = { army_chief_organizational_3 }
+		}
+		
+		pence_robert_doggart = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			traits = { army_chief_morale_1 }
+		}
+	}
+	
+	navy_chief = {
+	
+	}
+	
+	air_chief = {
+		pence_augustus_sol_invictus = {
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			traits = { air_chief_reform_1 }
+		}
+	}
+	
+	high_command = {
+		pence_hammer = {
+		ledger = army
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			traits = { army_regrouping_1 }
+		}
+		
+		pence_jester = {
+		ledger = army
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			traits = { army_logistics_1 }
+		}
+		
+		pence_elliot_kline = {
+		ledger = army
+		
+		    allowed = {
+			    tag = NEA
+				has_country_flag = NEA_pence_takeover_flag
+			}
+			
+			traits = { army_commando_1 }
+		}
+	}
+
 
 
 

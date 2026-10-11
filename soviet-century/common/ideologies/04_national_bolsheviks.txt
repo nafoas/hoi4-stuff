@@ -6,16 +6,17 @@ ideologies = {
 			
 			national_bolshevik_ideology = {
 			}
-
 			
-
 			baathist = {
 			}
-			
-			third_international_theory = {
+
+			neo_baathist = {
 			}
 			
-			marxist_leninist_maoist = {
+			black_sun = { # Soviet Century (Lincoln)
+			}
+
+			third_international_theory = {
 			}
 			
 			national_syndicalist = {
@@ -39,7 +40,7 @@ ideologies = {
 			revolutionary_junta = {
 			}
 
-			islamic_bolshevik = {
+			shariatist = {
 			}
 
 			duginism = {
@@ -50,9 +51,38 @@ ideologies = {
 
 			burmese_socialist = {
 			}
-			black_sun = {
-			}
+
 			limonovite = {
+			}
+			
+			mobutist = {
+			}
+			
+			young_socialist = {
+			}
+
+			gonzalo_thought = {
+			}
+
+			dengist = {
+			}
+
+			pierceist_spencerist = {
+			}
+
+			new_right = {
+			}
+
+			securocracy = {
+			}
+
+			mugabeism = {
+			}
+
+			ultraleftist_maoist = {
+			}
+
+			monolism = {
 			}
 		}
 		
@@ -72,14 +102,16 @@ ideologies = {
 		
 		rules = {
 			can_guarantee_other_ideologies = yes
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
-			can_puppet = yes
+			can_puppet = no
 			can_lower_tension = yes
+			can_join_factions = no
+			can_create_factions = no
 		}
 		
 		modifiers = {
-			join_faction_tension = 0.5
+			join_faction_tension = 0.3
 			civilian_intel_to_others = 10.0
 			army_intel_to_others = 10.0
 			navy_intel_to_others = 10.0

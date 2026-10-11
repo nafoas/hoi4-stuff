@@ -12,24 +12,80 @@ american_unification = {
 			has_integrated_ILL = yes
 			has_integrated_GRL = yes
 			has_integrated_MWA = yes
-			has_integrated_MOT = yes
-			has_integrated_LIN = yes
+			OR = {
+				has_integrated_MOT = yes
+				hidden_trigger = {
+					AND = {
+						has_country_flag = PCA_american_reunificationism
+						CSD = { has_integrated_MOT = yes }
+					}
+				}
+			}
+			OR = {
+				has_integrated_LIN = yes
+				hidden_trigger = {
+					AND = {
+						has_country_flag = PCA_american_reunificationism
+						CSD = { has_integrated_LIN = yes }
+					}
+				}
+			}
 			has_integrated_UTA = yes
 			has_integrated_ARI = yes
-			has_integrated_PCA = yes
+			OR = {
+				has_country_flag = PCA_american_reunificationism
+				has_integrated_PCA = yes
+			}
 			has_integrated_or_puppeted_TEX = yes
 		}
 		complete_effect = {
+			if = {
+				limit = {
+					tag = USA
+				}
+				add_research_slot = 1
+			}
 			remove_ideas = {
 				idea_america_neutrality
-			}
-			hidden_effect = {
-				set_rule = {
-					can_join_factions = yes
-					can_create_factions = yes
-				}
+				idea_standing_firm_remnants
+				idea_standing_firm_commonwealth
+				idea_standing_firm_union
 			}
 			country_event = american_unification.1
+			
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = PCA_american_reunificationism
+					} 
+					hidden_effect = {
+						if = {
+							limit = {
+								PCA = {
+									is_ai = no
+								}
+							}
+							sound_effect = bentley_america_sound
+						}
+						set_country_flag = PCA_harris_reunited_america
+						mark_focus_tree_layout_dirty = yes
+						every_country = {
+							news_event = { id = golden_gate_usa.39} 
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_leader = { 
+										name = "Kamala Harris"
+										ruling_only = yes
+									}
+								}
+							}
+							country_event = golden_gate_usa.40
+						}
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 320
@@ -87,7 +143,13 @@ american_unification = {
 			NOT = {
 				has_country_flag = west_texas_question_resolved
 			}
-			owns_state = 376
+			OR = {
+				owns_state = 376
+				TEX = {
+					owns_state = 376
+				}
+			}
+			
 			TEX = {
 				exists = yes
 				is_puppet_of = ROOT
@@ -95,7 +157,12 @@ american_unification = {
 			}
 		}
 		available = {
-			owns_state = 376
+			OR = {
+				owns_state = 376
+				TEX = {
+					owns_state = 376
+				}
+			}
 			TEX = {
 				exists = yes
 				is_puppet_of = ROOT
@@ -116,7 +183,12 @@ american_unification = {
 			NOT = {
 				has_country_flag = east_texas_question_resolved
 			}
-			owns_state = 376
+			OR = {
+				owns_state = 376
+				TEX = {
+					owns_state = 376
+				}
+			}
 			TEX = {
 				exists = yes
 				is_puppet_of = ROOT
@@ -124,7 +196,12 @@ american_unification = {
 			}
 		}
 		available = {
-			owns_state = 376
+			OR = {
+				owns_state = 376
+				TEX = {
+					owns_state = 376
+				}
+			}
 			TEX = {
 				exists = yes
 				is_puppet_of = ROOT
@@ -193,7 +270,10 @@ american_unification = {
 		visible = {
 			has_country_flag = the_united_states_are_back
 			NOT = {
-				tag = GAU
+				AND = {
+					tag = NEA
+					has_cosmetic_tag = GAU
+				}
 				OR = {
 					AND = {
 						owns_state = 376
@@ -202,6 +282,12 @@ american_unification = {
 					AND = {
 						owns_state = 376
 						TEX = {
+							owns_state = 894
+						}
+					}
+					AND = {
+						TEX = {
+							owns_state = 376
 							owns_state = 894
 						}
 					}
@@ -316,6 +402,10 @@ american_unification = {
 			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.129
 			}
@@ -331,7 +421,10 @@ american_unification = {
 		visible = {
 			has_country_flag = the_united_states_are_back
 			NOT = {
-				tag = GAU
+				AND = {
+					tag = NEA
+					has_cosmetic_tag = GAU
+				}
 				owns_state = 463
 			}
 		}
@@ -389,6 +482,10 @@ american_unification = {
 			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.130
 			}
@@ -408,7 +505,6 @@ american_unification = {
 					owns_state = 629
 					owns_state = 630
 					owns_state = 631
-					owns_state = 727
 				}
 			}
 		}
@@ -418,7 +514,6 @@ american_unification = {
 					owns_state = 629
 					owns_state = 630
 					owns_state = 631
-					owns_state = 727
 				}
 			}
 		}
@@ -449,14 +544,12 @@ american_unification = {
 				owns_state = 629
 				owns_state = 630
 				owns_state = 631
-				owns_state = 727
 			}
 			NOT = {
 				AND = {
 					629 = { is_core_of = ROOT }
 					630 = { is_core_of = ROOT }
 					631 = { is_core_of = ROOT }
-					727 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -465,14 +558,12 @@ american_unification = {
 				owns_state = 629
 				owns_state = 630
 				owns_state = 631
-				owns_state = 727
 			}
 			NOT = {
 				AND = {
 					629 = { is_core_of = ROOT }
 					630 = { is_core_of = ROOT }
 					631 = { is_core_of = ROOT }
-					727 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -480,7 +571,6 @@ american_unification = {
 			add_state_core = 629
         	add_state_core = 630
         	add_state_core = 631
-        	add_state_core = 727
 		}
 		ai_will_do = {
 			factor = 40
@@ -533,6 +623,9 @@ american_unification = {
 				NEA = {
 					is_puppet_of = ROOT
 				}
+				AMC = {
+					is_puppet_of = ROOT
+				}
 			}
 		}
 		remove_effect = {
@@ -544,6 +637,17 @@ american_unification = {
 				}
 				annex_country = {
 					target = NEA
+					transfer_troops = no
+				}
+			}
+			if = {
+				limit = {
+					AMC = {
+						is_puppet_of = ROOT
+					}
+				}
+				annex_country = {
+					target = AMC
 					transfer_troops = no
 				}
 			}
@@ -562,9 +666,19 @@ american_unification = {
 			add_state_core = 795
 			add_state_core = 893
 			add_state_core = 902
+			add_state_core = 1012
+			add_state_core = 739
+			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
 			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.128
 			}
@@ -672,6 +786,10 @@ american_unification = {
 			add_state_core = 900
 			add_state_core = 901
 			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
+			if = {
 				limit = {
 					owns_state = 686
 				}
@@ -686,6 +804,10 @@ american_unification = {
 			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.127
 			}
@@ -737,6 +859,10 @@ american_unification = {
 			}
 			add_state_core = 375
 			add_state_core = 899
+			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
 			if = { #if AR is cored but you lost core on east texas, you get the core back
 				limit = {
 					365 = { #Georgia
@@ -753,6 +879,10 @@ american_unification = {
 			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.124
 			}
@@ -805,8 +935,16 @@ american_unification = {
 			add_state_core = 373
 			add_state_core = 892
 			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
+			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.126
 			}
@@ -865,8 +1003,16 @@ american_unification = {
 			add_state_core = 394
 			add_state_core = 891
 			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
+			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.125
 			}
@@ -929,8 +1075,16 @@ american_unification = {
 			add_state_core = 390
 			add_state_core = 898
 			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
+			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.123
 			}
@@ -996,8 +1150,16 @@ american_unification = {
 			add_state_core = 1017
 			add_state_core = 1018
 			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
+			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.122
 			}
@@ -1050,8 +1212,16 @@ american_unification = {
 			add_state_core = 387
 			add_state_core = 890
 			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
+			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.121
 			}
@@ -1076,6 +1246,7 @@ american_unification = {
 					379 = { is_core_of = ROOT }
 					380 = { is_core_of = ROOT }
 					896 = { is_core_of = ROOT }
+					621 = { is_core_of = ROOT }
 				}
 			}
 		}
@@ -1085,6 +1256,7 @@ american_unification = {
 					owns_state = 379
 					owns_state = 380
 					owns_state = 896
+					owns_state = 621
 				}
 				UTA = {
 					is_puppet_of = ROOT
@@ -1106,9 +1278,18 @@ american_unification = {
 			add_state_core = 379
 			add_state_core = 380
 			add_state_core = 896
+			add_state_core = 621
+			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
 			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.120
 			}
@@ -1161,8 +1342,16 @@ american_unification = {
 			add_state_core = 377
 			add_state_core = 895
 			if = {
+				limit = { tag = CAN }
+				add_to_variable = { CAN_provinces = 1 }
+			}
+			if = {
 				limit = {
 					has_country_flag = foster_elected_general_secretary
+					has_country_leader = {
+						name = "John Foster"
+						ruling_only = yes
+					}
 				}
 				country_event = pacific_america.119
 			}
@@ -1254,6 +1443,7 @@ american_unification = {
 				tag = UTA
 				tag = LIN
 				tag = ARI
+				tag = TEX
 			}
 		}
 		available = {
@@ -1266,14 +1456,11 @@ american_unification = {
 				tag = UTA
 				tag = LIN
 				tag = ARI
+				tag = TEX
 			}
 		}
 		complete_effect = {
 			remove_ideas = idea_america_neutrality
-			set_rule = {
-				can_join_factions = yes
-				can_create_factions = yes
-			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -1343,6 +1530,226 @@ american_unification = {
 		}
 		ai_will_do = {
 			factor = 320
+		}
+	}
+	MTF_united = {
+		visible = {
+			has_government = revolutionary_socialist
+			tag = MOT
+			has_country_flag = NTI_has_been_formed
+			has_country_flag = can_core_UTA
+            has_country_flag = can_core_PCA
+            has_country_flag = can_core_ARI
+            NOT = {
+            has_country_flag = MTF_has_been_formed
+            }
+		}
+		available = {
+			1015 = { is_core_of = ROOT }
+			378 = { is_core_of = ROOT }
+			889 = { is_core_of = ROOT }
+			897 = { is_core_of = ROOT }
+			379 = { is_core_of = ROOT }
+			896 = { is_core_of = ROOT }
+			380 = { is_core_of = ROOT }
+			897 = { is_core_of = ROOT }
+			895 = { is_core_of = ROOT }
+			377 = { is_core_of = ROOT }
+		}
+		complete_effect = {
+			set_country_flag = MTF_has_been_formed
+			set_cosmetic_tag = MTF
+			add_stability = 0.025
+		}
+		ai_will_do = {
+			factor = 320
+		}
+	}
+	unif_negotiate_with_country = {
+		target_root_trigger = {
+			has_country_flag = unifying_america
+			OR = {
+				AND = {
+					tag = PCA
+					NEA = {
+						exists = no
+					}
+					AMC = {
+						OR = {
+							exists = no
+							NOT = {
+								has_country_flag = unifying_america
+							}
+						}
+					}
+					AMS = {
+						OR = {
+							exists = no
+							NOT = {
+								has_country_flag = unifying_america
+							}
+						}
+					}
+					USA = {
+						exists = no
+					}
+					MWA = {
+						exists = no
+					}
+				}
+				AND = {
+					OR = {
+						tag = NEA
+						tag = AMC
+						tag = AMS
+					}
+					PCA = {
+						exists = no
+					}
+					USA = {
+						exists = no
+					}
+					MWA = {
+						exists = no
+					}
+				}
+				AND = {
+					tag = USA
+					NEA = {
+						exists = no
+					}
+					AMC = {
+						OR = {
+							exists = no
+							NOT = {
+								has_country_flag = unifying_america
+							}
+						}
+					}
+					AMS = {
+						OR = {
+							exists = no
+							NOT = {
+								has_country_flag = unifying_america
+							}
+						}
+					}
+					PCA = {
+						exists = no
+					}
+					MWA = {
+						exists = no
+					}
+				}
+				AND = {
+					tag = MWA
+					NEA = {
+						exists = no
+					}
+					AMC = {
+						OR = {
+							exists = no
+							NOT = {
+								has_country_flag = unifying_america
+							}
+						}
+					}
+					AMS = {
+						OR = {
+							exists = no
+							NOT = {
+								has_country_flag = unifying_america
+							}
+						}
+					}
+					USA = {
+						exists = no
+					}
+					MWA = {
+						exists = no
+					}
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					tag = ILL
+					tag = GRL
+					tag = MOT
+					tag = UTA
+					tag = LIN
+					tag = ARI
+					tag = TEX
+					tag = USA
+					tag = PCA
+					tag = CSD
+					tag = NEA
+					tag = AMC
+					tag = AMS
+					tag = LAK
+					has_country_flag = refused_american_land_return
+				}
+				any_owned_state = {
+					NOT = {
+						state = 880
+						state = 894
+						state = 376
+						is_core_of = PREV
+					}
+					OR = {
+						is_core_of = ILL
+						is_core_of = GRL
+						is_core_of = MOT
+						is_core_of = UTA
+						is_core_of = LIN
+						is_core_of = ARI
+						is_core_of = TEX
+						is_core_of = PCA
+						is_core_of = NEA
+						is_core_of = USA
+						is_core_of = MWA
+					}
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				country_event = american_unification.32
+			}
+		}
+		ai_will_do = {
+			factor = 320
+		}
+	}
+	
+	demand_canadian_territories = {
+		cost = 10
+		icon = SWI_dismiss_council
+		visible = {
+			CAN = {
+				any_owned_state = {
+					is_mainland_us_state = yes
+				}
+			}
+		}
+		allowed = {
+			is_post_america_nation = yes
+		}
+		available = {
+			is_neighbor_of = CAN
+		}
+		complete_effect = {
+			CAN = {
+				country_event = {
+					id = american_diplo.48
+					days = 3
+				}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

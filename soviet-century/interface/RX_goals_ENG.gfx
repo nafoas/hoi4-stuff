@@ -122,10 +122,7 @@ spriteTypes = {
 	name = "form_a_new_government_scot"
 	texturefile = "gfx/interface/goals/scotland/form_a_new_government_scot.dds"			
 	}
-	SpriteType = {	
-		name = "SCOTTISH_FREEDOM_is_here"
-		texturefile = "gfx/interface/goals/scotland/SCOTTISH_FREEDOM_is_here.dds"			
-	}
+	
 	SpriteType = {	
 		name = "the_scottish_king"
 		texturefile = "gfx/interface/goals/scotland/the_scottish_king.dds"			
@@ -1700,10 +1697,7 @@ spriteTypes = {
 	name = "the_national_infrastructure_program"
 	texturefile = "gfx/interface/goals/britain/the_national_infrastructure_program.dds"			
 	}
-	SpriteType = {	
-	name = "the_national_infrastructure_program"
-	texturefile = "gfx/interface/goals/britain/the_national_infrastructure_program.dds"			
-	}
+	
 	SpriteType = {	
 	name = "north_tech_hub"
 	texturefile = "gfx/interface/goals/britain/north_tech_hub.dds"			
@@ -3896,10 +3890,7 @@ spriteTypes = {
 	name = "the_outside_world"
 	texturefile = "gfx/interface/goals/britain/the_outside_world.dds"			
 	} 
-	SpriteType = {	
-	name = "appease_scotland"
-	texturefile = "gfx/interface/goals/britain/appease_scotland.dds"			
-	} 
+	 
 	SpriteType = {	
 	name = "recover_from_the_backlash"
 	texturefile = "gfx/interface/goals/britain/recover_from_the_backlash.dds"			
@@ -4975,188 +4966,80 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/britain/CANZUK_Proposal.dds"			
 	}
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-		SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+		
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-		SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+		
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-		SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+		
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-		SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+		
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-		SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+		
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-		SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+		
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-			SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+			
 	
-		SpriteType = {
-	name = "Green_uk"
-	texturefile = "gfx/interface/goals/britain/Green_uk.dds"			
-	}
+		
 	
 	
 	
-	SpriteType = {
-	name = "british_factories"
-	texturefile = "gfx/interface/goals/britain/british_factories.dds"			
-	}
-	
-	SpriteType = {
-	name = "half_mast"
-	texturefile = "gfx/interface/goals/britain/half_mast.dds"			
-	}
-	
-	SpriteType = {
-	name = "foreign_office"
-	texturefile = "gfx/interface/goals/britain/foreign_office.dds"			
-	}
-	
-	SpriteType = {
-	name = "scottish_military_industry"
-	texturefile = "gfx/interface/goals/britain/scottish_military_industry.dds"			
-	}
-	
-	SpriteType = {
-	name = "offshore_oil"
-	texturefile = "gfx/interface/goals/britain/offshore_oil.dds"			
-	}
-	
-	SpriteType = {
-	name = "royal_scottish_guards"
-	texturefile = "gfx/interface/goals/britain/royal_scottish_guards.dds"			
-	}
-	
-	SpriteType = {
-	name = "english_military_industry"
-	texturefile = "gfx/interface/goals/britain/english_military_industry.dds"			
-	}
-	
-	SpriteType = {
-	name = "let_her_in"
-	texturefile = "gfx/interface/goals/britain/let_her_in.dds"			
-	}
-	
-	SpriteType = {
-	name = "empower_the_house_of_lords"
-	texturefile = "gfx/interface/goals/britain/empower_the_house_of_lords.dds"			
-	}
-	
-	SpriteType = {
-	name = "british_security_act"
-	texturefile = "gfx/interface/goals/britain/british_security_act.dds"			
-	}
-	
-	SpriteType = {
-	name = "threaten_social_democrats"
-	texturefile = "gfx/interface/goals/britain/threaten_social_democrats.dds"			
-	}
 	
 	
-	SpriteType = {
-	name = "threaten_conservatives"
-	texturefile = "gfx/interface/goals/britain/threaten_conservatives.dds"			
-	}
 	
-	SpriteType = {
-	name = "privy_council"
-	texturefile = "gfx/interface/goals/britain/privy_council.dds"			
-	}
 	
-	SpriteType = {
-	name = "peoples_government"
-	texturefile = "gfx/interface/goals/britain/peoples_government.dds"			
-	}
 	
-	SpriteType = {
-	name = "trades_union_congress"
-	texturefile = "gfx/interface/goals/britain/trades_union_congress.dds"			
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	SpriteType = {
 	name = "revolt_uk"
@@ -5245,10 +5128,7 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/britain/Old_tory.dds"			
 	}
 	
-	SpriteType = {
-	name = "conservative_uk"
-	texturefile = "gfx/interface/goals/britain/conservative_uk.dds"			
-	}
+	
 	
 	SpriteType = {
 	name = "U_C"
@@ -5265,15 +5145,9 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/britain/Aust_uk.dds"			
 	}
 	
-	SpriteType = {
-	name = "liberal_democrat_uk"
-	texturefile = "gfx/interface/goals/britain/liberal_democrat_uk.dds"			
-	}
 	
-	SpriteType = {
-	name = "social_democrat_uk"
-	texturefile = "gfx/interface/goals/britain/social_democrat_uk.dds"			
-	}
+	
+	
 	
 	SpriteType = {
 	name = "NES_UK"
@@ -5307,10 +5181,7 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/britain/peaceful_uk.dds"			
 	}
 	
-	SpriteType = {
-	name = "labour_uk"
-	texturefile = "gfx/interface/goals/britain/labour_uk.dds"			
-	}
+	
 	
 	SpriteType = {
 	name = "war_uk"
@@ -5355,10 +5226,7 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/britain/new_labour_uk.dds"			
 	}
 	
-	SpriteType = {
-	name = "independent_labour_uk"
-	texturefile = "gfx/interface/goals/britain/independent_labour_uk.dds"			
-	}
+	
 		
 	SpriteType = {
 	name = "internationalism_uk"
@@ -5395,10 +5263,7 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/britain/securing_the_nation.dds"			
 	}
 
-	SpriteType = {
-	name = "a_new_party_a_new_britain_icon"
-	texturefile = "gfx/interface/goals/britain/a_new_party_a_new_britain_icon.dds"			
-	}
+	
 
 	SpriteType = {
 	name = "the_three_nation_plan"
@@ -7401,40 +7266,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/france/new_art_hub.dds"			
 		}
 		
-		SpriteType = {
-		name = "Better_treatment"
-		texturefile = "gfx/interface/goals/france/Better_treatment.dds"			
-		}
+		
 		
 		SpriteType = {
 			name = "André_Gandillon"
 			texturefile = "gfx/interface/goals/france/André_Gandillon.dds"			
 			}
 	
-		SpriteType = {
-		name = "Better_treatment"
-		texturefile = "gfx/interface/goals/france/Better_treatment.dds"			
-		}	
+			
 		
-		SpriteType = {
-			name = "Better_treatment"
-			texturefile = "gfx/interface/goals/france/Better_treatment.dds"			
-			}
+		
 	
-			SpriteType = {
-				name = "Better_treatment"
-				texturefile = "gfx/interface/goals/france/Better_treatment.dds"			
-				}		
+					
 	
 		SpriteType = {
 		name = "EURO_spring_start"
 		texturefile = "gfx/interface/goals/france/EURO_spring_start.dds"			
 		}	
 	
-		SpriteType = {
-		name = "EURO_spring_start"
-		texturefile = "gfx/interface/goals/france/EURO_spring_start.dds"			
-		}	
+			
 	
 		SpriteType = {
 			name = "France_Crisis"
@@ -7795,10 +7645,7 @@ spriteTypes = {
 													texturefile = "gfx/interface/goals/france/tok_tok.dds"			
 													}			
 												
-													SpriteType = {
-														name = "day_of_rage"
-														texturefile = "gfx/interface/goals/france/day_of_rage.dds"			
-														}			
+																
 												 SpriteType = {
 													name = "protecting_the_people"
 													texturefile = "gfx/interface/goals/france/protecting_the_people.dds"			
@@ -8194,10 +8041,7 @@ spriteTypes = {
 																												texturefile = "gfx/interface/goals/france/overseas_investment_taxes.dds"			
 																												}	
 																										
-																										 SpriteType = {
-																											name = "canadian_investment"
-																											texturefile = "gfx/interface/goals/france/canadian_investment.dds"			
-																											}	
+																										 	
 	
 																											SpriteType = {
 																												name = "fair_welfair"
@@ -8227,10 +8071,7 @@ spriteTypes = {
 																											texturefile = "gfx/interface/goals/france/overcoming_communism.dds"			
 																											}			
 																										
-																											SpriteType = {
-																												name = "direct_democracy"
-																												texturefile = "gfx/interface/goals/france/direct_democracy.dds"			
-																												}	
+																												
 																										
 																										 SpriteType = {
 																											name = "first_france_elections"
@@ -8519,20 +8360,11 @@ spriteTypes = {
 																																	name = "the_king_is_staying_as_the_leader"
 																																	texturefile = "gfx/interface/goals/france/the_king_is_staying_as_the_leader.dds"			
 																																	}			
-																															 SpriteType = {
-																																name = "Address_The_nation"
-																																texturefile = "gfx/interface/goals/france/Address_The_nation.dds"			
-																																}			
+																															 			
 																															
-																																SpriteType = {
-																																	name = "Address_The_nation"
-																																	texturefile = "gfx/interface/goals/france/Address_The_nation.dds"			
-																																	}	
+																																	
 																															
-																															 SpriteType = {
-																																name = "Address_The_nation"
-																																texturefile = "gfx/interface/goals/france/Address_The_nation.dds"			
-																																}
+																															 
 		#texas
 	SpriteType = {
 	name = "scott_copeland_icon"
@@ -8594,10 +8426,7 @@ spriteTypes = {
 	name = "ban_obamas"
 	texturefile = "gfx/interface/goals/tex/ban_obamas.dds"			
 	}
-	SpriteType = {
-	name = "the_lost_cause"
-	texturefile = "gfx/interface/goals/tex/the_lost_cause.dds"			
-	}
+	
 	SpriteType = {
 	name = "the_golden_circle"
 	texturefile = "gfx/interface/goals/tex/the_golden_circle.dds"			
@@ -8699,10 +8528,7 @@ spriteTypes = {
 	name = "enlightened_monarchy"
 	texturefile = "gfx/interface/goals/tex/enlightened_monarchy.dds"			
 	}
-	SpriteType = {
-	name = "antonio_burr_focus"
-	texturefile = "gfx/interface/goals/tex/antonio_burr_focus.dds"			
-	}
+	
 	SpriteType = {
 	name = "eradicate_copeland_loyalist"
 	texturefile = "gfx/interface/goals/tex/eradicate_copeland_loyalist.dds"			
@@ -8971,10 +8797,7 @@ spriteTypes = {
 	name = "the_4th_riech"
 	texturefile = "gfx/interface/goals/lincoln/the_4th_riech.dds"				
 }
-	SpriteType = {
-	name = "the_camps"
-	texturefile = "gfx/interface/goals/lincoln/the_camps.dds"				
-}
+	
 	SpriteType = {
 	name = "ultimate_victory"
 	texturefile = "gfx/interface/goals/lincoln/ultimate_victory.dds"			
@@ -9084,10 +8907,7 @@ spriteTypes = {
 	name = "peoples_storm"
 	texturefile = "gfx/interface/goals/lincoln/peoples_storm.dds"				
 }
-	SpriteType = {
-	name = "the_camps"
-	texturefile = "gfx/interface/goals/lincoln/the_camps.dds"				
-}
+	
 	SpriteType = {
 	name = "ss_of_our_own"
 	texturefile = "gfx/interface/goals/lincoln/ss_of_our_own.dds"				
@@ -9128,18 +8948,9 @@ spriteTypes = {
 	name = "operation_gold"
 	texturefile = "gfx/interface/goals/lincoln/operation_gold.dds"				
 }
-	SpriteType = {
-	name = "ultimate_victory"
-	texturefile = "gfx/interface/goals/lincoln/ultimate_victory.dds"				
-}
-	SpriteType = {
-	name = "more_living_space"
-	texturefile = "gfx/interface/goals/lincoln/more_living_space.dds"				
-}
-	SpriteType = {
-	name = "moving_north"
-	texturefile = "gfx/interface/goals/lincoln/moving_north.dds"				
-}
+	
+	
+	
 	SpriteType = {
 	name = "purify_canada"
 	texturefile = "gfx/interface/goals/lincoln/purify_canada.dds"				
@@ -9152,10 +8963,7 @@ spriteTypes = {
 	name = "inuit_to_work"
 	texturefile = "gfx/interface/goals/lincoln/inuit_to_work.dds"				
 }
-	SpriteType = {
-	name = "moving_south"
-	texturefile = "gfx/interface/goals/lincoln/moving_south.dds"				
-}
+	
 	SpriteType = {
 	name = "purify_mexico"
 	texturefile = "gfx/interface/goals/lincoln/purify_mexico.dds"				
@@ -9168,10 +8976,7 @@ spriteTypes = {
 	name = "cartels_to_protection_squad"
 	texturefile = "gfx/interface/goals/lincoln/cartels_to_protection_squad.dds"				
 }
-	SpriteType = {
-	name = "taking_the_carib"
-	texturefile = "gfx/interface/goals/lincoln/taking_the_carib.dds"				
-}
+	
 	SpriteType = {
 	name = "purify_caribean"
 	texturefile = "gfx/interface/goals/lincoln/purify_caribean.dds"				
@@ -9196,10 +9001,7 @@ spriteTypes = {
 	name = "purify_central_america"
 	texturefile = "gfx/interface/goals/lincoln/purify_central_america.dds"				
 }
-	SpriteType = {
-	name = "north_to_south"
-	texturefile = "gfx/interface/goals/lincoln/north_to_south.dds"				
-}
+	
 	SpriteType = {
 	name = "a_new_land_for_whites"
 	texturefile = "gfx/interface/goals/lincoln/a_new_land_for_whites.dds"				
@@ -9209,75 +9011,33 @@ spriteTypes = {
 
 
 		## New Icons ##
-	SpriteType = {
-	name = "glr_attack"
-	texturefile = "gfx/interface/goals/attack/glr_attack.dds"			
-	}
 	
-	SpriteType = {
-	name = "hawaii_attack"
-	texturefile = "gfx/interface/goals/attack/hawaii_attack.dds"			
-	}
+	
+	
 
-	SpriteType = {
-	name = "lincoln_attack"
-	texturefile = "gfx/interface/goals/attack/lincoln_attack.dds"			
-	}
 	
-	SpriteType = {
-	name = "midwest_attack"
-	texturefile = "gfx/interface/goals/attack/midwest_attack.dds"			
-	}
+	
+	
 
-	SpriteType = {
-	name = "montana_attack"
-	texturefile = "gfx/interface/goals/attack/montana_attack.dds"			
-	}
 	
-	SpriteType = {
-	name = "utah_attack"
-	texturefile = "gfx/interface/goals/attack/utah_attack.dds"			
-	}
+	
+	
 
-	SpriteType = {
-	name = "texas_attack"
-	texturefile = "gfx/interface/goals/attack/texas_attack.dds"			
-	}
 	
-	SpriteType = {
-	name = "arizona_attack"
-	texturefile = "gfx/interface/goals/attack/arizona_attack.dds"			
-	}
 	
-	SpriteType = {
-	name = "illinois_attack"
-	texturefile = "gfx/interface/goals/attack/illinois_attack.dds"			
-	}
 	
-	SpriteType = {
-	name = "venezuela_attack"
-	texturefile = "gfx/interface/goals/attack/venezuela_attack.dds"			
-	}
-	SpriteType = {
-	name = "authority_and_strength"
-	texturefile = "gfx/interface/goals/usa/authority_and_strength.dds"			
-	}
+	
+	
+	
+	
+	
 	SpriteType = {
 	name = "usa_restore_order"
 	texturefile = "gfx/interface/goals/usa/GFX_usa_restore_order.dds"			
 	}
-	SpriteType = {
-	name = "corporatism"
-	texturefile = "gfx/interface/goals/usa/GFX_corporatism.dds"			
-	}
-	SpriteType = {
-	name = "it_cant_happen_here"
-	texturefile = "gfx/interface/goals/usa/GFX_it_cant_happen_here.dds"			
-	}
-	SpriteType = {
-	name = "state_of_texas"
-	texturefile = "gfx/interface/goals/usa/GFX_state_of_texas.dds"			
-	}
+	
+	
+	
 	SpriteType = {
 	name = "the_moderate"
 	texturefile = "gfx/interface/goals/pence/focus_the_moderate.dds"			
