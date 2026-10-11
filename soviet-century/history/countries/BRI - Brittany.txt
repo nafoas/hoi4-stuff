@@ -3,29 +3,76 @@
 oob = "generic_2000"
 
 set_research_slots = 4
-set_convoys = 500
+set_convoys = 98
 set_stability = 0.8
 set_war_support = 0.3
+
+set_country_flag = RW_northern_hemisphere
 
 set_technology = {
 	support_weapons = 1
 	infantry_weapons = 1
+	tech_trucks = 1
 	motorised_infantry = 1 
 	tech_support = 1 
 	tech_field_hospital = 1 
 	tech_engineers = 1 
-	gwtank = 1 
-	basic_light_tank = 1 
 	gw_artillery = 1 
 	tech_mountaineers = 1
 	early_light_cruiser = 1
-	early_fighter = 1 
-	early_bomber = 1 
-    transport = 1 
 	marines = 1
 	early_destroyer = 1 
+	transport = 1 
 	interwar_antiair = 1
 	interwar_antitank = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+#		set_air_oob = "ENG_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+		}
+	else = {
+#		set_air_oob = "ENG_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		armor_tech_1 = 1
+		engine_tech_1 = 1
+	}
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -59,17 +106,15 @@ if = {
 		basic_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
+		#basic_medium_battery = 1
 		basic_heavy_battery = 1
 		basic_torpedo = 1
 		sonar = 1
 		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		improved_airplane_launcher = 1
+		#improved_airplane_launcher = 1
 	}
 }
 set_politics = {
@@ -93,68 +138,113 @@ set_popularities = {
 		communist = 60
 }
 
-create_country_leader = {
-	name = "Ronan Le Gall"
-	picture = "Portrait_BRI_Ronan_Le_Gall.dds"
-	ideology = fascist_ideology
-}
+recruit_character = BRI_ronan_le_gall
+recruit_character = BRI_thierry_jigourel
+recruit_character = BRI_francois_i
+recruit_character = BRI_gael_roblin
+recruit_character = BRI_francois_goulard
+recruit_character = BRI_alain_cadec
+recruit_character = BRI_valerie_hayer
+recruit_character = BRI_mathieu_guihard
+recruit_character = BRI_andre_lavanant
+recruit_character = BRI_eric_bainvel
+recruit_character = BRI_lydie_massard
 
-create_country_leader = {
-	name = "Jean-Paul Félix"
-	picture = "Portrait_BRI_Jean-Paul_Felix.dds"
-	ideology = nationalist_ideology
-}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Cold War Light Tank"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+	}
 
-create_country_leader = {
-	name = "François I"
-	picture = "Portrait_BRI_Francois_I.dds"
-	ideology = absolute_monarchist
-}
+	create_equipment_variant = {
+		name = "Cold War Heavy Tank" 
+		type = heavy_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_howitzer
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 4
+		}
+	}
 
-create_country_leader = {
-	name = "Gaël Roblin"
-	picture = "Portrait_BRI_Gael_Roblin.dds"
-	ideology = national_bolshevik_ideology
+	create_equipment_variant = {
+		name = "Cold War Medium Tank" 
+		type = medium_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_medium_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 5
+		}
+	}
 }
-
-create_country_leader = {
-	name = "François Goulard"
-	picture = "Portrait_BRI_Francois_Goulard.dds"
-	ideology = european_conservative
-}
-
-create_country_leader = {
-	name = "Alain Cadec"
-	picture = "Portrait_BRI_Alain_Cadec.dds"
-	ideology = christian_democrat
-}
-
-create_country_leader = {
-	name = "Valérie Hayer"
-	picture = "Portrait_BRI_Valerie_Hayer.dds"
-	ideology = social_liberal
-}
-
-create_country_leader = {
-	name = "Mathieu Guihard"
-	picture = "Portrait_BRI_Mathieu_Guihard.dds"
-	ideology = new_democrat_ideology
-}
-
-create_country_leader = {
-	name = "André Lavanant"
-	picture = "Portrait_BRI_Andre_Lavanant.dds"
-	ideology = progressive
-}
-
-create_country_leader = {
-	name = "Éric Bainvel"
-	picture = "Portrait_BRI_Eric_Bainvel.dds"
-	ideology = revolutionary_socialist_ideology
-}
-
-create_country_leader = {
-	name = "Lydie Massard"
-	picture = "Portrait_BRI_Lydie_Massard.dds"
-	ideology = neocommunist
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "Fighter I"
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "CAS I" 
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Naval Bomber I" 
+		type = small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Tactical Bomber I" 
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = empty
+		}
+	}
 }

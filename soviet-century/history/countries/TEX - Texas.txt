@@ -1,6 +1,5 @@
 ﻿capital = 375
 
- 
 if = {
 	limit = {
 		NOT = {
@@ -17,21 +16,24 @@ if = {
 }
 
 set_research_slots = 3
-set_convoys = 500
+set_convoys = 40
 set_stability = 0.7
 set_war_support = 0.4
+
+set_country_flag = RW_northern_hemisphere
 
 add_ideas = {
 	idea_america_neutrality_statelet
 	YEM_opec_member
-	idea_tex_coalition_cracks 
 	#idea_tex_economy
 	#idea_tex_independent
+	extensive_conscription
 }
 
 set_technology = {
 	support_weapons = 1
 	infantry_weapons = 1
+	tech_trucks = 1
 	motorised_infantry = 1 
 	tech_support = 1 
 	tech_field_hospital = 1 
@@ -44,7 +46,27 @@ set_technology = {
 	interwar_antiair = 1
 	interwar_antitank = 1
 	basic_train = 1
+	militia_tech = 1
 }
+#Nuclear projects
+complete_special_project = {
+	project = sp:sp_nuclear_reactor
+}
+complete_special_project = {
+	project = sp:sp_commercial_nuclear_reactor
+}
+#Air Projects
+complete_special_project = {
+	project = sp:sp_air_radar
+}
+complete_special_project = {
+	project = sp:sp_air_helicopter
+}
+add_opinion_modifier = {
+	target = VEN
+	modifier = close_friendship
+}
+
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 #		set_air_oob = "ENG_1936_air_bba"
@@ -126,7 +148,7 @@ if = {
 		basic_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
+		#basic_medium_battery = 1
 		basic_heavy_battery = 1
 		basic_torpedo = 1
 		sonar = 1
@@ -134,12 +156,9 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		improved_airplane_launcher = 1
+		#improved_airplane_launcher = 1
 	}
 }
-
-
-
 set_politics = {
 	ruling_party = nationalist
 	last_election = "1997.1.1"
@@ -148,12 +167,12 @@ set_politics = {
 }
 
 set_popularities = {
-        	fascist = 12
-		nationalist = 41
+        fascist = 12
+		nationalist = 51
 		monarchist = 0
 		national_bolshevik = 0
 		national_conservative = 25
-		centrist = 10
+		centrist = 0
 		liberal = 10
 		new_democrat = 2
 		moderate_socialist = 0
@@ -167,7 +186,7 @@ recruit_character = TEX_texan_royal_council
 recruit_character = TEX_wade_michael_page
 recruit_character = TEX_joe_straus
 recruit_character = TEX_ron_paul
-recruit_character = TEX_ross_perot
+recruit_character = TEX_jose_r._rodriguez
 recruit_character = TEX_david_cobb
 recruit_character = TEX_stewart_alexander
 recruit_character = TEX_gary_chartier
@@ -181,15 +200,6 @@ recruit_character = TEX_horace_c._chuck_hodges
 recruit_character = TEX_paul_e._funk_ii
 recruit_character = TEX_john_b._nathman
 recruit_character = TEX_patrick_m._walsh
-recruit_character = TEX_david_koresh
-recruit_character = TEX_jim_jones_jr
-recruit_character = TEX_antonio_burr
-recruit_character = TEX_dick_burr
-recruit_character = TEX_sherri_burr
-recruit_character = TEX_rand_paul
-recruit_character = TEX_greg_abbott
-recruit_character = TEX_larry_kilgore
-
 
 if = {
 	limit = {
@@ -269,7 +279,7 @@ create_equipment_variant = {
 		type = ship_hull_cruiser_2
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_battery_slot = ship_light_medium_battery_2
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = ship_sonar_1
@@ -421,3 +431,17 @@ if = {
 		}
 	}
 }
+
+### Soviet Century additions ###
+add_ideas = {
+	idea_tex_coalition_cracks
+}
+recruit_character = TEX_ross_perot
+recruit_character = TEX_david_koresh
+recruit_character = TEX_jim_jones_jr
+recruit_character = TEX_antonio_burr
+recruit_character = TEX_dick_burr
+recruit_character = TEX_sherri_burr
+recruit_character = TEX_rand_paul
+recruit_character = TEX_greg_abbott
+recruit_character = TEX_larry_kilgore

@@ -1245,7 +1245,7 @@
 	}
 	shared_focus = {
 		id = LIN_expand_our_airbases
-		icon = expand_airfields
+		icon = GFX_goal_generic_build_airforce
 		cost = 7.2
 		prerequisite = {
 			focus = LIN_the_new_coast_guard
@@ -2009,7 +2009,7 @@ shared_focus = {
 		y = 1
 		relative_position_id = LIN_operation_red
 		completion_reward = {
-		  	create_country_flag = purify_canada
+		  	set_country_flag = purify_canada
 			custom_effect_tooltip = purify_CAN_tt
 		}
 
@@ -2077,7 +2077,7 @@ shared_focus = {
 		y = 1
 		relative_position_id = LIN_operation_green
 		completion_reward = {
-		  		create_country_flag = purify_mexico
+		  		set_country_flag = purify_mexico
 				custom_effect_tooltip = purify_MEX_tt
 		}
 
@@ -2227,7 +2227,7 @@ shared_focus = {
 		y = 1
 		relative_position_id = LIN_take_the_caribean
 		completion_reward = {
-		  	create_country_flag = purify_caribean
+		  	set_country_flag = purify_caribean
 			custom_effect_tooltip = purify_CAR_tt
 		}
 
@@ -2370,7 +2370,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = LIN_new_banana_plantations
-		icon = banana_plantation
+		icon = GFX_goal_generic_agriculture
 		cost = 7.2
 		prerequisite = {
 			focus = LIN_operation_banana
@@ -2425,7 +2425,7 @@ shared_focus = {
 		y = 2
 		relative_position_id = LIN_operation_banana
 		completion_reward = {
-		  		create_country_flag = purify_centralA
+		  		set_country_flag = purify_centralA
 				custom_effect_tooltip = purify_CAA_tt
 		}
 

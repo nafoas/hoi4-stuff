@@ -17,7 +17,7 @@ ideas = {
 		targeted_modifier = {
 			tag = MOT
 			defense_bonus_against = 0.10
-			defense_attack_against = 0.10
+			attack_bonus_against = 0.10
 			}
 		}
 idea_lin_reopened_canal = { 

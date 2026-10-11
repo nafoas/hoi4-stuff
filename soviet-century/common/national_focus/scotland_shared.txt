@@ -115,12 +115,12 @@ shared_focus = {
 				focus = SCO_Discuss_The_Government_Structure
 			}
 			available = {
-				has_government = green
+				has_government = liberal
 			}
 			completion_reward = {
 				add_political_power = 20
 				add_popularity = {
-					ideology = green
+					ideology = liberal
 					popularity = 0.10
 				}
 				country_event = { 
@@ -181,7 +181,7 @@ shared_focus = {
 			}
 			completion_reward = {
 				add_popularity = {
-					ideology = green
+					ideology = liberal
 					popularity = 0.05
 				}
 				country_event = { 
@@ -880,203 +880,203 @@ shared_focus = {
 		}
 
 		#shared_focus = {
-			id = SCO_Scottish_Armed_Forces
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 18
-			y = 16
-		prerequisite = {
-			focus = SCO_Officially_Form_The_Scottish_Military
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Scottish_Armed_Forces
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 18
+#			y = 16
+#		prerequisite = {
+#			focus = SCO_Officially_Form_The_Scottish_Military
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
-
+#
 	#	shared_focus = {
-			id = SCO_Tank_Blitzkriegs
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 17
-			y = 17
-		prerequisite = {
-			focus = SCO_Scottish_Armed_Forces
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Tank_Blitzkriegs
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 17
+#			y = 17
+#		prerequisite = {
+#			focus = SCO_Scottish_Armed_Forces
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
-
+#
 		#shared_focus = {
-			id = SCO_Grand_Battleplans
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 19
-			y = 17
-		prerequisite = {
-			focus = SCO_Scottish_Armed_Forces
-		}
-			completion_reward = {
-			
-			 }
-		#}
-		#shared_focus = {
-			id = SCO_St_Andrews_Armory
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 18
-			y = 18
-		prerequisite = {
-			focus = SCO_Tank_Blitzkriegs
-		}
-		prerequisite = {
-			focus = SCO_Grand_Battleplans
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Grand_Battleplans
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 19
+#			y = 17
+#		prerequisite = {
+#			focus = SCO_Scottish_Armed_Forces
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
 		#shared_focus = {
-			id = SCO_Project_Robert
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 18
-			y = 19
-		prerequisite = {
-			focus = SCO_St_Andrews_Armory
-		}
-			completion_reward = {
-				set_country_flag = Project_Robert
-			 }
-		#}
-
-
-		#shared_focus = {
-			id = SCO_The_Flying_Scots
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 22
-			y = 16
-		prerequisite = {
-			focus = SCO_Officially_Form_The_Scottish_Military
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_St_Andrews_Armory
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 18
+#			y = 18
+#		prerequisite = {
+#			focus = SCO_Tank_Blitzkriegs
+#		}
+#		prerequisite = {
+#			focus = SCO_Grand_Battleplans
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
 		#shared_focus = {
-			id = SCO_Bomber_Warfare
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 21
-			y = 17
-		prerequisite = {
-			focus = SCO_The_Flying_Scots
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Project_Robert
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 18
+#			y = 19
+#		prerequisite = {
+#			focus = SCO_St_Andrews_Armory
+#		}
+#			completion_reward = {
+#				set_country_flag = Project_Robert
+#			 }
+		#}
+#
+#
+		#shared_focus = {
+#			id = SCO_The_Flying_Scots
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 22
+#			y = 16
+#		prerequisite = {
+#			focus = SCO_Officially_Form_The_Scottish_Military
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
 		#shared_focus = {
-			id = SCO_Fighter_Warfare
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 23
-			y = 17
-		prerequisite = {
-			focus = SCO_The_Flying_Scots
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Bomber_Warfare
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 21
+#			y = 17
+#		prerequisite = {
+#			focus = SCO_The_Flying_Scots
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
 		#shared_focus = {
-			id = SCO_Perth_Air_Yards
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 22
-			y = 18
-		prerequisite = {
-			focus = SCO_Bomber_Warfare
-		}
-		prerequisite = {
-			focus = SCO_Fighter_Warfare
-		}
-			completion_reward = {
-			
-			 }
-		#}
-
-
-		#shared_focus = {
-			id = SCO_Focus_On_Sonic_Planes
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 22
-			y = 19
-		prerequisite = {
-			focus = SCO_Perth_Air_Yards
-		}
-			completion_reward = {
-				set_country_flag = Sonic_Planes
-			 }
-		#}
-
-		#shared_focus = {
-			id = SCO_Scotland_Rules_The_Waves
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 26
-			y = 16
-		prerequisite = {
-			focus = SCO_Officially_Form_The_Scottish_Military
-		}
-			completion_reward = {
-			
-			 }
-		#}
-
-		#shared_focus = {
-			id = SCO_A_Navy_To_Rule_Them_All
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 25
-			y = 17
-		prerequisite = {
-			focus = SCO_Scotland_Rules_The_Waves
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Fighter_Warfare
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 23
+#			y = 17
+#		prerequisite = {
+#			focus = SCO_The_Flying_Scots
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
 		#shared_focus = {
-			id = SCO_Focus_On_Carrier_Warfare
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 27
-			y = 17
-		prerequisite = {
-			focus = SCO_Scotland_Rules_The_Waves
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Perth_Air_Yards
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 22
+#			y = 18
+#		prerequisite = {
+#			focus = SCO_Bomber_Warfare
+#		}
+#		prerequisite = {
+#			focus = SCO_Fighter_Warfare
+#		}
+#			completion_reward = {
+#			
+#			 }
+		#}
+#
+#
+		#shared_focus = {
+#			id = SCO_Focus_On_Sonic_Planes
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 22
+#			y = 19
+#		prerequisite = {
+#			focus = SCO_Perth_Air_Yards
+#		}
+#			completion_reward = {
+#				set_country_flag = Sonic_Planes
+#			 }
+		#}
+#
+		#shared_focus = {
+#			id = SCO_Scotland_Rules_The_Waves
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 26
+#			y = 16
+#		prerequisite = {
+#			focus = SCO_Officially_Form_The_Scottish_Military
+#		}
+#			completion_reward = {
+#			
+#			 }
+		#}
+#
+		#shared_focus = {
+#			id = SCO_A_Navy_To_Rule_Them_All
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 25
+#			y = 17
+#		prerequisite = {
+#			focus = SCO_Scotland_Rules_The_Waves
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
 		#shared_focus = {
-			id = SCO_Develop_Edinburgh_Naval_Yards
-			icon = discuss_the_government_structure
-			cost = 1
-			x = 26
-			y = 18
-		prerequisite = {
-			focus = SCO_A_Navy_To_Rule_Them_All
-		}
-		prerequisite = {
-			focus = SCO_Focus_On_Carrier_Warfare
-		}
-			completion_reward = {
-			
-			 }
+#			id = SCO_Focus_On_Carrier_Warfare
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 27
+#			y = 17
+#		prerequisite = {
+#			focus = SCO_Scotland_Rules_The_Waves
+#		}
+#			completion_reward = {
+#			
+#			 }
+		#}
+		#shared_focus = {
+#			id = SCO_Develop_Edinburgh_Naval_Yards
+#			icon = discuss_the_government_structure
+#			cost = 1
+#			x = 26
+#			y = 18
+#		prerequisite = {
+#			focus = SCO_A_Navy_To_Rule_Them_All
+#		}
+#		prerequisite = {
+#			focus = SCO_Focus_On_Carrier_Warfare
+#		}
+#			completion_reward = {
+#			
+#			 }
 		#}
 			 #SCOTLAND MONARCHY###
 
@@ -1622,7 +1622,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		SCO = {
-			create_faction = "CANZS"
+			create_faction_from_template = { template = faction_template_generic name = "CANZS" }
 		add_to_faction = CAN	
 		add_to_faction = NZL
 		add_to_faction = AST
@@ -3487,7 +3487,7 @@ shared_focus = {
 		focus = SCO_Joining_The_Rest_Of_Europe
 	}
 	completion_reward = {
-		create_faction = "The 4th Internationale"
+		create_faction_from_template = { template = faction_template_generic name = "The 4th Internationale" }
 	}
 }
 
@@ -4606,13 +4606,13 @@ shared_focus = {
 	}
 	completion_reward = {
 		set_politics = {
-			ruling_party = green
+			ruling_party = liberal
 			elections_allowed = no
 		}
 		create_country_leader = {
 			name = "Thomas And Lorna"
 			picture = "thomas_and_lorna.dds"
-			ideology = european_green
+			ideology = green_liberal
 		}
 	}
 }

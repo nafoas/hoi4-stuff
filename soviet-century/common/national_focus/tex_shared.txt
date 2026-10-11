@@ -415,7 +415,7 @@
 	}
 	shared_focus = {
 		id = TEX_bomber_research
-		icon = GFX_drones
+		icon = GFX_goal_generic_air_doctrine
 		cost = 7
 		prerequisite = {
 			focus = TEX_airbase_exspansion
@@ -1854,7 +1854,7 @@
 		y = 1
 		relative_position_id = Tex_build_foreign_relations
 		completion_reward = {
-			create_faction = american_defence_pact
+			create_faction_from_template = { template = faction_template_generic name = american_defence_pact }
 			MEX = {
 		    		country_event = { id = texas.29 }
 				}
@@ -4788,7 +4788,8 @@
 		icon = it_cant_happen_here
 		cost = 5
 		prerequisite = {
-			focus = TEX_united_under_burr
+			focus = TEX_king_antonio_burr
+			focus = TEX_king_richard_burr
 		}
 		available = {
 			AND = {
@@ -5483,7 +5484,7 @@ shared_focus = {
 		y = 1
 		relative_position_id = TEX_build_a_bigger_empire
 		completion_reward = {
-			create_faction = american_defence_pact
+			create_faction_from_template = { template = faction_template_generic name = american_defence_pact }
 		}
 
 	}

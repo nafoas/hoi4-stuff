@@ -1,4 +1,4 @@
-characters={
+﻿characters={
 	LIN_shaun_patrick_winkler={
 		name="Shaun Patrick Winkler"
 		portraits={
@@ -53,6 +53,7 @@ characters={
 			}
 		}
 		country_leader={
+			traits = { trait_altright_demagague }
 			desc="POLITICS_RICHARD_SPENCER_DESC"
 			ideology=pierceist_spencerist
 			expire="1.1.1.1"

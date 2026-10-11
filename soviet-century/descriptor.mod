@@ -1,10 +1,9 @@
-version="1"
+version="2.0"
 tags={
 	"Alternative History"
 }
 dependencies={
-	"Red World Fan Fork"
+	"Red World: Alien Nation"
 }
 name="The Soviet Century: A Red World Submod"
-supported_version="1.13.5"
-remote_file_id="3081106259"
+supported_version="1.19.*"

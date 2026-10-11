@@ -1488,7 +1488,7 @@ focus_tree = {
 			focus = AMS_help_catholics_in_new_england
 		}
 		prerequisite = {
-			focus = AMS_preach_traditional_family_values
+			focus = AMS_encourage_traditional_families
 		}
 		x = 4
 		y = 7

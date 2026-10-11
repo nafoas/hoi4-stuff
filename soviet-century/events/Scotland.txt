@@ -29,7 +29,7 @@ country_event = {
 	option = {
 		name = scotland.2.o1
 		SCO = {
-			country_event = { days = 50 id = britain.33 } 
+			#country_event = { days = 50 id = britain.33 } # event does not exist in Soviet Century or the fork 
 		}
 	}
 }
@@ -192,18 +192,18 @@ country_event = {
 		option = {    #Druid
 			name = scotland.4.o4
 			set_politics = {
-				ruling_party = green
+				ruling_party = liberal
 				elections_allowed = no
 			}
 			set_cosmetic_tag = SCO_Clan_flag_green
-			set_party_name = { ideology = green long_name = SCO_Druid name = SCO_Druid }
+			set_party_name = { ideology = liberal long_name = SCO_Druid name = SCO_Druid }
 			create_country_leader = {
 				name = "Juniper Mackenzie"
 				picture = "juniper_mackenzie.dds"
-				ideology = european_green
+				ideology = green_liberal
 			}
 			add_popularity = {
-				ideology = european_green
+				ideology = liberal
 				popularity = 0.05
 			}
 			hidden_effect = {
@@ -353,7 +353,7 @@ country_event = {
 		set_country_flag = Bond_is_back
 		name = scotland.14.o1
 		SCO = {
-			country_event = { days = 30 id = britain.32 } 
+			#country_event = { days = 30 id = britain.32 } # event does not exist in Soviet Century or the fork 
 		}
 	}
 }

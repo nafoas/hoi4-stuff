@@ -1,11 +1,23 @@
 ﻿capital = 126
 
-oob = "ENG_2000"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "ENG_2000"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "ENG_2000_nsb"
+}
 
-load_focus_tree = british_tree
 
 if = {
-	limit = { has_dlc = "Man the Guns" }
+	limit = { has_dlc = "Gotterdammerung" }
 		set_naval_oob = "ENG_2000_naval_mtg"
 	else = {
 		set_naval_oob = "ENG_2000_naval_legacy"
@@ -13,10 +25,10 @@ if = {
 }
 
 add_ideas = {
-	 idea_queen_elizabeth_ii
+    idea_queen_elizabeth_ii
 	idea_bastion_of_european_democracy
-	idea_prime_minister_owen
 	idea_scottish_tensions
+	limited_conscription
 	britain_sic_shirley_williams
 	britain_fom_mike_gapes
 	britain_ind_kenneth_clarke
@@ -24,10 +36,18 @@ add_ideas = {
 	britain_inm_john_sawers
 }
 
+create_intelligence_agency = {
+    name = "Military Intelligence 6"
+    icon = GFX_intelligence_agency_logo_uk
+}
+
 set_research_slots = 4
 set_convoys = 1000
 set_stability = 0.8
 set_war_support = 0.2
+add_nuclear_bombs = 225
+
+set_country_flag = RW_northern_hemisphere
 
 set_technology = {
 	early_submarine = 1
@@ -40,31 +60,171 @@ set_technology = {
 	basic_carrier = 1
 	support_weapons = 1
 	infantry_weapons = 1
+	tech_trucks = 1
 	motorised_infantry = 1 
 	tech_support = 1 
 	tech_field_hospital = 1 
 	tech_engineers = 1 
-	gwtank = 1 
-	basic_light_tank = 1 
 	gw_artillery = 1 
-	tech_mountaineers = 1
-	early_fighter = 1
-	cv_early_fighter = 1
-	
-	fighter1 = 1
-	
-	naval_bomber1 = 1
-	
-	cv_naval_bomber1 = 1 
-	early_bomber = 1 
+	tech_mountaineers = 1 
 	paratroopers = 1 
 	marines = 1
-	basic_heavy_tank = 1 
 	atomic_research = 1 
 	nuclear_reactor = 1 
 	nukes = 1
 	interwar_antiair = 1
 	interwar_antitank = 1
+    basic_train = 1
+    tech_logistics_company = 1
+	tech_military_police = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	tech_signal_company = 1
+	experimental_rockets = 1
+}
+
+#Nuclear projects
+complete_special_project = {
+	project = sp:sp_nuclear_reactor
+}
+complete_special_project = {
+	project = sp:sp_commercial_nuclear_reactor
+}
+complete_special_project = {
+	project = sp:sp_nuclear_engines
+}
+complete_special_project = {
+	project = sp:sp_nuclear_bomb
+}
+complete_special_project = {
+	project = sp:sp_thermo_nuclear_bomb
+}
+complete_special_project = {
+	project = sp:sp_nuclear_warheads
+}
+#Naval Projects
+complete_special_project = {
+	project = sp:sp_naval_torpedo_cruiser
+}
+complete_special_project = {
+	project = sp:sp_naval_midget_submarine
+}
+complete_special_project = {
+	project = sp:sp_naval_aip_engine
+}
+complete_special_project = {
+	project = sp:sp_naval_anechoic_tiles
+}
+complete_special_project = {
+	project = sp:sp_naval_fleet_submarine
+}
+complete_special_project = {
+	project = sp:sp_naval_nuclear_submarine
+}
+complete_special_project = {
+	project = sp:sp_naval_nuclear_missile_submarine
+}
+complete_special_project = {
+	project = sp:sp_naval_nuclear_torpedo
+}
+complete_special_project = {
+	project = sp:sp_naval_proximity_fuze
+}
+#Air Projects
+complete_special_project = {
+	project = sp:sp_air_radar
+}
+complete_special_project = {
+	project = sp:sp_air_helicopter
+}
+complete_special_project = {
+	project = sp:sp_rockets_ground_to_air_missile
+}
+complete_special_project = {
+	project = sp:sp_air_jet_engine
+}
+complete_special_project = {
+	project = sp:sp_air_intercontinental_bomber
+}
+complete_special_project = {
+	project = sp:sp_rockets_flying_bomb
+}
+complete_special_project = {
+	project = sp:sp_rockets_ballistic_missile
+}
+complete_special_project = {
+	project = sp:sp_rockets_medium_range_ballistic_missile
+}
+complete_special_project = {
+	project = sp:sp_rockets_long_range_ballistic_missile
+}
+#Land Projects
+complete_special_project = {
+	project = sp:sp_land_military_engineering_vehicles
+}
+complete_special_project = {
+	project = sp:sp_land_super_heavy_railway_gun
+}
+complete_special_project = {
+	project = sp:sp_land_multi_charge_large_caliber_gun
+}
+complete_special_project = {
+	project = sp:sp_land_stronghold_network
+}
+complete_special_project = {
+	project = sp:sp_land_super_heavy_howitzer
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "ENG_2000_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_large_airframe = 1
+		}
+	else = {
+		set_air_oob = "ENG_2000_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			strategic_bomber1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1 
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		engine_tech_1 = 1
+	}
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -72,6 +232,7 @@ if = {
 		early_submarine = 1
 		basic_submarine = 1
 		early_destroyer = 1
+		basic_destroyer = 1
 		early_light_cruiser = 1
 		basic_light_cruiser = 1
 		early_heavy_cruiser = 1
@@ -98,17 +259,15 @@ if = {
 		basic_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
+		#basic_medium_battery = 1
 		basic_heavy_battery = 1
 		basic_torpedo = 1
 		sonar = 1
 		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		improved_airplane_launcher = 1
+		#improved_airplane_launcher = 1
 	}
 }
 
@@ -120,665 +279,425 @@ set_politics = {
 }
 
 set_popularities = {
-
-       fascist = 0
+        fascist = 0
 		nationalist = 7
 		monarchist = 2
 		national_bolshevik = 0
 		national_conservative = 26
 		centrist = 0
 		liberal = 31
-		new_democrat = 15
+		new_democrat = 12
 		moderate_socialist = 3
-		green = 0
 		revolutionary_socialist = 4
-		communist = 12
+		communist = 15
 }
 
-create_faction = british_isles_protection_union
+create_faction_from_template = faction_template_british_isles_protection_union
 add_to_faction = IRE
 add_to_faction = ULS
-	
-create_country_leader = {
-	name = "David Owen"
-	desc = "POLITICS_DAVID_OWEN_DESC"
-	picture = "Portrait_ENG_David_Owen.dds"
-	ideology = social_liberal
+
+give_guarantee = CYP
+
+add_opinion_modifier = {
+	target = OMA
+	modifier = close_friendship
 }
 
-create_country_leader = {
-	name = "Robert Griffiths"
-	picture = "Portrait_ENG_Robert_Griffiths.dds"
-	ideology = marxist
-}
-
-create_country_leader = {
-	name = "Paul Golding"
-	picture = "Portrait_ENG_Paul_Golding.dds"
-	ideology = fascist_ideology
-}
-
-create_country_leader = {
-	name = "Nick Griffin"
-	picture = "Portrait_ENG_Nick_Griffin.dds"
-	ideology = nationalist_ideology
-}
-
-create_country_leader = {
-	name = "Elizabeth II"
-	picture = "Portrait_ENG_Elizabeth_Second.dds"
-	ideology = absolute_monarchist
-}
-
-create_country_leader = {
-	name = "Patrick Harrington"
-	picture = "Portrait_ENG_Patrick_Harrington.dds"
-	ideology = national_bolshevik_ideology
-}
-
-create_country_leader = {
-	name = "Owen Paterson"
-	picture = "Portrait_ENG_Owen_Paterson.dds"
-	ideology = european_conservative
-}
-
-create_country_leader = {
-	name = "Nick Clegg"
-	picture = "Portrait_ENG_Nick_Clegg.dds"
-	ideology = centrist_ideology
-}
-
-create_country_leader = {
-	name = "Tony Benn"
-	picture = "Portrait_ENG_Tony_Benn.dds"
-	ideology = new_democrat_ideology
-}
-
-create_country_leader = {
-	name = "Jeremy Corbyn"
-	picture = "Portrait_ENG_Jeremy_Corbyn.dds"
-	ideology = democratic_socialist
-}
-
-create_country_leader = {
-	name = "George Galloway"
-	picture = "Portrait_ENG_George_Galloway.dds"
-	ideology = revolutionary_socialist_ideology
-}
-
-create_country_leader = {
-	name = "Keir Starmer"
-	picture = "Portrait_ENG_Keir_Starmer.dds"
-	ideology = united_labour_ideology
-}
-
-create_country_leader = {
-	name = "Russel Brand"
-	picture = "Portrait_ENG_Russel_Brand.dds"
-	ideology = green_ideology
+add_opinion_modifier = {
+	target = POR
+	modifier = close_friendship
 }
 	
-create_field_marshal = {
-	name = "Sir Stuart Peach"
-	picture = "Portrait_Stuart_Peach.dds"
-	traits = { old_guard defensive_doctrine }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 1
+recruit_character = ENG_david_owen
+recruit_character = ENG_robert_griffiths
+recruit_character = ENG_paul_golding
+recruit_character = ENG_nick_griffin
+recruit_character = ENG_elizabeth_ii
+recruit_character = ENG_patrick_harrington
+recruit_character = ENG_owen_paterson
+recruit_character = ENG_nick_clegg
+recruit_character = ENG_tony_benn
+recruit_character = ENG_george_galloway
+recruit_character = ENG_jeremy_corbyn
+recruit_character = ENG_sir_stuart_peach
+recruit_character = ENG_sir_nicolas_carter
+recruit_character = ENG_patrick_sanders
+recruit_character = ENG_sir_richard_shirreff
+recruit_character = ENG_sir_christopher_deverell
+recruit_character = ENG_glenn_haughton
+recruit_character = ENG_paul_anthony_edward_nanson
+recruit_character = ENG_andrew_hughes
+recruit_character = ENG_philip_napier
+recruit_character = ENG_mike_elviss
+recruit_character = ENG_tom_beckett
+recruit_character = ENG_richard_william_dennis
+recruit_character = ENG_bob_bruce
+recruit_character = ENG_colin_weir
+recruit_character = ENG_ralph_wooddisse
+recruit_character = ENG_charlie_herbert
+recruit_character = ENG_richard_felton
+recruit_character = ENG_tyrone_urch
+recruit_character = ENG_alastair_aitken
+recruit_character = ENG_david_neal
+recruit_character = ENG_benjamin_bathurst
+recruit_character = ENG_mike_walliker
+recruit_character = ENG_susan_ridge
+recruit_character = ENG_sharon_nesmith
+recruit_character = ENG_james_illingworth
+recruit_character = ENG_russell_la_forte
+recruit_character = ENG_james_robert_chiswell
+recruit_character = ENG_oliver_stokes
+recruit_character = ENG_andy_hadfield
+recruit_character = ENG_david_middleton
+recruit_character = ENG_sir_stephen_hillier
+recruit_character = ENG_robert_magowan
+recruit_character = ENG_matt_pierson
+recruit_character = ENG_richard_cantrill
+recruit_character = ENG_graeme_jock_fraser
+recruit_character = ENG_tony_turner
+recruit_character = ENG_paul_lynch
+recruit_character = ENG_graeme_armour
+recruit_character = ENG_ed_davis
+recruit_character = ENG_duncan_potts
+recruit_character = ENG_alasdair_walker
+recruit_character = ENG_sir_philip_jones
+recruit_character = ENG_ben_key
+recruit_character = ENG_jonathan_woodcock
+recruit_character = ENG_tom_karsten
+recruit_character = ENG_paul_bennett
+recruit_character = ENG_robert_tarrant
+recruit_character = ENG_alex_burton
+recruit_character = ENG_john_weale
+recruit_character = ENG_simon_williams
+recruit_character = ENG_john_clink
+recruit_character = ENG_shirley_williams
+recruit_character = ENG_theresa_brasier
+recruit_character = ENG_charles_iii
+recruit_character = ENG_william_v
+recruit_character = ENG_george_osborne
+recruit_character = ENG_iain_duncan_smith
+recruit_character = ENG_nigel_farage
+recruit_character = ENG_liam_fox
+recruit_character = ENG_david_davis
+recruit_character = ENG_boris_johnson
+recruit_character = ENG_justine_greening
+recruit_character = ENG_andrew_mitchell
+recruit_character = ENG_carol_thatcher
+recruit_character = ENG_tony_blair
+recruit_character = ENG_jo_cox
+recruit_character = ENG_edward_miliband
+recruit_character = ENG_tom_watson
+recruit_character = ENG_chuka_umunna
+recruit_character = ENG_hilary_benn
+recruit_character = ENG_harriet_harman
+recruit_character = ENG_diane_abbott
+recruit_character = ENG_ken_loach
+recruit_character = ENG_edward_ix
+recruit_character = ENG_andrew_i
+recruit_character = ENG_navnit_dholakia
+recruit_character = ENG_sarah_teather
+recruit_character = ENG_tim_farron
+recruit_character = ENG_sarah_olney
+recruit_character = ENG_jo_swinson
+recruit_character = ENG_luciana_berger
+recruit_character = ENG_ed_davey
+recruit_character = ENG_layla_moran
+recruit_character = ENG_charles_kennedy
+recruit_character = ENG_chris_huhne
+recruit_character = ENG_norman_lamb
+recruit_character = ENG_vince_cable
+recruit_character = ENG_julia_goldsworthy
+recruit_character = ENG_chris_leslie
+recruit_character = ENG_jess_phillips
+recruit_character = ENG_angela_smith
+recruit_character = ENG_margaret_hodge
+recruit_character = ENG_len_mccluskey
+recruit_character = ENG_lindsey_german
+recruit_character = ENG_john_mcdonnell
+recruit_character = ENG_ken_livingstone
+recruit_character = ENG_salma_yaqoob
+recruit_character = ENG_tim_roache
+recruit_character = ENG_frances_ogrady
+recruit_character = ENG_paul_nowak
+recruit_character = ENG_murad_qureshi
+recruit_character = ENG_alex_callinicos
+recruit_character = ENG_rebecca_long_bailey
+recruit_character = ENG_hannah_sell
+recruit_character = ENG_derek_hatton
+recruit_character = ENG_seumas_milne
+recruit_character = ENG_zane_carpenter
+recruit_character = ENG_brendan_barber
+recruit_character = ENG_dave_prentis
+recruit_character = ENG_john_rees
+recruit_character = ENG_chris_nineham
+recruit_character = ENG_christine_blower
+recruit_character = ENG_zarah_sultana
+recruit_character = ENG_richard_barnbrook
+recruit_character = ENG_robert_west
+recruit_character = ENG_regency_council
+recruit_character = ENG_Henry_Ninth
+recruit_character = ENG_SF
+recruit_character = ENG_Benjamin_Raymond
+recruit_character = ENG_david_mcginley
+recruit_character = ENG_john_allen
+recruit_character = ENG_sue_ion
+recruit_character = ENG_richard_knighton
+recruit_character = ENG_frances_saunders
+recruit_character = ENG_donald_spiers
+recruit_character = ENG_alan_bond
+recruit_character = ENG_lewis_booth
+recruit_character = ENG_ian_king
+recruit_character = ENG_graham_hawkes
+recruit_character = ENG_jonathan_lyle
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Cold War Light Tank"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Cold War Heavy Tank" 
+		type = heavy_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_howitzer
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 4
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Cold War Medium Tank" 
+		type = medium_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_medium_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 5
+		}
+	}
+}
+#ships
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "Invincible Class"  # las malvinas son paraguayas
+		type = ship_hull_carrier_conversion_bb
+		name_group = ENG_CV_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_4
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = carrier_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_secondaries_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Type 42"	#https://www.youtube.com/watch?v=hjXW1J-YNRQ
+		type = ship_hull_light_2
+		name_group = ENG_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_3
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	create_equipment_variant = {
+		name = "Vanguard Class" # submarines
+		type = ship_hull_nuclear_submarine
+		name_group = ENG_SS_VANGUARD
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_nuclear_engine_1
+			front_1_custom_slot = ship_torpedo_sub_2
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = slbm_launcher
+			rear_2_custom_slot = empty
+		}
+	}
+	add_equipment_to_stockpile = { 
+			type = nuclear_missile_equipment_2
+#			variant_name = "L3/35"
+			amount = 70
+			producer = ENG
+		}
+	add_equipment_to_stockpile = { 
+			type = nuclear_missile_equipment_1
+#			variant_name = "L3/35"
+			amount = 40
+			producer = ENG
+	}		
 }
 
-create_field_marshal = {
-	name = "Sir Nicolas Carter"
-	picture = "Portrait_Nicholas_Carter.dds"
-	traits = { thorough_planner }
-	skill = 4
-	attack_skill = 1
-	defense_skill = 5
-	planning_skill = 2
-	logistics_skill = 2
+if = {
+		limit = { not = { has_dlc = "Gotterdammerung" } }
+	create_equipment_variant = {
+		name = "Vanguard Class" # submarines
+		type = ship_hull_submarine_2
+		name_group = ENG_SS_VANGUARD
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_nuclear_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_2
+		}
+	}
 }
-
-create_field_marshal = {
-	name = "Patrick Sanders"
-	picture = "Portrait_Patrick_Sanders.dds"
-	traits = { offensive_doctrine }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 1
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	create_equipment_variant = { 
+		name = "Invincible Class" #carriers
+		type = carrier_1
+		upgrades = {
+			ship_deckspace_upgrade = 0
+			carrier_armor_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_reliability_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Type 42" #destroyers
+		type = destroyer_2
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 2
+			ship_anti_air_upgrade = 3
+		}
+	}
+	create_equipment_variant = {
+		name = "Vanguard Class" #submarines
+		type = submarine_2
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
 }
-
-create_field_marshal = {
-	name = "Sir Richard Shirreff"
-	picture = "Portrait_Richard_Shirreff.dds"
-	traits = { inspirational_leader }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Sir Christopher Deverell"
-	picture = "Portrait_Chris_Deverell.dds"
-	traits = { logistics_wizard }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 4
-}
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "Carrier Fighter I" 
+		type = cv_small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
 	
-create_corps_commander = {
-	name = "Glenn Haughton"
-	picture = "Portrait_Glenn_Haughton.dds"
-	traits = {  }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
+	create_equipment_variant = {
+		name = "Carrier Naval Bomber I" 
+		type = cv_small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Fighter I"
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "CAS I" 
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Naval Bomber I" 
+		type = small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Tactical Bomber I" 
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Strategic Bomber I" 
+		type = large_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_2_4x 
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = empty
+			special_type_slot_3 = fuel_tanks_large
+			special_type_slot_4 = self_sealing_fuel_tanks_large
+			special_type_slot_5 = empty
+		}
+	}
 }
 
-create_corps_commander = {
-	name = "Paul Anthony Edward Nanson"
-	picture = "Portrait_Edward_Nanson.dds"
-	traits = { ranger }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 4
+### Soviet Century additions ###
+load_focus_tree = british_tree
+add_ideas = {
+	idea_prime_minister_owen
 }
-
-create_corps_commander = {
-	name = "Andrew Hughes"
-	picture = "Portrait_Andrew_Hughes.dds"
-	traits = { ranger }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Philip Napier"
-	picture = "Portrait_Philip_Napier.dds"
-	traits = { hill_fighter }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Mike Elviss"
-	picture = "Portrait_Mike_Elviss.dds"
-	traits = { panzer_leader }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Tom Beckett"
-	picture = "Portrait_Tom_Beckett.dds"
-	traits = { panzer_leader }
-	skill = 3
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Richard William Dennis"
-	picture = "Portrait_Richard_Dennis.dds"
-	traits = { trickster }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Bob Bruce"
-	picture = "Portrait_Bob_Bruce.dds"
-	traits = { trickster }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Colin Weir"
-	picture = "Portrait_Colin_Weir.dds"
-	traits = { commando ranger }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Ralph Wooddisse"
-	picture = "Portrait_Ralph_Wooddisse.dds"
-	traits = { panzer_leader }
-	skill = 2
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Charlie Herbert"
-	picture = "Portrait_Charlie_Herbert.dds"
-	traits = { panzer_leader }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Richard Felton"
-	picture = "Portrait_Richard_Felton.dds"
-	traits = { ranger }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Tyrone Urch"
-	picture = "Portrait_Tyrone_Urch.dds"
-	traits = { trait_engineer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Alastair Aitken"
-	picture = "Portrait_Alastair_Aitken.dds"
-	traits = { urban_assault_specialist }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "David Neal"
-	picture = "Portrait_David_Neal.dds"
-	traits = { urban_assault_specialist }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Benjamin Bathurst"
-	picture = "Portrait_Ben_Bathurst.dds"
-	traits = { urban_assault_specialist }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Mike Walliker"
-	picture = "Portrait_Mike_Walliker.dds"
-	traits = {  }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Susan Ridge"
-	picture = "Portrait_Susan_Ridge.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Sharon Nesmith"
-	picture = "Portrait_Sharon_Nesmith.dds"
-	traits = { trait_engineer }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "James Illingworth"
-	picture = "Portrait_James_Illingworth.dds"
-	traits = { trait_engineer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 5
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Russell La Forte"
-	picture = "Portrait_Russ_La_Forte.dds"
-	traits = { urban_assault_specialist }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "James Robert Chiswell"
-	picture = "Portrait_James_Chiswell.dds"
-	traits = { commando }
-	skill = 2
-	attack_skill = 7
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Oliver Stokes"
-	picture = "Portrait_Oliver_Stokes.dds"
-	traits = { fortress_buster }
-	skill = 1
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Andy Hadfield"
-	picture = "Portrait_Andy_Hadfield.dds"
-	traits = { ranger }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "David Middleton"
-	picture = "Portrait_David_Middleton.dds"
-	traits = { trait_engineer }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 5
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Sir Stephen Hillier"
-	picture = "Portrait_Stephen_Hillier.dds"
-	traits = {  }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Robert Magowan"
-	picture = "Portrait_Rob_Magowan.dds"
-	traits = { naval_invader }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Matt Pierson"
-	picture = "Portrait_Matt_Pierson.dds"
-	traits = { commando naval_invader }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Richard Cantrill"
-	picture = "Portrait_Richard_Cantrill.dds"
-	traits = { commando naval_invader }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Graeme -Jock- Fraser"
-	picture = "Portrait_Graeme_Fraser.dds"
-	traits = { commando naval_invader }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 7
-}
-
-create_corps_commander = {
-	name = "Tony Turner"
-	picture = "Portrait_Tony_Turner.dds"
-	traits = { commando naval_invader }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Paul Lynch"
-	picture = "Portrait_Paul_Lynch.dds"
-	traits = { commando trait_engineer }
-	skill = 1
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Graeme Armour"
-	picture = "Portrait_Graeme_Armour.dds"
-	traits = { commando naval_invader }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Ed Davis"
-	picture = "Portrait_Ed_Davis.dds"
-	traits = { naval_invader }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_navy_leader = {
-	name = "Duncan Potts"
-	picture = "Portrait_Duncan_Potts.dds"
-	traits = { superior_tactician }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	coordination_skill = 5
-	maneuvering_skill = 5
-}
-
-create_navy_leader = {
-	name = "Alasdair Walker"
-	picture = "Portrait_Alasdair_Walker.dds"
-	traits = { blockade_runner }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	coordination_skill = 3
-	maneuvering_skill = 2
-}
-
-create_navy_leader = {
-	name = "Sir Philip Jones"
-	picture = "Portrait_Philip_Jones.dds"
-	traits = { old_guard_navy superior_tactician }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	coordination_skill = 2
-	maneuvering_skill = 3
-}
-
-create_navy_leader = {
-	name = "Ben Key"
-	picture = "Portrait_Ben_Key.dds"
-	traits = { ironside }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	coordination_skill = 2
-	maneuvering_skill = 2
-}
-
-create_navy_leader = {
-	name = "Jonathan Woodcock"
-	picture = "Portrait_Jonathan_Woodcock.dds"
-	traits = { seawolf }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	coordination_skill = 2
-	maneuvering_skill = 2
-}
-
-create_navy_leader = {
-	name = "Tom Karsten"
-	picture = "Portrait_Tom_Karsten.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	coordination_skill = 2
-	maneuvering_skill = 1
-}
-
-create_navy_leader = {
-	name = "Paul Bennett"
-	picture = "Portrait_Paul_Bennett.dds"
-	traits = { fly_swatter }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	coordination_skill = 2
-	maneuvering_skill = 2
-}
-
-create_navy_leader = {
-	name = "Robert Tarrant"
-	picture = "Portrait_Robert_Tarrant.dds"
-	traits = { spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	coordination_skill = 3
-	maneuvering_skill = 1
-}
-
-create_navy_leader = {
-	name = "Alex Burton"
-	picture = "Portrait_Alex_Burton.dds"
-	traits = { seawolf }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	coordination_skill = 1
-	maneuvering_skill = 2
-}
-
-create_navy_leader = {
-	name = "John Weale"
-	picture = "Portrait_John_Weale.dds"
-	traits = { air_controller }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	coordination_skill = 2
-	maneuvering_skill = 1
-}
-
-create_navy_leader = {
-	name = "Simon Williams"
-	picture = "Portrait_Simon_Williams.dds"
-	traits = { ironside }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	coordination_skill = 2
-	maneuvering_skill = 1
-}
-
-create_navy_leader = {
-	name = "John Clink"
-	picture = "Portrait_John_Clink.dds"
-	traits = { spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	coordination_skill = 2
-	maneuvering_skill = 2
-}
-	
-
-	
-

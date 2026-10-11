@@ -11,6 +11,8 @@ set_convoys = 1000
 set_stability = 0.8
 set_war_support = 0.2
 
+set_country_flag = RW_northern_hemisphere
+
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -94,17 +96,13 @@ if = {
 		basic_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
 		basic_heavy_battery = 1
 		basic_torpedo = 1
 		sonar = 1
 		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		improved_airplane_launcher = 1
 	}
 }
 
@@ -219,7 +217,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jamie Driscoll"
 	picture = "Portrait_NOF_Jamie_Driscoll.dds"
-	ideology = english_socialists
+	ideology = european_moderate_socialist
 }
 
 create_country_leader = {
@@ -232,7 +230,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Russel Brand"
 	picture = "Portrait_ENG_Russel_Brand.dds"
-	ideology = green_ideology
+	ideology = green_liberal
 }
 create_navy_leader = {
     name = "Edmund Walter Anstice"
@@ -372,7 +370,7 @@ create_country_leader = {
 	desc = "POLITICS_ROBERT_MCINTYRE_DESC"
 	picture = "Robert_Mcintyre.dds"
 	expire = "1975.1.1"
-	ideology = social_liberal_subtype
+	ideology = social_liberal
 	traits = {
 	}
 }
@@ -382,7 +380,7 @@ create_country_leader = {
 #	desc = "POLITICS_JOHN_MACCORMICK_DESC"
 #	picture = "Portrait_JohnMacCormick.dds"
 #	expire = "1975.1.1"
-#	ideology = social_liberal_subtype
+#	ideology = social_liberal
 #	traits = {
 #	}
 #}
@@ -393,7 +391,7 @@ create_country_leader = {
 	desc = "POLITICS_WILLIAM_WOLFE_DESC"
 	picture = "Portrait_SCO_William_Wolfe.dds"
 	expire = "1975.1.1"
-	ideology = social_democrat_subtype
+	ideology = democratic_socialist
 	traits = {
 	}
 }
@@ -403,7 +401,7 @@ create_country_leader = {
 #	desc = "POLITICS_WILLIE_ROSS_DESC"
 #	picture = "Willie_Ross.dds"
 #	expire = "1975.1.1"
-#	ideology = social_democrat_subtype
+#	ideology = democratic_socialist
 #	traits = {
 #	}
 #}
@@ -413,7 +411,7 @@ create_country_leader = {
 	desc = "POLITICS_PRISCILLA_BUCHAN_DESC"
 	picture = "Priscilla_Buchan.dds"
 	expire = "1975.1.1"
-	ideology = social_conservative_subtype
+	ideology = christian_democracy
 	traits = {
 	}
 }
@@ -421,40 +419,9 @@ create_country_leader = {
 add_opinion_modifier = { target = GER modifier = embargo }
 
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		early_ship_hull_very_light = 1
-	    basic_ship_hull_very_light = 1 
-	    early_ship_hull_more_light = 1
-	    basic_ship_hull_more_light = 1
-	    early_ship_hull_light = 1
-	    basic_ship_hull_light = 1
-	    basic_depth_charges = 1
-	    sonar = 1
-	    early_ship_hull_submarine = 1
-    	basic_battery = 1
-    	basic_secondary_battery = 1
-	    basic_torpedo = 1
-	    mtg_transport = 1
-	    basic_naval_mines = 1
-	    improved_naval_mines = 1
-	    submarine_mine_laying = 1
-	    basic_ship_hull_submarine = 1
-	}
-	set_naval_oob = "SCO_1962_naval"
-}
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_naval_oob = "SCO_1962_naval_non_mtg"
-}
+
+
 
 
 

@@ -482,21 +482,21 @@ country_event = {
 		name = lin.25.o1
 		 swap_ideas = {
 				remove_idea = idea_lin_minorty_rescitance 
-				add_idea = idea_lin_minorty_rescitance2 
+				add_idea = idea_lin_minorty_rescitance_2 
 			}
 	}
 	option = {#deport them 
 		name = lin.25.o2
 		 swap_ideas = {
 				remove_idea = idea_lin_minorty_rescitance 
-				add_idea = idea_lin_minorty_rescitance3  
+				add_idea = idea_lin_minorty_rescitance_3  
 			}
 	}
 	option = {#intergrate some, removes others
 		name = lin.25.o3
 		swap_ideas = {
 				remove_idea = idea_lin_minorty_rescitance 
-				add_idea = idea_lin_minorty_rescitance4 
+				add_idea = idea_lin_minorty_rescitance_4 
 			}
 	}
 
@@ -560,7 +560,7 @@ country_event = {
 	#core
 	option = {
 		name = lin.27.o1
-		create_country_flag = core_quebec
+		set_country_flag = core_quebec
 	}
 	#puppet
 	option = {

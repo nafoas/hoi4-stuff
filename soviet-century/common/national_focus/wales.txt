@@ -815,7 +815,7 @@ focus = {
 	}
 	completion_reward = {
 		add_popularity = {
-			ideology = green
+			ideology = liberal
 			popularity = 0.20
 		}
 		set_cosmetic_tag = WAL_welsh_celtic
@@ -823,10 +823,10 @@ focus = {
 			name = "Neil McEvoy"
 			desc = "POLITICS_Neil_McEvoy_DESC"
 			picture = "Neil_McEvoy.dds"
-			ideology = european_green 
+			ideology = green_liberal 
 		}
 		set_politics = {
-			ruling_party = green
+			ruling_party = liberal
 			elections_allowed = no
 		}
 	

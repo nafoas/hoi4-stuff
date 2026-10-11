@@ -10,6 +10,8 @@ set_convoys = 500
 set_stability = 0.8
 set_war_support = 0.3
 
+set_country_flag = RW_northern_hemisphere
+
 set_technology = {
 	support_weapons = 1
 	infantry_weapons = 1
@@ -61,17 +63,13 @@ if = {
 		basic_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
 		basic_heavy_battery = 1
 		basic_torpedo = 1
 		sonar = 1
 		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		improved_airplane_launcher = 1
 	}
 }
 
@@ -166,11 +164,11 @@ create_country_leader = {
 create_country_leader = {
 	name = "Keir Starmer"
 	picture = "Portrait_ENG_Keir_Starmer.dds"
-	ideology = united_labour_ideology
+	ideology = labourist
 }
 
 create_country_leader = {
 	name = "Russel Brand"
 	picture = "Portrait_ENG_Russel_Brand.dds"
-	ideology = green_ideology
+	ideology = green_liberal
 }

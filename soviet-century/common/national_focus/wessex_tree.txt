@@ -61,7 +61,7 @@ focus = {
 	y = 0
 	completion_reward = {
 		declare_war_on = {
-			target = CON
+			target = COW
 		}
 	}
 }

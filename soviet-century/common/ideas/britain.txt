@@ -2235,7 +2235,6 @@ ideas = {
 				stability_factor = 0.20
 				industrial_capacity_factory = 0.025	
 				production_factory_start_efficiency_factor = 0.05
-				trade_council_power = 0.4	
 			}
 		}
 	idea_southern_investment = {
@@ -2254,7 +2253,6 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.10
-				trade_council_power = 0.2
 				production_speed_industrial_complex_factor = 0.2
 				local_resources_factor = 0.05	
 			}
@@ -3487,7 +3485,6 @@ ideas = {
 	picture = pointless_crown_idea
 	
 	modifier = {
-		Monarchist = -0.01
 		political_power_gain = 0.1
 
 
@@ -4747,7 +4744,7 @@ ideas = {
 		
 	}
 }
-	idea_secret_police = {
+	idea_ENG_secret_police = {
 	allowed = {
 		always = no
 	}
@@ -4891,7 +4888,6 @@ ideas = {
 		consumer_goods_factor = 0.10
 		liberal_acceptance = 15
 		new_democrat_acceptance = 15
-		conservative_acceptance = 15
 	}
 }
 	idea_the_economy_problem = {

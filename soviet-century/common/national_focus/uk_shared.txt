@@ -495,7 +495,7 @@
 			focus = ENG_The_Lion_And_The_Mapel_Leaf
 		}
 		prerequisite = {
-			focus = ENG_Democratic_Reform
+			focus = ENG_democratic_reform
 		}
 		prerequisite = {
 			focus = ENG_Attempt_To_Attract_Investors
@@ -510,7 +510,7 @@
 				popularity = 0.05
 			}
 			add_popularity = {
-				ideology = National_Conservative
+				ideology = national_conservative
 				popularity = 0.030
 			}
 			add_popularity = {
@@ -574,7 +574,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		add_popularity = {
-			ideology = Monarchist
+			ideology = monarchist
 			popularity = 0.5
 		}
 		add_stability = 0.3
@@ -3318,7 +3318,7 @@ shared_focus = {
 	y = 3
 	completion_reward = {
 		add_timed_idea = {
-			idea = idea_secret_police
+			idea = idea_ENG_secret_police
 			days = 70
 		}
 	}
@@ -3476,7 +3476,7 @@ shared_focus = {
 	y = 7
 	completion_reward = {
 		add_popularity = {
-			ideology = Monarchist
+			ideology = monarchist
 			popularity = 0.10
 		}
 	}
@@ -4095,7 +4095,7 @@ shared_focus = {
 	y = 16
 	completion_reward = {
 		add_popularity = {
-			ideology = Monarchist
+			ideology = monarchist
 			popularity = 0.05
 		}
 	}
@@ -4159,7 +4159,7 @@ shared_focus = {
 	completion_reward = {
 		add_stability = 0.4
 		add_popularity = {
-			ideology = Monarchist
+			ideology = monarchist
 			popularity = 0.05
 		}
 	}
@@ -4497,7 +4497,7 @@ shared_focus = {
 	x = 18
 	y = 13
 	completion_reward = {
-		create_faction = imperial_alliance
+		create_faction_from_template = { template = faction_template_generic name = imperial_alliance }
 		SPR = {
 			country_event = {
 				id = britain.28
@@ -5144,7 +5144,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		add_popularity = {
-			ideology = Monarchist
+			ideology = monarchist
 			popularity = -0.1
 		}
 		add_political_power = 50
@@ -5390,7 +5390,7 @@ shared_focus = {
 	completion_reward = {
 		add_political_power = 10
 		add_popularity = {
-			ideology = green
+			ideology = liberal
 			popularity = 0.20
 		}
 	}
@@ -5541,7 +5541,7 @@ shared_focus = {
 	x = 11
 	y = 0
 	available = {
-		has_government = National_Conservative
+		has_government = national_conservative
 	}
 	completion_reward = {
 
@@ -5576,7 +5576,7 @@ shared_focus = {
 	completion_reward = {
 		add_stability = 0.5
 			add_popularity = {
-				ideology = National_Conservative
+				ideology = national_conservative
 				popularity = 0.05
 			}
 	}
@@ -5930,7 +5930,7 @@ shared_focus = {
 		}
 		completion_reward = {
 			add_popularity = {
-				ideology = Liberal
+				ideology = liberal
 				popularity = -0.015
 			}
 		}
@@ -6818,7 +6818,7 @@ shared_focus = {
 		x = 42
 		y = 0
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_political_power = 20
@@ -6834,7 +6834,7 @@ shared_focus = {
 			focus = ENG_The_SDP_Government
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -6851,7 +6851,7 @@ shared_focus = {
 			focus = ENG_The_Leadership_Election
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		mutually_exclusive = {
 			focus = ENG_Amy_Callaghan
@@ -6869,7 +6869,7 @@ shared_focus = {
 				ideology = social_liberal
 			}
 			add_popularity = {
-				ideology = Liberal
+				ideology = liberal
 				popularity = 0.05
 			}
 		}
@@ -6884,7 +6884,7 @@ shared_focus = {
 			focus = ENG_The_Leadership_Election
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		mutually_exclusive = {
 			focus = ENG_Tony_Blair
@@ -6902,7 +6902,7 @@ shared_focus = {
 				ideology = social_liberal
 			}
 			add_popularity = {
-				ideology = Liberal
+				ideology = liberal
 				popularity = 0.05
 			}
 			
@@ -6919,7 +6919,7 @@ shared_focus = {
 			focus = ENG_The_Leadership_Election
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		mutually_exclusive = {
 			focus = ENG_Tony_Blair
@@ -6937,7 +6937,7 @@ shared_focus = {
 				ideology = social_liberal
 			}
 			add_popularity = {
-				ideology = Liberal
+				ideology = liberal
 				popularity = 0.05
 			}
 		}
@@ -6952,7 +6952,7 @@ shared_focus = {
 			focus = ENG_The_Leadership_Election
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		mutually_exclusive = {
 			focus = ENG_Tony_Blair
@@ -6970,7 +6970,7 @@ shared_focus = {
 				ideology = social_liberal
 			}
 			add_popularity = {
-				ideology = Liberal
+				ideology = liberal
 				popularity = 0.05
 			}
 		
@@ -6990,7 +6990,7 @@ shared_focus = {
 		}
 		
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 	
@@ -7006,7 +7006,7 @@ shared_focus = {
 			focus = ENG_The_Williams_Aftermath
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_stability = 0.010
@@ -7023,7 +7023,7 @@ shared_focus = {
 			focus = ENG_Prepare_The_Economy
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		mutually_exclusive = {
 			focus = ENG_Working_With_The_Irish
@@ -7045,7 +7045,7 @@ shared_focus = {
 			focus = ENG_The_Canadian_Investment
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -7064,7 +7064,7 @@ shared_focus = {
 			focus = ENG_Lower_Business_Taxes
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 	
@@ -7081,7 +7081,7 @@ shared_focus = {
 			focus = ENG_Prepare_The_Economy
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		mutually_exclusive = {
 			focus = ENG_The_Canadian_Investment
@@ -7103,7 +7103,7 @@ shared_focus = {
 			focus = ENG_Working_With_The_Irish
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_extra_state_shared_building_slots = 2
@@ -7124,7 +7124,7 @@ shared_focus = {
 			focus = ENG_The_Anglo-Irish_Market
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			
@@ -7141,7 +7141,7 @@ shared_focus = {
 			focus = ENG_Working_Together_For_The_Future
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			country_event = { 
@@ -7158,7 +7158,7 @@ shared_focus = {
 			focus = ENG_A_Richer_Nation
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 	
@@ -7175,7 +7175,7 @@ shared_focus = {
 			focus = ENG_The_Modern_Job_Promise
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -7195,7 +7195,7 @@ shared_focus = {
 			focus = ENG_The_Williams_Aftermath
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -7211,7 +7211,7 @@ shared_focus = {
 			focus = ENG_A_Message_To_Wales_And_Scotland
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 	
@@ -7227,7 +7227,7 @@ shared_focus = {
 			focus = ENG_Funding_For_The_Two_Nations
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7255,7 +7255,7 @@ shared_focus = {
 			focus = ENG_Invest_In_Welsh_Industry
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7276,7 +7276,7 @@ shared_focus = {
 			focus = ENG_Scottish_Army_Factories
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -7295,7 +7295,7 @@ shared_focus = {
 			focus = ENG_Update_The_Mines_And_Factories
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 	
@@ -7311,7 +7311,7 @@ shared_focus = {
 			focus = ENG_SDP_Local_Governments
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			country_event = { 
@@ -7330,7 +7330,7 @@ shared_focus = {
 			focus = ENG_The_Williams_Aftermath
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_political_power = 10
@@ -7347,7 +7347,7 @@ shared_focus = {
 			focus = ENG_Create_The_NES
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_stability = 0.3
@@ -7370,7 +7370,7 @@ shared_focus = {
 			focus = ENG_Modernise_Transport
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7391,7 +7391,7 @@ shared_focus = {
 			focus = ENG_Build_The_Northern_Powerhouse
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 	
@@ -7409,7 +7409,7 @@ shared_focus = {
 			focus = ENG_The_Williams_Aftermath
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_political_power = 100
@@ -7427,7 +7427,7 @@ shared_focus = {
 			focus = ENG_On_The_World_Stage
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 				add_tech_bonus = {
@@ -7456,7 +7456,7 @@ shared_focus = {
 			focus = ENG_A_Show_Of_Force
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			country_event = { 
@@ -7474,7 +7474,7 @@ shared_focus = {
 			focus = ENG_The_United_Nations_Meeting
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			country_event = { 
@@ -7495,7 +7495,7 @@ shared_focus = {
 			focus = ENG_Split_The_London_Bankers
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -7514,7 +7514,7 @@ shared_focus = {
 			focus = ENG_Attract_More_Investors
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 	
@@ -7531,7 +7531,7 @@ shared_focus = {
 			focus = ENG_Build_The_GigaPlant
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			country_event = { 
@@ -7554,7 +7554,7 @@ shared_focus = {
 			focus = ENG_Build_New_Business_Centers
 		}
 		available = {
-			has_government = Liberal
+			has_government = liberal
 		}
 		completion_reward = {
 			add_ideas = idea_eng_owens_legacy
@@ -8689,7 +8689,7 @@ shared_focus = {
 					popularity = 0.05
 				}
 				add_popularity = {
-					ideology = Liberal
+					ideology = liberal
 					popularity = 0.05
 				}
 				add_popularity = {
@@ -9233,7 +9233,7 @@ shared_focus = {
 				ideology = fascist
 				popularity = 0.050
 			}
-			add_threat = 10
+			add_named_threat = { threat = 10 name = ENG_soviet_century_threat }
 			add_defense = 10
 		}
 	}
@@ -10159,7 +10159,7 @@ shared_focus = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = ENG_Warships_In_France  }
-		prerequisite = { focus = ENG_Prepare_For_war  }
+		prerequisite = { focus = ENG_Prepare_For_War  }
 		prerequisite = { focus = ENG_army_parades  }
 		
 		completion_reward = {
@@ -10552,7 +10552,7 @@ shared_focus = {
 		completion_reward = {
 			country_event = { 
 				id = britain.403}
-				add_threat = 5
+				add_named_threat = { threat = 5 name = ENG_soviet_century_threat }
 		}
 	}
 
@@ -11538,7 +11538,7 @@ shared_focus = {
 		x = 21
 		y = 13
 		completion_reward = {
-			add_threat = 0.5
+			add_named_threat = { threat = 0.5 name = ENG_soviet_century_threat }
 		}
 	}
 
@@ -11991,7 +11991,7 @@ shared_focus = {
 		y = 14
 		completion_reward = {
 			add_popularity = {
-				ideology = Monarchist
+				ideology = monarchist
 				popularity = 0.05
 			}
 		}
@@ -12007,7 +12007,7 @@ shared_focus = {
 		x = 12
 		y = 14
 		completion_reward = {
-			add_threat = -10
+			add_named_threat = { threat = -10 name = ENG_soviet_century_threat }
 		}
 	}
 	shared_focus = { 
@@ -12668,7 +12668,7 @@ shared_focus = {
 				popularity = 0.05
 			}
 			add_popularity = {
-				ideology = Liberal
+				ideology = liberal
 				popularity = 0.05
 			}
 			add_popularity = {
@@ -13131,7 +13131,7 @@ shared_focus = {
 		completion_reward = {
 			add_stability = 0.5
 			add_popularity = {
-				ideology = Liberal
+				ideology = liberal
 				popularity = 0.05
 			}
 			add_popularity = {
@@ -13460,7 +13460,7 @@ shared_focus = {
 		completion_reward = {
 			add_stability = 0.5
 			add_popularity = {
-				ideology = Monarchist
+				ideology = monarchist
 				popularity = 0.05
 			}
 		}
@@ -13599,7 +13599,7 @@ shared_focus = {
 			add_manpower = 10000
 			add_war_support = 0.10
 			add_stability = -0.100
-			add_threat = 50
+			add_named_threat = { threat = 50 name = ENG_soviet_century_threat }
 		}
 	}
 
@@ -14046,7 +14046,7 @@ shared_focus = {
 		focus = ENG_Nigels_Vision
 	}
 	completion_reward = {
-		add_threat = 0.1
+		add_named_threat = { threat = 0.1 name = ENG_soviet_century_threat }
 		add_stability = -0.05
 		country_event = {
 			id = britain.597
@@ -14093,7 +14093,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		add_political_power = 100
-		add_threat = 0.2
+		add_named_threat = { threat = 0.2 name = ENG_soviet_century_threat }
 	}
 }
 
@@ -14274,7 +14274,7 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		add_threat = 0.5
+		add_named_threat = { threat = 0.5 name = ENG_soviet_century_threat }
 	}
 }
 
@@ -15303,7 +15303,7 @@ shared_focus = {
 		country_event = { 
 			id = britain.429 }
 			MER = {
-			create_faction = "Cameron Faction"
+			create_faction_from_template = { template = faction_template_generic name = "Cameron Faction" }
 			}
 		} 
 	}
@@ -15320,7 +15320,7 @@ shared_focus = {
 		country_event = { 
 			id = britain.426 }
 			EAG = {
-			create_faction = "Johnson Faction"
+			create_faction_from_template = { template = faction_template_generic name = "Johnson Faction" }
 			}
 		}
 }
@@ -15337,7 +15337,7 @@ shared_focus = {
 		country_event = { 
 			id = britain.427 }
 			WES = {
-			create_faction = "Nigel Faction"
+			create_faction_from_template = { template = faction_template_generic name = "Nigel Faction" }
 			}
 		}
 }
@@ -15354,7 +15354,7 @@ shared_focus = {
 		country_event = { 
 			id = britain.428 }
 			KET = {
-			create_faction = "Kent Faction"
+			create_faction_from_template = { template = faction_template_generic name = "Kent Faction" }
 			}
 	}
 }
@@ -16904,7 +16904,7 @@ shared_focus = {
 		focus = ENG_The_New_Housing_Market
 	}
 	prerequisite = {
-		focus = ENG_Welfare_For_Only_The_True_British2
+		focus = ENG_Welfare_For_Only_The_True_British
 	}
 	completion_reward = {
 		add_political_power = 100

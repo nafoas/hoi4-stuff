@@ -4597,6 +4597,7 @@ country_event = {
 #2010 conservative leadership spill
 country_event = {
 	id = britain.166
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.166.t
 	desc = britain.166.d
 	picture = conservative_party
@@ -4640,6 +4641,7 @@ country_event = {
 #Parliament votes to shorten election term limits to 3 years
 country_event = {
 	id = britain.167
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.167.t
 	desc = britain.167.d
 	picture = house_of_commons
@@ -4667,6 +4669,7 @@ country_event = {
 #2011 General Election
 country_event = {
 	id = britain.168
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.168.t
 	desc = britain.168.d
 	picture = british_election
@@ -4843,6 +4846,7 @@ country_event = {
 #2014 General Election
 country_event = {
 	id = britain.169
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.169.t
 	desc = britain.169.d
 	picture = british_election
@@ -5006,7 +5010,7 @@ country_event = {
 				has_government = liberal
 				has_government = new_democrat
 				has_government = moderate_socialist
-				has_government = green
+				has_government = liberal
 				
 			}
 		}
@@ -5091,11 +5095,11 @@ country_event = {
 		option = {   #Green
 			name = britain.170.o5
 			set_politics = {
-				ruling_party = green
+				ruling_party = liberal
 				elections_allowed = no
 			}
 			add_popularity = {
-				ideology = green
+				ideology = liberal
 				popularity = 0.05
 			}
 			ai_chance = {
@@ -5548,6 +5552,7 @@ country_event = {
 #2014 conservative leadership spill
 country_event = {
 	id = britain.174
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.174.t
 	desc = britain.174.d
 	picture = conservative_party
@@ -5710,6 +5715,7 @@ country_event = {
 #2012 labour leadership spill
 country_event = {
 	id = britain.177
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.177.t
 	desc = britain.177.d
 	picture = labour_party
@@ -5790,6 +5796,7 @@ country_event = {
 #2015 labour leadership spill
 country_event = {
 	id = britain.178
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.178.t
 	desc = britain.178.d
 	picture = labour_party
@@ -7809,6 +7816,7 @@ country_event = { #Lindsey German disagrees with foreign policy course
 
 country_event = { #Len McCluskey wants greater Union representation
 	id = britain.244
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.244.t 
 	desc = britain.244.d 
 	picture = len_mccluskey_talks
@@ -8777,6 +8785,7 @@ country_event = { #McDonnell election part 2
 
 country_event = { #PM Benn gets a stroke
 	id = britain.260
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.260.t 
 	desc = britain.260.d 
 	picture = pm_benn_gets_stroke
@@ -8806,6 +8815,7 @@ country_event = { #PM Benn gets a stroke
 
 country_event = { #Labour Leader Benn gets a stroke
 	id = britain.261
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.261.t 
 	desc = britain.261.d 
 	picture = mp_benn_gets_stroke
@@ -8840,6 +8850,7 @@ country_event = { #Labour Leader Benn gets a stroke
 
 country_event = { #MP Benn gets a stroke
 	id = britain.262
+	is_triggered_only = yes # Soviet Century: the fork\'s own UK election chain would run over the submod\'s British storyline
 	title = britain.262.t 
 	desc = britain.262.d 
 	picture = mp_benn_gets_stroke
@@ -10422,7 +10433,7 @@ country_event = { #Queen's Apology
 		option = {
 			name = britain.332.o1
 			add_popularity = {
-				ideology = monarchy
+				ideology = monarchist
 				popularity = 0.10
 			}
 
@@ -10674,7 +10685,7 @@ country_event = { #Queen's Apology
 				name = "David Cameron"
 				desc = "POLITICS_David_Cameron_DESC"
 				picture = David_cameron_civilwar
-				ideology = Nationalist
+				ideology = nationalist
 			}
 			name = britain.429.o1
 			MER = {
@@ -13092,7 +13103,7 @@ country_event = { #Queen's Apology
 						name = "Dermot Hudson"
 						desc = "POLITICS_Dermot_Hudson_DESC"
 						picture = "dermot_hudson.dds"
-						ideology = juche
+						ideology = national_stalinist
 					}
 					set_politics = {
 						ruling_party = communist
@@ -13890,7 +13901,7 @@ country_event = { #Queen's Apology
 					USA = {
 						set_cosmetic_tag = ENG_America_monarchy
 						set_politics = {
-							ruling_party = monarchy
+							ruling_party = monarchist
 							elections_allowed = no
 						}
 					}
@@ -14321,7 +14332,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.672.o1
 				ENG = {
-					create_faction = "Imperial Federation"
+					create_faction_from_template = { template = faction_template_generic name = "Imperial Federation" }
 					add_to_faction = ENG
 					add_to_faction = CAN
 					add_to_faction = AST
@@ -14332,7 +14343,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.672.o2
 				ENG = {
-					create_faction = "CANZUK Union"
+					create_faction_from_template = { template = faction_template_generic name = "CANZUK Union" }
 					add_to_faction = ENG
 					add_to_faction = CAN
 					add_to_faction = AST
@@ -14342,7 +14353,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.672.o3
 				ENG = {
-					create_faction = "CANZUK Commonwealth"
+					create_faction_from_template = { template = faction_template_generic name = "CANZUK Commonwealth" }
 					add_to_faction = ENG
 					add_to_faction = CAN
 					add_to_faction = AST
@@ -14353,7 +14364,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.672.o4
 				ENG = {
-					create_faction = "CANZUK Federation"
+					create_faction_from_template = { template = faction_template_generic name = "CANZUK Federation" }
 					add_to_faction = ENG
 					add_to_faction = CAN
 					add_to_faction = AST
@@ -14363,7 +14374,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.672.o5
 				ENG = {
-					create_faction = "Imperial CANZUK Federation"
+					create_faction_from_template = { template = faction_template_generic name = "Imperial CANZUK Federation" }
 					add_to_faction = ENG
 					add_to_faction = CAN
 					add_to_faction = AST
@@ -14374,7 +14385,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.672.o6
 				ENG = {
-					create_faction = "Imperial CANZUK Commonwealth"
+					create_faction_from_template = { template = faction_template_generic name = "Imperial CANZUK Commonwealth" }
 					add_to_faction = ENG
 					add_to_faction = CAN
 					add_to_faction = AST
@@ -14385,7 +14396,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.672.o7
 				ENG = {
-					create_faction = "Imperial Commonwealth Federation"
+					create_faction_from_template = { template = faction_template_generic name = "Imperial Commonwealth Federation" }
 					add_to_faction = ENG
 					add_to_faction = CAN
 					add_to_faction = AST
@@ -15113,7 +15124,7 @@ country_event = { #Queen's Apology
 						name = "Dermot Hudson"
 						desc = "POLITICS_Dermot_Hudson_DESC"
 						picture = "dermot_hudson.dds"
-						ideology = juche
+						ideology = national_stalinist
 					}
 					set_politics = {
 						ruling_party = communist
@@ -15362,7 +15373,7 @@ country_event = { #Queen's Apology
 			is_triggered_only = yes
 			option = {
 				name = britain.734.o1
-				create_faction = "The Pact of Nations"
+				create_faction_from_template = { template = faction_template_generic name = "The Pact of Nations" }
 				add_to_faction = NZL
 				add_to_faction = SPR
 			}

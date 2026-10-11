@@ -1,0 +1,10 @@
+# British breakaway states added by Soviet Century (not defined by Red World: Alien Nation)
+ABS = "countries/Aberdeenshire.txt"
+COW = "countries/Cornwall.txt"
+EAG = "countries/East Anglia.txt"
+KET = "countries/Kent.txt"
+MCS = "countries/Merseyside Communist State.txt"
+MER = "countries/Mercia.txt"
+NCS = "countries/Northern Communist State.txt"
+NOF = "countries/Northumbria.txt"
+WES = "countries/Wessex.txt"
