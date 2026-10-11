@@ -207,15 +207,15 @@ country_event = {
 }
 
 country_event = {
-	id = pence.5
-	title = pence.5.t
-	desc = pence.5.d
+	id = pence.105
+	title = pence.105.t
+	desc = pence.105.d
 	picture = pence_god
 	
 	is_triggered_only = yes
 	
 	option = {   
-		name = pence.5.o1
+		name = pence.105.o1
 		    set_rule = {
 				can_create_factions = yes
 			}
@@ -238,15 +238,41 @@ country_event = {
 	}
 }
 
+country_event = { #No-Nose Passes Away
+	id = pence.5
+	title = pence.5.t
+	desc = pence.5.d
+	picture = american_mafia_no_nose_death
+	
+	fire_only_once = yes
+	trigger = {
+		tag = NEA
+		has_country_leader = {
+			name = "Social Development Council"
+			ruling_only = yes
+		}
+		date > 2018.5.1
+		date < 2018.5.30
+	}
+	
+	option = {
+		name = pence.5.o1
+		add_political_power = 50
+		set_country_flag = AMS_no_nose_dead
+		add_ideas = pence_sic_salvatore_delaurentis
+		add_ideas = pence_ind_salvatore_cataudella
+	}
+}
+
 country_event = {
-	id = pence.6
-	title = pence.6.t
-	desc = pence.6.d
+	id = pence.106
+	title = pence.106.t
+	desc = pence.106.d
 	picture = mike_pence_converts
 	
 	is_triggered_only = yes
 		option = {   #refuse
-		name = pence.6.o1
+		name = pence.106.o1
 		AMS = {
 			country_event = { id = pence.7 days = 1 }
 			 
@@ -257,7 +283,7 @@ country_event = {
 	}
 	
 	option = {   #accept
-		name = pence.6.o2
+		name = pence.106.o2
 		AMS = {
 			country_event = { id = pence.8 days = 1 }
 		}
@@ -266,6 +292,228 @@ country_event = {
 		}
 	}
 	
+}
+
+country_event = { #commonwealth generals defect
+	id = pence.6
+	title = pence.6.t
+	desc = pence.6.d
+	picture = pence_army_purge
+
+	is_triggered_only = yes
+
+	option = { #they will die like the others traitors
+		name = pence.6.o1
+		hidden_effect = {
+			set_nationality = {
+				target_country = AMC
+				character = NEA_larry_r._ellis
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_timothy_maude
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_vincent_r._stewart
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_david_zinn
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_richard_ojeda
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_stephen_r._lyons
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_dennis_l._via
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_ann_dunwoody
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_edwin_t._brooks
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_flora_d._darpino
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_james_j._tuite_iv
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_john_w._nicholson_jr.
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_john_c._aquilino
+			}
+			set_nationality = {
+				target_country = AMC
+				character = NEA_philip_s._davidson
+			}
+			add_corps_commander_role = {
+				character = NEA_michael_flynn
+				traits = {
+					politically_connected
+				}
+				skill=2
+				attack_skill=2
+				defense_skill=3
+				planning_skill=1
+				logistics_skill=1
+				legacy_id=-1
+			}
+			add_corps_commander_role = {
+				character = NEA_robert_doggart
+				traits = {
+					trait_reckless
+				}
+				skill=1
+				attack_skill=1
+				defense_skill=1
+				planning_skill=2
+				logistics_skill=1
+				legacy_id=-1
+			}
+			add_corps_commander_role = {
+				character = NEA_elliot_kline
+				traits = {
+					media_personality
+				}
+				skill=1
+				attack_skill=2
+				defense_skill=1
+				planning_skill=1
+				logistics_skill=1
+				legacy_id=-1
+			}
+			add_corps_commander_role = {
+				character = NEA_james_charles_kopp
+				traits = {
+					engineer_officer
+				}
+				skill=2
+				attack_skill=1
+				defense_skill=3
+				planning_skill=2
+				logistics_skill=1
+				legacy_id=-1
+			}
+			add_corps_commander_role = {
+				character = NEA_john_salvi
+				traits = {
+					harsh_leader
+				}
+				skill=1
+				attack_skill=1
+				defense_skill=1
+				planning_skill=2
+				logistics_skill=1
+				legacy_id=-1
+			}
+			add_field_marshal_role = {
+				character = NEA_hammer
+				traits = {
+					militias_leader
+				}
+				skill=2
+				attack_skill=1
+				defense_skill=4
+				planning_skill=1
+				logistics_skill=1
+				legacy_id=-1
+			}
+			add_naval_commander_role = {
+				character = NEA_john_sharpe
+				traits = {
+					seawolf
+				}
+
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 1
+				coordination_skill = 2
+			}
+			add_advisor_role = {
+				character = NEA_robert_doggart
+				activate = yes
+				advisor = {
+					slot = army_chief
+					cost = 50
+					idea_token = pence_robert_doggart
+					traits = {
+						army_chief_morale_1
+					}
+				}
+			}
+			add_advisor_role = {
+				character = NEA_augustus_sol_invictus
+				activate = yes
+				advisor = {
+					slot = air_chief
+					cost = 50
+					idea_token = pence_augustus_sol_invictu
+					traits = {
+						air_chief_reform_1
+					}
+				}
+			}
+			add_advisor_role = {
+				character = NEA_hammer
+				activate = yes
+				advisor = {
+					slot = high_command
+					cost = 50
+					idea_token = pence_hammer
+					traits = {
+						army_regrouping_1
+					}
+				}
+			}
+			add_advisor_role = {
+				character = NEA_jester
+				activate = yes
+				advisor = {
+					slot = high_command
+					cost = 50
+					idea_token = pence_jester
+					traits = {
+						army_logistics_1
+					}
+				}
+			}
+			add_advisor_role = {
+				character = NEA_elliot_kline
+				activate = yes
+				advisor = {
+					slot = high_command
+					cost = 50
+					idea_token = pence_elliot_kline
+					traits = {
+						army_commando_1
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = NEA_pence_defections
+		AMC = {
+			country_event = {
+				id = rebel.95
+				days = 1
+			}
+		}
+	}
 }
 
 country_event = {

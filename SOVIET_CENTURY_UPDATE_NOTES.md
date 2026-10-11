@@ -50,6 +50,50 @@ pointing at it, and load it after **Red World: Alien Nation**.
 - `remote_file_id` was removed from `descriptor.mod`, since it belongs to the original
   author's Workshop item.
 
+## Rename/duplicate audit (event IDs, flags, focuses, ideas)
+Everything that two mods could name differently, or define twice, was cross-checked:
+- **Shared focuses, ideas, decisions, characters and traits where the fork's version won:**
+  Soviet Century never wrote its own text for any of them, so they were old-fork copies,
+  not reused names. Where they differ a lot, the fork's versions are the 1.19 updates.
+- **Events Soviet Century calls from the fork (95, mostly news.*):** all still point to
+  the same story in the fork. None were renumbered.
+- **Event numbers both mods use for different events:** where the fork still needs its
+  event (it fires on its own, or other fork content calls it), Soviet Century's event was
+  moved to a new number and the fork's event put back at its original number:
+  - britain.229–233, 238, 239 → Soviet Century's are now britain.2229–2239. The fork's
+    Liberal Democrat / SDP leadership elections are back.
+  - britain.252–254 → 2252–2254. The fork's Maoist-coup chain from britain.142–144 is back.
+  - britain.306–308, 311 → 2306–2311. The fork's Ireland storyline from britain.7/11 is back.
+  - pence.5, pence.6 → pence.105, pence.106. The fork's "'No Nose' Passes Away" and
+    "High Command Defects" are back. The fork's Commonwealth events call pence.6.
+  Soviet Century's own callers and text keys were updated to the new numbers.
+- britain.7, 11, 120, 142, 143, 144 use the fork's versions. britain.120's calls to the
+  fork's renumbered Galloway/Corbyn events point to Soviet Century's copies (515, 516).
+- **Fork content checking flags that only the displaced fork events set:** the flags were
+  added to Soviet Century's equivalent events or focuses:
+  - royal_family_executed (britain.137), CAN_monarchy_exists_in_canada and
+    CAN_andrew/edward_leads_exiles (britain.500): needed by the fork's Canada storyline.
+  - USA_war_with_TEX (usa.5/usa.6): needed by the fork's Second Texan War decisions.
+  - british_republic (focus ENG_The_Republic).
+  - britain_shirley_williams_retirement (britain.511), ENG_corbyn_in_cabinet (britain.551).
+- **Shared events where Soviet Century only added options:** these now use the fork's
+  updated event plus Soviet Century's extra option. usa.2 gets the fork's cabinets plus
+  the McAfee option, which the fork's new Rumsfeld/Cheney branches need. usa.3 gets the
+  Liberty Front option. britain.170 gets the Green option.
+- **Checks for the fork's UK focuses that Soviet Century's tree replaces:** three were
+  pointed at Soviet Century's equivalents (Lower Company Taxes, Unite the Isle, Cut
+  Military Spending). The rest have no equivalent; those fork branches stay inactive
+  while Soviet Century's UK tree is in use.
+- **Duplicates removed:**
+  - `left_extended_tree.txt`: 66 focuses already in uk_shared.txt.
+  - A second, dead `texas.112` event.
+  - A second `idea_unitary_scotland` definition.
+  - A shine sprite that shared its name with the icon it animates, overriding it.
+- **Variables, event targets, cosmetic tags and missions:** clean.
+- **Known fork-side issues left alone:** the fork's own usa.2 references an undefined
+  idea `usa_nsm_robert_gates`. The fork's USA characters / leader traits define
+  `USA_howard_lutnick` and `ideological_crusader` twice.
+
 ## 1.19 / fork compatibility fixes
 - Dependency switched to `Red World: Alien Nation`, `supported_version = "1.19.*"`.
 - `create_faction` changed to `create_faction_from_template` (generic template) and

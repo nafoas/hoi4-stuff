@@ -64,13 +64,27 @@ country_event = {
 						rule = USA_ai_behavior
 						option = RUM_WIN
 					}
+					has_game_rule = {
+						rule = USA_ai_behavior
+						option = CHENEY_WIN
+					}
 				}
 				factor = 0
 			}
 		}
 		set_country_flag = donald_rumsfeld_elected
 		set_country_flag = us_election_completed
-		add_ideas = usa_mitch_mcconnell
+		if = {
+			limit = { has_country_flag = USA_cheney_is_vp }
+			add_ideas = usa_dick_cheney
+			custom_effect_tooltip = tooltip_blank_line
+			custom_effect_tooltip = USA_rumsfeld_cheney_elected
+		}
+		else = {
+			add_ideas = usa_mitch_mcconnell
+			custom_effect_tooltip = tooltip_blank_line
+			custom_effect_tooltip = USA_rumsfeld_mcconnell_elected
+		}
 		hidden_effect = {
 			every_country = {
 		        limit = {
@@ -83,17 +97,15 @@ country_event = {
 			        id = news.227
 		        }
 		    }
+			add_ideas = USA_divided_gop
 		}
 	}
 	
 	option = { #Jeb Bush - Nationalists
 		name = usa.2.o2
-		create_country_leader = {
-	        name = "Jeb Bush"
-	        picture = "Portrait_USA_Jeb_Bush.dds"
-	        ideology = american_nationalist
-		traits = { trait_son_of_the_father }
-        }
+		USA_jeb_bush = {
+			promote_character = american_nationalist
+		}
 		add_popularity = {
 			ideology = nationalist
 			popularity = 0.05
@@ -114,9 +126,20 @@ country_event = {
 				factor = 0
 			}
 		}
+		mark_focus_tree_layout_dirty = yes
 		set_country_flag = jeb_bush_elected
 		set_country_flag = us_election_completed
-		add_ideas = usa_lindsey_graham
+		custom_effect_tooltip = tooltip_blank_line
+		custom_effect_tooltip = USA_jeb_bush_cabinet
+		hidden_effect = {
+			add_ideas = usa_lindsey_graham
+			add_ideas = usa_fom_jeff_sessions
+			add_ideas = usa_ind_neil_bush
+			add_ideas = usa_nsm_robert_gates
+			add_ideas = usa_inm_gina_haspel
+		}
+		custom_effect_tooltip = tooltip_blank_line
+		custom_effect_tooltip = USA_jeb_elected
 		hidden_effect = {
 			every_country = {
 		        limit = {
@@ -129,6 +152,7 @@ country_event = {
 			        id = news.228
 		        }
 		    }
+			add_ideas = USA_divided_gop
 		}
 	}
 	
@@ -184,7 +208,17 @@ country_event = {
 		}
 		set_country_flag = david_duke_elected
 		set_country_flag = us_election_completed
-		add_ideas = usa_don_black
+		custom_effect_tooltip = tooltip_blank_line
+		custom_effect_tooltip = USA_david_duke_cabinet
+		hidden_effect = {
+			add_ideas = usa_don_black
+			add_ideas = usa_fom_peter_brimelow
+			add_ideas = usa_ind_charles_murray
+			add_ideas = usa_nsm_darrell_castle
+			add_ideas = usa_inm_sam_dickson
+		}
+		custom_effect_tooltip = tooltip_blank_line
+		custom_effect_tooltip = USA_duke_elected
 		hidden_effect = {
 			every_country = {
 		        limit = {
@@ -228,7 +262,17 @@ country_event = {
 		}
 		set_country_flag = robert_bentley_elected
 		set_country_flag = us_election_completed
-		add_ideas = usa_omarosa_manigault
+		custom_effect_tooltip = tooltip_blank_line
+		custom_effect_tooltip = USA_rob_bentley_cabinet
+		hidden_effect = {
+			add_ideas = usa_omarosa_manigault
+			add_ideas = usa_fom_bobby_jindal
+			add_ideas = usa_ind_elaine_chao
+			add_ideas = usa_nsm_steve_scalise
+			add_ideas = usa_inm_gina_haspel
+		}
+		custom_effect_tooltip = tooltip_blank_line
+		custom_effect_tooltip = USA_betley_elected
 		hidden_effect = {
 			every_country = {
 		        limit = {
@@ -243,6 +287,8 @@ country_event = {
 		    }
 		}
 	}
+
+	# Soviet Century option(s), kept on top of the fork's updated event
 	option = { #McAfee
 		name = usa.2.o5
 		set_politics = {
@@ -378,6 +424,8 @@ country_event = {
 		add_political_power = -100
 		set_country_flag = national_renewal_gains_power
 	}
+
+	# Soviet Century option(s), kept on top of the fork's updated event
 	option = { #liberty front gain power
 		name = usa.3.o4
 		add_popularity = {
@@ -476,6 +524,7 @@ country_event = {
 		complete_national_focus = TEX_texan_war_of_independence
 		USA = {
 		    declare_war_on = { target = TEX type = annex_everything }
+			set_country_flag = USA_war_with_TEX # Soviet Century: flag the fork's version sets, needed by fork content (Second Texan War decisions)
 		}
 		ai_chance = {
 			factor = 40
@@ -514,6 +563,7 @@ country_event = {
 		complete_national_focus = TEX_texan_war_of_independence
 		USA = {
 		    declare_war_on = { target = TEX type = puppet_wargoal_focus }
+			set_country_flag = USA_war_with_TEX # Soviet Century: flag the fork's version sets, needed by fork content (Second Texan War decisions)
 		}
 		ai_chance = {
 			factor = 10

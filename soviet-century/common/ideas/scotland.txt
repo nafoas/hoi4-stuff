@@ -182,30 +182,7 @@ ideas = {
 }
 
 
-	idea_unitary_scotland = {
-		allowed = {
-			always = yes
-		}
-		
-		allowed_civil_war = {
-			always = yes
-		}
-		
-		picture = agriculture_focus
-		
-		removal_cost = -1
-		
-		modifier = {
-			political_power_gain = 0.05
-				national_conservative_drift = 0.01
-				nationalist_drift = 0.01
-				centrist_drift = 0.01
-				liberal_drift = 0.01
-				new_democrat_drift = 0.01
-				moderate_socialist_drift = 0.01
-				trade_opinion_factor = 0.25
-	}
-}
+	
 
 	idea_rebuild_scotland = {
 		allowed = {

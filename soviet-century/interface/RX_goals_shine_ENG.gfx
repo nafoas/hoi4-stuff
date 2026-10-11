@@ -52472,7 +52472,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "create_a_parliament"
+		name = "create_a_parliament_shine"
 		texturefile = "gfx/interface/goals/tex/create_a_parliament.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

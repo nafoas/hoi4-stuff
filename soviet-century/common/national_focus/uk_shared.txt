@@ -8846,7 +8846,7 @@ shared_focus = {
 		completion_reward = {
 		
 			country_event = {
-				id = britain.306
+				id = britain.2306
 			}
 		}
 	}
@@ -8931,7 +8931,7 @@ shared_focus = {
 				modifier = declaration_of_friendship
 			}
 			country_event = {
-				id = britain.307
+				id = britain.2307
 			}
 		}
 	}
@@ -8953,7 +8953,7 @@ shared_focus = {
 				category = electronics
 			}
 			country_event = {
-				id = britain.308
+				id = britain.2308
 			}
 		}
 	}
@@ -15921,6 +15921,7 @@ shared_focus = {
 		focus = ENG_The_First_TUC_Congress
 	}
 	completion_reward = {
+		set_country_flag = british_republic # Soviet Century: flag the fork's republic focus sets, needed by fork content
 		add_ideas = the_republic
 	}
 }

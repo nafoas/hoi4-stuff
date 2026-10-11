@@ -481,93 +481,93 @@ country_event = {
 
 #Ireland - UK asks for Ulster back
 country_event = {
-		id = britain.7
-		title = britain.7.t
-		desc = britain.7.d
-		picture = event_northern_ireland_negotiations
-		
-		is_triggered_only = yes
-		
-		option = {    #Yes
-			name = britain.7.o1
-			hidden_effect = {
-				ULS = {
-					country_event = { days = 2 id = britain.11 } 
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						ENG = {
-							has_country_flag = british_republic
-						}
-					}
-				}
-				ENG = {
-					set_cosmetic_tag = ENG_Ulster
-				}
-			}
-			hidden_effect = {
-				every_country = {
-					limit = {
-						NOT = {
-							OR = {
-								tag = ULS
-								tag = IRE
-							}
-						}
-					}
-					news_event = {
-						hours = 4
-						id = news.90
+	id = britain.7
+	title = britain.7.t
+	desc = britain.7.d
+	picture = event_northern_ireland_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {    #Yes
+		name = britain.7.o1
+	    hidden_effect = {
+		    ULS = {
+		        country_event = { days = 2 id = britain.11 } 
+		    }
+		}
+		if = {
+		    limit = {
+			    NOT = {
+				    ENG = {
+					    has_country_flag = british_republic
 					}
 				}
 			}
-			ai_chance = {
-				factor = 30
+			ENG = {
+			    set_cosmetic_tag = ENG_Ulster
 			}
 		}
-		
-		option = {    #No
-			name = britain.7.o2
-			ENG = {
-				remove_from_faction = IRE
-			}
-			ENG = {
-				remove_from_faction = ULS
-			}
-			IRE = {
-				declare_war_on = { target = ENG type = annex_everything }
-			}
-			set_global_flag = uk_betrayed_us
-			hidden_effect = {
-				ULS = {
-					country_event = { days = 2 id = britain.12 } 
-				}
-			}
-			hidden_effect = {
-				ENG = {
-					country_event = { days = 1 id = britain.13 } 
-				}
-			}
-			hidden_effect = {
-				every_country = {
-					limit = {
-						NOT = {
-							tag = IRE
-						}
-					}
-					news_event = {
-						hours = 4
-						id = news.91
-					}
-				}
-			}
-			ai_chance = {
-				factor = 70
-			}
+		hidden_effect = {
+			every_country = {
+		        limit = {
+			        NOT = {
+					    tag = ULS
+						tag = IRE
+				    }
+			    }
+			    news_event = {
+			        hours = 4
+			        id = news.90
+		        }
+		    }
+		}
+		ai_chance = {
+			factor = 30
 		}
 	}
+	
+	option = {    #No
+		name = britain.7.o2
+		ENG = {
+		    remove_from_faction = IRE
+		}
+		ENG = {
+		    remove_from_faction = ULS
+		}
+		IRE = {
+		    declare_war_on = { target = ENG type = annex_everything }
+		}
+		set_global_flag = uk_betrayed_us
+	    hidden_effect = {
+		    ULS = {
+		        country_event = { days = 2 id = britain.12 } 
+		    }
+		}
+		hidden_effect = {
+		    ENG = {
+		        country_event = { days = 1 id = britain.13 }
+		        country_event = { months = 5 id = britain.307 }
+		        country_event = { months = 5 id = britain.308 } 
+		    }
+		}
+		hidden_effect = {
+			every_country = {
+		        limit = {
+			        NOT = {
+				        tag = IRE
+				    }
+			    }
+			    news_event = {
+			        hours = 4
+			        id = news.91
+		        }
+		    }
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
 
 #Ireland - UK proposes Irish unification
 country_event = {
@@ -711,70 +711,69 @@ country_event = {
 
 #Ulster - UK and Ireland agree to UK annexing us
 country_event = {
-		id = britain.11
-		title = britain.11.t
-		desc = britain.11.d
-		picture = uk_ireland_agree
-		
-		is_triggered_only = yes
-		
-		option = {    #Yes
-			name = britain.11.o1
-			ENG = {
-				annex_country = { target = ULS }
-			}
-			hidden_effect = {
-				every_country = {
-					limit = {
-						NOT = {
-							tag = ENG
-						}
-					}
-					news_event = {
-						hours = 4
-						id = news.96
-					}
-				}
-			}
-			ai_chance = {
-				factor = 95
-			}
+	id = britain.11
+	title = britain.11.t
+	desc = britain.11.d
+	picture = uk_ireland_agree
+	
+	is_triggered_only = yes
+	
+	option = {    #Yes
+		name = britain.11.o1
+	    ENG = {
+		    annex_country = { target = ULS }
 		}
-		
-		option = {    #No
-			name = britain.11.o2
-			ENG = {
-				remove_from_faction = ULS 
-			}
-			ULS = {
-				declare_war_on = { target = ENG type = annex_everything }
-			}
-			hidden_effect = {
-				ENG = {
-					country_event = { days = 1 id = britain.19 } 
-				}
-			}
-			hidden_effect = {
-				every_country = {
-					limit = {
-						NOT = {
-							OR = {
-								tag = ENG
-								tag = ULS
-							}
-						}
-					}
-					news_event = {
-						hours = 4
-						id = news.97
-					}
-				}
-			}
-			ai_chance = {
-				factor = 5
-			}
+		hidden_effect = {
+			every_country = {
+		        limit = {
+			        NOT = {
+				        tag = ENG
+				    }
+			    }
+			    news_event = {
+			        hours = 4
+			        id = news.96
+		        }
+		    }
+		}
+		ai_chance = {
+			factor = 95
 		}
 	}
+	
+	option = {    #No
+		name = britain.11.o2
+		ENG = {
+		    remove_from_faction = ULS 
+		}
+		ULS = {
+		    declare_war_on = { target = ENG type = annex_everything }
+		}
+		hidden_effect = {
+		    ENG = {
+		        country_event = { days = 1 id = britain.19 } 
+		        country_event = { months = 5 id = britain.306 }
+		    }
+		}
+		hidden_effect = {
+			every_country = {
+		        limit = {
+			        NOT = {
+					    tag = ENG
+						tag = ULS
+				    }
+			    }
+			    news_event = {
+			        hours = 4
+			        id = news.97
+		        }
+		    }
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
 
 #Ulster - Ireland defends us against UK
 country_event = {
@@ -3294,30 +3293,43 @@ country_event = {
 
 #Monarchy abolished and corbyn removed from office
 country_event = {
-		id = britain.120
-		title = britain.120.t
-		desc = britain.120.d
-		picture = british_monarchy_abolished
-		
-		is_triggered_only = yes
-		
-		option = {   
-			name = britain.120.o1
-			hidden_effect = {
-				every_country = {
-					limit = {
-						NOT = {
-							tag = ENG
-						}
-					}
-					news_event = {
-						hours = 4
-						id = news.128
-					}
-				}
-			}
+	id = britain.120
+	title = britain.120.t
+	desc = britain.120.d
+	picture = british_monarchy_abolished
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = britain.120.o1
+		hidden_effect = {
+			every_country = {
+		        limit = {
+			        NOT = {
+				        tag = ENG
+				    }
+			    }
+			    news_event = {
+			        hours = 4
+			        id = news.128
+		        }
+		    }
+		}
+		hidden_effect = {
+		    ENG = {
+		        country_event = { days = 14 id = britain.515 } 
+		    }
+		}
+		hidden_effect = {
+		    ENG = {
+		        country_event = { days = 30 id = britain.516 } 
+		    }
+		}
+		CAN = {
+			set_country_flag = CAN_monarchy_has_been_abolished
 		}
 	}
+}
 
 #American scientists arrive in britain
 country_event = {
@@ -3675,6 +3687,7 @@ country_event = {
 		
 		option = {   
 			name = britain.137.o1
+		set_global_flag = royal_family_executed # Soviet Century: flag the fork's version sets, needed by fork content (Canada)
 			ENG = {
 				country_event = { days = 30 id = britain.500 } 
 			}
@@ -3774,71 +3787,80 @@ country_event = {
 
 #Communist party's maoist doctrine
 country_event = {
-		id = britain.142
-		title = britain.142.t
-		desc = britain.142.d
-		picture = maoist_doctrine
-		
-		is_triggered_only = yes
-		
-		option = {   
-			name = britain.142.o1
-			hidden_effect = {
-				every_country = {
-					limit = {
-						NOT = {
-							tag = ENG
-						}
-					}
-					news_event = {
-						hours = 4
-						id = news.140
-					}
-				}
-			}
+	id = britain.142
+	title = britain.142.t
+	desc = britain.142.d
+	picture = maoist_doctrine
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = britain.142.o1
+		hidden_effect = {
+			every_country = {
+		        limit = {
+			        NOT = {
+				        tag = ENG
+				    }
+			    }
+			    news_event = {
+			        hours = 4
+			        id = news.140
+		        }
+		    }
+			ENG = {
+		        country_event = { days = 7 id = britain.252 } 
+		    }
 		}
 	}
+}
 
 #Communist party stays with pro-Soviet doctrine
 country_event = {
-		id = britain.143
-		title = britain.143.t
-		desc = britain.143.d
-		picture = uk_union_state
-		
-		is_triggered_only = yes
-		
-		option = {   
-			name = britain.143.o1
+	id = britain.143
+	title = britain.143.t
+	desc = britain.143.d
+	picture = uk_union_state_pic
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = britain.143.o1
+		ENG = {
+		    country_event = { days = 7 id = britain.254 }
 		}
 	}
+}
 
 #Communist party goes alone against ussr and china
 country_event = {
-		id = britain.144
-		title = britain.144.t
-		desc = britain.144.d
-		picture = uk_union_state
-		
-		is_triggered_only = yes
-		
-		option = {   
-			name = britain.144.o1
-			hidden_effect = {
-				every_country = {
-					limit = {
-						NOT = {
-							tag = ENG
-						}
-					}
-					news_event = {
-						hours = 4
-						id = news.141
-					}
-				}
+	id = britain.144
+	title = britain.144.t
+	desc = britain.144.d
+	picture = uk_union_state_pic
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = britain.144.o1
+		hidden_effect = {
+			every_country = {
+		        limit = {
+			        NOT = {
+				        tag = ENG
+				    }
+			    }
+			    news_event = {
+			        hours = 4
+			        id = news.141
+		        }
+		    }
+			ENG = {
+				country_event = { days = 7 id = britain.253 }
 			}
 		}
 	}
+}
 
 #British-soviet training exercises begin
 country_event = {
@@ -4800,120 +4822,166 @@ country_event = {
 
 #2017 General Election
 country_event = {
-		id = britain.170
-		title = britain.170.t
-		desc = britain.170.d
-		picture = british_election
-		
-		fire_only_once = yes
-		
-		trigger = {
-			tag = ENG
-			date > 2017.9.1
-			date < 2017.9.30
-			OR = {
-				has_government = national_conservative
-				has_government = centrist
-				has_government = liberal
-				has_government = new_democrat
-				has_government = moderate_socialist
-				has_government = liberal
-				
-			}
-		}
-		
-		option = {   #Conservative Party
-			name = britain.170.o1
-			set_politics = {
-				ruling_party = national_conservative
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = national_conservative
-				popularity = 0.05
-			}
-			ai_chance = {
-				factor = 20
-			}
-		}
-		
-		option = {   #Liberal Democrats
-			name = britain.170.o2
-			set_politics = {
-				ruling_party = centrist
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = centrist
-				popularity = 0.05
-			}
-			ai_chance = {
-				factor = 20
-			}
-		}
-		
-		option = {   #Social Democrats
-			name = britain.170.o3
-			set_politics = {
-				ruling_party = liberal
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = liberal
-				popularity = 0.05
-			}
-			ai_chance = {
-				factor = 20
-			}
-		}
-		
-		option = {   #Labour
-			name = britain.170.o4
-			set_politics = {
-				ruling_party = new_democrat
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = new_democrat
-				popularity = 0.05
-			}
-			ai_chance = {
-				factor = 20
-			}
-		}
-		
-		
-		
-		option = {   #Independent Labour
-			name = britain.170.o5
-			set_politics = {
-				ruling_party = moderate_socialist
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = moderate_socialist
-				popularity = 0.05
-			}
-			ai_chance = {
-				factor = 20
-			}
-		}
-
-		option = {   #Green
-			name = britain.170.o5
-			set_politics = {
-				ruling_party = liberal
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = liberal
-				popularity = 0.05
-			}
-			ai_chance = {
-				factor = 20
-			}
+	id = britain.170
+	title = britain.170.t
+	desc = britain.170.d
+	picture = british_election
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		date > 2017.9.1
+		date < 2017.9.30
+		OR = {
+		    has_government = national_conservative
+			has_government = centrist
+			has_government = liberal
+			has_government = new_democrat
+			has_government = moderate_socialist
 		}
 	}
+	
+	option = {   #Conservative Party
+		name = britain.170.o1
+		set_politics = {
+	        ruling_party = national_conservative
+	        elections_allowed = no
+        }
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = ENG_nigel_farage
+					}
+				}
+			add_ideas = britain_sic_michael_gove
+			}
+			else = {
+				add_ideas = britain_sic_nigel_farage
+			}
+			add_ideas = britain_fom_damian_green
+			add_ideas = britain_ind_philip_hammond
+			add_ideas = britain_nsm_amber_rudd
+		}
+		custom_effect_tooltip = britain_tory_ministers_tooltip
+		add_natcon_popularity = yes
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {   #Liberal Democrats
+		name = britain.170.o2
+		set_politics = {
+	        ruling_party = centrist
+	        elections_allowed = no
+        }
+		hidden_effect = {
+			add_ideas = britain_sic_simon_hughes
+			add_ideas = britain_fom_jeremy_browne
+			add_ideas = britain_ind_david_laws
+			add_ideas = britain_nsm_nick_harvey
+		}
+		custom_effect_tooltip = britain_libdem_ministers_tooltip
+		add_centrist_popularity = yes
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {   #Social Democrats
+		name = britain.170.o3
+		set_politics = {
+	        ruling_party = liberal
+	        elections_allowed = no
+        }
+		hidden_effect = {
+			add_ideas = britain_sic_gordon_brown
+			add_ideas = britain_fom_mike_gapes
+			add_ideas = britain_ind_kenneth_clarke
+			add_ideas = britain_nsm_chris_leslie
+		}
+		custom_effect_tooltip = britain_sdp_ministers_tooltip
+		add_liberal_popularity = yes
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {   #Labour
+		name = britain.170.o4
+		set_politics = {
+	        ruling_party = new_democrat
+	        elections_allowed = no
+        }
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = ENG_jo_cox
+					}
+				}
+			add_ideas = britain_sic_angela_eagle
+			}
+			else = {
+				add_ideas = britain_sic_jon_cruddas
+			}
+			add_ideas = britain_fom_peter_hain
+			add_ideas = britain_ind_andy_burnham
+			add_ideas = britain_nsm_emily_thornberry
+		}
+		custom_effect_tooltip = britain_labour_ministers_tooltip
+		add_newdem_popularity = yes
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {   #Independent Labour
+		name = britain.170.o5
+		set_politics = {
+	        ruling_party = moderate_socialist
+	        elections_allowed = no
+        }
+		hidden_effect = {
+			add_ideas = britain_sic_ken_livingstone 
+			add_ideas = britain_fom_margaret_beckett
+			add_ideas = britain_ind_john_mcdonnell
+			add_ideas = britain_nsm_clive_lewis
+			if = {
+				limit = {
+					has_completed_focus = ENG_democratic_policies
+				}
+			add_ideas = britain_nsm_clive_lewis
+			}
+			else = {
+				add_ideas = britain_nsm_george_galloway
+			}
+		}
+		custom_effect_tooltip = britain_ilp_ministers_tooltip
+		add_modsoc_popularity = yes
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+	# Soviet Century option(s), kept on top of the fork's updated event
+	option = {   #Green
+			name = britain.170.o6
+			set_politics = {
+				ruling_party = liberal
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.05
+			}
+			ai_chance = {
+				factor = 20
+			}
+		}
+}
 
 #2020 General Election
 country_event = {
@@ -6600,7 +6668,7 @@ country_event = {
 		NOT = {
 		    has_idea = idea_eng_low_corporate_taxes
 		}
-		has_completed_focus = ENG_lower_company_taxes
+		has_completed_focus = ENG_Lower_Company_Taxes
 		has_government = centrist
 	}
 	
@@ -6704,7 +6772,7 @@ country_event = {
 		NOT = {
 		    has_idea = idea_eng_decreased_military_spending 
 		}
-		has_completed_focus = ENG_less_military_spending
+		has_completed_focus = ENG_Cut_Military_Spending
 		OR = {
 		    has_government = new_democrat
 			has_government = moderate_socialist
@@ -7074,61 +7142,216 @@ country_event = {
 	}
 
 country_event = {
-		id = britain.229
-		title = britain.229.t
-		desc =  britain.229.d
+		id = britain.2229
+		title = britain.2229.t
+		desc =  britain.2229.d
 		picture = Starmer_10down
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name =  britain.229.o1
+			name =  britain.2229.o1
 		}
 	}
 
+country_event = { #2011 Liberal Democrats Leadership Spill
+	id = britain.229
+	title = britain.229.t
+	desc = britain.229.d
+	picture = lib_dems_pic
+
+	trigger = {
+		tag = ENG
+		date > 2011.6.1
+		date < 2011.6.30
+		OR = {
+		    has_government = national_conservative
+		    has_government = liberal
+			has_government = new_democrat
+			has_government = moderate_socialist
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { #keep Nick Clegg
+		name = britain.229.o1
+	}
+
+	option = { #Navnit Dholakia
+		name = britain.229.o2
+		ENG_navnit_dholakia = {
+			promote_character = centrist_populist
+		}
+	}
+
+	option = { #Sarah Teather
+		name = britain.229.o3
+		ENG_sarah_teather = {
+			promote_character = centrist_ideology
+		}
+	}
+}
+
 country_event = {
-		id = britain.230
-		title = britain.230.t
-		desc =  britain.230.d
+		id = britain.2230
+		title = britain.2230.t
+		desc =  britain.2230.d
 		picture = Wage_act
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name =  britain.230.o1
+			name =  britain.2230.o1
 		}
 	}
 
+country_event = { #2014 Liberal Democrats Leadership Spill
+	id = britain.230
+	title = britain.230.t
+	desc = britain.230.d
+	picture = lib_dems_pic
+
+	trigger = {
+		tag = ENG
+		date > 2014.12.1
+		date < 2014.12.30
+		OR = {
+		    has_government = national_conservative
+		    has_government = liberal
+			has_government = new_democrat
+			has_government = moderate_socialist
+		}
+	}
+	fire_only_once = yes
+
+	option = { #keep current leader
+		name = britain.230.o1
+	}
+
+	option = { #Tim Farron
+		name = britain.230.o2
+		ENG_tim_farron = {
+			promote_character = christian_democrat
+		}
+	}
+
+	option = { #Sarah Olney
+		name = britain.230.o3
+		ENG_sarah_olney = {
+			promote_character = centrist_ideology
+		}
+	}
+}
+
 country_event = {
-		id = britain.231
-		title = britain.231.t
-		desc =  britain.231.d
+		id = britain.2231
+		title = britain.2231.t
+		desc =  britain.2231.d
 		picture = dev2_uk
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name =  britain.231.o1
+			name =  britain.2231.o1
 		}
 	}
 
+country_event = { #2017 Liberal Democrats Leadership Spill
+	id = britain.231
+	title = britain.231.t
+	desc = britain.231.d
+	picture = lib_dems_pic
+
+	trigger = {
+		tag = ENG
+		date > 2017.12.1
+		date < 2017.12.30
+		OR = {
+		    has_government = national_conservative
+		    has_government = liberal
+			has_government = new_democrat
+			has_government = moderate_socialist
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { #keep current leader
+		name = britain.231.o1
+	}
+
+	option = { #Jo Swinson
+		name = britain.231.o2
+		ENG_jo_swinson = {
+			promote_character = centrist_ideology
+		}
+	}
+
+	option = { #Luciana Berger
+		name = britain.231.o3
+		ENG_luciana_berger = {
+			promote_character = centrist_ideology
+		}
+	}
+}
+
 country_event = {
-		id = britain.232
-		title = britain.232.t
-		desc =  britain.232.d
+		id = britain.2232
+		title = britain.2232.t
+		desc =  britain.2232.d
 		picture = nationalise_uk
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name =  britain.232.o1
+			name =  britain.2232.o1
 		}
 	}
 
+country_event = { #2021 Liberal Democrats Leadership Spill
+	id = britain.232
+	title = britain.232.t
+	desc = britain.232.d
+	picture = lib_dems_pic
+
+	trigger = {
+		tag = ENG
+		date > 2021.2.1
+		date < 2021.2.30
+		OR = {
+		    has_government = national_conservative
+		    has_government = liberal
+			has_government = new_democrat
+			has_government = moderate_socialist
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { #keep current leader
+		name = britain.232.o1
+	}
+
+	option = { #Ed Davey
+		name = britain.232.o2
+		ENG_ed_davey = {
+			promote_character = right_libertarian
+		}
+	}
+
+	option = { #Layla Moran
+		name = britain.232.o3
+		ENG_layla_moran = {
+			promote_character = centrist_ideology
+		}
+	}
+}
+
 country_event = {
-		id = britain.233
-		title = britain.233.t
-		desc = britain.233.d
+		id = britain.2233
+		title = britain.2233.t
+		desc = britain.2233.d
 		picture = war_uk2
 		
 		is_triggered_only = yes
@@ -7137,6 +7360,59 @@ country_event = {
 			name = britain.223.o1
 		}
 	}
+
+country_event = { #2011 SDP Leadership Spill
+	id = britain.233
+	title = britain.233.t
+	desc = britain.233.d
+	picture = sdp_pic
+
+	trigger = {
+		tag = ENG
+		date > 2011.1.1
+		date < 2011.1.30
+		OR = {
+		    has_government = national_conservative
+		    has_government = centrist
+			has_government = new_democrat
+			has_government = moderate_socialist
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { #keep Shirley Williams
+		name = britain.233.o1
+	}
+
+	option = { #Charles Kennedy
+		name = britain.233.o2
+		ENG_charles_kennedy = {
+			promote_character = social_liberal
+		}
+		hidden_effect = {
+			ENG_shirley_williams = {
+				remove_country_leader_role = {
+					ideology = owenist
+				}
+			}
+		}
+	}
+
+	option = { #Chris Huhne
+		name = britain.233.o3
+		ENG_chris_huhne = {
+			promote_character = social_liberal
+		}
+		hidden_effect = {
+			ENG_shirley_williams = {
+				remove_country_leader_role = {
+					ideology = owenist
+				}
+			}
+		}
+	}
+}
 
 country_event = {
 		id = britain.234
@@ -7191,30 +7467,108 @@ country_event = {
 	}
 
 country_event = {
-		id =  britain.238
-		title =  britain.238.t
-		desc =  britain.238.d
+		id =  britain.2238
+		title =  britain.2238.t
+		desc =  britain.2238.d
 		picture = Green_jobs
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name =  britain.238.o1
+			name =  britain.2238.o1
 		}
 	}
 
+country_event = { #2017 SDP Leadership Spill
+	id = britain.238
+	title = britain.238.t
+	desc = britain.238.d
+	picture = sdp_pic
+
+	trigger = {
+		tag = ENG
+		date > 2017.12.1
+		date < 2017.12.30
+		OR = {
+		    has_government = national_conservative
+		    has_government = centrist
+			has_government = new_democrat
+			has_government = moderate_socialist
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { #keep current leader
+		name = britain.238.o1
+	}
+
+	option = { #Chris Leslie
+		name = britain.238.o2
+		ENG_chris_leslie = {
+			promote_character = owenist
+		}
+	}
+
+	option = { #Jess Phillips
+		name = britain.238.o3
+		ENG_jess_phillips = {
+			promote_character = social_liberal
+		}
+	}
+}
+
 country_event = {
-		id =   britain.239
-		title =   britain.239.t
-		desc =   britain.239.d
+		id =   britain.2239
+		title =   britain.2239.t
+		desc =   britain.2239.d
 		picture = Universal_credit
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name =   britain.239.o1
+			name =   britain.2239.o1
 		}
 	}
+
+country_event = { #2021 SDP Leadership Spill
+	id = britain.239
+	title = britain.239.t
+	desc = britain.239.d
+	picture = sdp_pic
+
+	trigger = {
+		tag = ENG
+		date > 2021.1.1
+		date < 2021.1.30
+		OR = {
+		    has_government = national_conservative
+		    has_government = centrist
+			has_government = new_democrat
+			has_government = moderate_socialist
+		}
+	}
+
+	fire_only_once = yes
+
+	option = { #keep current leader
+		name = britain.239.o1
+	}
+
+	option = { #Angela Smith
+		name = britain.239.o2
+		ENG_angela_smith = {
+			promote_character = social_liberal
+		}
+	}
+
+	option = { #Margaret Hodge
+		name = britain.239.o3
+		ENG_margaret_hodge = {
+			promote_character = owenist
+		}
+	}
+}
 
 country_event = {
 		id =  britain.240
@@ -7480,15 +7834,15 @@ country_event = {
 	}
 
 country_event = {
-		id = britain.252
-		title = britain.252.t
-		desc = britain.252.d
+		id = britain.2252
+		title = britain.2252.t
+		desc = britain.2252.d
 		picture = Braiser_taken
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name = britain.252.o1
+			name = britain.2252.o1
 			hidden_effect = {
 				every_country = {
 					limit = {
@@ -7505,16 +7859,33 @@ country_event = {
 		}
 	}
 
+country_event = { #Maoist party coup
+	id = britain.252
+	title = britain.252.t
+	desc = britain.252.d
+	picture = britain_maoist_party_coup
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+			
+	option = { #The Maoists win 
+		name = britain.252.o1
+		ENG_seumas_milne = {
+			promote_character = maoist
+		}
+	}
+}
+
 country_event = {
-		id = britain.253
-		title = britain.253.t
-		desc = britain.253.d
+		id = britain.2253
+		title = britain.2253.t
+		desc = britain.2253.d
 		picture = A_New_dawn_in_the_uk
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name = britain.253.o1
+			name = britain.2253.o1
 			hidden_effect = {
 				every_country = {
 					limit = {
@@ -7531,16 +7902,33 @@ country_event = {
 		}
 	}
 
+country_event = { #Neo-Brezhnevite party coup
+	id = britain.253
+	title = britain.253.t 
+	desc = britain.253.d 
+	picture = britain_brezhnevite_party_coup
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = { #The Brezhnevites win 
+		name = britain.253.o1
+		ENG_zane_carpenter = {
+			promote_character = stalinist
+		}
+	}
+}
+
 country_event = {
-		id = britain.254
-		title = britain.254.t
-		desc = britain.254.d
+		id = britain.2254
+		title = britain.2254.t
+		desc = britain.2254.d
 		picture = The_Noose
 		
 		is_triggered_only = yes
 		
 		option = {   
-			name = britain.254.o1
+			name = britain.2254.o1
 			hidden_effect = {
 				every_country = {
 					limit = {
@@ -7556,6 +7944,21 @@ country_event = {
 			}
 		}
 	}
+
+country_event = { #Revisionists purged
+	id = britain.254
+	title = britain.254.t 
+	desc = britain.254.d
+	picture = griffiths_triumphs_party_coups
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.254.o1
+		add_political_power = 75
+	}
+}
 
 country_event = {
 		id = britain.255
@@ -8726,37 +9129,138 @@ country_event = {
 	
  #Ulster Peace Events
  country_event = {
-			id = britain.306
-			title = britain.306.t
-			desc = britain.306.d
+			id = britain.2306
+			title = britain.2306.t
+			desc = britain.2306.d
 			picture = CANZUK_Jobs	
 			is_triggered_only = yes
 			option = {
-				name = britain.306.o1
+				name = britain.2306.o1
 			}
 		}
 
+country_event = { #Ulster Victory VS UK
+ 	id = britain.306
+ 	title = britain.306.t
+ 	desc = britain.306.d
+ 	picture = ulster_declares_war
+
+ 	fire_only_once = yes
+ 	is_triggered_only = yes
+
+ 	trigger = {
+ 		tag = ENG
+ 		has_war_with = ULS
+ 		NOT = { controls_state = 119 }
+ 	}
+
+ 	option ={
+ 		name = britain.306.01
+ 		white_peace = ULS
+ 		hidden_effect = {
+			every_country = {
+			    news_event = {
+			        hours = 4
+			        id = news.330
+		        }
+		    }
+		}
+ 	}
+ }
+
  country_event = {
-			id = britain.307
-			title = britain.307.t
-			desc = britain.307.d
+			id = britain.2307
+			title = britain.2307.t
+			desc = britain.2307.d
 			picture = CANZUK_working_together
 			is_triggered_only = yes
 			option = {
-				name = britain.307.o1
+				name = britain.2307.o1
 			}
 		}
 
+country_event = { #Ulster and Irish Victory VS UK
+ 	id = britain.307
+ 	title = britain.307.t
+ 	desc = britain.307.d
+ 	picture = irish_unification
+
+ 	fire_only_once = yes
+ 	is_triggered_only = yes
+
+ 	trigger = {
+ 		tag = ENG
+ 		has_war_with = IRE
+ 		NOT = { controls_state = 119 }
+ 	}
+
+ 	option ={
+ 		name = britain.307.01
+ 		white_peace = ULS
+ 		white_peace = IRE
+ 		hidden_effect = {
+			every_country = {
+			    news_event = {
+			        hours = 4
+			        id = news.331
+		        }
+		    }
+		}
+ 	}
+ }
+
  country_event = {
-			id = britain.308
-			title = britain.308.t
-			desc = britain.308.d
+			id = britain.2308
+			title = britain.2308.t
+			desc = britain.2308.d
 			picture = CANZUK_Future_Research
 			is_triggered_only = yes
 			option = {
-				name = britain.308.o1
+				name = britain.2308.o1
 			}
 		}
+
+country_event = { #UK takes Ulster, Ireland White Peace
+ 	id = britain.308
+ 	title = britain.308.t
+ 	desc = britain.308.d
+ 	picture = protestant_coup
+
+ 	fire_only_once = yes
+ 	is_triggered_only = yes
+
+ 	trigger = {
+ 		tag = ENG
+ 		has_war_with = IRE
+ 		controls_state = 119
+ 	}
+
+ 	option ={
+ 		name = britain.308.01
+ 		white_peace = IRE
+		if = {
+			limit = {
+				NOT = {
+					has_cosmetic_tag = ENG_Republic
+				}
+			}
+			ENG = {
+				set_cosmetic_tag = ENG_Ulster
+			}
+		}
+		ENG = {
+			transfer_state = 119
+		}
+		hidden_effect = {
+			every_country = {
+			    news_event = {
+			        hours = 4
+			        id = news.332
+		        }
+		    }
+		}
+ 	}
+ }
 
  country_event = { #Ulster Victory VS UK and Ireland
  	id = britain.309
@@ -8854,15 +9358,44 @@ country_event = {
  }
 
  country_event = {
-		id = britain.311
-		title = britain.311.t
-		desc = britain.311.d
+		id = britain.2311
+		title = britain.2311.t
+		desc = britain.2311.d
 		picture = family_around_tv_for_phoenix
 		is_triggered_only = yes
 		option = {
-			name = britain.311.o1
+			name = britain.2311.o1
 		}
 	}
+
+country_event = { #Borderfix Giving Ulster to Ireland
+ 	id = britain.311
+ 	title = britain.311.t
+ 	desc = britain.311.d
+ 	picture = uk_ireland_agree
+
+ 	fire_only_once = yes
+ 	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		NOT = {
+			country_exists = ULS
+		}
+		tag = ENG
+		has_global_flag = irish_dominance
+		owns_state = 119
+		is_in_faction_with = IRE
+	}
+
+	option = { #Give Ulster to Ireland
+		name = britain.311.01
+		IRE = {
+			transfer_state = 119
+		}
+	}
+  }
   
   country_event = { #LANCE project
 	id = britain.1001
@@ -8929,12 +9462,16 @@ country_event = { #Queen's Apology
 		
 		option = {   
 			name = britain.500.o1
+		set_country_flag = CAN_monarchy_exists_in_canada # Soviet Century: flag the fork's version sets, needed by fork content (Canada)
+		set_country_flag = CAN_andrew_leads_exiles
 			ENG = {
 				country_event = { days = 20 id = britain.501 } 
 			}
 		}
 		option = {   
 			name = britain.500.o2
+		set_country_flag = CAN_monarchy_exists_in_canada # Soviet Century: flag the fork's version sets, needed by fork content (Canada)
+		set_country_flag = CAN_edward_leads_exiles
 			ENG = {
 				country_event = { days = 20 id = britain.502 } 
 			}
@@ -11487,6 +12024,7 @@ country_event = { #Queen's Apology
 				is_triggered_only = yes
 				option = {
 					name = britain.511.o1
+				set_country_flag = britain_shirley_williams_retirement # Soviet Century: same flag the fork's version of this event sets
 				}
 			}
 	country_event = {
@@ -13933,6 +14471,7 @@ country_event = { #Queen's Apology
 			is_triggered_only = yes
 			option = {
 				name = britain.551.o1
+				set_country_flag = ENG_corbyn_in_cabinet # Soviet Century: same flag the fork's version of this event sets
 			}
 			option = {
 				name = britain.551.o2

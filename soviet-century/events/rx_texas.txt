@@ -1,4 +1,4 @@
-﻿add_namespace = rx_texas
+add_namespace = rx_texas
 
 
 #Pro-remnant terrorists strike senate
@@ -2462,35 +2462,7 @@ country_event = {
 	}
 }
 #2014 opposition primaries - Joe Straus is President
-country_event = {
-	id = texas.112
-	title = texas.112.t
-	desc = texas.112.d
-	picture = washington_deal
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	trigger = {
-		tag = TEX
-		date > 2014.5.1
-		date < 2014.5.30
-		has_country_flag = dixiecrat_victory
-	}
-	
-	option = {   #Rand Paul
-		name = texas.110.o1
-		set_country_flag = candidate_rand_paul
-	}
-	
-	option = {   #Mark Tibbetts
-		name = texas.110.o2
-		set_country_flag = candidate_mark_tibbetts
-	}
-	option = {   #Patrick Wynne
-		name = texas.110.o2
-		set_country_flag = candidate_patrick_wynne
-	}
-}
+
 #2014 primaries - Ron Paul is President
 country_event = {
 	id = texas.112

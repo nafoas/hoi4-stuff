@@ -1950,7 +1950,7 @@ focus_tree = {
 		relative_position_id = AMS_national_revanchism
 		completion_reward = {
 		USA = {
-			country_event = { id = pence.6 } 
+			country_event = { id = pence.106 } 
 		}
 		
 		}
@@ -2164,7 +2164,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = AMS_national_revanchism
 		completion_reward = {
-			country_event = { id = pence.5 }
+			country_event = { id = pence.105 }
 		
 		}
 
