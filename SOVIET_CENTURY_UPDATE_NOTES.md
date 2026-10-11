@@ -48,6 +48,13 @@ pointing at it, and load it after **Red World: Alien Nation**.
   were removed from breakaway histories. Wrong capitals were fixed: Brittany, Cornwall,
   Aberdeenshire, Mercia and Kent.
 
+- Every effect, trigger and modifier the submod uses was checked against the game's
+  1.19 `documentation/` (effects, triggers, modifiers) plus the base game's and fork's
+  scripts. Nothing invalid remains; deprecated-but-working effects are noted below.
+- The fork's `equipment_l_english.yml` replaces the base game's and is missing 2,857
+  1.19 keys (e.g. "Convoy", ship and armour descriptions). Soviet Century ships that
+  file, so the missing base-game keys were added back to it.
+
 ## Bugs fixed in the original submod
 - Brace errors that broke parsing in usa.txt, american_state.txt, Britain/Scotland
   events, Britain and Wales ideas, several UK trees, and the focus shine sprite file
@@ -71,5 +78,4 @@ pointing at it, and load it after **Red World: Alien Nation**.
   lin.25) will show raw keys.
 - Breakaway country leaders still use the older `create_country_leader` /
   `create_navy_leader` syntax. It still works but is deprecated.
-- Not checked against the game's own 1.19 `documentation/` files, which weren't
-  provided. Run once with `-debug` and check `error.log` for anything left.
+- Run once with `-debug` and check `error.log` for anything static checks can't catch.
