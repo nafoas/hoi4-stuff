@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+		
+			TEX = {
+				country_event = { id = texas.114}
+			}
+     		}
+  	}
+}

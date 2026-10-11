@@ -1,0 +1,20 @@
+focus_tree = {
+	id = scottish_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = sco
+				}
+	}
+	default = no
+	shared_focus = SCO_FREEDOM
+	shared_focus = SCO_Rebuilding_Scotland
+	shared_focus = SCO_Scottish_Entertainment
+
+	continuous_focus_position = {
+		x = 500
+		y = 5100
+	}
+}
+

@@ -1,0 +1,17 @@
+focus_tree = {
+	id = british_assination_tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_half_mast	
+	shared_focus = ENG_truly_british_military
+continuous_focus_position = {
+		x = 500
+		y = 5100
+	}
+}
+
+	

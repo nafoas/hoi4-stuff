@@ -1,0 +1,17 @@
+focus_tree = {
+	id = scotland_communism_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = sco
+				}
+	}
+	default = no
+	shared_focus = SCO_Leonard_Ascendant
+	shared_focus = SCO_A_Red_Scotland
+	continuous_focus_position = {
+		x = 500
+		y = 5100
+	}
+}

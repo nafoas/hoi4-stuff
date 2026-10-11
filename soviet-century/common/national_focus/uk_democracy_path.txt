@@ -1,0 +1,20 @@
+focus_tree = {
+	id = british_democracy_tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_The_Conservative_Government
+	shared_focus = ENG_Liberal_Democrat_Government
+	shared_focus = ENG_The_SDP_Government
+	shared_focus = ENG_The_Labour_Government
+	shared_focus = ENG_The_New_Relationship
+	continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+	
+
+}

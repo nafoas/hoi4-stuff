@@ -1,0 +1,19 @@
+focus_tree = {
+	id = Scotland_monarchy_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = sco
+				}
+	}
+	default = no
+	shared_focus = SCO_The_Jacobites_Heir
+	shared_focus = SCO_The_Peoples_Queen
+
+	shared_focus = SCO_Scotland_On_The_World_Stage_i
+	continuous_focus_position = {
+		x = 500
+		y = 5100
+	}
+}

@@ -1,0 +1,17 @@
+focus_tree = {
+	id = extended_left_tree_Tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_A_New_Party_A_New_Britain
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+}
+
+	

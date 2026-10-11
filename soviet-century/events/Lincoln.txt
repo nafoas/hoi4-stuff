@@ -1,0 +1,643 @@
+add_namespace = lin
+
+
+#issues of today
+country_event = {
+	id = lin.1
+	title = lin.1.t
+	desc = lin.1.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lin.1.o1
+		
+	}
+}
+#speach from spokane
+country_event = {
+	id = lin.2
+	title = lin.2.t
+	desc = lin.2.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Speach goes poorly
+		name = lin.2.o1
+		trigger = {
+			has_country_flag = sent_militia
+		}
+		country_event = { id = lin.21}
+	}
+	option = { #speach goes well
+		name = lin.2.o2
+		trigger = {
+			has_country_flag = seceret_police
+		}
+		country_event = { id = lin.20}
+	}
+}
+#time for action
+country_event = {
+	id = lin.3
+	title = lin.3.t
+	desc = lin.3.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lin.3.o1
+	}
+}
+#victory at great falls
+country_event = {
+	id = lin.4
+	title = lin.4.t
+	desc = lin.4.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lin.4.o1
+	}
+}
+#north west dream
+country_event = {
+	id = lin.5
+	title = lin.5.t
+	desc = lin.5.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lin.5.o1
+	}
+}
+#white emancipation caimpaigh 
+country_event = {
+	id = lin.6
+	title = lin.6.t
+	desc = lin.6.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lin.6.o1
+	}
+}
+#friends in the repulic (USA EVENT)
+country_event = {
+	id = lin.7
+	title = lin.7.t
+	desc = lin.7.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.7.o1
+		country_event = { id = lin.8}
+	}
+	#hell no
+	option = {
+		name = lin.7.o2
+		country_event = { id = lin.9}
+	}
+}
+#usa says yes
+country_event = {
+	id = lin.8
+	title = lin.8.t
+	desc = lin.8.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.8.o1
+		LIN = {
+		    annex_country = { target = USA }
+		}
+		USA = {	
+			every_army_leader = {
+			set_nationality = LIN
+				}
+		}
+	}
+
+}
+#usa says no
+country_event = {
+	id = lin.9
+	title = lin.9.t
+	desc = lin.9.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.9.o1
+		create_wargoal = {
+			    type = annex_everything
+			    target = USA
+		    }
+	}
+
+}
+#spencer reunites the usa (normal)
+country_event = {
+	id = lin.10
+	title = lin.10.t
+	desc = lin.10.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.10.o1
+		add_research_slot = 1
+	}
+
+}
+#down with the nazi
+country_event = {
+	id = lin.11
+	title = lin.11.t
+	desc = lin.11.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.11.o1
+		
+	}
+
+}
+#regain control
+country_event = {
+	id = lin.12
+	title = lin.12.t
+	desc = lin.12.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.12.o1
+		country_event = { id = lin.24 days = 7}
+	}
+
+}
+ #death squads
+country_event = {
+	id = lin.13
+	title = lin.13.t
+	desc = lin.13.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.13.o1
+			remove_idea = idea_lin_seceret_police
+			remove_idea = idea_lin_militia_crackdown 
+			add_timed_idea = { idea = idea_lin_death_squads days = 60 }
+	}
+
+}
+#the 4th riech rises
+country_event = {
+	id = lin.14
+	title = lin.14.t
+	desc = lin.14.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.14.o1
+		set_cosmetic_tag = LIN_4thriech 
+		set_party_name = { ideology = national_bolshevik long_name = LIN_nazi_party_long name = LIN_nazi_party}
+		create_country_leader = {
+	        name = "Richard Spencer"
+	        picture = "Portrait_LIN_ss_Richard.dds"
+	        ideology = black_sun
+		traits = { trait_american_himmler }
+        }
+			
+	}
+
+}
+#the fate of montana
+country_event = {
+	id = lin.15
+	title = lin.15.t
+	desc = lin.15.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.15.o1
+		core_MOT = yes
+	}
+
+}
+#the fate of the west
+country_event = {
+	id = lin.16
+	title = lin.16.t
+	desc = lin.16.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.16.o1
+		core_UTA = yes
+		core_ARI = yes
+		
+	}
+
+}
+#the fate of the midwest
+country_event = {
+	id = lin.17
+	title = lin.17.t
+	desc = lin.17.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.17.o1
+		core_MWA = yes
+		core_GRL = yes
+		core_ILL = yes
+	}
+
+}
+#ultimate victory
+country_event = {
+	id = lin.18
+	title = lin.18.t
+	desc = lin.18.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.18.o1
+		core_NEA = yes
+		core_PCA = yes
+		core_USA = yes
+		core_TEX = yes
+	}
+
+}
+#more living space
+country_event = {
+	id = lin.19
+	title = lin.19.t
+	desc = lin.19.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.19.o1
+		
+	}
+
+}
+
+#spookane speach goes well
+country_event = {
+	id = lin.20
+	title = lin.20.t
+	desc = lin.20.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.20.o1
+		hidden_effect = {
+		load_focus_tree = {
+			tree = lincoln_tree_normal
+			keep_completed = yes
+			}
+		}
+	}
+
+}
+#spookane speach goes poorly
+country_event = {
+	id = lin.21
+	title = lin.21.t
+	desc = lin.21.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.21.o1
+		country_event = { id = lin.22 days = 3}
+		hidden_effect = {
+		country_event = { id = lin.31 days = 1}
+		load_focus_tree = {
+			tree = lincoln_tree_falling_apart
+			keep_completed = yes
+			}
+		}
+	}
+
+}
+
+#fighting in the streets
+country_event = {
+	id = lin.22
+	title = lin.22.t
+	desc = lin.22.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.22.o1
+		country_event = { id = lin.23 days = 7}
+	}
+	option = {
+		name = lin.22.o2
+		country_event = { id = lin.23 days = 7}
+	}
+	option = {
+		name = lin.22.o3
+		country_event = { id = lin.23 days = 7}
+	}
+}
+
+#spencer awakens
+country_event = {
+	id = lin.23
+	title = lin.23.t
+	desc = lin.23.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.23.o1
+		country_event = { id = lin.12 days = 7}
+	}
+
+}
+#spencer reasumes control
+country_event = {
+	id = lin.24
+	title = lin.24.t
+	desc = lin.24.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.24.o1
+		hidden_effect = {
+		load_focus_tree = {
+			tree = lincoln_tree_ss
+			keep_completed = yes
+			}
+		}
+	}
+
+}
+#unawnsered questions
+country_event = {
+	id = lin.25
+	title = lin.25.t
+	desc = lin.25.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {#work them to death
+		name = lin.25.o1
+		 swap_ideas = {
+				remove_idea = idea_lin_minorty_rescitance 
+				add_idea = idea_lin_minorty_rescitance2 
+			}
+	}
+	option = {#deport them 
+		name = lin.25.o2
+		 swap_ideas = {
+				remove_idea = idea_lin_minorty_rescitance 
+				add_idea = idea_lin_minorty_rescitance3  
+			}
+	}
+	option = {#intergrate some, removes others
+		name = lin.25.o3
+		swap_ideas = {
+				remove_idea = idea_lin_minorty_rescitance 
+				add_idea = idea_lin_minorty_rescitance4 
+			}
+	}
+
+
+}
+#minority resitance
+country_event = {
+	id = lin.30
+	title = lin.30.t
+	desc = lin.30.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.30.o1
+		add_ideas = idea_lin_minorty_rescitance 
+	}
+
+}
+#native question
+country_event = {
+	id = lin.26
+	title = lin.26.t
+	desc = lin.26.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.26.o1
+		    add_stability = 0.05
+        LAK = {
+            add_state_core = 381
+            add_state_core = 384
+            add_state_core = 390
+            add_state_core = 1018
+        }
+        release_puppet = LAK	
+	}
+	#deport
+	option = {
+		name = lin.26.o2
+		add_timed_idea = { idea = idea_lin_deported_natives days = 130 }
+	}
+}
+#québécois question
+country_event = {
+	id = lin.27
+	title = lin.27.t
+	desc = lin.27.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#core
+	option = {
+		name = lin.27.o1
+		create_country_flag = core_quebec
+	}
+	#puppet
+	option = {
+		name = lin.27.o2
+		release_puppet = QUE
+	}
+
+}
+#Inuit question
+country_event = {
+	id = lin.28
+	title = lin.28.t
+	desc = lin.28.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.28.o1
+		add_idea = idea_lin_inuit_autonomy 
+	}
+	option = {
+		name = lin.28.o2
+		add_timed_idea = { idea = idea_lin_deported_inuit  days = 60 }
+	}
+}
+#new north
+country_event = {
+	id = lin.29
+	title = lin.29.t
+	desc = lin.29.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.29.o1
+		
+	}
+
+}
+#the coma
+country_event = {
+	id = lin.31
+	title = lin.31.t
+	desc = lin.31.d
+	picture = 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.31.o1
+		country_event = { id = lin.32}
+	}
+
+}
+#the coma 2
+country_event = {
+	id = lin.32
+	title = lin.32.t
+	desc = lin.32.d
+	picture = 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#yes
+	option = {
+		name = lin.32.o1
+		
+	}
+
+}
+

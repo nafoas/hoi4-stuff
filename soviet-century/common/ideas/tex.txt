@@ -1,0 +1,2033 @@
+ideas = {
+
+    country = {
+	idea_tex_coalition_cracks = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = texan_troubles
+
+			modifier = {
+				liberal_drift = 0.01
+				centrist_drift = 0.01
+				nationalist_drift = -0.01
+				national_conservative_drift = 0.01
+				fascist_drift = 0.01
+			}
+		}
+	idea_tex_pro-remnant_terrorist = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.25
+			}
+		}
+	idea_tex_sweeping_reform = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = 0.25
+			}
+		}
+		idea_tex_expanded_police = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = triumphant_will
+
+			modifier = {
+				crypto_strength = 1
+				decryption_power = 10
+				stability_factor = 0.10
+				conscription = 0.005
+			}
+		}
+	idea_tex_silence_opposition = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				centrist_drift = -0.01
+				nationalist_drift = -0.01
+				national_conservative_drift = -0.01
+				fascist_drift = 0.01
+			}
+		}
+	idea_tex_peoples_support = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.05
+	
+			}
+		}
+	idea_tex_enforced_loyalty = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				training_time_factor = 0.10
+				army_morale_factor = 0.1
+			}
+		}
+	idea_tex_stronger_border_security = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_core_defence_factor = 0.02
+				training_time_factor = -0.05
+			}
+		}
+	idea_tex_stronger_increased_national_gaurd = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.1
+			}
+		}
+	idea_tex_decrease_taxes = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+	idea_tex_republic_law = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.05
+	
+			}
+		}
+	idea_tex_economic_cooperation = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	idea_tex_stronger_economy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+	idea_tex_a_christian_nation = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				stability_factor = 0.05
+				nationalist_drift = 0.01
+				national_conservative_drift = 0.03
+				army_morale_factor = 0.1
+				political_power_gain = 0.1
+
+			}
+		}
+		idea_tex_less_executuve_power = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+	idea_tex_export_arms = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		idea_tex_uphold_the_constitution = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.15
+				army_core_defence_factor = 0.05
+			}
+		}
+		idea_tex_american_nostalgia = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.15
+				national_conservative_drift = 0.03
+			}
+		}
+	idea_tex_deregulated_economy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				political_power_gain = -0.15
+			}
+		}
+	idea_tex_abolished_income_taxes = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.15
+			}
+		}
+		idea_tex_small_goverment = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+	idea_tex_new_bill_of_rights = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.1
+				army_core_defence_factor = 0.05
+				training_time_factor = -0.05
+			}
+		}
+		idea_tex_privitised_education = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				research_speed_factor = 0.08
+				political_power_gain = -0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		idea_tex_protected_privacy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = triumphant_will
+
+			modifier = {
+				crypto_strength = -1
+				decryption_power = -10
+				centrist_drift = 0.01
+				stability_factor = 0.10
+			}
+		}
+	idea_tex_a_better_militia = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.025
+				army_morale_factor = -0.05
+				army_core_defence_factor = 0.10
+				training_time_factor = -0.10
+			}
+		}
+	idea_tex_a_standing_army = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		idea_tex_texan_identity = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = 0.10
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		idea_tex_we_are_americans = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.15
+
+			}
+		}
+		idea_tex_a_new_republic = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.15
+				conscription = 0.01
+				centrist_drift = 0.01
+				nationalist_drift = 0.01
+				national_conservative_drift = 0.01
+			}
+		}
+		idea_tex_a_free_texas = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = 0.10
+				political_power_gain = 0.15
+			}
+		}
+
+
+	idea_tex_a_loyal_army = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = -0.01
+				army_morale_factor = 0.10
+				army_attack_factor = -0.02
+				army_defence_factor = -0.02
+			}
+		}
+
+	idea_tex_compulsory_service = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.025
+				war_support_factor = -0.10
+				stability_factor = -0.10
+			}
+		}
+	idea_tex_desperate_defence = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+		modifier = {
+			conscription = 0.01
+			war_support_factor = 0.10
+			stability_factor = -0.10
+		}
+		targeted_modifier = {
+			tag = USA
+			defense_bonus_against = 0.05
+			}
+		}
+
+	idea_tex_remember_the_alamo = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+		modifier = {
+			conscription = 0.02
+			war_support_factor = 0.20
+			army_morale_factor = 0.10
+			stability_factor = -0.05
+		}
+		targeted_modifier = {
+			tag = USA
+			defense_bonus_against = 0.10
+			}
+		}
+
+	idea_tex_banned_miscegenation = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.05
+				army_morale_factor = 0.1
+				fascist_drift = 0.05
+			}
+		}
+
+	idea_tex_banned_from_office = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				political_power_gain = -0.15 
+				fascist_drift = 0.02
+				consumer_goods_factor = -0.05
+				
+			}
+		}
+
+	idea_tex_slavery = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.10
+				conscription = -0.02
+				consumer_goods_factor = -0.10
+				
+			}
+		}
+	idea_tex_slavery_2 = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.12
+				conscription = -0.025
+				consumer_goods_factor = -0.15
+				
+			}
+		}
+	idea_tex_begin_the_warpath = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				conscription = 0.01
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.30
+			}
+		}
+		idea_tex_expelling_radicals = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				fascist_drift = -0.05
+	
+			}
+		}
+	idea_tex_intergrated_armys = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	idea_tex_intergrated_economies = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+	idea_tex_the_fight_ahead = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.30
+			}
+		}
+		idea_tex_honor_the_founders = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.20
+				political_power_gain = 0.20
+			}
+		}
+		idea_tex_state_rights = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.10
+				political_power_gain = -0.10
+				national_conservative_drift = 0.04
+				centrist_drift = 0.01
+			}
+		}
+	idea_tex_decentralized_army = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_morale_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = 0.05
+				conscription = 0.01
+				army_core_defence_factor = 0.10
+				training_time_factor = -0.15
+			}
+		}
+
+		idea_tex_moderate_remnants = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				centrist_drift = 0.03
+				national_conservative_drift = 0.02
+			}
+		}
+		idea_tex_decentralized_republic = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+	idea_tex_preaching_god = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				stability_factor = 0.10
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+	idea_tex_liberate_america = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.30
+			}
+		}
+		idea_tex_more_perfect_union = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.20
+				political_power_gain = 0.20
+			}
+		}
+	idea_tex_uphold_liberty = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.1
+				army_core_defence_factor = 0.10
+				training_time_factor = -0.10
+			}
+		}
+		idea_tex_protected_rights = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		idea_tex_end_of_the_republicans = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.10
+				nationalist_drift = -0.01
+
+			}
+		}
+		idea_tex_end_of_the_kkk = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.10
+				fascist_drift = -0.05
+
+			}
+		}
+
+		idea_tex_american_freedom = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				stability_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+		idea_tex_army_recruitment_campaign = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.005
+				army_org_factor = 0.1
+			}
+		}
+
+		idea_tex_navy_recruitment_campaign = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		idea_tex_air_force_recruitment_campaign = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				 war_support_factor = 0.10
+				justify_war_goal_time = -0.3
+			}
+		}
+
+		idea_tex_articals_of_confederation = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.20
+				political_power_gain = 0.20
+			}
+		}
+ 		idea_tex_states_rights = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+		idea_tex_lost_cause_revisionism = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+
+		idea_tex_defend_the_confedracy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				conscription = 0.01
+				training_time_factor = -0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		idea_tex_foreign_relations = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				trade_opinion_factor = 0.25
+				stability_factor = 0.05
+			}
+		}
+
+	idea_tex_intergration_of_the_kkk = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = { 
+				army_morale_factor = 0.1
+				fascist_drift = 0.01
+				political_power_gain = -0.3
+			}
+		}
+
+	idea_tex_mandatory_faith = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.01
+				war_support_factor = 0.10
+				stability_factor = -0.10
+			}
+		}
+		idea_tex_keep_your_rifle_by_your_side = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				training_time_factor = -0.10
+				army_morale_factor = 0.1
+				army_core_defence_factor = 0.10
+			}
+		}
+		idea_tex_message_of_the_lamb = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.25
+				national_bolshevik_drift = 0.05
+
+			}
+		}
+		idea_tex_save_the_sinners = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				conscription = 0.005
+				MONTHLY_POPULATION = 0.05
+				stability_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+	idea_tex_prepare_for_the_end = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				army_core_defence_factor = 0.10
+			}
+		}
+	idea_tex_heed_the_lamb = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.20
+				national_bolshevik_drift = 0.02
+
+			}
+		}
+	idea_tex_the_seven_seals = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.01
+				war_support_factor = 0.10
+			}
+		}
+		idea_tex_religous_communalism = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.10
+				communist_drift = 0.02
+			}
+		}
+	idea_tex_minority_intergration = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.10
+				conscription = 0.01
+				stability_factor = -0.10
+				army_morale_factor = -0.05
+			}
+		}
+	idea_tex_faith_healings = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				political_power_gain = 0.15
+				stability_factor = 0.10
+			}
+		}
+	idea_tex_faithfull_texas = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				communist_drift = 0.01
+				national_bolshevik_drift = 0.01
+				fascist_drift = 0.01
+				political_power_gain = 0.1
+
+			}
+		}
+	idea_tex_prepared_texas = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				communist_drift = 0.01
+				national_bolshevik_drift = 0.01
+				fascist_drift = 0.01
+				political_power_gain = 0.1
+				conscription = 0.005
+				training_time_factor = -0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	idea_tex_sin_free_texas = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.10
+				communist_drift = 0.01
+				national_bolshevik_drift = 0.01
+				fascist_drift = 0.01
+				political_power_gain = 0.15
+				conscription = 0.005
+				training_time_factor = -0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	idea_tex_holy_texas = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.10
+				communist_drift = 0.03
+				national_bolshevik_drift = 0.03
+				fascist_drift = 0.01
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.10
+				conscription = 0.01
+				training_time_factor = -0.10
+				army_core_defence_factor = 0.05
+			}
+		}
+	idea_tex_communist_clergy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				communist_drift = 0.02
+				political_power_gain = 0.1
+
+			}
+		}
+	idea_tex_social_gospel = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				political_power_gain = 0.15
+				consumer_goods_factor = 0.05
+				stability_factor = 0.10
+			}
+		}
+	idea_tex_rainbow_family = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.20
+				conscription = 0.01
+				stability_factor = -0.05
+			}
+		}
+	idea_tex_clairvoyant_revelations = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				research_speed_factor = 0.01
+				communist_drift = 0.02
+
+			}
+		}
+		idea_tex_jonestowns = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.08
+				production_speed_buildings_factor = 0.08
+				political_power_gain = 0.15
+				MONTHLY_POPULATION = 0.02
+			}
+		}
+		idea_tex_collecivies_economy = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				political_power_gain = -0.15
+			}
+		}
+
+	idea_tex_power_to_the_reverend = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.005
+				communist_drift = 0.05
+				political_power_gain = 0.15
+			}
+		}
+	idea_tex_koreshian_education = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				research_speed_factor = -0.02
+				national_bolshevik_drift = 0.02
+
+			}
+		}
+		idea_tex_koreshs_economy = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				political_power_gain = -0.15
+			}
+		}
+
+		idea_tex_private_ownership_permitted = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+	idea_tex_jonesist_reeducation = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				research_speed_factor = -0.02
+				communist_drift = 0.02
+
+			}
+		}
+		idea_tex_clergy_to_industrialist = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				political_power_gain = 0.15
+			}
+		}
+
+		idea_tex_industrialist_to_communist = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.05
+				political_power_gain = -0.15
+			}
+		}
+	idea_tex_copeland_loyalist = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.25
+			}
+		}
+	idea_tex_prepare_the_crusades = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.30
+			}
+		}
+		idea_tex_the_messiah = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.20
+				political_power_gain = 0.20
+				national_bolshevik_drift = 0.01
+			}
+		}
+	idea_tex_generals_executed = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.1
+				army_core_defence_factor = -0.10
+				training_time_factor = 0.10
+			}
+		}
+	idea_tex_freed_minorites = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.10
+				conscription = 0.005
+				stability_factor = -0.05
+			}
+		}
+	idea_tex_aaron_burrs_legacy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.10
+
+			}
+		}
+	idea_tex_enlighted_monarchy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.10
+				monarchist_drift = 0.02
+			}
+		}
+	idea_tex_burrs_army = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.1
+			}
+		}
+	idea_tex_royal_military_duty = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.01
+				training_time_factor = -0.10
+			}
+		}
+	idea_tex_royal_investments = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.010
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+	idea_tex_american_napolean = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.05
+				conscription = 0.01
+				monarchist_drift = 0.02
+			}
+		}
+		idea_tex_increased_intelligence_funding = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = triumphant_will
+
+			modifier = {
+				crypto_strength = 2
+				decryption_power = 10
+			}
+		}
+	idea_tex_executive_monarchy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.10
+				monarchist_drift = 0.01
+				nationalist_drift = 0.01
+				national_conservative_drift = 0.01
+			}
+		}
+	idea_tex_glorified_army = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+	idea_tex_opened_markets = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+	idea_tex_royal_congress = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.10
+			}
+		}
+	idea_tex_strong_monarchy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.15
+				war_support_factor = 0.15
+				stability_factor = 0.05
+				monarchist_drift = 0.01
+				nationalist_drift = 0.01
+				national_conservative_drift = 0.01
+			}
+		}
+	idea_tex_constitutional_monarchy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.10
+				monarchist_drift = 0.01
+				centrist_drift = 0.01
+				national_conservative_drift = 0.01
+				liberal_drift = 0.01
+				new_democrat_drift = 0.01
+			}
+		}
+	idea_tex_female_recuitment = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				conscription = 0.015
+				army_morale_factor = -0.05
+			}
+		}
+		idea_tex_increased_social_services = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+				MONTHLY_POPULATION = 0.02
+			}
+		}
+		idea_tex_minority_protection_act = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.05
+				MONTHLY_POPULATION = 0.01
+			}
+		}
+	idea_tex_parliament = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.10
+			}
+		}
+	idea_tex_liberal_monarchy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.15
+				monarchist_drift = 0.01
+				centrist_drift = 0.02
+				national_conservative_drift = 0.02
+				liberal_drift = 0.02
+				new_democrat_drift = 0.02
+			}
+		}
+	idea_tex_prepare_for_reclaimation = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = catholic_values
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.30
+			}
+		}
+		idea_tex_end_to_dixie = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = -0.10
+				political_power_gain = 0.10
+				national_conservative_drift = -0.04
+				centrist_drift = -0.01
+			}
+		}
+	idea_tex_exiled_generals = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.1
+				army_core_defence_factor = -0.10
+				training_time_factor = 0.10
+			}
+		}
+idea_tex_secure_the_border = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				production_speed_bunker_factor = 0.2
+			}
+		}
+		idea_tex_national_preparedness = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_core_defence_factor = 0.10
+				training_time_factor = -0.05
+				war_support_factor = 0.15
+			}
+		}
+		idea_tex_increased_cybersecurity = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = triumphant_will
+
+			modifier = {
+				crypto_strength = 1
+				decryption_power = 10
+				
+			}
+		}
+		idea_king_richard_burr = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+
+			}
+		}
+		idea_king_antonio_burr = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				war_support_factor = 0.10
+				political_power_gain = -0.05
+
+			}
+		}
+		idea_queen_sherri_burr = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.05
+
+			}
+		}
+
+
+
+
+	}
+}

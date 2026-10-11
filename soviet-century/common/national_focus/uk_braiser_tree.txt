@@ -1,0 +1,19 @@
+focus_tree = {
+	id = british_braiser_tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_the_phoenix_front
+	shared_focus = ENG_Braisers_Leadership
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+}
+
+
+}

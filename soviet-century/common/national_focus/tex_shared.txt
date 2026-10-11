@@ -1,0 +1,5600 @@
+#Military tree
+	shared_focus = {
+		id = TEX_review_the_arm_forces
+		icon = military_salute
+		cost = 7
+		x = 40
+		y = 6
+		available = {
+		}
+		completion_reward = {
+			army_experience = 5
+			navy_experience = 5
+			air_experience = 5
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_army
+		icon = allies_infantry
+		cost = 7
+		prerequisite = {
+			focus = TEX_review_the_arm_forces
+		}
+		x = -5
+		y = 1
+		relative_position_id = TEX_review_the_arm_forces
+		completion_reward = {
+		  	army_experience = 5
+		}
+
+	}
+	shared_focus = {
+		id = TEX_infantry_focus
+		icon = military_drill
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_armour_focus
+		}
+		prerequisite = {
+			focus = TEX_the_army
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_the_army
+		completion_reward = {
+		   add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_better_artillery
+		icon = artillery_2
+		cost = 7
+		prerequisite = {
+			focus = TEX_infantry_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_infantry_focus
+		completion_reward = {
+		   add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+
+	}	
+	shared_focus = {
+		id = TEX_armour_focus
+		icon = tanks
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_infantry_focus
+		}
+		prerequisite = {
+			focus = TEX_the_army
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_the_army
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_mechanized_infantry
+		icon = motorised
+		cost = 7
+		prerequisite = {
+			focus = TEX_armour_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_armour_focus
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = cat_mechanized_equipment_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_better_doctrine
+		icon = military_academy
+		cost = 7
+		prerequisite = {
+			focus = TEX_mechanized_infantry
+			focus = TEX_better_artillery
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_mechanized_infantry
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_army_propaganda
+		icon = generic_marching
+		cost = 7
+		prerequisite = {
+			focus = TEX_a_better_doctrine
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_better_doctrine
+		completion_reward = {
+		  add_ideas = idea_tex_army_recruitment_campaign
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_navy
+		icon = amphibious_assault
+		cost = 7
+		prerequisite = {
+			focus = TEX_review_the_arm_forces
+		}
+		x = 5
+		y = 1
+		relative_position_id = TEX_review_the_arm_forces
+		completion_reward = {
+		  navy_experience = 5
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_grand_navy
+		icon = navy_doctrine
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_a_hidden_navy
+		}
+		prerequisite = {
+			focus = TEX_the_navy
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_the_navy
+		completion_reward = {
+		   add_tech_bonus = {
+				name = bc_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_carrier_research
+		icon = carrier
+		cost = 7
+		prerequisite = {
+			focus = TEX_a_grand_navy
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_grand_navy
+		completion_reward = {
+		  add_tech_bonus = {
+				name = cv_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_hidden_navy
+		icon = submarine
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_a_grand_navy
+		}
+		prerequisite = {
+			focus = TEX_the_navy
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_the_navy
+		completion_reward = {
+		  add_tech_bonus = {
+				name = ss_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_destroyer_devolopment
+		icon = naval_occupation
+		cost = 7
+		prerequisite = {
+			focus = TEX_a_hidden_navy
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_hidden_navy
+		completion_reward = {
+		   add_tech_bonus = {
+				name = dd_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_naval_air_power
+		icon = generic_fighter_2
+		cost = 7
+		prerequisite = {
+			focus = TEX_destroyer_devolopment
+			focus = TEX_carrier_research
+		}
+	
+		x = -1
+		y = 1
+		relative_position_id = TEX_destroyer_devolopment
+		completion_reward = {
+		   add_tech_bonus = {
+				name = naval_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_bomber
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_navy_propaganda
+		icon = wolf_pack
+		cost = 7
+		prerequisite = {
+			focus = TEX_naval_air_power
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_naval_air_power
+		completion_reward = {
+		add_ideas = idea_tex_navy_recruitment_campaign 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_airforce
+		icon = build_airforce
+		cost = 7
+		prerequisite = {
+			focus = TEX_review_the_arm_forces
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_review_the_arm_forces
+		completion_reward = {
+		   air_experience = 5
+		}
+
+	}
+	shared_focus = {
+		id = TEX_ground_support
+		icon = close_air_support
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_strategic_destruction
+		}
+		prerequisite = {
+			focus = TEX_the_airforce
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_the_airforce
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = cas_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+				}
+		
+			}
+
+	}
+	shared_focus = {
+		id = TEX_air_defence_exspansion
+		icon = air_defense
+		cost = 7
+		prerequisite = {
+			focus = TEX_ground_support
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_ground_support
+		completion_reward = {
+		  random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_strategic_destruction
+		icon = generic_bomber
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_ground_support
+		}
+		prerequisite = {
+			focus = TEX_the_airforce
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_the_airforce
+		completion_reward = {
+		  add_tech_bonus = {
+				name = cat_strategic_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_airbase_exspansion
+		icon = air_production
+		cost = 7
+		prerequisite = {
+			focus = TEX_strategic_destruction
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_strategic_destruction
+		completion_reward = {
+		   random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_bomber_research
+		icon = GFX_drones
+		cost = 7
+		prerequisite = {
+			focus = TEX_airbase_exspansion
+			focus = TEX_air_defence_exspansion
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_airbase_exspansion
+		completion_reward = {
+		  add_tech_bonus = {
+				name = tactical_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_airforce_propaganda
+		icon = air_icon
+		cost = 7
+		prerequisite = {
+			focus = TEX_bomber_research
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_bomber_research
+		completion_reward = {
+		  add_ideas = idea_tex_air_force_recruitment_campaign
+		}
+
+	}
+	#Election tree
+	shared_focus = {
+		id = TEX_2010_election
+		icon = tex_2010_election
+		cost = 1
+		x = 20
+		y = 0
+		available = {
+		 has_country_flag = tex_2010_election
+		}
+		completion_reward = {
+		}
+
+	}
+	#Fascist tree
+	shared_focus = {
+		id = TEX_fascist_victory
+		icon = scott_copeland_icon
+		cost = 1
+		available = {
+		     has_country_flag = fascist_won
+		}
+		prerequisite = {
+			focus = TEX_2010_election
+		}
+		x = -16
+		y = 1
+		relative_position_id = TEX_2010_election
+		completion_reward = {
+		    country_event = { id = texas.12 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_enact_sweeping_legislation
+		icon = laws
+		cost = 5
+		prerequisite = {
+			focus = TEX_fascist_victory
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_fascist_victory
+		completion_reward = {
+		    add_ideas = idea_tex_sweeping_reform
+		}
+
+	}
+	shared_focus = {
+		id = TEX_gain_the_peoples_support
+		icon = com_fascism
+		cost = 5
+		prerequisite = {
+			focus = TEX_fascist_victory
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_fascist_victory
+		completion_reward = {
+		    add_ideas = idea_tex_peoples_support
+		}
+
+	}
+	shared_focus = {
+		id = TEX_silence_opposition
+		icon = broken_star
+		cost = 5
+		prerequisite = {
+			focus = TEX_fascist_victory
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_fascist_victory
+		completion_reward = {
+		    add_ideas = idea_tex_silence_opposition
+		}
+
+	}
+	shared_focus = {
+		id = TEX_expand_the_police
+		icon = arrest_derg_members
+		cost = 5
+		prerequisite = {
+			focus = TEX_silence_opposition
+		}
+		prerequisite = {
+			focus = TEX_gain_the_peoples_support
+		}
+		prerequisite = {
+			focus = TEX_enact_sweeping_legislation
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_silence_opposition
+		completion_reward = {
+		    country_event = { id = texas.13 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_enforce_loyalty
+		icon = generic_strike
+		cost = 5
+		prerequisite = {
+			focus = TEX_silence_opposition
+		}
+		prerequisite = {
+			focus = TEX_gain_the_peoples_support
+		}
+		prerequisite = {
+			focus = TEX_enact_sweeping_legislation
+		}
+		
+		x = -1
+		y = 1
+		relative_position_id = TEX_silence_opposition
+		
+		completion_reward = {
+			country_event = { id = texas.14 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_purge_the_unloyal
+		icon = major_war
+		cost = 14.3
+		prerequisite = {
+			focus = TEX_enforce_loyalty
+		}
+		prerequisite = {
+			focus = TEX_expand_the_police
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_enforce_loyalty
+		select_effect = {
+			country_event = { id = texas.15 }
+		}
+		completion_reward = {
+		    
+		}
+
+	}
+	shared_focus = {
+		id = TEX_loyal_military
+		icon = military_salute
+		cost = 10
+		prerequisite = {
+			focus = TEX_purge_the_unloyal
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_purge_the_unloyal
+		completion_reward = {
+			   add_ideas = idea_tex_a_loyal_army
+		}
+
+	}
+	shared_focus = {
+		id = TEX_compulsory_service
+		icon = military_drill
+		cost = 10
+		prerequisite = {
+			focus = TEX_purge_the_unloyal
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_purge_the_unloyal
+		completion_reward = {
+		    add_ideas = idea_tex_compulsory_service
+		}
+
+	}
+	#Rick Perry tree
+	shared_focus = {
+		id = TEX_perrys_2nd_term
+		icon = rick_perry_icon
+		cost = 1
+		available = {
+		     has_country_flag = rick_perry_won
+		}
+		prerequisite = {
+			focus = TEX_2010_election
+		}
+		x = -8
+		y = 1
+		relative_position_id = TEX_2010_election
+		completion_reward = {
+		    country_event = { id = texas.10 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_increase_national_guard
+		icon = national_guard
+		cost = 7
+		prerequisite = {
+			focus = TEX_perrys_2nd_term
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_perrys_2nd_term
+		completion_reward = {
+		     add_ideas = idea_tex_stronger_increased_national_gaurd
+		}
+
+	}
+	shared_focus = {
+		id = TEX_decrease_taxes
+		icon = low_company_tax
+		cost = 7
+		prerequisite = {
+			focus = TEX_perrys_2nd_term
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_perrys_2nd_term
+		completion_reward = {
+		     add_ideas = idea_tex_decrease_taxes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_expand_the_arms_market
+		icon = power_to_the_president
+		cost = 7
+		prerequisite = {
+			focus = TEX_perrys_2nd_term
+		}
+		x = 3
+		y = 1
+		relative_position_id = TEX_perrys_2nd_term
+		completion_reward = {
+		     random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_stronger_economy
+		icon = power_to_the_corporations
+		cost = 7
+		prerequisite = {
+			focus = TEX_decrease_taxes
+		}
+		prerequisite = {
+			focus = TEX_expand_the_arms_market
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_expand_the_arms_market
+		completion_reward = {
+		    swap_ideas = {
+				remove_idea = idea_tex_decrease_taxes
+				add_idea = idea_tex_stronger_economy
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_stronger_border_security
+		icon = focus_syrian_border_defence
+		cost = 7
+		prerequisite = {
+			focus = TEX_perrys_2nd_term
+		}
+		x = -3
+		y = 1
+		relative_position_id = TEX_perrys_2nd_term
+		completion_reward = {
+		     add_ideas = idea_tex_stronger_border_security
+		}
+
+	}
+	shared_focus = {
+		id = TEX_cross_service_traing
+		icon = position_armies
+		cost = 7
+		prerequisite = {
+			focus = TEX_stronger_border_security
+		}
+		prerequisite = {
+			focus = TEX_increase_national_guard
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_stronger_border_security
+		completion_reward = {
+		    army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+		}
+
+	}
+	shared_focus = {
+		id = TEX_forge_texan_identity
+		icon = republic_of_texas
+		cost = 7
+		prerequisite = {
+			focus = TEX_cross_service_traing
+		}
+		prerequisite = {
+			focus = TEX_stronger_economy
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_stronger_economy
+		completion_reward = {
+		   add_ideas = idea_tex_texan_identity
+		}
+
+	}
+
+	#Dixiecrat tree
+	shared_focus = {
+		id = TEX_Dixie_victory
+		icon = joe_straus_icon
+		cost = 1
+		available = {
+		     has_country_flag = dixiecrat_victory
+		}
+		prerequisite = {
+			focus = TEX_2010_election
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_2010_election
+		completion_reward = {
+		    country_event = { id = texas.11 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_less_executive_power
+		icon = federal_intervention
+		cost = 7
+		prerequisite = {
+			focus = TEX_Dixie_victory
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_Dixie_victory
+		completion_reward = {
+		    add_ideas = idea_tex_less_executuve_power
+		}
+
+	}
+	shared_focus = {
+		id = TEX_export_arms
+		icon = military_factory
+		cost = 7
+		prerequisite = {
+			focus = TEX_less_executive_power
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_less_executive_power
+		completion_reward = {
+		    add_ideas = idea_tex_export_arms
+		}
+
+	}
+	shared_focus = {
+		id = TEX_agarian_subsidie_act
+		icon = free_some_farms
+		cost = 7
+		prerequisite = {
+			focus = TEX_less_executive_power
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_less_executive_power
+		completion_reward = {
+			 random_owned_state = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = TEX_spark_american_nostalgia
+		icon = usa_shaking_hands
+		cost = 7
+		prerequisite = {
+			focus = TEX_less_executive_power
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_less_executive_power
+		completion_reward = {
+		    add_ideas = idea_tex_american_nostalgia
+		}
+
+	}
+	shared_focus = {
+		id = TEX_christian_values
+		icon = focus_a_christian_america
+		cost = 7
+		prerequisite = {
+			focus = TEX_spark_american_nostalgia
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_spark_american_nostalgia
+		completion_reward = {
+		    add_ideas = idea_tex_a_christian_nation
+		}
+
+	}
+	shared_focus = {
+		id = TEX_familiy_values
+		icon = traditional_values
+		cost = 7
+		prerequisite = {
+			focus = TEX_spark_american_nostalgia
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_spark_american_nostalgia
+		completion_reward = {
+		    add_ideas = idea_usa_traditional_values
+		}
+
+	}
+	shared_focus = {
+		id = TEX_uphold_the_constitution
+		icon = laws
+		cost = 7
+		prerequisite = {
+			focus = TEX_christian_values
+		}
+		prerequisite = {
+			focus = TEX_familiy_values
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_familiy_values
+		completion_reward = {
+		    swap_ideas = {
+				remove_idea = idea_tex_less_executuve_power
+				add_idea = idea_tex_uphold_the_constitution
+			}
+		}
+
+	}
+
+	#Ron Paul tree
+	shared_focus = {
+		id = TEX_ron_paul
+		icon = ron_paul_icon
+		cost = 1
+		available = {
+		     has_country_flag = ron_paul_won
+		}
+		prerequisite = {
+			focus = TEX_2010_election
+		}
+		x = 8
+		y = 1
+		relative_position_id = TEX_2010_election
+		completion_reward = {
+		    country_event = { id = texas.9 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_deregulate_the_market
+		icon = power_to_the_corporations
+		cost = 7
+		prerequisite = {
+			focus = TEX_ron_paul
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_ron_paul
+		completion_reward = {
+		    add_ideas = idea_tex_deregulated_economy
+		}
+
+	}
+	shared_focus = {
+		id = TEX_abolish_income_taxes
+		icon = low_company_tax
+		cost = 7
+		prerequisite = {
+			focus = TEX_deregulate_the_market
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_deregulate_the_market
+		completion_reward = {
+		    add_ideas = idea_tex_abolished_income_taxes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reduce_goverment_powers
+		icon = focus_american_house_of_representatives
+		cost = 7
+		prerequisite = {
+			focus = TEX_ron_paul
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_ron_paul
+		completion_reward = {
+		    add_ideas = idea_tex_small_goverment
+		}
+
+	}
+	shared_focus = {
+		id = TEX_new_bill_of_rights
+		icon = focus_american_house_bill
+		cost = 7
+		prerequisite = {
+			focus = TEX_reduce_goverment_powers
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_reduce_goverment_powers
+		completion_reward = {
+		    add_ideas = idea_tex_new_bill_of_rights
+		}
+
+	}
+	shared_focus = {
+		id = TEX_privitise_education
+		icon = generic_research
+		cost = 7
+		prerequisite = {
+			focus = TEX_ron_paul
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_ron_paul
+		completion_reward = {
+		    add_ideas = idea_tex_privitised_education
+		}
+
+	}
+	shared_focus = {
+		id = TEX_protect_citizens_privacy
+		icon = democracy
+		cost = 7
+		prerequisite = {
+			focus = TEX_privitise_education
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_privitise_education
+		completion_reward = {
+		    add_ideas = idea_tex_protected_privacy
+		}
+
+	}
+
+	shared_focus = {
+		id = TEX_form_a_standing_army
+		icon = generic_marching
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_a_better_militia
+		}
+		prerequisite = {
+			focus = TEX_protect_citizens_privacy
+		}
+		prerequisite = {
+			focus = TEX_new_bill_of_rights
+		}
+		prerequisite = {
+			focus = TEX_abolish_income_taxes
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_new_bill_of_rights
+		completion_reward = {
+		    add_ideas = idea_tex_a_standing_army
+		}
+
+	}
+
+	shared_focus = {
+		id = TEX_a_better_militia
+		icon = national_guard
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_form_a_standing_army
+		}
+		prerequisite = {
+			focus = TEX_protect_citizens_privacy
+		}
+		prerequisite = {
+			focus = TEX_new_bill_of_rights
+		}
+		prerequisite = {
+			focus = TEX_abolish_income_taxes
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_protect_citizens_privacy
+		completion_reward = {
+		    add_ideas = idea_tex_a_better_militia
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_free_texas
+		icon = yellow_rose_of_texas
+		cost = 7
+		prerequisite = {
+			focus = TEX_a_better_militia
+			focus = TEX_form_a_standing_army
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_form_a_standing_army
+		completion_reward = {
+		    add_ideas = idea_tex_a_free_texas
+		}
+
+	}
+	#texan terrorist attack
+	shared_focus = {
+		id = TEX_texan_senate_attack
+		icon = texan_question
+		cost = 1
+		x = 40
+		y = 0
+		available = {
+		    has_global_flag = texas_senate_attack
+		}
+		completion_reward = {
+		}
+
+	}
+	shared_focus = {
+		id = TEX_texan_war_of_independence
+		icon = texan_war_for_independence
+		cost = 1
+		available = {
+		    has_country_flag = tex_texan_war_for_independence
+		}
+		mutually_exclusive = {
+			focus = TEX_submited_to_the_remnents
+		}
+		prerequisite = {
+			focus = TEX_texan_senate_attack
+		}
+		x = -3
+		y = 1
+		relative_position_id = TEX_texan_senate_attack
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = TEX_desperate_defence
+		icon = build_tank
+		cost = 2
+		prerequisite = {
+			focus = TEX_texan_war_of_independence
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_texan_war_of_independence
+		completion_reward = {
+			add_ideas = idea_tex_desperate_defence
+		}
+
+	}
+	shared_focus = {
+		id = TEX_fortify_houston_and_austin
+		icon = fortify_city
+		cost = 2
+		prerequisite = {
+			focus = TEX_desperate_defence
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_desperate_defence
+		completion_reward = {
+			 375 = {
+				add_building_construction = { type = bunker province = 10337 level = 5 instant_build = yes }
+				add_building_construction = { type = bunker province = 6798 level = 5 instant_build = yes }
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_seize_civilian_arms
+		icon = small_arms
+		cost = 2
+		prerequisite = {
+			focus = TEX_texan_war_of_independence
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_texan_war_of_independence
+		completion_reward = {
+			add_stability = -0.1
+			add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3000 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_rise_of_the_private_militias
+		icon = generic_marching
+		cost = 2
+		prerequisite = {
+			focus = TEX_seize_civilian_arms
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_seize_civilian_arms
+		completion_reward = {
+			division_template = {
+					name = "Texan militia"
+					division_names_group = TEX_INF_03
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+				
+		    	   		infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+				
+		    	   		infantry = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "division_template = \"Texan militia\"start_experience_factor = 0.5" 
+						owner = TEX
+						allow_spawning_on_enemy_provs = yes
+						count = 5
+					}
+				}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_remember_the_alamo
+		icon = army_doctrine
+		cost = 5
+		prerequisite = {
+			focus = TEX_rise_of_the_private_militias
+		}
+		prerequisite = {
+			focus = TEX_fortify_houston_and_austin
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_fortify_houston_and_austin
+		completion_reward = {
+			  swap_ideas = {
+				remove_idea = idea_tex_desperate_defence
+				add_idea = idea_tex_remember_the_alamo
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_submited_to_the_remnents
+		icon = state_of_texas
+		cost = 1
+		available = {
+		    has_country_flag = tex_submitted_to_the_remnants
+		}
+		mutually_exclusive = {
+			focus = TEX_texan_war_of_independence
+		}
+		prerequisite = {
+			focus = TEX_texan_senate_attack
+		}
+		x = 3
+		y = 1
+		relative_position_id = TEX_texan_senate_attack
+		completion_reward = {
+
+		}
+
+	}
+	shared_focus = {
+		id = TEX_economic_cooperation
+		icon = low_company_tax
+		cost = 7
+		prerequisite = {
+			focus = TEX_submited_to_the_remnents
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_submited_to_the_remnents
+		completion_reward = {
+			add_ideas = idea_tex_economic_cooperation
+		}
+
+	}
+	shared_focus = {
+		id = TEX_adopt_republic_law 
+		icon = laws
+		cost = 7
+		prerequisite = {
+			focus = TEX_submited_to_the_remnents
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_submited_to_the_remnents
+		completion_reward = {
+			add_ideas = idea_tex_republic_law 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_great_victory
+		icon = great_victory
+		cost = 1
+		x = 15
+		y = 7
+		available = {
+			AND = {
+			365 = { is_owned_and_controlled_by = ROOT }
+				
+			}
+		}
+		completion_reward = {
+			country_event = { id = texas.32 }
+		}
+
+	}
+	#Ron Paul Unification
+	shared_focus = {
+		id = TEX_a_more_perfect_union
+		icon = united_states
+		cost = 1
+		available = {
+		     has_country_flag = ron_paul_won
+		}
+		mutually_exclusive = {
+			focus = TEX_honor_the_fathers
+			focus = TEX_the_lost_cause
+			focus = TEX_we_are_americans
+			focus = TEX_revive_the_golden_circle
+		}
+		prerequisite = {
+			focus = TEX_a_great_victory
+		}
+		x = 12
+		y = 1
+		relative_position_id = TEX_a_great_victory
+		completion_reward = {
+		country_event = { id = texas.22 }
+		add_political_power = 150
+			enable_unification_decisions = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_uphold_liberty
+		icon = return_of_the_americans
+		cost = 7
+		prerequisite = {
+			focus = TEX_a_more_perfect_union
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_more_perfect_union
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = idea_tex_new_bill_of_rights 
+				add_idea = idea_tex_uphold_liberty
+			}
+		core_USA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_deligitimize_the_republicans
+		icon = cut_ties_to_the_usa
+		cost = 7
+		prerequisite = {
+			focus = TEX_uphold_liberty
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_uphold_liberty
+		completion_reward = {
+			add_ideas = idea_tex_end_of_the_republicans
+			hidden_effect = {
+					country_event = { days = 60 id = texas.55  } 
+				}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_denounce_the_kkk
+		icon = down_with_duke
+		cost = 7
+		prerequisite = {
+			focus = TEX_uphold_liberty
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_uphold_liberty
+		completion_reward = {
+			add_ideas = idea_tex_end_of_the_kkk
+				hidden_effect = {
+					country_event = { days = 60 id = texas.56  } 
+				}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_protect_individual_rights
+		icon = focus_a_democratic_america
+		cost = 7
+		prerequisite = {
+			focus = TEX_uphold_liberty
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_uphold_liberty
+		completion_reward = {
+			add_ideas = idea_tex_protected_rights
+		}
+
+	}
+	shared_focus = {
+		id = TEX_uphold_american_freedom
+		icon = focus_restore_congress
+		cost = 7
+		prerequisite = {
+			focus = TEX_denounce_the_kkk
+		}
+		prerequisite = {
+			focus = TEX_deligitimize_the_republicans
+		}
+		prerequisite = {
+			focus = TEX_protect_individual_rights
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_deligitimize_the_republicans
+		completion_reward = {
+			add_ideas = idea_tex_american_freedom 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_prepare_for_negotiations
+		icon = improve_relations
+		cost = 7
+		prerequisite = {
+			focus = TEX_uphold_american_freedom
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_uphold_american_freedom
+		completion_reward = {
+			country_event = { id = texas.36 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_negotiate_with_illinoi
+		icon = major_alliance
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_for_negotiations
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_prepare_for_negotiations
+		completion_reward = {
+			ILL = {
+					country_event = { id = texas.33}
+					}
+			core_ILL = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_negotiate_with_the_midwest
+		icon = shaking_hands_1
+		cost = 7
+		prerequisite = {
+			focus = TEX_negotiate_with_illinoi
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_negotiate_with_illinoi
+		completion_reward = {
+			MWA = {
+					country_event = { id = texas.37}
+					}
+			core_MWA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_negotiate_with_the_Greatlakes
+		icon = red_hands_shaking
+		cost = 7
+		prerequisite = {
+			focus = TEX_negotiate_with_illinoi
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_negotiate_with_illinoi
+		completion_reward = {
+			GRL = {
+					country_event = { id = texas.40}
+					}
+			core_GRL = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_negotiate_with_utah
+		icon = support_the_mormon_church
+		cost = 7
+		prerequisite = {
+			focus = TEX_negotiate_with_illinoi
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_negotiate_with_illinoi
+		completion_reward = {
+				UTA = {
+					country_event = { id = texas.43}
+					}
+				 core_UTA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_negotiate_with_arizona
+		icon = military_deal
+		cost = 7
+		prerequisite = {
+			focus = TEX_negotiate_with_utah
+		}
+		prerequisite = {
+			focus = TEX_negotiate_with_the_Greatlakes
+		}
+		prerequisite = {
+			focus = TEX_negotiate_with_the_midwest
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_negotiate_with_the_midwest
+		completion_reward = {
+				UTA = {
+					country_event = { id = texas.46}
+					}
+				core_ARI = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_no_compromise_with_fascist
+		icon = lincoln_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_negotiate_with_arizona
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_negotiate_with_arizona
+		completion_reward = {
+			 core_LIN = yes
+           		core_MOT = yes
+			create_wargoal = {
+			    type = annex_everything
+			    target = LIN
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = MOT
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_no_compromise_with_socialist
+		icon = commonwealth_attack
+		cost = 7
+		mutually_exclusive = {
+			focus = TEX_talk_with_the_north
+		}
+		prerequisite = {
+			focus = TEX_no_compromise_with_fascist
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_no_compromise_with_fascist
+		completion_reward = {
+			core_NEA = yes
+			create_wargoal = {
+			    type = annex_everything
+			    target = NEA
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMC
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMS
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = GAU
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_talk_with_the_north
+		icon = commonwealth
+		cost = 7
+		available = {
+		OR {
+		   NEA = {	
+			has_government = moderate_socialist
+ 		   }
+		AMC = {
+			has_completed_focus = AMC_the_presidents_plan
+		}
+		}
+	}
+		mutually_exclusive = {
+			focus = TEX_no_compromise_with_socialist
+		}
+		prerequisite = {
+			focus = TEX_no_compromise_with_fascist
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_no_compromise_with_fascist
+		completion_reward = {
+			if = {
+				limit = {
+					NEA = {
+						exists = yes
+					}
+				}
+					NEA = {
+						country_event = { id = texas.49}
+					}
+			}
+			if = {
+				limit = {
+					AMC = {
+						exists = yes
+					}
+				}
+					AMC = {
+						country_event = { id = texas.52}
+					}
+			}
+				core_NEA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_no_compromise_with_communist
+		icon = uapr_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_no_compromise_with_socialist
+			focus = TEX_talk_with_the_north
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_talk_with_the_north
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = PCA
+		    }
+           	 create_wargoal = {
+                type = annex_everything
+                target = CSD
+            }
+            core_PCA = yes
+		}
+
+	}
+
+		#Confederacy
+	shared_focus = {
+		id = TEX_the_lost_cause
+		icon = the_lost_cause
+		cost = 7
+		available = {
+		     has_country_flag = dixiecrat_victory
+		}
+		mutually_exclusive = {
+			focus = TEX_honor_the_fathers
+			focus = TEX_a_more_perfect_union
+			focus = TEX_we_are_americans
+			focus = TEX_revive_the_golden_circle
+		}
+		prerequisite = {
+			focus = TEX_a_great_victory
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_great_victory
+		completion_reward = {
+			country_event = { id = texas.24 }
+		add_political_power = 150
+		}
+
+	}
+	shared_focus = {
+		id = TEX_proclaim_a_new_confederacy
+		icon = i_wish_i_was_in_dixie
+		cost = 7
+		prerequisite = {
+			focus = TEX_the_lost_cause
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_the_lost_cause
+		completion_reward = {
+			country_event = { id = texas.23 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_articals_of_confederation
+		icon = draft_a_confederate_constitution
+		cost = 7
+		prerequisite = {
+			focus = TEX_proclaim_a_new_confederacy
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_proclaim_a_new_confederacy
+		completion_reward = {
+		core_USA = yes
+			swap_ideas = {
+				remove_idea = idea_tex_uphold_the_constitution
+				add_idea = idea_tex_articals_of_confederation 
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_increase_state_power
+		icon = demand_territory
+		cost = 7
+		prerequisite = {
+			focus = TEX_proclaim_a_new_confederacy
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_proclaim_a_new_confederacy
+		completion_reward = {
+			add_ideas = idea_tex_states_rights
+		}
+
+	}
+	shared_focus = {
+		id = TEX_lost_cause_revisionism
+		icon = focus_reform_port_procedures
+		cost = 7
+		prerequisite = {
+			focus = TEX_proclaim_a_new_confederacy
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_proclaim_a_new_confederacy 
+		completion_reward = {
+			add_ideas = idea_tex_lost_cause_revisionism
+		}
+
+	}
+	shared_focus = {
+		id = Tex_dc_for_virginia
+		icon = commonwealth
+		cost = 7
+		prerequisite = {
+			focus = TEX_increase_state_power
+		}
+		prerequisite = {
+			focus = TEX_the_articals_of_confederation
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_the_articals_of_confederation
+		completion_reward = {
+				if = {
+				limit = {
+					902 = {
+						owner = {
+							NOT = {
+								tag = TEX
+							}
+						}
+					}
+				}
+				902 = {
+					owner = {
+						country_event = { id = texas.25 }
+					}
+				}
+			}
+		
+
+	
+		}
+
+	}
+	shared_focus = {
+		id = TEX_request_mexican_land
+		icon = mexico
+		cost = 7
+		prerequisite = {
+			focus = TEX_lost_cause_revisionism
+		}
+		prerequisite = {
+			focus = TEX_the_articals_of_confederation
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_the_articals_of_confederation
+		completion_reward = {
+			MEX = {
+			country_event = { id = american_unification.8 }
+			}
+		}
+
+	} 
+	shared_focus = {
+		id = Tex_build_foreign_relations
+		icon = two_flags
+		cost = 7
+		prerequisite = {
+			focus = Tex_dc_for_virginia
+		}
+		x = 0
+		y = 1
+		relative_position_id = Tex_dc_for_virginia
+		completion_reward = {
+			remove_ideas = idea_america_neutrality
+			add_ideas = idea_tex_foreign_relations
+		}
+
+	}
+	shared_focus = {
+		id = TEX_defend_the_confederacy
+		icon = military_drill
+		cost = 7
+		prerequisite = {
+			focus = TEX_request_mexican_land
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_request_mexican_land
+		completion_reward = {
+			add_ideas = idea_tex_defend_the_confedracy 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_american_defence_pact
+		icon = the_kings_army
+		cost = 7
+		prerequisite = {
+			focus = TEX_defend_the_confederacy
+		}
+		prerequisite = {
+			focus = Tex_build_foreign_relations
+		}
+		x = -1
+		y = 1
+		relative_position_id = Tex_build_foreign_relations
+		completion_reward = {
+			create_faction = american_defence_pact
+			MEX = {
+		    		country_event = { id = texas.29 }
+				}
+			 BRA= {
+		    		country_event = { id = texas.29 }
+				}
+			PRU = {
+		    		country_event = { id = texas.29 }
+				}
+			 ARG = {
+		    		country_event = { id = texas.29 }
+				}
+			GUA = {
+		    		country_event = { id = texas.29 }
+				}
+			}
+
+	} 
+	#Dixiecrat unification
+	shared_focus = {
+		id = TEX_honor_the_fathers
+		icon = honor_the_founders
+		cost = 7
+		available = {
+		     has_country_flag = dixiecrat_victory
+		}
+		mutually_exclusive = {
+			focus = TEX_the_lost_cause
+			focus = TEX_a_more_perfect_union
+			focus = TEX_we_are_americans
+			focus = TEX_revive_the_golden_circle
+		}
+		prerequisite = {
+			focus = TEX_a_great_victory
+		}
+		x = 6
+		y = 1
+		relative_position_id = TEX_a_great_victory
+		completion_reward = {
+		   add_political_power = 150
+			country_event = { id = texas.19 }
+			enable_unification_decisions = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_ensure_state_rights
+		icon = focus_american_united_senate
+		cost = 7
+		prerequisite = {
+			focus = TEX_honor_the_fathers
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_honor_the_fathers
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_tex_american_nostalgia
+				add_idea = idea_tex_state_rights
+			}
+		  core_USA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_decentralize_the_army
+		icon = swords
+		cost = 7
+		prerequisite = {
+			focus = TEX_ensure_state_rights
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_ensure_state_rights
+		completion_reward = {
+		  add_ideas = idea_tex_decentralized_army
+		} 
+
+	}
+	shared_focus = {
+		id = TEX_intergrate_moderate_remmnents
+		icon = intelligence_exchange
+		cost = 7
+		prerequisite = {
+			focus = TEX_decentralize_the_army
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_decentralize_the_army
+		completion_reward = {
+			add_ideas = idea_tex_moderate_remnants
+		}
+
+	}
+	shared_focus = {
+		id = TEX_decentralize_the_republic
+		icon = focus_american_house_of_representatives
+		cost = 7
+		prerequisite = {
+			focus = TEX_intergrate_moderate_remmnents
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_intergrate_moderate_remmnents
+		completion_reward = {
+			add_ideas = idea_tex_decentralized_republic 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_spread_christian_values
+		icon = review_the_separation
+		cost = 7
+		prerequisite = {
+			focus = TEX_intergrate_moderate_remmnents
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_intergrate_moderate_remmnents
+		completion_reward = {
+			add_ideas = idea_tex_preaching_god
+		}
+
+	}
+	shared_focus = {
+		id = TEX_liberate_america
+		icon = focus_commonwealth_meet_conservatives
+		cost = 7
+		prerequisite = {
+			focus = TEX_spread_christian_values
+		}
+		prerequisite = {
+			focus = TEX_decentralize_the_republic
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_decentralize_the_republic
+		completion_reward = {
+			add_timed_idea = { idea = idea_tex_liberate_america days = 120 }
+		}
+
+	}
+		#rick perry unification
+	shared_focus = {
+		id = TEX_we_are_americans
+		icon = we_are_americans
+		cost = 7
+		available = {
+		     has_country_flag = rick_perry_won
+		}
+		mutually_exclusive = {
+			focus = TEX_the_lost_cause
+			focus = TEX_a_more_perfect_union
+			focus = TEX_honor_the_fathers
+			focus = TEX_revive_the_golden_circle
+		}
+		prerequisite = {
+			focus = TEX_a_great_victory
+		}
+		x = -6
+		y = 1
+		relative_position_id = TEX_a_great_victory
+		completion_reward = {
+		   add_political_power = 150
+			country_event = { id = texas.17 }
+			enable_unification_decisions = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_pardon_the_remmnents
+		icon = dangerous_deal
+		cost = 7
+		prerequisite = {
+			focus = TEX_we_are_americans
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_we_are_americans
+		completion_reward = {
+			country_event = { id = texas.18 }
+		  core_USA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_expel_the_radicals
+		icon = down_with_duke
+		cost = 7
+		prerequisite = {
+			focus = TEX_pardon_the_remmnents
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_pardon_the_remmnents
+		completion_reward = {
+		  add_ideas = idea_tex_expelling_radicals
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_new_republic
+		icon = state_of_america
+		cost = 7
+		prerequisite = {
+			focus = TEX_expel_the_radicals
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_expel_the_radicals
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_tex_we_are_americans
+				add_idea = idea_tex_a_new_republic
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_intergrate_the_armys
+		icon = usa_restore_order
+		cost = 7
+		prerequisite = {
+			focus =  TEX_a_new_republic
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_a_new_republic
+		completion_reward = {
+			add_ideas = idea_tex_intergrated_armys
+			USA = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+		} 
+
+	}
+	shared_focus = {
+		id = TEX_intergrate_the_economies
+		icon = corporatism
+		cost = 7
+		prerequisite = {
+			focus = TEX_a_new_republic
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_a_new_republic
+		completion_reward = {
+			add_ideas = idea_tex_intergrated_economies
+		}
+
+	}
+	shared_focus = {
+		id = TEX_prepare_for_the_fight_ahead
+		icon = power_to_the_president
+		cost = 7
+		prerequisite = {
+			focus = TEX_intergrate_the_economies
+		}
+		prerequisite = {
+			focus = TEX_intergrate_the_armys
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_intergrate_the_armys
+		completion_reward = {
+			add_timed_idea = { idea = idea_tex_the_fight_ahead days = 120 }
+		}
+
+	} 
+		#revive the golden circle
+	shared_focus = {
+		id = TEX_revive_the_golden_circle
+		icon = the_golden_circle
+		cost = 7
+		available = {
+		     has_country_flag = fascist_won
+		}
+		mutually_exclusive = {
+			focus = TEX_the_lost_cause
+			focus = TEX_a_more_perfect_union
+			focus = TEX_honor_the_fathers
+			focus = TEX_we_are_americans
+		}
+		prerequisite = {
+			focus = TEX_a_great_victory
+		}
+		x = -12
+		y = 1
+		relative_position_id = TEX_a_great_victory
+		completion_reward = {
+		   add_political_power = 150
+			country_event = { id = texas.20 }
+			enable_unification_decisions = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_work_with_the_kkk
+		icon = work_with_the_kkk
+		cost = 7
+		available = {
+		     has_country_flag = fascist_won
+		}
+		
+		prerequisite = {
+			focus = TEX_revive_the_golden_circle
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_revive_the_golden_circle
+		completion_reward = {
+			country_event = { id = texas.21 }
+		   core_USA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_intergrate_chruch_and_state
+		icon = church_and_state_RX
+		cost = 7
+		prerequisite = {
+			focus = TEX_work_with_the_kkk
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_work_with_the_kkk
+		completion_reward = {
+		  add_ideas = idea_ams_white_christian_state
+		}
+
+	}
+	shared_focus = {
+		id = TEX_ban_miscegenation
+		icon = ban_miscegrenation
+		cost = 7
+		prerequisite = {
+			focus = TEX_work_with_the_kkk
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_work_with_the_kkk
+		completion_reward = {
+		  add_ideas = idea_tex_banned_miscegenation
+		}
+
+	}
+	shared_focus = {
+		id = TEX_bar_minorities_from_office
+		icon = ban_obamas
+		cost = 7
+		prerequisite = {
+			focus = TEX_work_with_the_kkk
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_work_with_the_kkk
+		completion_reward = {
+		  add_ideas = idea_tex_banned_from_office
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reinstitute_slavery
+		icon = reinstitute_slavery
+		cost = 7
+		prerequisite = {
+			focus = TEX_intergrate_chruch_and_state
+		}
+		prerequisite = {
+			focus = TEX_ban_miscegenation
+		}
+		prerequisite = {
+			focus = TEX_bar_minorities_from_office
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_bar_minorities_from_office
+		completion_reward = {
+			add_ideas = idea_tex_slavery
+		}
+
+	}
+	shared_focus = {
+		id = TEX_begin_the_warpath
+		icon = begin_the_warpath
+		cost = 7
+		prerequisite = {
+			focus = TEX_reinstitute_slavery
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_reinstitute_slavery
+		completion_reward = {
+			add_timed_idea = { idea = idea_ams_prepare_for_war days = 120 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_end_the_north
+		icon = march_north
+		cost = 7
+		prerequisite = {
+			focus = TEX_begin_the_warpath
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_begin_the_warpath
+		completion_reward = {
+			 create_wargoal = {
+			    type = annex_everything
+			    target = NEA
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMC
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMS
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = GAU
+		    }
+		}
+	}
+	shared_focus = {
+		id = TEX_enslave_the_socialist
+		icon = enslave_socialist
+		cost = 7
+		prerequisite = {
+			focus = TEX_end_the_north
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_end_the_north
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = idea_tex_slavery
+				add_idea = idea_tex_slavery_2
+			}
+			core_NEA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_bring_in_the_midwest
+		icon = midwest_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_enslave_the_socialist
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_enslave_the_socialist
+		completion_reward = {
+		       create_wargoal = {
+			    type = annex_everything
+			    target = ILL
+		    }
+            
+			create_wargoal = {
+			    type = annex_everything
+			    target = GRL
+		    }
+            
+			 create_wargoal = {
+			    type = annex_everything
+			    target = MWA
+		    }
+		
+		}
+	}
+	shared_focus = {
+		id = TEX_reconstruct_the_midwest
+		icon = shaking_hands_1
+		cost = 7
+		prerequisite = {
+			focus = TEX_bring_in_the_midwest
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_bring_in_the_midwest
+		completion_reward = {
+		    core_ILL = yes
+		core_GRL = yes
+		core_MWA = yes
+		}
+
+	}
+	shared_focus = {
+		id = Tex_bring_in_the_rockys
+		icon = lincoln_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_enslave_the_socialist
+		}
+		available = {
+		   
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_enslave_the_socialist
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = LIN
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = MOT
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reconstruct_the_rockys
+		icon = military_deal
+		cost = 7
+		prerequisite = {
+			focus = Tex_bring_in_the_rockys
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = Tex_bring_in_the_rockys
+		completion_reward = {
+		    core_LIN = yes
+           	core_MOT = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_bring_in_the_desert
+		icon = utah_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_enslave_the_socialist
+		}
+		available = {
+		   
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_enslave_the_socialist
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = UTA
+		    }
+            
+		create_wargoal = {
+			    type = annex_everything
+			    target = ARI
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reconstruct_the_desert
+		icon = red_hands_shaking
+		cost = 7
+		prerequisite = {
+			focus = TEX_bring_in_the_desert
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_bring_in_the_desert
+		completion_reward = {
+		    core_UTA = yes
+            	core_ARI = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_destroy_the_communist
+		icon = operation_blue_dawn
+		cost = 7
+		prerequisite = {
+			focus = TEX_reconstruct_the_desert
+		}
+		prerequisite = {
+			focus = TEX_reconstruct_the_midwest
+		}
+		prerequisite = {
+			focus = TEX_reconstruct_the_rockys
+		}
+		available = {
+		   
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_reconstruct_the_desert
+		completion_reward = {
+		create_wargoal = {
+			    type = annex_everything
+			    target = PCA
+		    }
+           	 create_wargoal = {
+                type = annex_everything
+                target = CSD
+            }
+            core_PCA = yes
+		}
+}
+	shared_focus = {
+		id = TEX_enslave_mexico
+		icon = mexico_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_destroy_the_communist
+		}
+		available = {
+		   
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_destroy_the_communist
+		completion_reward = {
+		create_wargoal = {
+			    type = annex_everything
+			    target = MEX
+		    }
+		}
+}
+	shared_focus = {
+		id = TEX_enslave_canada
+		icon = canada_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_destroy_the_communist
+		}
+		available = {
+		   
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_destroy_the_communist
+		completion_reward = {
+		create_wargoal = {
+			    type = annex_everything
+			    target = CAN
+		    }
+		}
+}
+	shared_focus = {
+		id = TEX_enslave_cuba
+		icon = cuba_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_destroy_the_communist
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_destroy_the_communist
+		completion_reward = {
+		create_wargoal = {
+			    type = annex_everything
+			    target = CUB
+		    }
+		}
+}
+#dixie/rickperry unifaction shared
+	shared_focus = {
+		id = TEX_march_north
+		icon = march_north
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_for_the_fight_ahead
+			focus = TEX_liberate_america
+		}
+		x = 0
+		y = 8
+		relative_position_id = TEX_a_great_victory
+		completion_reward = {
+		 create_wargoal = {
+			    type = annex_everything
+			    target = NEA
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMC
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMS
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = GAU
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_destory_northern_socailism 
+		icon = operation_new_england
+		cost = 7
+		prerequisite = {
+			focus = TEX_march_north
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_march_north
+		completion_reward = {
+				
+		core_NEA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_free_the_midwest
+		icon = midwest_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_destory_northern_socailism 
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_destory_northern_socailism 
+		completion_reward = {
+		       create_wargoal = {
+			    type = annex_everything
+			    target = ILL
+		    }
+            
+			create_wargoal = {
+			    type = annex_everything
+			    target = GRL
+		    }
+            
+			 create_wargoal = {
+			    type = annex_everything
+			    target = MWA
+		    }
+		
+		}
+	}
+	shared_focus = {
+		id = TEX_rebuild_the_midwest
+		icon = shaking_hands_1
+		cost = 7
+		prerequisite = {
+			focus = TEX_free_the_midwest
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_free_the_midwest
+		completion_reward = {
+		    core_ILL = yes
+		core_GRL = yes
+		core_MWA = yes
+		}
+
+	}
+	shared_focus = {
+		id = Tex_free_the_rockys
+		icon = lincoln_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_destory_northern_socailism 
+		}
+		available = {
+		   
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_destory_northern_socailism 
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = LIN
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = MOT
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_rebuild_the_rockys
+		icon = military_deal
+		cost = 7
+		prerequisite = {
+			focus = Tex_free_the_rockys
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = Tex_free_the_rockys
+		completion_reward = {
+		    core_LIN = yes
+           	core_MOT = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_free_the_desert
+		icon = utah_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_destory_northern_socailism 
+		}
+		available = {
+		   
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_destory_northern_socailism 
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = UTA
+		    }
+            
+		create_wargoal = {
+			    type = annex_everything
+			    target = ARI
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_rebuild_the_desert
+		icon = red_hands_shaking
+		cost = 7
+		prerequisite = {
+			focus = TEX_free_the_desert
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_free_the_desert
+		completion_reward = {
+		    core_UTA = yes
+            	core_ARI = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_end_western_communism
+		icon = operation_blue_dawn
+		cost = 7
+		prerequisite = {
+			focus = TEX_rebuild_the_desert
+		}
+		prerequisite = {
+			focus = TEX_rebuild_the_midwest
+		}
+		prerequisite = {
+			focus = TEX_rebuild_the_rockys
+		}
+		available = {
+		   
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_rebuild_the_desert
+		completion_reward = {
+		create_wargoal = {
+			    type = annex_everything
+			    target = PCA
+		    }
+           	 create_wargoal = {
+                type = annex_everything
+                target = CSD
+            }
+            core_PCA = yes
+		}
+}
+	#cult tree
+	shared_focus = {
+		id = TEX_the_cult_prevail
+		icon = cults_prevail
+		cost = 1
+		x = 20
+		y = 0
+		available = {
+		 has_country_flag = cults_prevail
+		}
+		completion_reward = {
+			country_event = { id = texas.67 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_sweep_away_the_heathans
+		icon = sweep_away_the_heathans
+		cost = 1
+		prerequisite = {
+			focus = TEX_the_cult_prevail
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_the_cult_prevail
+		completion_reward = {
+		  country_event = { id = texas.68 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_organize_the_new_state
+		icon = organize_the_new_state
+		cost = 1
+		prerequisite = {
+			focus = TEX_sweep_away_the_heathans
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_sweep_away_the_heathans
+		completion_reward = {
+		   country_event = { id = texas.69 }
+		}
+
+	}
+	#koresh path
+	shared_focus = {
+		id = TEX_davidian_takeover
+		icon = davidian_takeover
+		cost = 1
+		prerequisite = {
+			focus = TEX_organize_the_new_state
+		}
+		available = {
+		   has_country_flag = davidian_takeover
+		}
+		x = -6
+		y = 1
+		relative_position_id = TEX_organize_the_new_state
+		completion_reward = {
+		   country_event = { id = texas.70 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_purge_the_jonesist
+		icon = purge_the_jonesist
+		cost = 5
+		prerequisite = {
+			focus = TEX_davidian_takeover
+		}
+		available = {
+		   
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_davidian_takeover
+		completion_reward = {
+		   country_event = { id = texas.71 }
+		}
+
+	}
+
+	shared_focus = {
+		id = TEX_spread_the_messiahs_truth
+		icon = save_the_sinners
+		cost = 5
+		prerequisite = {
+			focus = TEX_purge_the_jonesist
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_purge_the_jonesist
+		completion_reward = {
+		  add_ideas = idea_tex_message_of_the_lamb 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_save_the_sinners
+		icon = red_hands_shaking
+		cost = 5
+		prerequisite = {
+			focus = TEX_spread_the_messiahs_truth
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_spread_the_messiahs_truth
+		completion_reward = {
+		  add_ideas = idea_tex_save_the_sinners 
+		}
+
+	}
+	
+	shared_focus = {
+		id = TEX_mandatory_faith
+		icon = mandatory_faith
+		cost = 5
+		prerequisite = {
+			focus = TEX_davidian_takeover
+		}
+		available = {
+		   
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_davidian_takeover
+		completion_reward = {
+		  add_ideas = idea_tex_mandatory_faith 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_keep_your_rifle...
+		icon = keep_your_rifle
+		cost = 5
+		prerequisite = {
+			focus = TEX_mandatory_faith
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_mandatory_faith
+		completion_reward = {
+		  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 5000 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_...by_your_side
+		icon = by_your_side
+		cost = 5
+		prerequisite = {
+			focus = TEX_keep_your_rifle...
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_keep_your_rifle...
+		completion_reward = {
+		  add_ideas = idea_tex_keep_your_rifle_by_your_side 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_messiah_rises
+		icon = the_messiah_rised
+		cost = 5
+		prerequisite = {
+			focus = TEX_save_the_sinners
+		}
+		prerequisite = {
+			focus = TEX_...by_your_side
+		}
+		available = {
+		   
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_...by_your_side
+		completion_reward = {
+		    country_event = { id = texas.72 }
+		}
+
+	}
+	#shared powered
+	shared_focus = {
+		id = TEX_power_sharing_agreement
+		icon = power_sharing
+		cost = 1
+		prerequisite = {
+			focus = TEX_organize_the_new_state
+		}
+		available = {
+		   has_country_flag = power_sharing_agreement
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_organize_the_new_state
+		completion_reward = {
+		  country_event = { id = texas.73 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_koresh_takes_charge
+		icon = koresh_takes_charge
+		cost = 1
+		prerequisite = {
+			focus = TEX_power_sharing_agreement
+		}
+		mutually_exclusive = {
+			focus = TEX_Jones_takes_charge
+		}
+		available = {
+		   has_country_flag = koresh_chosen
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_power_sharing_agreement
+		completion_reward = {
+		  country_event = { id = texas.74 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_prepare_for_endtimes
+		icon = prepare_for_the_end
+		cost = 5
+		prerequisite = {
+			focus = TEX_koresh_takes_charge
+		}
+		available = {
+		   
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_koresh_takes_charge
+		completion_reward = {
+		  add_ideas = idea_tex_prepare_for_the_end 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_heed_the_lamb 
+		icon = heed_the_lamb
+		cost = 5
+		prerequisite = {
+			focus = TEX_prepare_for_endtimes
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_prepare_for_endtimes
+		completion_reward = {
+		  add_ideas = idea_tex_heed_the_lamb 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_seven_seals
+		icon = the_seven_scrolls
+		cost = 5
+		prerequisite = {
+			focus = TEX_heed_the_lamb
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_heed_the_lamb
+		completion_reward = {
+		  add_ideas = idea_tex_the_seven_seals 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_Jones_takes_charge
+		icon = jones_takes_charge
+		cost = 1
+		prerequisite = {
+			focus = TEX_power_sharing_agreement
+		}
+		mutually_exclusive = {
+			focus = TEX_koresh_takes_charge
+		}
+		available = {
+		   has_country_flag = jones_chosen	
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_power_sharing_agreement
+		completion_reward = {
+		  country_event = { id = texas.75 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_religous_communalism
+		icon = religous_comunilism
+		cost = 5
+		prerequisite = {
+			focus = TEX_Jones_takes_charge
+		}
+		available = {
+		   
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_Jones_takes_charge
+		completion_reward = {
+		  add_ideas = idea_tex_religous_communalism 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_minority_intergration
+		icon = minority_intergration
+		cost = 5
+		prerequisite = {
+			focus = TEX_religous_communalism
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_religous_communalism
+		completion_reward = {
+		  add_ideas = idea_tex_minority_intergration 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_faith_healings
+		icon = faith_healings
+		cost = 5
+		prerequisite = {
+			focus = TEX_minority_intergration
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_minority_intergration
+		completion_reward = {
+		  add_ideas = idea_tex_faith_healings 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_faithfull_texas
+		icon = faithful_texas
+		cost = 5
+		prerequisite = {
+			focus = TEX_Jones_takes_charge
+			focus = TEX_koresh_takes_charge
+		}
+		available = {
+		   
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_koresh_takes_charge
+		completion_reward = {
+		  add_ideas = idea_tex_faithfull_texas 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_prepared_texas
+		icon = prepared_texas
+		cost = 5
+		prerequisite = {
+			focus = TEX_a_faithfull_texas
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_faithfull_texas
+		completion_reward = {
+		  swap_ideas = {
+				remove_idea = idea_tex_faithfull_texas 
+				add_idea = idea_tex_prepared_texas
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_sin_free_texas
+		icon = sin_free_texas
+		cost = 5
+		prerequisite = {
+			focus = TEX_a_prepared_texas
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_prepared_texas
+		completion_reward = {
+		  swap_ideas = {
+				remove_idea = idea_tex_prepared_texas
+				add_idea = idea_tex_sin_free_texas 
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_holy_texas
+		icon = red_hands_shaking
+		cost = 5
+		prerequisite = {
+			focus = TEX_a_sin_free_texas
+		}
+		prerequisite = {
+			focus = TEX_the_seven_seals
+			focus= TEX_faith_healings
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_a_sin_free_texas
+		completion_reward = {
+		  swap_ideas = {
+				remove_idea = idea_tex_sin_free_texas 
+				add_idea = idea_tex_holy_texas 
+			}
+		}
+
+	}
+	#Jim Jones path
+	shared_focus = {
+		id = TEX_apostolic_socialism
+		icon = apostolic_socialism
+		cost = 1
+		prerequisite = {
+			focus = TEX_organize_the_new_state
+		}
+		available = {
+		   has_country_flag = jones_stays
+		}
+		x = 6
+		y = 1
+		relative_position_id = TEX_organize_the_new_state
+		completion_reward = {
+		  country_event = { id = texas.76 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_communist_clergy
+		icon = communist_monarchy
+		cost = 5
+		prerequisite = {
+			focus = TEX_apostolic_socialism
+		}
+		available = {
+		   
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_apostolic_socialism
+		completion_reward = {
+		  add_ideas = idea_tex_communist_clergy 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_social_gospel
+		icon = social_gosple
+		cost = 5
+		prerequisite = {
+			focus = TEX_communist_clergy
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_communist_clergy
+		completion_reward = {
+		 add_ideas =  idea_tex_social_gospel 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_the_rainbow_family
+		icon = rainbow_family
+		cost = 5
+		prerequisite = {
+			focus = TEX_the_social_gospel
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_the_social_gospel
+		completion_reward = {
+		  add_ideas = idea_tex_rainbow_family 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_clairvoyant_revelations
+		icon = clairvoyant_revalations
+		cost = 5
+		prerequisite = {
+			focus = TEX_apostolic_socialism
+		}
+		available = {
+		   
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_apostolic_socialism
+		completion_reward = {
+		  add_ideas = idea_tex_clairvoyant_revelations 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_establish_jonestowns
+		icon = establish_jonestowns
+		cost = 5
+		prerequisite = {
+			focus = TEX_clairvoyant_revelations
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_clairvoyant_revelations
+		completion_reward = {
+		  add_ideas = idea_tex_jonestowns 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_collectivise_texas
+		icon = collectivise_texas
+		cost = 5
+		prerequisite = {
+			focus = TEX_establish_jonestowns
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_establish_jonestowns
+		completion_reward = {
+		  add_ideas = idea_tex_collecivies_economy 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_power_to_the_reverend
+		icon = power_to_the_reverend
+		cost = 5
+		prerequisite = {
+			focus = TEX_collectivise_texas
+		}
+		prerequisite = {
+			focus = TEX_the_rainbow_family
+		}
+		available = {
+		   
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_collectivise_texas
+		completion_reward = {
+		   swap_ideas = {
+				remove_idea = idea_tex_communist_clergy 
+				add_idea = idea_tex_power_to_the_reverend 
+			}
+		}
+
+	}
+	#unification tree
+	shared_focus = {
+		id = TEX_end_of_the_republic
+		icon = it_cant_happen_here
+		cost = 1
+		available = {
+			AND = {
+			365 = { is_owned_and_controlled_by = ROOT }
+				
+			}
+		}
+		x = 20
+		y = 10
+		completion_reward = {
+		   country_event = { id = texas.77 }
+			enable_unification_decisions = yes
+		}
+
+	}
+	#koresh unification
+	shared_focus = {
+		id = TEX_preach_to_the_remnants
+		icon = focus_a_christian_america
+		cost = 7
+		available = {
+		OR = {
+		    has_completed_focus = TEX_the_messiah_rises
+		has_completed_focus = TEX_the_seven_seals
+		}
+	}
+		prerequisite = {
+			focus = TEX_end_of_the_republic
+		}
+		x = -6
+		y = 1
+		relative_position_id = TEX_end_of_the_republic
+		completion_reward = {
+		    core_USA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_kingdom_of_david
+		icon = davidian_takeover
+		cost = 10
+		available = {
+		 has_country_flag = the_united_states_are_back
+		}
+		prerequisite = {
+			focus = TEX_preach_to_the_remnants
+		}
+		x = 0
+		y = 2
+		relative_position_id = TEX_preach_to_the_remnants
+		completion_reward = {
+		   country_event = { id = texas.78 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_talk_with_duke_the_kkk
+		icon = authority_and_strength
+		cost = 7
+		prerequisite = {
+			focus = TEX_preach_to_the_remnants
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_preach_to_the_remnants
+		completion_reward = {
+		    country_event = { id = texas.79 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_execute_the_generals
+		icon = broken_star
+		cost = 7
+		prerequisite = {
+			focus = TEX_talk_with_duke_the_kkk
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_talk_with_duke_the_kkk
+		completion_reward = {
+		    country_event = { id = texas.80 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_find_the_white_phoenix
+		icon = focus_patriots_seize_power
+		cost = 7
+		available = {
+		 AMS = { exists = no } 
+		}
+		prerequisite = {
+			focus = TEX_execute_the_generals
+		}
+		mutually_exclusive = {
+			focus = TEX_meet_with_pence
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_execute_the_generals
+		completion_reward = {
+		   country_event = { id = texas.81 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_meet_with_pence
+		icon = focus_president_pence_consolidates_control
+		cost = 7
+		available = {
+		AMS = {
+		AMS = { exists = yes } 
+		has_country_leader = { ruling_only = yes name = "Mike Pence" }
+		}
+	}
+		prerequisite = {
+			focus = TEX_execute_the_generals
+		}
+		mutually_exclusive = {
+			focus = TEX_find_the_white_phoenix
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_execute_the_generals
+		completion_reward = {
+		   country_event = { id = texas.82 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_sieze_the_sinners_land
+		icon = industry_paper
+		cost = 7
+		prerequisite = {
+			focus = TEX_preach_to_the_remnants
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_preach_to_the_remnants
+		completion_reward = {
+		   random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			 random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_introduce_koreshian_education
+		icon = generic_research
+		cost = 7
+		prerequisite = {
+			focus = TEX_sieze_the_sinners_land
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_sieze_the_sinners_land
+		completion_reward = {
+		   add_ideas = idea_tex_koreshian_education 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_koresh_controlled_economy
+		icon = housing
+		cost = 7
+		prerequisite = {
+			focus = TEX_introduce_koreshian_education
+		}
+		mutually_exclusive = {
+			focus = TEX_allow_private_ownership
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_introduce_koreshian_education
+		completion_reward = {
+		   add_ideas = idea_tex_koreshs_economy 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_allow_private_ownership
+		icon = construct_civilian
+		cost = 7
+		prerequisite = {
+			focus = TEX_introduce_koreshian_education
+		}
+		mutually_exclusive = {
+			focus = TEX_koresh_controlled_economy
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_introduce_koreshian_education
+		completion_reward = {
+		   add_ideas = idea_tex_private_ownership_permitted 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reclaim_the_holy_lands
+		icon = smashing_flag
+		cost = 7
+		prerequisite = {
+			focus = TEX_allow_private_ownership
+			focus = TEX_koresh_controlled_economy
+		}
+		prerequisite = {
+			focus = TEX_meet_with_pence
+			focus = TEX_find_the_white_phoenix
+		}
+		prerequisite = {
+			focus = TEX_kingdom_of_david
+		}
+		x = -3
+		y = 1
+		relative_position_id = TEX_allow_private_ownership
+		completion_reward = {
+		   create_wargoal = {
+			type = annex_everything
+			target = PAL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = IRQ
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = UAR
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = JOR
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = EGY
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SYR
+		}
+		}
+
+	}
+	#jones unification
+	shared_focus = {
+		id = TEX_purge_the_reactionarys
+		icon = communists_marching
+		cost = 7
+		available = {
+		OR = {
+		    has_completed_focus = TEX_power_to_the_reverend
+		has_completed_focus = TEX_faith_healings
+		}
+	}
+		prerequisite = {
+			focus = TEX_end_of_the_republic
+		}
+		x = 6
+		y = 1
+		relative_position_id = TEX_end_of_the_republic
+		completion_reward = {
+		    core_USA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_holy_union_of_america
+		icon = communism_1
+		cost = 10
+		available = {
+		 has_country_flag = the_united_states_are_back
+		}
+		prerequisite = {
+			focus = TEX_purge_the_reactionarys
+		}
+		x = 0
+		y = 2
+		relative_position_id = TEX_purge_the_reactionarys
+		completion_reward = {
+		   country_event = { id = texas.83 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_execute_duke_and_the_kkk
+		icon = down_with_duke
+		cost = 7
+		prerequisite = {
+			focus = TEX_purge_the_reactionarys
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_purge_the_reactionarys
+		completion_reward = {
+		   country_event = { id = texas.84 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_help_the_oppresed_minorities
+		icon = minority_protection
+		cost = 7
+		prerequisite = {
+			focus = TEX_execute_duke_and_the_kkk
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_execute_duke_and_the_kkk
+		completion_reward = {
+		   add_ideas = idea_tex_freed_minorites  
+		}
+
+	}
+	shared_focus = {
+		id = TEX_mission_to_the_soviets
+		icon = ussr
+		cost = 7
+		prerequisite = {
+			focus = TEX_help_the_oppresed_minorities
+		}
+		mutually_exclusive = {
+			focus = TEX_mission_to_the_chinese
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_help_the_oppresed_minorities
+		completion_reward = {
+		   country_event = { id = texas.85 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_mission_to_the_chinese
+		icon = china
+		cost = 7
+		prerequisite = {
+			focus = TEX_help_the_oppresed_minorities
+		}
+		mutually_exclusive = {
+			focus = TEX_mission_to_the_soviets
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_help_the_oppresed_minorities
+		completion_reward = {
+		   country_event = { id = texas.86 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_seize_their_property
+		icon = communist_construction
+		cost = 7
+		prerequisite = {
+			focus = TEX_purge_the_reactionarys
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_purge_the_reactionarys
+		completion_reward = {
+		    random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			 random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_jonesist_reeducation
+		icon = socialist_science
+		cost = 7
+		prerequisite = {
+			focus = TEX_seize_their_property
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_seize_their_property
+		completion_reward = {
+		   add_ideas = idea_tex_jonesist_reeducation 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_clergy_to_industrialist
+		icon = roads
+		cost = 7
+		prerequisite = {
+			focus = TEX_jonesist_reeducation
+		}
+		mutually_exclusive = {
+			focus = TEX_industrialist_to_communist
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_jonesist_reeducation
+		completion_reward = {
+		   add_ideas = idea_tex_clergy_to_industrialist 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_industrialist_to_communist
+		icon = industry_1
+		cost = 7
+		prerequisite = {
+			focus = TEX_jonesist_reeducation
+		}
+		mutually_exclusive = {
+			focus = TEX_clergy_to_industrialist
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_jonesist_reeducation
+		completion_reward = {
+		   add_ideas = idea_tex_industrialist_to_communist 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_fold_in_the_continent
+		icon = provoke_border_clashes
+		cost = 7
+		prerequisite = {
+			focus = TEX_industrialist_to_communist
+			focus = TEX_clergy_to_industrialist
+		}
+		prerequisite = {
+			focus = TEX_mission_to_the_chinese
+			focus = TEX_mission_to_the_soviets
+		}
+		prerequisite = {
+			focus = TEX_holy_union_of_america
+		}
+		x = -3
+		y = 1
+		relative_position_id = TEX_industrialist_to_communist
+		completion_reward = {
+		   create_wargoal = {
+			type = annex_everything
+			target = CAN
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = MEX
+		}
+		   create_wargoal = {
+			type = annex_everything
+			target = BLZ
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = GUA
+		}
+		   create_wargoal = {
+			type = annex_everything
+			target = CEA
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = PAN
+		}
+			create_wargoal = {
+			type = annex_everything
+			target = CUB
+		}
+		}
+
+	}
+	#shared unification tree
+	shared_focus = {
+		id = TEX_prepare_the_crusade
+		icon = generic_strike
+		cost = 7
+		prerequisite = {
+			focus = TEX_end_of_the_republic
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_end_of_the_republic
+		completion_reward = {
+		   add_timed_idea = { idea = idea_tex_prepare_the_crusades days = 120 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_midwestern_crusade
+		icon = midwest_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_the_crusade
+		}
+		available = {
+		   
+		}
+		bypass = {
+		    OR = {
+			    ILL = {
+			        is_puppet = yes 
+			    }
+				ILL = { exists = no } 
+			}
+		OR = {
+			    MWA = {
+			        is_puppet = yes 
+			    }
+				MWA = { exists = no } 
+			}
+		OR = {
+			    GRL = {
+			        is_puppet = yes 
+			    }
+				GRL = { exists = no } 
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_prepare_the_crusade
+		completion_reward = {
+		       create_wargoal = {
+			    type = annex_everything
+			    target = ILL
+		    }
+            
+			create_wargoal = {
+			    type = annex_everything
+			    target = GRL
+		    }
+            
+			 create_wargoal = {
+			    type = annex_everything
+			    target = MWA
+		    }
+		
+		}
+	}
+	shared_focus = {
+		id = TEX_convert_the_midwest
+		icon = shaking_hands_1
+		cost = 7
+		prerequisite = {
+			focus = TEX_midwestern_crusade
+		}
+		available = {
+		   
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = TEX_midwestern_crusade
+		completion_reward = {
+		    core_ILL = yes
+		core_GRL = yes
+		core_MWA = yes
+		}
+
+	}
+	shared_focus = {
+		id = Tex_rockys_crusade
+		icon = lincoln_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_the_crusade
+		}
+		available = {
+		   
+		}
+		bypass = {
+		    OR = {
+			    MOT = {
+			        is_puppet = yes 
+			    }
+				MOT = { exists = no } 
+			}
+		OR = {
+			    LIN = {
+			        is_puppet = yes 
+			    }
+				LIN = { exists = no } 
+			}
+		
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_prepare_the_crusade
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = LIN
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = MOT
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_convert_the_rockys
+		icon = military_deal
+		cost = 7
+		prerequisite = {
+			focus = Tex_rockys_crusade
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = Tex_rockys_crusade
+		completion_reward = {
+		    core_LIN = yes
+           	core_MOT = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_desert_crusade
+		icon = utah_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_the_crusade
+		}
+		available = {
+		   
+		}
+		bypass = {
+		    OR = {
+			    UTA = {
+			        is_puppet = yes 
+			    }
+				UTA = { exists = no } 
+			}
+		OR = {
+			    ARI = {
+			        is_puppet = yes 
+			    }
+				ARI = { exists = no } 
+			}
+		
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_prepare_the_crusade
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = UTA
+		    }
+            
+		create_wargoal = {
+			    type = annex_everything
+			    target = ARI
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_convert_the_desert
+		icon = red_hands_shaking
+		cost = 7
+		prerequisite = {
+			focus = TEX_desert_crusade
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_desert_crusade
+		completion_reward = {
+		    core_UTA = yes
+            	core_ARI = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_northern_crusade
+		icon = march_north
+		cost = 7
+		prerequisite = {
+			focus = TEX_convert_the_rockys
+		}
+		prerequisite = {
+			focus = TEX_convert_the_desert
+		}
+		prerequisite = {
+			focus = TEX_convert_the_midwest
+		}
+		bypass = {
+			AND = {
+				NEA = {
+					exists = no
+				}
+				AMC = {
+					exists = no
+				}
+				AMS = {
+					exists = no
+				}
+				GAU = {
+					exists = no
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_convert_the_rockys
+		completion_reward = {
+		 create_wargoal = {
+			    type = annex_everything
+			    target = NEA
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMC
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMS
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = GAU
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_convert_the_north
+		icon = operation_new_england
+		cost = 7
+		prerequisite = {
+			focus = TEX_northern_crusade
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_northern_crusade
+		completion_reward = {
+				
+		core_NEA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_end_the_atheist_communist
+		icon = operation_blue_dawn
+		cost = 7
+		prerequisite = {
+			focus = TEX_convert_the_north
+		}
+		available = {
+		   
+		}
+		mutually_exclusive = {
+			focus = TEX_negotiate_unification 
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_convert_the_north
+		completion_reward = {
+		create_wargoal = {
+			    type = annex_everything
+			    target = PCA
+		    }
+           	 create_wargoal = {
+                type = annex_everything
+                target = CSD
+            }
+      
+		}
+}
+	shared_focus = {
+		id = TEX_negotiate_unification 
+		icon = operation_new_england
+		cost = 7
+		prerequisite = {
+			focus = TEX_convert_the_north
+		}
+		available = {
+		   has_government = communist
+			PCA = {
+			has_government = communist
+			}
+		}
+		mutually_exclusive = {
+			focus = TEX_end_the_atheist_communist
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_convert_the_north
+		completion_reward = {
+			PCA = {
+		   country_event = { id = texas.87 }
+		}
+		}
+	}
+	shared_focus = {
+		id = TEX_convert_the_west
+		icon = operation_new_england
+		cost = 7
+		prerequisite = {
+			focus = TEX_negotiate_unification 
+			focus = TEX_end_the_atheist_communist
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_negotiate_unification 
+		completion_reward = {
+				
+		      core_PCA = yes
+		}
+
+	}
+	#Burr conspiracy tree
+	shared_focus = {
+		id = TEX_the_conspiracy_succeeds
+		icon = the_conspiracy_succeeds_focus
+		cost = 1
+		x = 20
+		y = 0
+		available = {
+		 has_country_flag = conspiracy_succeeds
+		}
+		completion_reward = {
+			country_event = { id = texas.88 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_eradicate_copeland_loyalist
+		icon = eradicate_copeland_loyalist
+		cost = 1
+		prerequisite = {
+			focus = TEX_the_conspiracy_succeeds
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_the_conspiracy_succeeds
+		
+		completion_reward = {
+			country_event = { id = texas.89 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_prepare_the_coranation
+		icon = prepare_the_coronation
+		cost = 1
+		prerequisite = {
+			focus = TEX_eradicate_copeland_loyalist
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_eradicate_copeland_loyalist
+		
+		completion_reward = {
+			country_event = { id = texas.90 }
+		}
+
+	}
+	#Antonio Burr
+	shared_focus = {
+		id = TEX_king_antonio_burr
+		icon = antonio_burr_focus
+		cost = 1
+		prerequisite = {
+			focus = TEX_prepare_the_coranation
+		}
+		available = {
+		   has_country_flag = antonio_coranated
+		}
+		x = -6
+		y = 1
+		relative_position_id = TEX_prepare_the_coranation
+		completion_reward = {
+		  add_political_power = 50
+		}
+
+	}
+	
+	shared_focus = {
+		id = TEX_aaron_burrs_legacy
+		icon = aaron_burrs_legacy
+		cost = 5
+		prerequisite = {
+			focus = TEX_king_antonio_burr
+		}
+		available = {
+		  
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_king_antonio_burr
+		completion_reward = {
+		  add_ideas = idea_tex_aaron_burrs_legacy 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_enlightened_monarch
+		icon = enlightened_monarchy
+		cost = 5
+		prerequisite = {
+			focus = TEX_king_antonio_burr
+		}
+		available = {
+		  
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_king_antonio_burr
+		completion_reward = {
+		  add_ideas = idea_tex_enlighted_monarchy 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_burrs_army
+		icon = burrs_army
+		cost = 5
+		prerequisite = {
+			focus = TEX_king_antonio_burr
+		}
+		available = {
+		  
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_king_antonio_burr
+		completion_reward = {
+		  add_ideas = idea_tex_burrs_army 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_royal_military_duty
+		icon = royal_military_duty
+		cost = 5
+		prerequisite = {
+			focus = TEX_enlightened_monarch
+		}
+		prerequisite = {
+			focus = TEX_burrs_army
+		}
+		available = {
+		  
+		}
+		x = 3
+		y = 1
+		relative_position_id = TEX_aaron_burrs_legacy
+		completion_reward = {
+		  add_ideas = idea_tex_royal_military_duty 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_royal_investments
+		icon = royal_assest
+		cost = 5
+		prerequisite = {
+			focus = TEX_enlightened_monarch
+		}
+		prerequisite = {
+			focus = TEX_aaron_burrs_legacy
+		}
+		available = {
+		  
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_aaron_burrs_legacy
+		completion_reward = {
+		  add_ideas = idea_tex_royal_investments 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_end_antimonarchist_thought
+		icon = end_antimonarchist_thought
+		cost = 5
+		prerequisite = {
+			focus = TEX_royal_investments
+		}
+		prerequisite = {
+			focus = TEX_royal_military_duty
+		}
+		available = {
+		  
+		}
+		x =-1
+		y = 1
+		relative_position_id = TEX_royal_military_duty
+		completion_reward = {
+		  add_popularity = {
+			ideology = fascist
+			popularity = -0.2
+		}
+		  add_popularity = {
+			ideology = nationalist
+			popularity = -0.2
+		}
+		  add_popularity = {
+			ideology = national_conservative
+			popularity = -0.2
+		}
+		  add_popularity = {
+			ideology = centrist
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = -0.2
+		}
+		  add_popularity = {
+			ideology = new_democrat
+			popularity = -0.2
+		}
+		  
+		}
+
+	}
+	shared_focus = {
+		id = TEX_american_napolean
+		icon = american_napolean
+		cost = 5
+		prerequisite = {
+			focus = TEX_end_antimonarchist_thought
+		}
+		available = {
+		  
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_end_antimonarchist_thought
+		completion_reward = {
+		   swap_ideas = {
+				remove_idea = idea_tex_enlighted_monarchy 
+				add_idea = idea_tex_american_napolean 
+			}
+		}
+
+	}
+	#Richard Burr
+	shared_focus = {
+		id = TEX_king_richard_burr
+		icon = dick_burr_focus
+		cost = 1
+		prerequisite = {
+			focus = TEX_prepare_the_coranation
+		}
+		available = {
+		   has_country_flag = richard_coranated
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_prepare_the_coranation
+		completion_reward = {
+		  add_political_power = 50
+		}
+
+	}
+	shared_focus = {
+		id = TEX_executive_monarch
+		icon = executive_monarchy
+		cost = 5
+		prerequisite = {
+			focus = TEX_king_richard_burr
+		}
+		available = {
+		  
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_king_richard_burr
+		completion_reward = {
+		  add_ideas = idea_tex_executive_monarchy 
+		}
+
+	}
+
+	shared_focus = {
+		id = TEX_glorify_the_army
+		icon = glorify_the_army
+		cost = 5
+		prerequisite = {
+			focus = TEX_king_richard_burr
+		}
+		available = {
+		  
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_king_richard_burr
+		completion_reward = {
+		  add_ideas = idea_tex_glorified_army 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_increase_inteligence_spending
+		icon = increase_intel_spending
+		cost = 5
+		prerequisite = {
+			focus = TEX_king_richard_burr
+		}
+		available = {
+		  
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_king_richard_burr
+		completion_reward = {
+		  add_ideas = idea_tex_increased_intelligence_funding 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_open_the_market
+		icon = open_the_market
+		cost = 5
+		prerequisite = {
+			focus = TEX_executive_monarch
+		}
+		prerequisite = {
+			focus = TEX_increase_inteligence_spending
+		}
+		available = {
+		  
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_increase_inteligence_spending
+		completion_reward = {
+		  add_ideas = idea_tex_opened_markets  
+		}
+	}
+	shared_focus = {
+		id = TEX_new_congress
+		icon = new_congress
+		cost = 5
+		prerequisite = {
+			focus = TEX_executive_monarch
+		}
+		prerequisite = {
+			focus = TEX_glorify_the_army
+		}
+		available = {
+		  
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_executive_monarch
+		completion_reward = {
+		  add_ideas = idea_tex_royal_congress 
+		}
+	}
+	shared_focus = {
+		id = TEX_appoint_a_prime_minister
+		icon = appoint_prime_minister
+		cost = 5
+		prerequisite = {
+			focus = TEX_new_congress
+		}
+		prerequisite = {
+			focus = TEX_open_the_market
+		}
+		available = {
+		  
+		}
+		x =-1
+		y = 1
+		relative_position_id = TEX_new_congress
+		completion_reward = {
+		  country_event = { id = texas.98 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_strong_monarchy
+		icon = strong_monarchy
+		cost = 5
+		prerequisite = {
+			focus = TEX_appoint_a_prime_minister
+		}
+		available = {
+		  
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_appoint_a_prime_minister
+		completion_reward = {
+		   swap_ideas = {
+				remove_idea = idea_tex_executive_monarchy 
+				add_idea = idea_tex_strong_monarchy 
+			}
+		}
+
+	}
+	#Sherri Burr
+	shared_focus = {
+		id = TEX_queen_sherri_burr
+		icon = sherri_burr_focus
+		cost = 1
+		prerequisite = {
+			focus = TEX_prepare_the_coranation
+		}
+		available = {
+		   has_country_flag = sherri_coranated
+		}
+		x = 6
+		y = 1
+		relative_position_id = TEX_prepare_the_coranation
+		completion_reward = {
+		  add_political_power = 50
+		}
+
+	}
+	shared_focus = {
+		id = TEX_constitutional_monarch
+		icon = constitutional_monarchy
+		cost = 5
+		prerequisite = {
+			focus = TEX_queen_sherri_burr
+		}
+		available = {
+		  
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_queen_sherri_burr
+		completion_reward = {
+		  add_ideas = idea_tex_constitutional_monarchy 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_female_recuitment
+		icon = recuit_women
+		cost = 5
+		prerequisite = {
+			focus = TEX_queen_sherri_burr
+		}
+		available = {
+		  
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_queen_sherri_burr
+		completion_reward = {
+		  add_ideas = idea_tex_female_recuitment 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_increase_social_services
+		icon = social_services
+		cost = 5
+		prerequisite = {
+			focus = TEX_queen_sherri_burr
+		}
+		available = {
+		  
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_queen_sherri_burr
+		completion_reward = {
+		  add_ideas = idea_tex_increased_social_services 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_minority_portection_act
+		icon = minority_protection
+		cost = 5
+		prerequisite = {
+			focus = TEX_increase_social_services
+		}
+		prerequisite = {
+			focus = TEX_constitutional_monarch
+		}
+		available = {
+		  
+		}
+		x =-1
+		y = 1
+		relative_position_id = TEX_constitutional_monarch
+		completion_reward = {
+		  add_ideas = idea_tex_minority_protection_act 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_create_a_parliament
+		icon = create_a_parliament
+		cost = 5
+		prerequisite = {
+			focus = TEX_female_recuitment
+		}
+		prerequisite = {
+			focus = TEX_constitutional_monarch
+		}
+		available = {
+		  
+		}
+		x =-1
+		y = 1
+		relative_position_id = TEX_female_recuitment
+		completion_reward = {
+		  add_ideas = idea_tex_parliament 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_elect_a_prime_minister
+		icon = elect_a_pm
+		cost = 5
+		prerequisite = {
+			focus = TEX_create_a_parliament
+		}
+		prerequisite = {
+			focus = TEX_minority_portection_act
+		}
+		available = {
+		  
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_minority_portection_act
+		completion_reward = {
+		  country_event = { id = texas.99 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_a_liberal_monarchy
+		icon = liberal_monarchy
+		cost = 5
+		prerequisite = {
+			focus = TEX_elect_a_prime_minister
+		}
+		available = {
+		  
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_elect_a_prime_minister
+		completion_reward = {
+		  swap_ideas = {
+				remove_idea = idea_tex_constitutional_monarchy 
+				add_idea = idea_tex_liberal_monarchy 
+			}
+		}
+
+	}
+		#burr unification tree
+	shared_focus = {
+		id = TEX_down_with_the_republic
+		icon = it_cant_happen_here
+		cost = 5
+		prerequisite = {
+			focus = TEX_united_under_burr
+		}
+		available = {
+			AND = {
+			365 = { is_owned_and_controlled_by = ROOT }
+				
+			}
+		}
+		x = 20
+		y = 10
+		completion_reward = {
+			enable_unification_decisions = yes
+		}
+	}
+	shared_focus = {
+		id = TEX_intergrate_the_armed_forces
+		icon = usa_restore_order
+		cost = 7
+		prerequisite = {
+			focus = TEX_down_with_the_republic
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = TEX_exile_the_generals
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_down_with_the_republic
+		completion_reward = {
+		 add_ideas = idea_tex_intergrated_armys
+			USA = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+		}
+	}
+	shared_focus = {
+		id = TEX_exile_the_generals
+		icon = puppet
+		cost = 7
+		prerequisite = {
+			focus = TEX_down_with_the_republic
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = TEX_intergrate_the_armed_forces
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_down_with_the_republic
+		completion_reward = {
+		 add_timed_idea = { idea = idea_tex_exiled_generals  days = 120 }
+		add_political_power = 200
+		army_experience = 50
+		}
+	}
+	shared_focus = {
+		id = TEX_seize_their_land
+		icon = GFX_industry_act
+		cost = 7
+		prerequisite = {
+			focus = TEX_down_with_the_republic
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = TEX_intergrate_their_economy
+		}
+		x = -5
+		y = 1
+		relative_position_id = TEX_down_with_the_republic
+		completion_reward = {
+		 random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			 random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = TEX_intergrate_their_economy
+		icon = lucrative_investment
+		cost = 7
+		prerequisite = {
+			focus = TEX_down_with_the_republic
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = TEX_seize_their_land
+		}
+		x = -3
+		y = 1
+		relative_position_id = TEX_down_with_the_republic
+		completion_reward = {
+		 add_ideas = idea_tex_intergrated_economies 
+		}
+	}
+	shared_focus = {
+		id = TEX_destroy_their_history
+		icon = cut_ties_to_the_usa
+		cost = 7
+		prerequisite = {
+			focus = TEX_down_with_the_republic
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = TEX_protect_their_history
+		}
+		x = 5
+		y = 1
+		relative_position_id = TEX_down_with_the_republic
+		completion_reward = {
+		 add_ideas = idea_tex_end_to_dixie 
+		}
+	}
+	shared_focus = {
+		id = TEX_protect_their_history
+		icon = usa_shaking_hands
+		cost = 7
+		prerequisite = {
+			focus = TEX_down_with_the_republic
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = TEX_destroy_their_history
+		}
+		x = 3
+		y = 1
+		relative_position_id = TEX_down_with_the_republic
+		completion_reward = {
+		 add_ideas = idea_tex_state_rights 
+		}
+	}
+	shared_focus = {
+		id = TEX_hunt_down_the_kkk
+		icon = down_with_duke
+		cost = 7
+		prerequisite = {
+			focus = TEX_intergrate_the_armed_forces
+			focus = TEX_exile_the_generals
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_exile_the_generals
+		completion_reward = {
+		add_timed_idea = { idea = idea_tex_end_of_the_kkk  days = 120 }
+		}
+	}
+	shared_focus = {
+		id = TEX_end_the_republicans
+		icon = laws
+		cost = 7
+		prerequisite = {
+			focus = TEX_protect_their_history
+			focus = TEX_destroy_their_history
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_destroy_their_history
+		completion_reward = {
+		add_timed_idea = { idea = idea_tex_end_of_the_republicans  days = 120 }
+		}
+	}
+	shared_focus = {
+		id = TEX_mission_accomplished
+		icon = prepared_texas
+		cost = 7
+		prerequisite = {
+			focus = TEX_seize_their_land
+			focus = TEX_intergrate_their_economy
+		}
+		available = {
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_seize_their_land
+		completion_reward = {
+		 add_political_power = 200
+		}
+	}
+	shared_focus = {
+		id = TEX_new_addition_to_the_empire
+		icon = focus_an_american_king
+		cost = 7
+		prerequisite = {
+			focus = TEX_mission_accomplished
+		}
+		prerequisite = {
+			focus = TEX_hunt_down_the_kkk
+		}
+		prerequisite = {
+			focus = TEX_end_the_republicans
+		}
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_hunt_down_the_kkk
+		completion_reward = {
+		  core_USA = yes
+		}
+	}
+shared_focus = {
+		id = TEX_prepare_for_reclaimation
+		icon = red_hands_shaking
+		cost = 7
+		prerequisite = {
+			focus = TEX_new_addition_to_the_empire
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_new_addition_to_the_empire
+		completion_reward = {
+		   add_timed_idea = { idea = idea_tex_prepare_for_reclaimation days = 120 }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reclaim_the_midwestern
+		icon = midwest_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_for_reclaimation
+		}
+		available = {
+		   
+		}
+		bypass = {
+		    OR = {
+			    ILL = {
+			        is_puppet = yes 
+			    }
+				ILL = { exists = no } 
+			}
+		OR = {
+			    MWA = {
+			        is_puppet = yes 
+			    }
+				MWA = { exists = no } 
+			}
+		OR = {
+			    GRL = {
+			        is_puppet = yes 
+			    }
+				GRL = { exists = no } 
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = TEX_prepare_for_reclaimation
+		completion_reward = {
+		       create_wargoal = {
+			    type = annex_everything
+			    target = ILL
+		    }
+            
+			create_wargoal = {
+			    type = annex_everything
+			    target = GRL
+		    }
+            
+			 create_wargoal = {
+			    type = annex_everything
+			    target = MWA
+		    }
+		
+		}
+	}
+	shared_focus = {
+		id = TEX_intergrate_the_midwest
+		icon = shaking_hands_1
+		cost = 7
+		prerequisite = {
+			focus = TEX_reclaim_the_midwestern
+		}
+		available = {
+		   
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = TEX_reclaim_the_midwestern
+		completion_reward = {
+		    core_ILL = yes
+		core_GRL = yes
+		core_MWA = yes
+		}
+
+	}
+	shared_focus = {
+		id = Tex_reclaim_the_rockys
+		icon = lincoln_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_for_reclaimation
+		}
+		available = {
+		   
+		}
+		bypass = {
+		    OR = {
+			    MOT = {
+			        is_puppet = yes 
+			    }
+				MOT = { exists = no } 
+			}
+		OR = {
+			    LIN = {
+			        is_puppet = yes 
+			    }
+				LIN = { exists = no } 
+			}
+		
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_prepare_for_reclaimation
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = LIN
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = MOT
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_intergrate_the_rockys
+		icon = military_deal
+		cost = 7
+		prerequisite = {
+			focus = Tex_reclaim_the_rockys
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = Tex_reclaim_the_rockys
+		completion_reward = {
+		    core_LIN = yes
+           	core_MOT = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reclaim_the_desert
+		icon = utah_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_prepare_for_reclaimation
+		}
+		available = {
+		   
+		}
+		bypass = {
+		    OR = {
+			    UTA = {
+			        is_puppet = yes 
+			    }
+				UTA = { exists = no } 
+			}
+		OR = {
+			    ARI = {
+			        is_puppet = yes 
+			    }
+				ARI = { exists = no } 
+			}
+		
+		}
+		x = 2
+		y = 1
+		relative_position_id = TEX_prepare_for_reclaimation
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = UTA
+		    }
+            
+		create_wargoal = {
+			    type = annex_everything
+			    target = ARI
+		    }
+		
+		}
+
+	}
+	shared_focus = {
+		id = TEX_intergrate_the_desert
+		icon = red_hands_shaking
+		cost = 7
+		prerequisite = {
+			focus = TEX_reclaim_the_desert
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_reclaim_the_desert
+		completion_reward = {
+		    core_UTA = yes
+            	core_ARI = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reclaim_the_north
+		icon = march_north
+		cost = 7
+		prerequisite = {
+			focus = TEX_intergrate_the_rockys
+		}
+		prerequisite = {
+			focus = TEX_intergrate_the_desert
+		}
+		prerequisite = {
+			focus = TEX_intergrate_the_midwest
+		}
+		bypass = {
+			AND = {
+				NEA = {
+					exists = no
+				}
+				AMC = {
+					exists = no
+				}
+				AMS = {
+					exists = no
+				}
+				GAU = {
+					exists = no
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_intergrate_the_rockys
+		completion_reward = {
+		 create_wargoal = {
+			    type = annex_everything
+			    target = NEA
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMC
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMS
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = GAU
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_intergrate_the_north
+		icon = operation_new_england
+		cost = 7
+		prerequisite = {
+			focus = TEX_reclaim_the_north
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_reclaim_the_north
+		completion_reward = {
+				
+		core_NEA = yes
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reclaim_the_west
+		icon = operation_blue_dawn
+		cost = 7
+		prerequisite = {
+			focus = TEX_intergrate_the_north
+		}
+		available = {
+		   
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_intergrate_the_north
+		completion_reward = {
+		create_wargoal = {
+			    type = annex_everything
+			    target = PCA
+		    }
+           	 create_wargoal = {
+                type = annex_everything
+                target = CSD
+            }
+      
+		}
+}
+	shared_focus = {
+		id = TEX_intergrate_the_west
+		icon = operation_new_england
+		cost = 7
+		prerequisite = {
+			focus = TEX_reclaim_the_west
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_reclaim_the_west
+		completion_reward = {
+				
+		      core_PCA = yes
+		}
+
+	}
+	#post unification
+	shared_focus = {
+		id = TEX_the_empire_rises
+		icon = the_empire_rises
+		cost = 1
+		available = {
+		    has_country_flag = the_united_states_are_back
+		}
+		x = 30
+		y = 12
+		completion_reward = {
+			country_event = { id = texas.104 }
+		}
+
+	}
+	#bigger empire
+	shared_focus = {
+		id = TEX_build_a_bigger_empire
+		icon = build_a_bigger_empire
+		cost = 5
+		prerequisite = {
+			focus = TEX_the_empire_rises 
+		}
+		mutually_exclusive = {
+			focus = TEX_peace_in_america
+		}
+		available = {
+			OR = {
+		    has_completed_focus = TEX_king_antonio_burr
+		     has_completed_focus = TEX_king_richard_burr
+		}
+	}
+		x = -4
+		y = 1
+		relative_position_id = TEX_the_empire_rises
+		completion_reward = {
+			 add_political_power = 50
+		}
+
+	}
+	shared_focus = {
+		id = TEX_revenge_for_1812
+		icon = canada_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_all_of_mexico
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_all_of_mexico
+		completion_reward = {
+			 create_wargoal = {
+			    type = annex_everything
+			    target = CAN
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_all_of_mexico
+		icon = mexico_attack
+		cost = 7
+		prerequisite = {
+			focus = TEX_build_a_bigger_empire
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_build_a_bigger_empire
+		completion_reward = {
+			 create_wargoal = {
+			    type = annex_everything
+			    target = MEX
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reclaim_liberia
+		icon = usa_take_liberia
+		cost = 7
+		prerequisite = {
+			focus = TEX_build_a_bigger_empire
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_build_a_bigger_empire
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = LIB
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_reclaim_the_philipeans
+		icon = usa_take_phili
+		cost = 7
+		prerequisite = {
+			focus = TEX_reclaim_liberia
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_reclaim_liberia
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = PHI
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = TEX_our_own_alliance
+		icon = the_kings_army
+		cost = 7
+		prerequisite = {
+			focus = TEX_build_a_bigger_empire
+			focus = TEX_peace_in_america
+		}
+		mutually_exclusive = {
+			focus = TEX_join_the_democratic_league
+		}
+		x = 3
+		y = 1
+		relative_position_id = TEX_build_a_bigger_empire
+		completion_reward = {
+			create_faction = american_defence_pact
+		}
+
+	}
+	shared_focus = {
+		id = TEX_join_the_democratic_league
+		icon = major_alliance
+		cost = 7
+		prerequisite = {
+			focus = TEX_peace_in_america
+			focus = TEX_build_a_bigger_empire
+		}
+		mutually_exclusive = {
+			focus = TEX_our_own_alliance
+		}
+		x = -3
+		y = 1
+		relative_position_id = TEX_peace_in_america
+		completion_reward = {
+			CAN = {
+				country_event = { id = texas.101 }
+			}
+		}
+
+	}
+	#peace
+	shared_focus = {
+		id = TEX_peace_in_america
+		icon = peace_in_america
+		cost = 5
+		prerequisite = {
+			focus = TEX_the_empire_rises
+		}
+		mutually_exclusive = {
+			focus = TEX_build_a_bigger_empire
+		}
+		available = {
+			OR = {
+		    has_completed_focus = TEX_queen_sherri_burr
+		     has_completed_focus = TEX_king_richard_burr
+		}
+	}
+		x = 4
+		y = 1
+		relative_position_id = TEX_the_empire_rises
+		completion_reward = {
+			 add_political_power = 50
+		}
+
+	}
+	shared_focus = {
+		id = TEX_secure_the_borders
+		icon = fortify_city
+		cost = 7
+		prerequisite = {
+			focus = TEX_peace_in_america
+		}
+		x = 1
+		y = 1
+		relative_position_id = TEX_peace_in_america
+		completion_reward = {
+			add_ideas = idea_tex_secure_the_border  
+		}
+
+	}
+	shared_focus = {
+		id = TEX_secure_our_airspace
+		icon = air_defense
+		cost = 7
+		prerequisite = {
+			focus = TEX_secure_the_borders
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_secure_the_borders
+		completion_reward = {
+			 add_tech_bonus = {
+				name = radar_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = radar_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = TEX_national_preparedness
+		icon = national_guard
+		cost = 7
+		prerequisite = {
+			focus = TEX_peace_in_america
+		}
+		x = -1
+		y = 1
+		relative_position_id = TEX_peace_in_america
+		completion_reward = {
+			add_ideas = idea_tex_national_preparedness 
+		}
+
+	}
+	shared_focus = {
+		id = TEX_increase_cybersecurity
+		icon = generic_electric
+		cost = 7
+		prerequisite = {
+			focus = TEX_national_preparedness
+		}
+		x = 0
+		y = 1
+		relative_position_id = TEX_national_preparedness
+		completion_reward = {
+			add_ideas = idea_tex_increased_cybersecurity 
+		}
+
+	}

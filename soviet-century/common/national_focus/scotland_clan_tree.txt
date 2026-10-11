@@ -1,0 +1,19 @@
+focus_tree = {
+	id = scotland_clan_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = sco
+				}
+	}
+	default = no
+	shared_focus = SCO_Clan_Militarism
+	shared_focus = SCO_Bayerns_1st_Council_Meeting
+	shared_focus = SCO_Sturgeons_Progressive_Council
+	shared_focus = SCO_Ramsays_Council
+	continuous_focus_position = {
+		x = 500
+		y = 5100
+	}
+}

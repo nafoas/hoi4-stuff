@@ -1,0 +1,228 @@
+ideas = {
+
+	country = {
+		#blowback
+		idea_uphold_freedom_us = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				centrist_drift = 0.04
+				liberal_drift = 0.01
+				national_conservative_drift = 0.01
+				political_power_gain = 0.1
+				stability_factor = 0.05
+			}
+		}
+	idea_us_defend_the_shore = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				production_speed_bunker_factor = 0.2
+			}
+		}
+		idea_nfa_repealed = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				training_time_factor = -0.02
+
+			}
+		}
+		idea_usa_invasion_planning = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_morale_factor = 0.05
+				training_time_factor = -0.05
+				war_support_factor = 0.15
+			}
+		}
+		idea_usa_cybersecurity_act = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = triumphant_will
+
+			modifier = {
+				crypto_strength = 1
+				decryption_power = 10
+				
+			}
+		}
+		idea_abolish_atf = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.05
+				army_core_defence_factor = 0.10
+				training_time_factor = -0.10
+			}
+		}
+		idea_decriminalize_cannibis_us = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.15
+
+			}
+		}
+	idea_usa_religous_liberties = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				stability_factor = 0.05
+				centrist_drift = 0.01
+				national_conservative_drift = 0.03
+				political_power_gain = 0.1
+
+			}
+		}
+			idea_usa_crypto_currency = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		idea_dont_tread_on_me = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+
+			modifier = {
+				army_core_defence_factor = 0.15
+				training_time_factor = -0.10
+
+
+			}
+		}
+		idea_spread_democracy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = us_secret_police
+
+			modifier = {
+				foreign_subversive_activites = -0.5
+				drift_defence_factor = 0.5 
+
+			}
+		}
+	 	idea_usa_covert_ops = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = us_secret_police
+
+			modifier = {
+				foreign_subversive_activites = -0.5
+				drift_defence_factor = 0.5 
+
+			}
+		}
+	}
+
+second_in_command = {
+
+		usa_austin_petersen = {
+			picture = GFX_idea_usa_austin_petersen
+			allowed = {
+					original_tag = USA
+			}
+			available = {
+				OR = {
+					has_government = centrist
+				}
+				cannot_change_second_in_command = no
+			}
+			cancel_if_invalid = no
+			traits = {
+				political_protege
+			}
+		}
+		usa_brandon_herrera = {
+			picture = GFX_idea_usa_brandon_herrera
+			allowed = {
+					original_tag = USA
+			}
+			available = {
+				OR = {
+					has_government = centrist
+				}
+				cannot_change_second_in_command = no
+			}
+			cancel_if_invalid = no
+			traits = {
+				private_military_specialist 
+			}
+		}
+
+
+	}
+
+}

@@ -1,0 +1,20 @@
+focus_tree = {
+	id = uk_the_spark
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_The_Spark
+	shared_focus = ENG_The_Armed_Forces
+	shared_focus = ENG_The_People
+	shared_focus = ENG_Braiser_Escapes
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+
+}
+	

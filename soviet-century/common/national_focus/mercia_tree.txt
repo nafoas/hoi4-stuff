@@ -1,0 +1,129 @@
+focus_tree = {
+	id = mercia_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SCO
+		}
+	}
+	continuous_focus_position = {
+		x = 50
+		y = 3200
+	}
+
+	default = no
+
+	focus = {
+	id = MER_Attack_Wessex
+	icon = attacking_wessex_icon
+	cost = 1
+	x = 5
+	y = 0
+	completion_reward = {
+
+	}
+}
+
+focus = {
+	id = MER_Attack_Kent
+	icon = mercia_flag_icon
+	cost = 1
+	x = 7
+	y = 0
+	completion_reward = {
+
+	}
+}
+
+focus = {
+	id = MER_Attack_East_Anglia
+	icon = attack_east_anglia_iocn
+	cost = 1
+	x = 9
+	y = 0
+	completion_reward = {
+
+	}
+}
+
+focus = {
+	id = MER_Take_Cornwall
+	icon = cornwall_attack_icon
+	cost = 1
+	x = 11
+	y = 0
+	completion_reward = {
+
+	}
+}
+
+
+focus = {
+	id = MER_Take_Northumbria
+	icon = attack_northumbria_icon
+	cost = 1
+	x = 13
+	y = 0
+	completion_reward = {
+
+	}
+}
+
+
+focus = {
+	id = MER_Rebuild_Britian
+	icon = rebuilding_the_uk_icon
+	cost = 1
+	x = 9
+	y = 2
+
+	prerequisite = {
+		focus = MER_Attack_Wessex
+	}
+
+	prerequisite = {
+		focus = MER_Attack_Kent
+	}
+
+	prerequisite = {
+		focus = MER_Attack_East_Anglia
+	}
+
+	prerequisite = {
+		focus = MER_Take_Cornwall
+		focus = MER_Take_Northumbria
+	}
+	available = {
+		owns_state = 127
+		owns_state = 126
+		owns_state = 125
+}
+	completion_reward = {
+
+		ENG = {	
+			ENG = { change_tag_from = MER }
+			annex_country = {
+				target = MER
+			}
+			create_country_leader = {
+				name = "David Cameron"
+				desc = "POLITICS_David_Cameron_DESC"
+				picture = "Portrait_ENG_David_Cameron.dds"
+				ideology = european_conservative
+			}
+			set_politics = {
+				ruling_party = national_conservative
+				elections_allowed = no
+			}
+			set_cosmetic_tag = ENG_Ulster
+		}
+
+	}
+}
+
+
+
+
+
+}

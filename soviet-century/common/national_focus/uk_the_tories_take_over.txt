@@ -1,0 +1,18 @@
+focus_tree = {
+	id = uk_the_tories_take_over
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_The_New_Way
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+
+
+}
+	

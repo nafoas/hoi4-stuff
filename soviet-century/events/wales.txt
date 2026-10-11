@@ -1,0 +1,103 @@
+add_namespace = wales
+
+
+country_event = {
+    id = wales.1
+    title = wales.1.t
+    desc = wales.1.d
+    picture = assembling_the_welsh_guard_on_border	
+    is_triggered_only = yes
+    option = {
+        name = wales.1.o1
+		
+    }
+}
+
+country_event = {
+    id = wales.2
+    title = wales.2.t
+    desc = wales.2.d
+    picture = wales_independence_isolated	
+    is_triggered_only = yes
+    option = {
+        name = wales.2.o1
+    }
+}
+
+country_event = {
+    id = wales.3
+    title = wales.3.t
+    desc = wales.3.d
+    picture = welsh_drones_over_the_english_border	
+    is_triggered_only = yes
+    option = {
+        name = wales.3.o1
+    }
+}
+
+country_event = {
+    id = wales.4
+    title = wales.4.t
+    desc = wales.4.d
+    picture = the_fight_for_england_and_wales	
+    is_triggered_only = yes
+    option = {
+        name = wales.4.o1
+    }
+}
+
+country_event = {
+    id = wales.5
+    title = wales.5.t
+    desc = wales.5.d
+    picture = the_first_welsh_government	
+    is_triggered_only = yes
+    option = {
+        name = wales.5.o1
+    }
+}
+
+
+country_event = {
+    id = wales.6
+    title = wales.6.t
+    desc = wales.6.d
+    picture = welsh_power_grid	
+    is_triggered_only = yes
+    option = {
+        name = wales.6.o1
+    }
+}
+
+country_event = {
+    id = wales.7
+    title = wales.7.t
+    desc = wales.7.d
+    picture = welsh_bill_of_rights_event	
+    is_triggered_only = yes
+    option = {
+        name = wales.7.o1
+    }
+}
+
+country_event = {
+    id = wales.8
+    title = wales.8.t
+    desc = wales.8.d
+    picture = the_new_alliance_wal	
+    is_triggered_only = yes
+    option = {
+        name = wales.8.o1
+    }
+}
+
+country_event = {
+    id = wales.9
+    title = wales.9.t
+    desc = wales.9.d
+    picture = the_welsh_election_event	
+    is_triggered_only = yes
+    option = {
+        name = wales.9.o1
+    }
+}

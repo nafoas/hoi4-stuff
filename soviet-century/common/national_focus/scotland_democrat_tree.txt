@@ -1,0 +1,23 @@
+focus_tree = {
+	id = scotland_democracy_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = sco
+				}
+	}
+	default = no
+	shared_focus = SCO_Scottish_Christianity_Victorious
+	shared_focus = SCO_SNP_Victorious
+	shared_focus = SCO_ALBA_Victorious
+	shared_focus = SCO_A_Libertarian_Landslide
+	shared_focus = SCO_A_Green_Party
+	shared_focus = SCO_Scottish_Labour_Victorious
+	shared_focus = SCO_Scotland_On_The_World_Stage
+	shared_focus = SCO_The_Royal_Question
+	continuous_focus_position = {
+		x = 500
+		y = 5100
+	}
+}

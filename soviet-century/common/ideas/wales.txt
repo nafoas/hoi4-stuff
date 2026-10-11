@@ -1,0 +1,80 @@
+ideas = {
+
+country = {
+    
+    
+
+    idea_Build_the_armed_forces = {
+        allowed = {
+            always = no
+        }
+        
+        picture = wales_rebuild_the_army_idea
+        
+        removal_cost = -1
+        
+        allowed_civil_war = {
+            always = yes
+        }
+        
+        modifier = {
+            stability_factor = 0.015
+            conscription = 0.002
+            political_power_gain = 0.015
+            army_defence_factor = 0.05
+            training_time_army_factor = -0.05
+            army_attack_factor = 0.05
+        }
+    }
+
+	idea_Build_the_wall = {
+		allowed = {
+			always = no
+		}
+		
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		removal_cost = -1
+		
+		picture = the_border_wall_idea
+		
+		modifier = {
+			foreign_subversive_activites = -0.5
+			crypto_strength = 1 
+			army_defence_factor = 0.05 
+			trade_opinion_factor = -0.8
+			research_speed_factor = -0.1
+			
+		}
+	}
+
+
+
+	idea_power_the_State = {
+		allowed = {
+			always = no
+		}
+		
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		removal_cost = -1
+		
+		picture = catholic_values
+		
+		modifier = {
+			conscription = 0.01
+			consumer_goods_factor = -0.10
+			production_speed_buildings_factor = 0.30
+			production_speed_industrial_complex_factor = 0.1
+			industrial_capacity_factory = 0.05
+			MONTHLY_POPULATION = -0.025
+		}
+	}
+
+
+
+}

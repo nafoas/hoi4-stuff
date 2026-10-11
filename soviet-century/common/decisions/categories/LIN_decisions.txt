@@ -1,0 +1,8 @@
+intergration_of_canada = {		
+	icon = generic_independence
+	priority = 9	
+}
+purification = {		
+	icon = generic_independence
+	priority = 9	
+}

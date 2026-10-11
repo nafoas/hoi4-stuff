@@ -1,0 +1,19 @@
+focus_tree = {
+	id = royal_british_tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_The_Gates_Of_Royalty
+	shared_focus = ENG_The_death_of_the_Duke
+	
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+}
+
+	

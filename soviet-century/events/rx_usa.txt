@@ -1,0 +1,162 @@
+add_namespace = rx_usa
+
+
+
+#McAfee 
+country_event = {
+	id = rx_usa.1
+	title = rx_usa.1.t
+	desc = rx_usa.1.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = rx_usa.1.o1
+	}
+	
+}
+#mcafee cought in scandle
+country_event = {
+	id = rx_usa.2
+	title = rx_usa.2.t
+	desc = rx_usa.2.d
+	picture = texas_state
+	
+	trigger = {
+		tag = USA
+		date > 2016.1.1
+		date < 2016.1.20
+		has_completed_focus = USA_McAfee
+	}
+	
+	option = {   #let it go
+		name = rx_usa.2.o1
+	}
+	option = {  #remove him 
+		name = rx_usa.2.o2
+		  country_event = { id = rx_usa.3 }
+	}
+	
+}
+#mcafee flees to belize
+country_event = {
+	id = rx_usa.3
+	title = rx_usa.3.t
+	desc = rx_usa.3.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #let it go
+		name = rx_usa.3.o1
+		 country_event = { id = rx_usa.4}
+		BLZ = {
+		    country_event = { id = rx_usa.5}
+		}
+	}
+	
+}
+#new president
+country_event = {
+	id = rx_usa.4
+	title = rx_usa.4.t
+	desc = rx_usa.4.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #let it go
+		name = rx_usa.4.o1
+		add_ideas = usa_brandon_herrera
+		create_country_leader = {
+	        name = "Austin Petersen"
+	        picture = "Portrait_Austin_Petersen.dds"
+	        ideology = right_libertarian
+        }
+	}
+	
+}
+#mcafee takes over belize
+country_event = {
+	id = rx_usa.5
+	title = rx_usa.5.t
+	desc = rx_usa.5.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #let it go
+		name = rx_usa.5.o1
+		set_politics = {
+	        ruling_party = fascist
+	        elections_allowed = no
+        }
+		create_country_leader = {
+	        name = "John McAfee"
+	        picture = "Portrait_mcafee_blz.dds"
+	        ideology = fascist_ideology
+      	  }
+	}
+	
+}
+# america ask to join faction
+country_event = {
+	id = rx_usa.6
+	title = rx_usa.6.t
+	desc = rx_usa.6.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #yes
+		name = rx_usa.6.o1
+		USA = {
+		country_event = { id = rx_usa.7 }
+		}
+		add_to_faction = USA
+		CAN = {
+		    add_ai_strategy = {
+		        type = alliance
+		        id = "USA"
+		        value = 120
+	        }
+	}	
+}
+	option = {   #no
+		name = rx_usa.6.o2
+		USA = {
+		country_event = { id = rx_usa.8 }
+		}
+	}
+}
+# no
+country_event = {
+	id = rx_usa.7
+	title = rx_usa.7.t
+	desc = rx_usa.7.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #yes
+		name = rx_usa.7.o1
+		
+	}
+	
+}
+# yes
+country_event = {
+	id = rx_usa.8
+	title = rx_usa.8.t
+	desc = rx_usa.8.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #yes
+		name = rx_usa.8.o1
+		
+	}
+	
+}

@@ -1,0 +1,1050 @@
+focus_tree = {
+	id = Wales_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SCO
+		}
+	}
+	continuous_focus_position = {
+		x = 50
+		y = 3200
+	}
+	default = no
+	
+	focus = {
+	id = WAL_Assemble_The_Welsh_Guard
+	icon = welsh_national_guard
+	cost = 5
+	x = 10
+	y = 0
+	completion_reward = {
+		add_manpower = 10000
+		add_stability = 0.05
+		add_political_power = 100
+		country_event = {
+			id = wales.1
+		}
+	}
+}
+
+focus = {
+	id = WAL_Guard_The_Border
+	icon = protecting_the_border_wal
+	cost = 2
+	x = 9
+	y = 1
+	prerequisite = {
+		focus = WAL_Assemble_The_Welsh_Guard
+	}
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+focus = {
+	id = WAL_Watch_The_Air
+	icon = watching_the_sky
+	cost = 2
+	x = 11
+	y = 1
+	prerequisite = {
+		focus = WAL_Assemble_The_Welsh_Guard
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Isolate_Wales
+	icon = isolate_wales
+	cost = 3
+	x = 10
+	y = 2
+	prerequisite = {
+		focus = WAL_Guard_The_Border
+	}
+	prerequisite = {
+		focus = WAL_Watch_The_Air
+	}
+	completion_reward = {
+		country_event = {
+			id = wales.2
+		}
+	}
+}
+
+focus = {
+	id = WAL_Build_The_Armed_Forces
+	icon = build_the_armed_forces
+	cost = 4
+	x = 6
+	y = 3
+	prerequisite = {
+		focus = WAL_Isolate_Wales
+	}
+	completion_reward = {
+		add_ideas = idea_Build_the_armed_forces
+
+	}
+}
+
+focus = {
+	id = WAL_Phoenix_Technology
+	icon = phoenix_technology
+	cost = 4
+	x = 6
+	y = 4
+	prerequisite = {
+		focus = WAL_Build_The_Armed_Forces
+	}
+	completion_reward = {
+		add_political_power = 50
+	}
+}
+
+focus = {
+	id = WAL_Create_The_Airforce
+	icon = build_the_airforce_wal
+	cost = 3
+	x = 5
+	y = 5
+	prerequisite = {
+		focus = WAL_Phoenix_Technology
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Drones_Over_The_Border
+	icon = drones_over_the_border
+	cost = 3
+	x = 5
+	y = 6
+	prerequisite = {
+		focus = WAL_Create_The_Airforce
+	}
+	completion_reward = {
+		country_event = {
+			id = wales.3
+		}
+	}
+}
+
+focus = {
+	id = WAL_Defence_Strategy
+	icon = defence_strategy_wales
+	cost = 3
+	x = 7
+	y = 5
+	prerequisite = {
+		focus = WAL_Phoenix_Technology
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Build_The_Wall
+	icon = building_the_wall_wales
+	cost = 3
+	x = 7
+	y = 6
+	prerequisite = {
+		focus = WAL_Defence_Strategy
+	}
+	completion_reward = {
+		add_ideas = idea_Build_the_wall
+	}
+}
+
+focus = {
+	id = WAL_Propaganda_Wars
+	icon = wales_proaganda_wars
+	cost = 3
+	x = 6
+	y = 7
+	prerequisite = {
+		focus = WAL_Build_The_Wall
+	}
+	prerequisite = {
+		focus = WAL_Drones_Over_The_Border
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_What_is_our_destiny
+	icon = what_is_our_destiny_wal
+	cost = 2
+	x = 6
+	y = 8
+	prerequisite = {
+		focus = WAL_Propaganda_Wars
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Prepare_To_strike
+	icon = prepare_to_strike_wal
+	cost = 1
+	x = 4
+	y = 9
+	prerequisite = {
+		focus = WAL_What_is_our_destiny
+	}
+	mutually_exclusive = {
+		focus = WAL_Isolate
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Isolate
+	icon = wal_isolated
+	cost = 1
+	x = 6
+	y = 9
+	mutually_exclusive = {
+		focus = WAL_Prepare_To_strike
+	}
+	prerequisite = {
+		focus = WAL_What_is_our_destiny
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_England_Whats_Happened
+	icon = england_what_has_happened
+	cost = 1
+	x = 6
+	y = 10
+	prerequisite = {
+		focus = WAL_Prepare_To_strike
+	}
+
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Cut_Off_The_Resources
+	icon = cut_off_the_resources
+	cost = 4
+	x = 4
+	y = 11
+	prerequisite = {
+		focus = WAL_England_Whats_Happened
+	}
+
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Ask_The_Irish_For_Support
+	icon = ask_the_irish_for_support
+	cost = 4
+	x = 6
+	y = 11
+	prerequisite = {
+		focus = WAL_England_Whats_Happened
+	}
+
+	completion_reward = {
+	
+	}
+}
+
+
+focus = {
+	id = WAL_Change_English_History
+	icon = change_english_history_wal
+	cost = 4
+	x = 8
+	y = 11
+	prerequisite = {
+		focus = WAL_England_Whats_Happened
+	}
+
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_FOR_WALES_AND_FOR_FREEDOM
+	icon = wales_for_Freedom_wal
+	cost = 6
+	x = 6
+	y = 12
+	prerequisite = {
+		focus = WAL_Cut_Off_The_Resources
+	}
+	prerequisite = {
+		focus = WAL_Ask_The_Irish_For_Support
+	}
+	prerequisite = {
+		focus = WAL_Change_English_History
+	}
+	completion_reward = {
+		WAL = {
+			declare_war_on = { target = ENG type = annex_everything }
+		}
+		country_event = {
+			id = wales.4
+		}
+	}
+}
+
+focus = {
+	id = WAL_The_Welsh_Kingdom
+	icon = the_welsh_kingdom
+	cost = 1
+	x = 4
+	y = 13
+	prerequisite = {
+		focus = WAL_FOR_WALES_AND_FOR_FREEDOM
+	}
+	mutually_exclusive = {
+		focus = WAL_Puppet_England
+	}
+	mutually_exclusive = {
+		focus = WAL_Restore_the_uk
+	}
+	available = {
+		owns_state = 131
+		owns_state = 130
+		owns_state = 132
+		owns_state = 128
+		owns_state = 129
+		owns_state = 338
+		owns_state = 123
+		owns_state = 127
+		owns_state = 126
+		owns_state = 125
+}
+	completion_reward = {
+		add_political_power = 100
+	set_cosmetic_tag = WAL_the_welsh_kingdom_flag
+	}
+}
+
+focus = {
+	id = WAL_Restore_the_uk
+	icon = restore_the_uk_wales
+	cost = 1
+	x = 6
+	y = 13
+	prerequisite = {
+		focus = WAL_FOR_WALES_AND_FOR_FREEDOM
+	}
+	mutually_exclusive = {
+		focus = WAL_Puppet_England
+	}
+	mutually_exclusive = {
+		focus = WAL_The_Welsh_Kingdom
+	}
+	available = {
+		owns_state = 131
+		owns_state = 130
+		owns_state = 132
+		owns_state = 128
+		owns_state = 129
+		owns_state = 338
+		owns_state = 123
+		owns_state = 127
+		owns_state = 126
+		owns_state = 125
+}
+	completion_reward = {
+		add_political_power = 100
+		set_cosmetic_tag = ENG_Ulster
+	}
+}
+
+focus = {
+	id = WAL_Puppet_England
+	icon = puppet_england_wal
+	cost = 1
+	x = 8
+	y = 13
+	prerequisite = {
+		focus = WAL_FOR_WALES_AND_FOR_FREEDOM
+	}
+	mutually_exclusive = {
+		focus = WAL_Restore_the_uk
+	}
+	mutually_exclusive = {
+		focus = WAL_The_Welsh_Kingdom
+	}
+	available = {
+		owns_state = 131
+		owns_state = 130
+		owns_state = 132
+		owns_state = 128
+		owns_state = 129
+		owns_state = 338
+		owns_state = 123
+		owns_state = 127
+		owns_state = 126
+		owns_state = 125
+}
+
+	completion_reward = {
+		add_political_power = 100
+		ENG = {
+			set_cosmetic_tag = WAL_welsh_england_puppet_flag
+			create_country_leader = {
+				name = "Mark Drakeford"
+				desc = "POLITICS_Mark_Drakeford_DESC"
+				picture = "Mark_Drakeford.dds"
+				ideology = democratic_socialist 
+			}
+		}
+		release_puppet = ENG
+		WAL = {
+			transfer_state = 122
+		}
+	}
+}
+
+focus = {
+	id = WAL_The_Welsh_Parliament
+	icon = the_welsh_parliament
+	cost = 5
+	x = 10
+	y = 3
+	prerequisite = {
+		focus = WAL_Isolate_Wales
+	}
+	completion_reward = {
+		country_event = {
+			id = wales.5
+		}
+	}
+}
+
+focus = {
+	id = WAL_Plaid_Cymru
+	icon = wal_plaid_cymru
+	cost = 5
+	x = 10
+	y = 4
+	prerequisite = {
+		focus = WAL_The_Welsh_Parliament
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_New_Social_Democracy
+	icon = new_social_democracy_wal
+	cost = 5
+	x = 10
+	y = 5
+	prerequisite = {
+		focus = WAL_Plaid_Cymru
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = new_democrat
+			popularity = 0.20
+		}
+	}
+}
+
+focus = {
+	id = WAL_Reopen_The_Mines
+	icon = reopen_the_welsh_mines
+	cost = 3
+	x = 9
+	y = 6
+	prerequisite = {
+		focus = WAL_New_Social_Democracy
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_The_Welsh_Power_Grid
+	icon = welsh_power_grid
+	cost = 2
+	x = 9
+	y = 7
+	prerequisite = {
+		focus = WAL_Reopen_The_Mines
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Solar_Power
+	icon = wales_solar_power
+	cost = 2
+	x = 8
+	y = 8
+	prerequisite = {
+		focus = WAL_The_Welsh_Power_Grid
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Wind_Sea_And_Solar
+	icon = wind_sea_and_solar
+	cost = 2
+	x = 8
+	y = 9
+	prerequisite = {
+		focus = WAL_Solar_Power
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Mine_The_Resources
+	icon = mine_the_resources_wales
+	cost = 2
+	x = 10
+	y = 8
+	prerequisite = {
+		focus = WAL_The_Welsh_Power_Grid
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Modern_Safer_Mining
+	icon = modern_safer_mining_wal
+	cost = 2
+	x = 10
+	y = 9
+	prerequisite = {
+		focus = WAL_Mine_The_Resources
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Power_The_State
+	icon = power_the_state_wal
+	cost = 1
+	x = 9
+	y = 10
+	prerequisite = {
+		focus = WAL_Modern_Safer_Mining
+	}
+	prerequisite = {
+		focus = WAL_Wind_Sea_And_Solar
+	}
+	completion_reward = {
+		country_event = {
+			id = wales.6
+		}
+		add_ideas = idea_power_the_State
+	}
+}
+
+focus = {
+	id = WAL_Nationalise_Key_Areas
+	icon = nationalise_key_areas_wal
+	cost = 4
+	x = 12
+	y = 6
+	prerequisite = {
+		focus = WAL_New_Social_Democracy
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Welsh_Education
+	icon = welsh_education_wal
+	cost = 4
+	x = 12
+	y = 7
+	prerequisite = {
+		focus = WAL_Nationalise_Key_Areas
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Bill_Of_Rights
+	icon = wal_bill_of_rights
+	cost = 3
+	x = 12
+	y = 8
+	prerequisite = {
+		focus = WAL_Welsh_Education
+	}
+	completion_reward = {
+		country_event = {
+			id = wales.7
+		}
+	}
+}
+
+focus = {
+	id = WAL_Help_The_Refuges
+	icon = save_the_refugees_wal
+	cost = 3
+	x = 14
+	y = 8
+	prerequisite = {
+		focus = WAL_Welsh_Education
+	}
+	completion_reward = {
+	
+	}
+}
+
+
+focus = {
+	id = WAL_Welsh_Nationalism
+	icon = welsh_nationalism_wal
+	cost = 2
+	x = 13
+	y = 9
+	prerequisite = {
+		focus = WAL_Bill_Of_Rights
+	}
+	prerequisite = {
+		focus = WAL_Help_The_Refuges
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_The_Dragon_Roars_Loud
+	icon = welsh_dragon_roars_loud
+	cost = 2
+	x = 13
+	y = 10
+	prerequisite = {
+		focus = WAL_Welsh_Nationalism
+	}
+
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_A_New_Alliance
+	icon = a_new_alliance_wal
+	cost = 5
+	x = 16
+	y = 3
+	prerequisite = {
+		focus = WAL_Isolate_Wales
+	}
+	completion_reward = {
+	
+	}
+}
+
+
+focus = {
+	id = WAL_Around_The_Irish_Sea
+	icon = around_the_irish_sea
+	cost = 3
+	x = 14
+	y = 4
+	prerequisite = {
+		focus = WAL_A_New_Alliance
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Meet_The_Irish
+	icon = meeting_the_irish
+	cost = 3
+	x = 15
+	y = 5
+	prerequisite = {
+		focus = WAL_Around_The_Irish_Sea
+	}
+	completion_reward = {
+		ENG = {
+			add_opinion_modifier = {
+				target = IRE
+				modifier = declaration_of_friendship
+			}
+		}
+	}	}
+
+focus = {
+	id = WAL_Scotland_And_Wales
+	icon = scotland_and_wales_wal
+	cost = 3
+	x = 18
+	y = 4
+	prerequisite = {
+		focus = WAL_A_New_Alliance
+	}
+	completion_reward = {
+		ENG = {
+			add_opinion_modifier = {
+				target = SCO
+				modifier = declaration_of_friendship
+			}
+		}
+	}
+}
+focus = {
+	id = WAL_Shared_Resources
+	icon = shared_resources_wal
+	cost = 3
+	x = 17
+	y = 5
+	prerequisite = {
+		focus = WAL_Scotland_And_Wales
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_The_Celtic_Brothers
+	icon = the_celtic_brothers_wal
+	cost = 2
+	x = 16
+	y = 6
+	prerequisite = {
+		focus = WAL_Shared_Resources
+	}
+	prerequisite = {
+		focus = WAL_Meet_The_Irish
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Standing_Against_The_English
+	icon = standing_against_the_english
+	cost = 2
+	x = 16
+	y = 7
+	prerequisite = {
+		focus = WAL_The_Celtic_Brothers
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_The_Old_Clans_Of_Celtic_Brothers
+	icon = old_clans_of_celtic_brothers
+	cost = 2
+	x = 16
+	y = 8
+	prerequisite = {
+		focus = WAL_Standing_Against_The_English
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_The_Welsh_Election
+	icon = the_welsh_election
+	cost = 10
+	x = 25
+	y = 0
+
+	completion_reward = {
+		country_event = {
+			id = wales.9
+		}
+	}
+}
+
+focus = {
+	id = WAL_The_Old_Ways
+	icon = the_old_ways_wal
+	cost = 5
+	x = 22
+	y = 1
+	prerequisite = {
+		focus = WAL_The_Welsh_Election
+	}
+	mutually_exclusive = {
+		focus = WAL_Democracy_Forward
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = green
+			popularity = 0.20
+		}
+		set_cosmetic_tag = WAL_welsh_celtic
+		create_country_leader = {
+			name = "Neil McEvoy"
+			desc = "POLITICS_Neil_McEvoy_DESC"
+			picture = "Neil_McEvoy.dds"
+			ideology = european_green 
+		}
+		set_politics = {
+			ruling_party = green
+			elections_allowed = no
+		}
+	
+	}
+}
+focus = {
+	id = WAL_The_Clans_Of_Wales
+	icon = the_clans_of_wales
+	cost = 3
+	x = 22
+	y = 2
+	prerequisite = {
+		focus = WAL_The_Old_Ways
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Protect_The_Cities
+	icon = wal_protect_the_cities
+	cost = 3
+	x = 21
+	y = 3
+	prerequisite = {
+		focus = WAL_The_Clans_Of_Wales
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Tribal_Signs
+	icon = tribal_signs
+	cost = 3
+	x = 21
+	y = 4
+	prerequisite = {
+		focus = WAL_Protect_The_Cities
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Watch_The_Waters
+	icon = watch_the_waters_wal
+	cost = 3
+	x = 23
+	y = 3
+	prerequisite = {
+		focus = WAL_The_Clans_Of_Wales
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Protecting_The_Irish_Waters
+	icon = protecting_irish_waters_wal
+	cost = 3
+	x = 23
+	y = 4
+	prerequisite = {
+		focus = WAL_Watch_The_Waters
+	}
+	completion_reward = {
+	
+	}
+}
+
+
+focus = {
+	id = WAL_Democracy_Forward
+	icon = democracy_forward_wal
+	cost = 5
+	x = 27
+	y = 1
+	prerequisite = {
+		focus = WAL_The_Welsh_Election
+	}
+	mutually_exclusive = {
+		focus = WAL_The_Old_Ways
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_Choosing_The_Party
+	icon = choosing_a_party_wal
+	cost = 3
+	x = 25
+	y = 2
+	prerequisite = {
+		focus = WAL_Democracy_Forward
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_The_People_Want_Power
+	icon = the_people_want_power_wal
+	cost = 3
+	x = 29
+	y = 2
+	prerequisite = {
+		focus = WAL_Democracy_Forward
+	}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = WAL_The_First_Welsh_Election
+	icon = welsh_polling_election
+	cost = 2
+	x = 27
+	y = 3
+	prerequisite = {
+		focus = WAL_Choosing_The_Party
+	}
+	prerequisite = {
+		focus = WAL_The_People_Want_Power
+	}
+	completion_reward = {
+	
+	}
+}
+
+focus = {
+	id = WAL_Welsh_Tories
+	icon = welsh_conservatives
+	cost = 1
+	x = 25
+	y = 4
+	prerequisite = {
+		focus = WAL_The_First_Welsh_Election
+	}
+	mutually_exclusive = {
+		focus = WAL_Welsh_Nationalists
+	}
+	mutually_exclusive = {
+		focus = WAL_Welsh_Communists
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.20
+		}
+		set_politics = {
+			ruling_party = national_conservative
+			elections_allowed = no
+		}
+
+	
+	}
+}
+
+focus = {
+	id = WAL_Welsh_Nationalists
+	icon = the_welsh_nationalists
+	cost = 1
+	x = 27
+	y = 4
+	prerequisite = {
+		focus = WAL_The_First_Welsh_Election
+	}
+	mutually_exclusive = {
+		focus = WAL_Welsh_Tories
+	}
+	mutually_exclusive = {
+		focus = WAL_Welsh_Communists
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = moderate_socialist
+			popularity = 0.20
+		}
+		set_politics = {
+			ruling_party = moderate_socialist
+			elections_allowed = no
+		}
+	}
+}
+
+focus = {
+	id = WAL_Welsh_Communists
+	icon = welsh_communists
+	cost = 1
+	x = 29
+	y = 4
+	prerequisite = {
+		focus = WAL_The_First_Welsh_Election
+	}
+	mutually_exclusive = {
+		focus = WAL_Welsh_Nationalists
+	}
+	mutually_exclusive = {
+		focus = WAL_Welsh_Tories
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = communist
+			popularity = 0.20
+		}
+		set_politics = {
+			ruling_party = communist
+			elections_allowed = no
+		}
+
+	}
+}
+
+
+
+
+}

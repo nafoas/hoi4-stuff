@@ -1,0 +1,2683 @@
+﻿add_namespace = rx_texas
+
+
+#Pro-remnant terrorists strike senate
+country_event = {
+	id = texas.1
+	title = texas.1.t
+	desc = texas.1.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = texas.1.o1
+		complete_national_focus = TEX_texan_senate_attack
+		add_political_power = -250
+		set_global_flag = texas_senate_attack
+		USA = {
+			country_event = {id = texas.2}
+		}
+	}
+}
+
+#AR finds out about Senate attack
+country_event = {
+	id = texas.2
+	title = texas.2.t
+	desc = texas.2.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.2.o1
+	}
+}
+#pro remnant protest
+country_event = {
+	id = texas.3
+	title = texas.3.t
+	desc = texas.3.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2010.2.1
+		date < 2010.2.30
+	}
+	
+	option = {
+		name = texas.3.o1
+		add_timed_idea = { idea = idea_tex_pro-remnant_terrorist days = 240 }
+	}
+}
+
+#Ron Paul ramps up campaign
+country_event = {
+	id = texas.4
+	title = texas.4.t
+	desc = texas.4.d
+	picture = ron_paul_running
+	
+	fire_only_once = yes
+	
+	
+	
+	option = {
+		name = texas.4.o1
+		set_party_name = { ideology = centrist long_name = TEX_centrist_paul_party_Long name = TEX_centrist_paul_party }
+		set_party_name = { ideology = centrist long_name =  TEX_liberal_paul_party_Long name =  TEX_liberal_paul_party }
+		add_popularity = {
+			ideology = centrist
+			popularity = 0.05
+		}
+	}
+}
+#dixiecrat return
+country_event = {
+	id = texas.5
+	title = texas.5.t
+	desc = texas.5.d
+	picture = joe_straus_running
+	
+	fire_only_once = yes
+	
+	
+	option = {
+		name = texas.5.o1
+		set_party_name = { ideology = national_conservative long_name = TEX_national_straus_conservative_party_Long name = TEX_national_straus_conservative_party }
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.05
+		}
+	}
+}
+
+#revive texas movement
+country_event = {
+	id = texas.6
+	title = texas.6.t
+	desc = texas.6.d
+	picture = far_right_rally
+	
+	fire_only_once = yes
+	
+	
+	option = {
+		name = texas.6.o1
+		set_party_name = { ideology = fascist long_name = TEX_fascist_copeland_party_Long name = TEX_fascist_copeland_party }
+		add_popularity = {
+			ideology = fascist
+			popularity = 0.05
+		}
+	}
+}
+#rick perry anounces hes running for a 3rd term
+country_event = {
+	id = texas.7
+	title = texas.7.t
+	desc = texas.7.d
+	picture = rick_perry_running
+	
+	fire_only_once = yes
+	
+	
+	
+	option = {
+		name = texas.7.o1
+		set_party_name = { ideology = nationalist long_name = TEX_nationalist_perry_party_Long name = TEX_nationalist_perry_party }
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+	}
+}
+
+#2010 election 
+country_event = {
+	id = texas.8
+	title = texas.8.t
+	desc = texas.8.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEX
+		date > 2010.11.1
+		date < 2010.11.30
+	}
+	#Ron paul
+	option = {
+		name = texas.8.o1
+		remove_ideas = idea_tex_coalition_cracks
+		set_country_flag = ron_paul_won
+		set_country_flag = tex_2010_election
+		set_politics = {
+	        ruling_party = centrist
+	        elections_allowed = no
+      		  }
+	}
+	#dixiecrat
+	option = {
+		name = texas.8.o2
+		remove_ideas = idea_tex_coalition_cracks
+		set_country_flag = dixiecrat_victory
+		set_country_flag = tex_2010_election
+		set_politics = {
+	        ruling_party = national_conservative
+	        elections_allowed = no
+      		  }
+	}
+	#rick perry
+	option = {
+		name = texas.8.o3
+		remove_ideas = idea_tex_coalition_cracks
+		set_country_flag = rick_perry_won
+		set_country_flag = tex_2010_election
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+	}
+	#golden circle
+	option = {
+		name = texas.8.o4
+		remove_ideas = idea_tex_coalition_cracks
+		set_country_flag = fascist_won
+		set_country_flag = tex_2010_election
+		set_politics = {
+	       		 ruling_party = fascist
+	       		 elections_allowed = no
+        	}
+	}
+}
+
+#ron paul wins
+country_event = {
+	id = texas.9
+	title = texas.9.t
+	desc = texas.9.d
+	picture = ron_paul_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.9.o1
+	}
+}
+
+#rick perry wins
+country_event = {
+	id = texas.10
+	title = texas.10.t
+	desc = texas.10.d
+	picture = rick_perry_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.10.o1
+	}
+}
+
+#dixiecrats win
+country_event = {
+	id = texas.11
+	title = texas.11.t
+	desc = texas.11.d
+	picture = joe_straus_running
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.11.o1
+	}
+}
+
+#fascist win
+country_event = {
+	id = texas.12
+	title = texas.12.t
+	desc = texas.12.d
+	picture = far_right_rally
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.12.o1
+	}
+}
+
+#expand the police
+country_event = {
+	id = texas.13
+	title = texas.13.t
+	desc = texas.13.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.13.o1
+		add_ideas = idea_tex_expanded_police
+	}
+}
+
+#enforce loyalty
+country_event = {
+	id = texas.14
+	title = texas.14.t
+	desc = texas.14.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.14.o1
+		add_ideas = idea_tex_enforced_loyalty
+	}
+}
+#purge_the_unloyal
+country_event = {
+	id = texas.15
+	title = texas.15.t
+	desc = texas.15.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#let them protest
+	option = {
+		name = texas.15.o1
+		country_event = { id = texas.57 }
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = centrist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.05
+		}
+	}
+	#crack down 
+	option = {
+		name = texas.15.o2
+		country_event = { id = texas.58 }
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = centrist
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = national_conservative
+			popularity = -0.05
+		}
+	}
+}
+#antonio burr speaks out
+country_event = {
+	id = texas.57
+	title = texas.57.t
+	desc = texas.57.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#arrest him
+	option = {
+		name = texas.57.o1
+		
+	}
+	#let him shout
+	option = {
+		name = texas.57.o2
+		country_event = { id = texas.59 }
+	}
+	
+}
+#Jim Jones joins the protest
+country_event = {
+	id = texas.58
+	title = texas.58.t
+	desc = texas.58.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#get rid of the old fool
+	option = {
+		name = texas.58.o1
+		country_event = { id = texas.65 }
+	}
+	#what is he gonna do
+	option = {
+		name = texas.58.o2
+		country_event = { id = texas.61 }
+	}
+	
+}
+#burrs are planning
+country_event = {
+	id = texas.59
+	title = texas.59.t
+	desc = texas.59.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#investigate
+	option = {
+		name = texas.59.o1
+		country_event = { id = texas.64 }
+	}
+	#its nothing
+	option = {
+		name = texas.59.o2
+		country_event = { id = texas.60 }
+	}
+	
+}
+#burrs conspriacy succeeds
+country_event = {
+	id = texas.60
+	title = texas.60.t
+	desc = texas.60.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#hail burr
+	option = {
+		name = texas.60.o1
+		 remove_ideas = idea_tex_sweeping_reform
+		remove_ideas = idea_tex_peoples_support
+		remove_ideas = idea_tex_silence_opposition
+		remove_ideas = idea_tex_expanded_police 
+		remove_ideas = idea_tex_enforced_loyalty 
+		add_ideas = idea_tex_copeland_loyalist 
+		 set_country_flag = conspiracy_succeeds
+		set_politics = {
+	        ruling_party = monarchist
+	        elections_allowed = no
+      		  }
+		set_party_name = { ideology = monarchist long_name = TEX_house_of_burr_long name = TEX_house_of_burr}
+		add_popularity = {
+			ideology = monarchist
+			popularity = 0.2
+		}
+		load_focus_tree = {
+			tree = texas_burr_tree
+			keep_completed = yes
+		}
+	}
+	
+	
+}
+#David Koresh Joins Jim Jones
+country_event = {
+	id = texas.61
+	title = texas.61.t
+	desc = texas.61.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#what are they doing
+	option = {
+		name = texas.61.o1
+		country_event = { id = texas.62 }
+	}
+	
+}
+#march from waco
+country_event = {
+	id = texas.62
+	title = texas.62.t
+	desc = texas.62.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#send the army
+	option = {
+		name = texas.62.o1
+		country_event = { id = texas.66 }
+	}
+	#flee houston
+	option = {
+		name = texas.62.o2
+		country_event = { id = texas.63 }
+	}
+	
+}
+#david and Jim take over
+country_event = {
+	id = texas.63
+	title = texas.63.t
+	desc = texas.63.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.63.o1
+		 remove_ideas = idea_tex_sweeping_reform
+		remove_ideas = idea_tex_peoples_support
+		remove_ideas = idea_tex_silence_opposition
+		remove_ideas = idea_tex_expanded_police 
+		remove_ideas = idea_tex_enforced_loyalty 
+		add_ideas = idea_tex_copeland_loyalist 
+		set_country_flag = cults_prevail
+		set_politics = {
+	        ruling_party = communist
+	        elections_allowed = no
+      		  }
+		create_country_leader = {
+	        name = "David Koresh"
+	        picture = "Portrait_David_Koresh.dds"
+	        ideology = national_bolshevik_ideology
+		traits = { trait_the_lamb }
+        }
+		set_party_name = { ideology = national_bolshevik long_name = TEX_branch_davidians_long name = TEX_branch_davidians}
+		add_popularity = {
+			ideology = communist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = national_bolshevik
+			popularity = 0.2
+		}
+		load_focus_tree = {
+			tree = texas_cult_tree
+			keep_completed = yes
+		}
+	}
+	
+}
+#burr arested 
+country_event = {
+	id = texas.64
+	title = texas.64.t
+	desc = texas.64.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.64.o1
+		
+	}
+	
+}
+#Jones found dead
+country_event = {
+	id = texas.65
+	title = texas.65.t
+	desc = texas.65.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.65.o1
+		
+	}
+	
+}
+#waco compound burrned
+country_event = {
+	id = texas.66
+	title = texas.66.t
+	desc = texas.66.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.66.o1
+		
+	}
+	
+}
+#won the war 
+country_event = {
+	id = texas.16
+	title = texas.16.t
+	desc = texas.16.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.16.o1
+		if = {
+			limit = {
+				has_ideas = {
+					name = idea_tex_remember_the_alamo 
+				}
+			}
+			remove_ideas = idea_tex_remember_the_alamo 
+		}
+		if = {
+			limit = {
+				has_ideas = {
+					name = idea_tex_desperate_defence
+				}
+			}
+			remove_ideas = idea_tex_desperate_defence
+		}
+		 set_country_flag = tex_a_great_victory
+	}
+}
+#we are americans 
+country_event = {
+	id = texas.17
+	title = texas.17.t
+	desc = texas.17.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.17.o1
+		swap_ideas = {
+				remove_idea = idea_tex_texan_identity
+				add_idea = idea_tex_we_are_americans
+			}
+	}
+}
+#pardon the remnents 
+country_event = {
+	id = texas.18
+	title = texas.18.t
+	desc = texas.18.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.18.o1
+		
+	}
+}
+
+#honor the founders 
+country_event = {
+	id = texas.19
+	title = texas.19.t
+	desc = texas.19.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.19.o1
+		swap_ideas = {
+				remove_idea = idea_tex_uphold_the_constitution
+				add_idea = idea_tex_honor_the_founders
+			}
+	}
+}
+#revive the golden circle
+country_event = {
+	id = texas.20
+	title = texas.20.t
+	desc = texas.20.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.20.o1
+		set_cosmetic_tag = TEX_goldencircle
+	}
+}
+#work with the kkk
+country_event = {
+	id = texas.21
+	title = texas.21.t
+	desc = texas.21.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.21.o1
+		add_ideas = idea_tex_intergration_of_the_kkk 
+	}
+}
+
+#a more perfct union 
+country_event = {
+	id = texas.22
+	title = texas.22.t
+	desc = texas.22.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = texas.22.o1
+		swap_ideas = {
+				remove_idea = idea_tex_a_free_texas
+				add_idea = idea_tex_more_perfect_union
+			}
+	}
+}
+#Confederate states proclaimed
+country_event = {
+	id = texas.23
+	title = texas.23.t
+	desc = texas.23.d
+	picture = confederate_states_proclaimed
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.23.o1
+		set_cosmetic_tag = CSA
+	}
+	
+}
+
+#the lost cause 
+country_event = {
+	id = texas.24
+	title = texas.24.t
+	desc = texas.24.d
+	picture = confederate_states_proclaimed
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.24.o1
+		
+	}
+	
+}
+
+#dc for virginia
+country_event = {
+	id = texas.25
+	title = texas.25.t
+	desc = texas.25.d
+	picture = confederate_states_proclaimed
+	
+	is_triggered_only = yes
+	
+	option = {   #Accept the offer
+		name = texas.25.o1
+		ai_chance = {
+			factor = 60
+		}
+		TEX = {
+			country_event = { id = texas.27 }
+		}
+	}
+	
+	option = {   #We don't deal with traitors
+		name = texas.25.o2
+		ai_chance = {
+			factor = 40
+		}
+		TEX = {
+			country_event = { id = texas.28 }
+		}
+	}
+	
+}
+
+#request mexican land
+country_event = {
+	id = texas.26
+	title = texas.26.t
+	desc = texas.26.d
+	picture = confederate_states_proclaimed
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.26.o1
+		
+	}
+	
+}
+
+#Commonwealth accepts DC for Virginia offer
+country_event = {
+	id = texas.27
+	title = texas.27.t
+	desc = texas.27.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.27.o1
+		TEX = {
+		    transfer_state = 902
+		}
+		902 = {
+		    add_core_of = USA
+			remove_core_of = FROM
+		}
+		FROM = {
+		    transfer_state = 901
+		}
+		901 = {
+		    add_core_of = FROM
+			remove_core_of = USA
+		}
+	}
+	
+}
+
+#Commonwealth refuses DC for Virginia offer
+country_event = {
+	id = texas.28
+	title = texas.28.t
+	desc = texas.28.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.28.o1
+		add_political_power = -25
+	}
+	
+}
+#join the defence pack
+country_event = {
+	id = texas.29
+	title = texas.29.t
+	desc = texas.29.d
+	picture = confederate_states_proclaimed
+	
+	is_triggered_only = yes
+	
+	option = {   #Join
+		name = texas.29.o1
+		TEX = {
+		    add_to_faction = ROOT
+		}
+		TEX = {
+		    country_event = { id = texas.30 }
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+	
+	option = {   #Nah
+		name = texas.29.o2
+		TEX = {
+		    country_event = { id = texas.31 }
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+	
+}
+#accept faction
+country_event = {
+	id = texas.30
+	title = texas.30.t
+	desc = texas.30.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.30.o1
+		
+	}
+	
+}
+#refuse faction
+country_event = {
+	id = texas.31
+	title = texas.31.t
+	desc = texas.31.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.31.o1
+	}
+	
+}
+
+#a great victory
+country_event = {
+	id = texas.32
+	title = texas.32.t
+	desc = texas.32.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.32.o1
+	}
+	
+}
+#Illinois - republic proposes union
+country_event = {
+	id = texas.33
+	title = texas.33.t
+	desc = texas.33.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #Yes
+		name = texas.33.o1
+		ai_chance = {
+			factor = 90
+		}
+		TEX = {
+			country_event = { id = texas.34 }
+		}
+	}
+	
+	option = {   #No
+		name = texas.33.o2
+		ai_chance = {
+			factor = 10
+		}
+		TEX = {
+			country_event = { id = texas.35 }
+		}
+	}
+	
+}
+
+#Illinois accepts
+country_event = {
+	id = texas.34
+	title = texas.34.t
+	desc = texas.34.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.34.o1
+		TEX = {
+		    annex_country = { target = ILL }
+		}
+		ILL = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+
+#Illinois refuses
+country_event = {
+	id = texas.35
+	title = texas.35.t
+	desc = texas.35.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.35.o1
+		create_wargoal = {
+			type = annex_everything
+			target = ILL
+		}
+	}
+	
+}
+
+#prepare for union
+country_event = {
+	id = texas.36
+	title = texas.36.t
+	desc = texas.36.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.36.o1
+	}
+	
+}
+
+#Midwest - republic proposes union
+country_event = {
+	id = texas.37
+	title = texas.37.t
+	desc = texas.37.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #Yes
+		name = texas.37.o1
+		ai_chance = {
+			factor = 70
+		}
+		TEX = {
+			country_event = { id = texas.38 }
+		}
+	}
+	
+	option = {   #No
+		name = texas.37.o2
+		ai_chance = {
+			factor = 30
+		}
+		TEX = {
+			country_event = { id = texas.39 }
+		}
+	}
+	
+}
+
+#Midwest accepts
+country_event = {
+	id = texas.38
+	title = texas.38.t
+	desc = texas.38.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.38.o1
+		TEX = {
+		    annex_country = { target = MWA }
+		}
+		MWA = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+
+#Midwest refuses
+country_event = {
+	id = texas.39
+	title = texas.39.t
+	desc = texas.39.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.39.o1
+		create_wargoal = {
+			type = annex_everything
+			target = MWA
+		}
+	}
+	
+}
+
+#great lakes - republic proposes union
+country_event = {
+	id = texas.40
+	title = texas.40.t
+	desc = texas.40.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #Yes
+		name = texas.40.o1
+		ai_chance = {
+			factor = 70
+		}
+		TEX = {
+			country_event = { id = texas.41 }
+		}
+	}
+	
+	option = {   #No
+		name = texas.40.o2
+		ai_chance = {
+			factor = 30
+		}
+		TEX = {
+			country_event = { id = texas.42 }
+		}
+	}
+	
+}
+
+#great lakes accepts
+country_event = {
+	id = texas.41
+	title = texas.41.t
+	desc = texas.41.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.41.o1
+		TEX = {
+		    annex_country = { target = GRL }
+		}
+		GRL = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+
+#great lakes refuses
+country_event = {
+	id = texas.42
+	title = texas.42.t
+	desc = texas.42.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.42.o1
+		create_wargoal = {
+			type = annex_everything
+			target = GRL
+		}
+	}
+	
+}
+
+#utah - republic proposes union
+country_event = {
+	id = texas.43
+	title = texas.43.t
+	desc = texas.43.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #Yes
+		name = texas.43.o1
+		ai_chance = {
+			factor = 70
+		}
+		TEX = {
+			country_event = { id = texas.44 }
+		}
+	}
+	
+	option = {   #No
+		name = texas.43.o2
+		ai_chance = {
+			factor = 30
+		}
+		TEX = {
+			country_event = { id = texas.45 }
+		}
+	}
+	
+}
+
+#utah accepts
+country_event = {
+	id = texas.44
+	title = texas.44.t
+	desc = texas.44.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.44.o1
+		TEX = {
+		    annex_country = { target = UTA }
+		}
+		UTA = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+
+#great lakes refuses
+country_event = {
+	id = texas.45
+	title = texas.45.t
+	desc = texas.45.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.45.o1
+		create_wargoal = {
+			type = annex_everything
+			target = UTA
+		}
+	}
+	
+}
+
+#arizona - republic proposes union
+country_event = {
+	id = texas.46
+	title = texas.46.t
+	desc = texas.46.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #Yes
+		name = texas.46.o1
+		ai_chance = {
+			factor = 70
+		}
+		TEX = {
+			country_event = { id = texas.47 }
+		}
+	}
+	
+	option = {   #No
+		name = texas.46.o2
+		ai_chance = {
+			factor = 30
+		}
+		TEX = {
+			country_event = { id = texas.48 }
+		}
+	}
+	
+}
+
+#arizona accepts
+country_event = {
+	id = texas.47
+	title = texas.47.t
+	desc = texas.47.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.47.o1
+		TEX = {
+		    annex_country = { target = ARI }
+		}
+		ARI = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+
+#arizona refuses
+country_event = {
+	id = texas.48
+	title = texas.48.t
+	desc = texas.48.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.48.o1
+		create_wargoal = {
+			type = annex_everything
+			target = ARI
+		}
+	}
+	
+}
+
+#commonwealth - republic proposes union
+country_event = {
+	id = texas.49
+	title = texas.49.t
+	desc = texas.49.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #Yes
+		name = texas.49.o1
+		ai_chance = {
+			factor = 40
+		}
+		TEX = {
+			country_event = { id = texas.50 }
+		}
+	}
+	
+	option = {   #No
+		name = texas.49.o2
+		ai_chance = {
+			factor = 60
+		}
+		TEX = {
+			country_event = { id = texas.51 }
+		}
+	}
+	
+}
+
+#commonwealth accepts
+country_event = {
+	id = texas.50
+	title = texas.50.t
+	desc = texas.50.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.50.o1
+		TEX = {
+		    annex_country = { target = NEA }
+		}
+		NEA = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+
+#commonwealth refuses
+country_event = {
+	id = texas.51
+	title = texas.51.t
+	desc = texas.51.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.51.o1
+		create_wargoal = {
+			type = annex_everything
+			target = NEA
+		}
+	}
+	
+}
+
+#commonwealth 2 - republic proposes union
+country_event = {
+	id = texas.52
+	title = texas.52.t
+	desc = texas.52.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   #Yes
+		name = texas.52.o1
+		ai_chance = {
+			factor = 50
+		}
+		TEX = {
+			country_event = { id = texas.53 }
+		}
+	}
+	
+	option = {   #No
+		name = texas.42.o2
+		ai_chance = {
+			factor = 50
+		}
+		TEX = {
+			country_event = { id = texas.54 }
+		}
+	}
+	
+}
+
+#commonwealth 2 accepts
+country_event = {
+	id = texas.53
+	title = texas.53.t
+	desc = texas.53.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.53.o1
+		TEX = {
+		    annex_country = { target = AMC }
+		}
+		AMC = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+
+#commonwealth 2 refuses
+country_event = {
+	id = texas.54
+	title = texas.54.t
+	desc = texas.54.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.54.o1
+		create_wargoal = {
+			type = annex_everything
+			target = AMC
+		}
+	}
+	
+}
+
+#former republicans announce new party
+country_event = {
+	id = texas.55
+	title = texas.55.t
+	desc = texas.55.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.55.o1
+		set_party_name = { ideology = nationalist long_name = TEX_patriot_party name = TEX_patriot_party }
+	}
+	
+}
+
+#former KKK members form new party
+country_event = {
+	id = texas.56
+	title = texas.56.t
+	desc = texas.56.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.56.o1
+		set_party_name = { ideology = fascist long_name = TEX_freedom_party name = TEX_freedom_party }
+	}
+	
+}
+#cults prevail
+country_event = {
+	id = texas.67
+	title = texas.67.t
+	desc = texas.67.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.67.o1
+		add_political_power = 150
+	}
+	
+}
+#sweep heathans
+country_event = {
+	id = texas.68
+	title = texas.68.t
+	desc = texas.68.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.68.o1
+		remove_ideas = idea_tex_copeland_loyalist 
+	}
+	
+}
+#new state
+country_event = {
+	id = texas.69
+	title = texas.69.t
+	desc = texas.69.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = { #koresh wins
+		name = texas.69.o1
+		set_country_flag = davidian_takeover
+		set_politics = {
+	       		 ruling_party = national_bolshevik
+	       		 elections_allowed = no
+        	}
+	}
+	option = { #jones wins
+		name = texas.69.o2
+		set_country_flag = jones_stays
+	}
+	option = { #power sharing 
+		name = texas.69.o3
+		set_country_flag = power_sharing_agreement
+	}
+}
+
+#davidian takeover
+country_event = {
+	id = texas.70
+	title = texas.70.t
+	desc = texas.70.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.70.o1
+		
+	}
+	
+}
+#jonesist purged
+country_event = {
+	id = texas.71
+	title = texas.71.t
+	desc = texas.71.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.71.o1
+		
+	}
+	
+}
+#messiah rises
+country_event = {
+	id = texas.72
+	title = texas.72.t
+	desc = texas.72.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.72.o1
+		add_ideas = idea_tex_the_messiah 
+	}
+	
+}
+#Power sharing 
+country_event = {
+	id = texas.73
+	title = texas.73.t
+	desc = texas.73.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.73.o1
+		set_country_flag = koresh_chosen
+	}
+	option = {
+		name = texas.73.o2
+		set_country_flag = jones_chosen	
+	}
+	
+}
+#koresh leads pack
+country_event = {
+	id = texas.74
+	title = texas.74.t
+	desc = texas.74.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.74.o1
+		set_country_flag = koresh_chosen
+	}
+	
+	
+}
+#Jones takes charge
+country_event = {
+	id = texas.75
+	title = texas.75.t
+	desc = texas.75.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.75.o1
+		set_country_flag = jones_chosen
+	}
+	
+	
+}
+#Jones secures control
+country_event = {
+	id = texas.76
+	title = texas.76.t
+	desc = texas.76.d
+	picture = texan_senate
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	#gloryous
+	option = {
+		name = texas.76.o1
+		
+	}
+	
+	
+}
+#end of the republic
+country_event = {
+	id = texas.77
+	title = texas.77.t
+	desc = texas.77.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.77.o1
+	}
+	
+}
+#kingdom of david 
+country_event = {
+	id = texas.78
+	title = texas.78.t
+	desc = texas.78.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.78.o1
+		set_cosmetic_tag = TEX_KingdomofDavid 
+	}
+	
+}
+#talk with duke and the kkk 
+country_event = {
+	id = texas.79
+	title = texas.79.t
+	desc = texas.79.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.79.o1
+		add_ideas = idea_tex_intergration_of_the_kkk
+	}
+	
+}
+#execute the generals
+country_event = {
+	id = texas.80
+	title = texas.80.t
+	desc = texas.80.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.80.o1
+		add_timed_idea = { idea = idea_tex_generals_executed  days = 120 }
+	}
+	
+}
+#the white phoenix
+country_event = {
+	id = texas.81
+	title = texas.81.t
+	desc = texas.81.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.81.o1
+	add_manpower = 2500
+	create_corps_commander = {
+	name = "Mike Pence"
+	picture = "Portrait_TEX_Mike_Pence.dds"
+	traits = { guerilla_fighter trickster }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+	}
+	
+}
+#meeting pence
+country_event = {
+	id = texas.82
+	title = texas.82.t
+	desc = texas.82.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.82.o1
+		TEX = {
+			country_event = { id = texas.92 }
+		}
+	}
+	option = {   
+		name = texas.82.o2
+		TEX = {
+			country_event = { id = texas.93 }
+		}
+	}
+}
+#holy union
+country_event = {
+	id = texas.83
+	title = texas.83.t
+	desc = texas.83.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.83.o1
+		set_cosmetic_tag = TEX_unionofamerica
+	}
+	
+}
+#execution of duke
+country_event = {
+	id = texas.84
+	title = texas.84.t
+	desc = texas.84.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.84.o1
+		add_ideas = idea_tex_end_of_the_kkk 
+	}
+	
+}
+#mission to the soviets
+country_event = {
+	id = texas.85
+	title = texas.85.t
+	desc = texas.85.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.85.o1
+	}
+	
+}
+#mission to the chinese
+country_event = {
+	id = texas.86
+	title = texas.86.t
+	desc = texas.86.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.86.o1
+	}
+	
+}
+#negotiate unification
+country_event = {
+	id = texas.87
+	title = texas.87.t
+	desc = texas.87.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.87.o1
+		TEX = {
+			country_event = { id = texas.94 }
+		}
+	}
+	option = {   
+		name = texas.87.o2
+		TEX = {
+			country_event = { id = texas.95 }
+		}
+	}
+	
+}
+#conspriacy succeeds
+country_event = {
+	id = texas.88
+	title = texas.88.t
+	desc = texas.88.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.88.o1
+		add_political_power = 150
+	}
+	
+}
+#ends copelands loyalist
+country_event = {
+	id = texas.89
+	title = texas.89.t
+	desc = texas.89.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.89.o1
+		remove_ideas = idea_tex_copeland_loyalist 
+	}
+	
+}
+#prepare coranation
+country_event = {
+	id = texas.90
+	title = texas.90.t
+	desc = texas.90.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.90.o1
+		set_country_flag = antonio_coranated
+		country_event = { id = texas.91 }
+	}
+	
+	option = {   
+		name = texas.90.o2
+		set_country_flag = richard_coranated
+		country_event = { id = texas.96 }
+	}
+
+	option = {   
+		name = texas.90.o3
+		set_country_flag = sherri_coranated
+		country_event = { id = texas.97 }
+	}
+	
+}
+#antonios burrs corantion
+country_event = {
+	id = texas.91
+	title = texas.91.t
+	desc = texas.91.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.91.o1
+		create_country_leader = {
+	        name = "Antonio I"
+	        picture = "Portrait_TEX_Antonio_Burr.dds"
+	        ideology = absolute_monarchist
+		traits = { trait_eccentric_monarch }
+        }
+	}
+	
+}
+#offer pence agrees to unify
+country_event = {
+	id = texas.92
+	title = texas.92.t
+	desc = texas.92.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.92.o1
+		TEX = {
+		    annex_country = { target = AMS }
+		}
+		AMS = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+#offer pence refuses to unify
+country_event = {
+	id = texas.93
+	title = texas.93.t
+	desc = texas.93.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.93.o1
+		create_wargoal = {
+			type = annex_everything
+			target = AMS
+		}
+	}
+	
+}
+#offer cali agrees to unify
+country_event = {
+	id = texas.94
+	title = texas.94.t
+	desc = texas.94.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.94.o1
+		TEX = {
+		    annex_country = { target = PCA }
+		}
+		PCA = {	
+			every_army_leader = {
+			set_nationality = TEX
+				}
+		}	
+	}
+	
+}
+#offer cali refuses to unify
+country_event = {
+	id = texas.95
+	title = texas.95.t
+	desc = texas.95.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.95.o1
+		create_wargoal = {
+			type = annex_everything
+			target = PCA
+		}
+	}
+	
+}
+#richard burrs corantion
+country_event = {
+	id = texas.96
+	title = texas.96.t
+	desc = texas.96.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.96.o1
+		create_country_leader = {
+	        name = "Richard I"
+	        picture = "Portrait_TEX_Richard_Burr.dds"
+	        ideology = absolute_monarchist
+        }
+	}
+	
+}
+#Sherri burrs corantion
+country_event = {
+	id = texas.97
+	title = texas.97.t
+	desc = texas.97.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.97.o1
+		create_country_leader = {
+	        name = "Sherri I"
+	        picture = "Portrait_TEX_Sherri_Burr.dds"
+	        ideology = absolute_monarchist
+        }
+	}
+	
+}
+#picking a prime minister
+country_event = {
+	id = texas.98
+	title = texas.98.t
+	desc = texas.98.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   #conservative
+		name = texas.98.o1
+		add_ideas = idea_king_richard_burr 
+		set_politics = {
+	        ruling_party = national_conservative
+	        elections_allowed = no
+      		  }
+		create_country_leader = {
+	        name = "Greg Abbott"
+	        picture = "Portrait_TEX_Greg_Abbott.dds"
+	        ideology = american_conservative
+		traits = { trait_southern_conservitive }
+        }
+	}
+	option = {   #nationalist
+		name = texas.98.o2
+		add_ideas = idea_king_richard_burr 
+		set_politics = {
+	        ruling_party = nationalist
+	        elections_allowed = no
+      		  }
+		create_country_leader = {
+	        name = "Larry Kilgore"
+	        picture = "Portrait_TEX_Larry_Kilgore.dds"
+	        ideology = american_nationalist
+		traits = { trait_texan_nationalist }
+        }
+	}
+	option = {   #centrist
+		name = texas.98.o3
+		add_ideas = idea_king_richard_burr 
+		set_politics = {
+	        ruling_party = centrist
+	        elections_allowed = no
+      		  }
+		create_country_leader = {
+	        name = "Rand Paul"
+	        picture = "Portrait_TEX_Rand_Paul.dds"
+	        ideology = right_libertarian
+		traits = { trait_conservitive_libertarian  }
+        }
+	}
+	
+}
+#electing a prime minister
+country_event = {
+	id = texas.99
+	title = texas.99.t
+	desc = texas.99.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   #conservative
+		name = texas.99.o1
+		add_ideas = idea_queen_sherri_burr 
+		set_politics = {
+	        ruling_party = national_conservative
+	        elections_allowed = no
+      		  }
+		create_country_leader = {
+	        name = "Greg Abbott"
+	        picture = "Portrait_TEX_Greg_Abbott.dds"
+	        ideology = american_conservative
+		traits = { trait_southern_conservitive }
+        	}
+	}
+	option = {   #centrist
+		name = texas.99.o2
+		add_ideas = idea_queen_sherri_burr 
+		set_politics = {
+	        ruling_party = centrist
+	        elections_allowed = no
+      		  }
+		create_country_leader = {
+	        name = "Rand Paul"
+	        picture = "Portrait_TEX_Rand_Paul.dds"
+	        ideology = right_libertarian
+		traits = { trait_conservitive_libertarian } 
+        	}
+	}
+	option = {   #liberal
+		name = texas.99.o3
+		add_ideas = idea_queen_sherri_burr 
+		set_politics = {
+	        ruling_party = liberal
+	        elections_allowed = no
+      		  }
+		}
+	option = {   #New democrat
+		name = texas.99.o4
+		add_ideas = idea_queen_sherri_burr 
+		set_politics = {
+	        ruling_party = new_democrat
+	        elections_allowed = no
+      		  }
+	}
+	
+}
+#death of Im Jones
+country_event = {
+	id = texas.100
+	title = texas.100.t
+	desc = texas.100.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TEX
+		date > 2017.3.1
+		date < 2017.3.20
+		has_country_leader = { ruling_only = yes name = "Jim Jones" }
+	}
+	option = {   
+		name = texas.100.o1
+		kill_country_leader = yes
+	create_country_leader = {
+	        name = "Stephen Jones"
+	        picture = "Portrait_Stephen_Jones.dds"
+	        ideology = marxist
+        }
+	}
+	option = {   
+		name = texas.100.o2
+		kill_country_leader = yes
+	create_country_leader = {
+	        name = "Jim Jones JR."
+	        picture = "Portrait_Jim_jones_JR.dds"
+	        ideology = marxist
+        }
+	}
+	
+}
+#burr kingdom wants to join faction
+country_event = {
+	id = texas.101
+	title = texas.101.t
+	desc = texas.101.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   #yes
+		name = texas.101.o1
+		USA = {
+		country_event = { id = texas.102 }
+		}
+		add_to_faction = TEX
+		CAN = {
+		    add_ai_strategy = {
+		        type = alliance
+		        id = "TEX"
+		        value = 120
+	       	 	}
+		}	
+	}
+	option = {   #no
+		name = texas.101.o2
+		USA = {
+		country_event = { id = texas.103  }
+		}
+	}
+}
+country_event = { #yes
+	id = texas.102
+	title = texas.102.t
+	desc = texas.102.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.102.o1
+		
+	}
+	
+}
+country_event = { #no
+	id = texas.103
+	title = texas.103.t
+	desc = texas.103.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.103.o1
+		
+	}
+	
+}
+#empire rises
+country_event = { 
+	id = texas.104
+	title = texas.104.t
+	desc = texas.104.d
+	picture = washington_deal
+	
+	is_triggered_only = yes
+	
+	option = {   
+		name = texas.104.o1
+		
+	}
+	
+}
+#2014 election # fascist
+country_event = { 
+	id = texas.105
+	title = texas.105.t
+	desc = texas.105.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2014.11.1
+		date < 2014.11.30
+		has_government = fascist
+		has_completed_focus = TEX_fascist_victory
+	}
+	#shits rigged
+	option = {   
+		name = texas.105.o1
+		
+	}
+	
+}
+#2014 primaries - rick perry is President
+country_event = {
+	id = texas.106
+	title = texas.106.t
+	desc = texas.106.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2014.5.1
+		date < 2014.5.30
+		has_country_flag = rick_perry_won
+	}
+	
+	option = {   #Greg Abbott
+		name = texas.106.o1
+		set_country_flag = candidate_greg_abbot
+	}
+	
+	option = {   #Lisa Fritsch
+		name = texas.106.o2
+		set_country_flag = candidate_lisa_fritsch
+	}
+	option = {   #Larry Kilgore
+		name = texas.106.o3
+		set_country_flag = candidate_larry_kilgore
+	}
+	option = {   #Rick Perry
+		name = texas.106.o4
+		set_country_flag = candidate_rick_perry
+	}
+}
+#2014 primaries opposition - rick perry is President
+country_event = {
+	id = texas.111
+	title = texas.111.t
+	desc = texas.111.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2014.5.1
+		date < 2014.5.30
+		has_country_flag = rick_perry_won
+	}
+	
+	option = {   #Mark Tippetts
+		name = texas.111.o1
+		set_country_flag = candidate_mark_tibbetts
+	}
+	
+	option = {   #Kathie Glass
+		name = texas.111.o2
+		set_country_flag = candidate_kathie_glass
+	}
+	option = {   #Rand Paul
+		name = texas.111.o3
+		set_country_flag = candidate_rand_paul
+	}
+	option = {   #Patrick Wynne
+		name = texas.111.o4
+		set_country_flag = candidate_patrick_wynne
+	}
+}
+#2011 rick perry two party state formilized
+country_event = { 
+	id = texas.107
+	title = texas.107.t
+	desc = texas.107.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2011.11.1
+		date < 2011.11.30
+		has_government = nationalist
+		has_country_flag = rick_perry_won
+	}
+	
+	option = {   
+		name = texas.107.o1
+		set_party_name = { ideology = national_conservative long_name = TEX_rickperry_nc_party_long name = TEX_rickperry_nc_party }
+		set_party_name = { ideology = centrist long_name = TEX_rickperry_c_party_long name = TEX_rickperry_c_party }
+		set_party_name = { ideology = liberal long_name = TEX_rickperry_l_party_long name = TEX_rickperry_l_party }
+	}
+	
+}
+#2011 Joes Strous two party state formilized
+country_event = { 
+	id = texas.108
+	title = texas.108.t
+	desc = texas.108.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2011.11.1
+		date < 2011.11.30
+		has_government = national_conservative
+		has_country_flag = dixiecrat_victory
+	}
+	
+	option = {   
+		name = texas.108.o1
+		set_party_name = { ideology = nationalist long_name = TEX_dixiecrat_n_party_long name = TEX_dixiecrat_n_party }
+		set_party_name = { ideology = centrist long_name = TEX_dixiecrat_c_party_long name = TEX_dixiecrat_c_party }
+		set_party_name = { ideology = liberal long_name = TEX_dixiecrat_l_party_long name = TEX_dixiecrat_l_party }
+	}
+	
+}
+#2011 Ron Paul two party state formilized
+country_event = { 
+	id = texas.109
+	title = texas.109.t
+	desc = texas.109.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2011.11.1
+		date < 2011.11.30
+		has_government = centrist
+		has_country_flag = ron_paul_won
+	}
+	
+	option = {   
+		name = texas.109.o1
+		set_party_name = { ideology = nationalist long_name = TEX_ronpaul_n_party_long name = TEX_ronpaul_n_party }
+		set_party_name = { ideology = national_conservative long_name = TEX_ronpaul_c_party_long name = TEX_ronpaul_c_party }
+		set_party_name = { ideology = liberal long_name = TEX_ronpaul_l_party_long name = TEX_ronpaul_l_party }
+	}
+	
+}
+#2014 primaries - Joe Straus is President
+country_event = {
+	id = texas.110
+	title = texas.110.t
+	desc = texas.110.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2014.5.1
+		date < 2014.5.30
+		has_country_flag = dixiecrat_victory
+	}
+	
+	option = {   #Joe Straus
+		name = texas.110.o1
+		set_country_flag = candidate_joe_straus
+	}
+	
+	option = {   #Dan Patrick
+		name = texas.110.o2
+		set_country_flag = candidate_dan_patrick
+	}
+	option = {   #David Dewhurst
+		name = texas.110.o2
+		set_country_flag = candidate_david_dewurst
+	}
+}
+#2014 opposition primaries - Joe Straus is President
+country_event = {
+	id = texas.112
+	title = texas.112.t
+	desc = texas.112.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2014.5.1
+		date < 2014.5.30
+		has_country_flag = dixiecrat_victory
+	}
+	
+	option = {   #Rand Paul
+		name = texas.110.o1
+		set_country_flag = candidate_rand_paul
+	}
+	
+	option = {   #Mark Tibbetts
+		name = texas.110.o2
+		set_country_flag = candidate_mark_tibbetts
+	}
+	option = {   #Patrick Wynne
+		name = texas.110.o2
+		set_country_flag = candidate_patrick_wynne
+	}
+}
+#2014 primaries - Ron Paul is President
+country_event = {
+	id = texas.112
+	title = texas.112.t
+	desc = texas.112.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2014.5.1
+		date < 2014.5.30
+		has_country_flag = dixiecrat_victory
+	}
+	
+	option = {   #Ron Paul
+		name = texas.112.o1
+		set_country_flag = candidate_ron_paul
+	}
+	
+	option = {   #Mark Tibbetts
+		name = texas.112.o2
+		set_country_flag = candidate_mark_tibbetts
+	}
+	option = {   #Patrick Wynne
+		name = texas.112.o2
+		set_country_flag = candidate_patrick_wynne
+	}
+}
+#2014 oppositon primaries - Ron Paul is President
+country_event = {
+	id = texas.113
+	title = texas.113.t
+	desc = texas.113.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = TEX
+		date > 2014.5.1
+		date < 2014.5.30
+		has_country_flag = dixiecrat_victory
+	}
+	
+	option = {   #Greg Abbott
+		name = texas.113.o1
+		set_country_flag = candidate_joe_straus
+	}
+	
+	option = {   #Larry Kilgore
+		name = texas.113.o2
+		set_country_flag = candidate_lisa_fritsch
+	}
+	
+}
+#Texas Opening event
+country_event = { 
+	id = texas.114
+	title = texas.114.t
+	desc = texas.114.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {   
+		name = texas.114.o1
+		hidden_effect = {
+			country_event = { id = texas.1 days = 520 }
+			country_event = {
+				id = texas.115
+				days = 30
+			}
+		}
+	}
+	
+}
+#cracks in the coalition
+country_event = { 
+	id = texas.115
+	title = texas.115.t
+	desc = texas.115.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {   
+		name = texas.115.o1
+		add_popularity = {
+			ideology = nationalist
+			popularity = -0.10
+		}
+	hidden_effect = {
+			country_event = {
+				id = texas.116
+				days = 30
+			}
+		}
+	}
+	
+}
+#Formation of the Dixie Party
+country_event = { 
+	id = texas.116
+	title = texas.116.t
+	desc = texas.116.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {   
+		name = texas.116.o1
+		set_party_name = { ideology = national_conservative long_name = TEX_national_straus_conservative_party_Long name = TEX_national_straus_conservative_party }
+		hidden_effect = {
+			country_event = {
+				id = texas.117
+				days = 30
+			}
+		}
+	}
+	
+}
+#Ron Paul Announces Candidacy
+country_event = { 
+	id = texas.117
+	title = texas.117.t
+	desc = texas.117.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {   
+		name = texas.117.o1
+		set_party_name = { ideology = centrist long_name = TEX_centrist_paul_party_Long name = TEX_centrist_paul_party }
+		set_party_name = { ideology = liberal long_name =  TEX_liberal_paul_party_Long name =  TEX_liberal_paul_party }
+		hidden_effect = {
+			country_event = {
+				id = texas.118
+				days = 30
+			}
+		}
+
+	}
+	
+}
+#The christian Revival Party
+country_event = { 
+	id = texas.118
+	title = texas.118.t
+	desc = texas.118.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {   
+		name = texas.118.o1
+		set_party_name = { ideology = fascist long_name = TEX_fascist_copeland_party_Long name = TEX_fascist_copeland_party }
+		hidden_effect = {
+			country_event = {
+				id = texas.119
+				days = 30
+			}
+		}
+	}
+	
+}
+#Rick Perry's New Party
+country_event = { 
+	id = texas.119
+	title = texas.119.t
+	desc = texas.119.d
+	picture = washington_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {   
+		name = texas.119.o1
+		set_party_name = { ideology = nationalist long_name = TEX_nationalist_perry_party_Long name = TEX_nationalist_perry_party }
+	}
+	
+}

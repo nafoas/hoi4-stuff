@@ -1,0 +1,120 @@
+focus_tree = {
+	id = east_anglia_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SCO
+		}
+	}
+	continuous_focus_position = {
+		x = 50
+		y = 3200
+	}
+
+	default = no
+	focus = {
+	id = EAG_Attack_Kent
+	icon = attacking_kent_icon
+	cost = 1
+	x = 5
+	y = 0
+	completion_reward = {
+	declare_war_on = {
+		target = KET
+	}
+	}
+}
+
+focus = {
+	id = EAG_Attack_Merica
+	icon = mercia_flag_icon
+	cost = 1
+	x = 7
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = MER
+		}
+	}
+}
+
+focus = {
+	id = EAG_Attack_Wessex
+	icon = attacking_wessex_icon
+	cost = 1
+	x = 9
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = WES
+		}
+	}
+}
+
+focus = {
+	id = EAG_Take_Cornwall
+	icon = cornwall_attack_icon
+	cost = 1
+	x = 11
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = CON
+		}
+	}
+}
+
+
+focus = {
+	id = EAG_Take_Northumbria
+	icon = attack_northumbria_icon
+	cost = 1
+	x = 13
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = NOF
+		}
+	}
+}
+
+
+focus = {
+	id = EAG_Rebuild_Britian
+	icon = rebuilding_the_uk_icon
+	cost = 1
+	x = 9
+	y = 2
+
+	prerequisite = {
+		focus = EAG_Attack_Merica
+	}
+
+	prerequisite = {
+		focus = EAG_Attack_Kent
+	}
+
+	prerequisite = {
+		focus = EAG_Attack_Wessex
+	}
+
+	prerequisite = {
+		focus = EAG_Take_Cornwall
+		focus = EAG_Take_Northumbria
+	}
+	available = {
+		owns_state = 127
+		owns_state = 128
+		owns_state = 126
+}
+	completion_reward = {
+		set_cosmetic_tag = ENG_hopkins_party
+	}
+}
+
+
+
+
+
+}

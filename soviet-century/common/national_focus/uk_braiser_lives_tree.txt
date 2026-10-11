@@ -1,0 +1,17 @@
+focus_tree = {
+	id = uk_braiser_lives_tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_Year_Zero
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+	
+
+}

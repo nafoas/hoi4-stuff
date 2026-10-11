@@ -1,0 +1,69 @@
+focus_tree = {
+	id = lincoln_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = lin
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+
+
+	shared_focus = LIN_issues_of_today
+	
+}
+focus_tree = {
+	id = lincoln_tree_normal
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = lin
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+
+
+	shared_focus = LIN_time_for_action
+	shared_focus = LIN_victory_at_great_falls
+	shared_focus = LIN_a_white_america
+	shared_focus = LIN_establish_a_new_airforce
+	shared_focus = LIN_establish_a_new_navy
+	shared_focus = LIN_estabish_a_army
+
+}
+focus_tree = {
+	id = lincoln_tree_falling_apart
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = lin
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+	shared_focus = LIN_down_with_the_nazi
+
+
+}
+focus_tree = {
+	id = lincoln_tree_ss
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = lin
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+		shared_focus = LIN_regain_control
+	shared_focus = LIN_more_living_space
+	shared_focus = LIN_establish_a_new_airforce
+	shared_focus = LIN_establish_a_new_navy
+	shared_focus = LIN_estabish_a_army
+}

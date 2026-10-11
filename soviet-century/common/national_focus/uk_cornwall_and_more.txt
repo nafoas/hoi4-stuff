@@ -1,0 +1,17 @@
+focus_tree = {
+	id = uk_cornwall_and_more
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_The_Cornwall_Border
+	shared_focus = ENG_The_Front_Is_Still_Unhappy
+
+	continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+}

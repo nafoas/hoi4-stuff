@@ -1,0 +1,1442 @@
+intergration_of_canada = {
+	core_eastern_canada = {	
+		visible = {			
+			has_country_flag = core_canada
+		}		
+		available = {		
+		AND = {
+				276 = { is_owned_and_controlled_by = ROOT }
+				276 = { compliance >50 }
+				465 = { is_owned_and_controlled_by = ROOT }
+				465 = { compliance >50 }
+				464 = { is_owned_and_controlled_by = ROOT }
+				464 = { compliance >50 }
+				331 = { is_owned_and_controlled_by = ROOT }
+				331 = { compliance >50 }
+				332 = { is_owned_and_controlled_by = ROOT }
+				332 = { compliance >50 }
+				682 = { is_owned_and_controlled_by = ROOT }
+				682 = { compliance >50 }	
+				
+			}
+		}
+			
+		cost = 200	
+		complete_effect = {
+			add_state_core = 276 
+			add_state_core = 465
+			add_state_core = 464
+			add_state_core = 331
+			add_state_core = 332
+			add_state_core = 682		
+		}
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+	core_western_canada = {	
+		visible = {			
+			has_country_flag = core_canada
+		}	
+		available = {		
+		AND = {
+				467 = { is_owned_and_controlled_by = ROOT }
+				467 = { compliance >50 }
+				469 = { is_owned_and_controlled_by = ROOT }
+				469 = { compliance >50 }
+				470 = { is_owned_and_controlled_by = ROOT }
+				470 = { compliance >50 }
+				473 = { is_owned_and_controlled_by = ROOT }
+				473 = { compliance >50 }
+				740 = { is_owned_and_controlled_by = ROOT }
+				740 = { compliance >50 }
+				739 = { is_owned_and_controlled_by = ROOT }
+				739 = { compliance >50 }	
+				472 = { is_owned_and_controlled_by = ROOT }
+				472 = { compliance >50 }
+				471 = { is_owned_and_controlled_by = ROOT }
+				471 = { compliance >50 }
+				683 = { is_owned_and_controlled_by = ROOT }
+				683 = { compliance >50 }
+				1012 = { is_owned_and_controlled_by = ROOT }
+				1012 = { compliance >50 }
+			}
+		}		
+		cost = 200	
+		complete_effect = {
+			add_state_core = 467
+			add_state_core = 469
+			add_state_core = 470
+			add_state_core = 473
+			add_state_core = 740
+			add_state_core = 739	
+			add_state_core = 472
+			add_state_core = 471
+			add_state_core = 683
+			add_state_core = 1012	
+		}
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+	question_of_quebec = {		
+		available = {		
+		AND = {
+				466 = { is_owned_and_controlled_by = ROOT }
+				466 = { compliance >50 }
+				468 = { is_owned_and_controlled_by = ROOT }
+				468 = { compliance >50 }				
+			}
+		}
+		visible = {			
+			has_country_flag = core_quebec
+		}		
+		cost = 200	
+		complete_effect = {
+			add_state_core = 466
+			add_state_core = 468		
+		}
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+}
+
+
+purification = {		
+	purify_eastern_canada = {
+		visible = {			
+			has_country_flag = purify_canada
+		}		
+		available = {		
+		AND = {
+				276 = { is_owned_and_controlled_by = ROOT }
+				
+				465 = { is_owned_and_controlled_by = ROOT }
+				
+				464 = { is_owned_and_controlled_by = ROOT }
+				
+				331 = { is_owned_and_controlled_by = ROOT }
+				
+				332 = { is_owned_and_controlled_by = ROOT }
+				
+				682 = { is_owned_and_controlled_by = ROOT }
+			}
+		}		
+		cost = 500
+		complete_effect = {
+			add_state_core = 276 
+			276 = { add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -2000000			
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 465
+			465 = { add_manpower = -600000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 464
+			464 = { add_manpower = -700000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 331
+			331 = { add_manpower = -400000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 332
+			332 = { add_manpower = -10000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 682	
+			682 = { add_manpower = -1500000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+		}
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+	purify_western_canada = {
+		visible = {			
+			has_country_flag = purify_canada
+		}		
+		available = {		
+		AND = {
+					
+				467 = { is_owned_and_controlled_by = ROOT }
+			
+				469 = { is_owned_and_controlled_by = ROOT }
+			
+				470 = { is_owned_and_controlled_by = ROOT }
+			
+				473 = { is_owned_and_controlled_by = ROOT }
+				
+				740 = { is_owned_and_controlled_by = ROOT }
+				
+				739 = { is_owned_and_controlled_by = ROOT }
+					
+				472 = { is_owned_and_controlled_by = ROOT }
+				
+				471 = { is_owned_and_controlled_by = ROOT }
+				
+				683 = { is_owned_and_controlled_by = ROOT }
+			
+				1012 = { is_owned_and_controlled_by = ROOT }
+				
+			}
+		}		
+		cost = 500
+		complete_effect = {
+			add_state_core = 467
+			467 = { add_manpower = -800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 469
+			469 = { add_manpower = -800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 470
+			470 = { add_manpower = -2000000	
+				add_manpower = -800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 473
+			473 = { add_manpower = -2000000	
+				add_manpower = -1800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 740
+			740 = { add_manpower = -150000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 739
+			739 = { add_manpower = -4500
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 472
+				472 = { add_manpower = -9500
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 471
+			471 = { add_manpower = -9500
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 683
+			683 = { add_manpower = -9500
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 1012	
+			1012 = { add_manpower = -500
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+		}
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+
+purify_north_mexico = {		
+		available = {		
+		AND = {
+					
+				484 = { is_owned_and_controlled_by = ROOT }
+			
+				483 = { is_owned_and_controlled_by = ROOT }
+			
+				482 = { is_owned_and_controlled_by = ROOT }
+			
+				480 = { is_owned_and_controlled_by = ROOT }
+				
+				481 = { is_owned_and_controlled_by = ROOT }
+				
+				479 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		visible = {			
+			has_country_flag = purify_mexico
+		}		
+		cost = 500
+		complete_effect = {
+			add_state_core = 484
+			484 = { add_manpower = -2000000	
+				add_manpower = -1500000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 483
+			483 = { add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -500000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 482
+			482 = { add_manpower = -2000000	
+				
+				add_manpower = -800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 480
+			480 = { add_manpower = -2000000	
+				add_manpower = -1800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 481
+			481 = { add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 479
+			479 = { add_manpower = -2000000	
+				add_manpower = -400000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+}
+	purify_south_mexico = {		
+		available = {		
+		AND = {
+				485 = { is_owned_and_controlled_by = ROOT }
+			
+				477 = { is_owned_and_controlled_by = ROOT }
+			
+				476 = { is_owned_and_controlled_by = ROOT }
+				
+				475 = { is_owned_and_controlled_by = ROOT }
+				
+				474 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		visible = {			
+			has_country_flag = purify_mexico
+		}		
+		cost = 500
+		complete_effect = {
+			add_state_core = 485
+			485 = { add_manpower = -2000000	
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 477
+			477 = { add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -500000		
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 476
+			476 = { add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 475
+			475 = { add_manpower = -2000000	
+				add_manpower = -800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 474
+			474 = {
+				add_manpower = -500000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+
+}
+purify_central_america = {		
+		available = {		
+		AND = {
+				
+				313 = { is_owned_and_controlled_by = ROOT }				
+	
+				1027 = { is_owned_and_controlled_by = ROOT }
+
+				314 = { is_owned_and_controlled_by = ROOT }				
+			
+				311 = { is_owned_and_controlled_by = ROOT }
+			
+				312 = { is_owned_and_controlled_by = ROOT }
+			
+				317 = { is_owned_and_controlled_by = ROOT }
+				
+				1028 = { is_owned_and_controlled_by = ROOT }
+				
+				316 = { is_owned_and_controlled_by = ROOT }
+					
+				304 = { is_owned_and_controlled_by = ROOT }
+				
+				685 = { is_owned_and_controlled_by = ROOT }
+				
+				1030 = { is_owned_and_controlled_by = ROOT }
+
+				1029 = { is_owned_and_controlled_by = ROOT }
+			
+				
+			}
+		}
+		visible = {			
+			has_country_flag = purify_centralA
+		}	
+		cost = 500
+		complete_effect = {
+			add_state_core = 313
+			313 = { add_manpower = -2000000	
+				add_manpower = -1800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 1027
+			1027 = { add_manpower = -400000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 314
+			314 = { add_manpower = -2000000	
+				add_manpower = -1800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 311
+			311 = { 
+				add_manpower = -200000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 312
+			312 = { add_manpower = -1500000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 317
+			317 = { add_manpower = -2000000
+				add_manpower = -1500000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 1028
+				1028 = { add_manpower = -950000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 316
+			316 = { add_manpower = -2000000
+				add_manpower = -500000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 304
+			304 = { add_manpower = -950000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 685
+			685 = { add_manpower = -9700
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 1030
+			1030 = { add_manpower = -900000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 1029
+			1029 = { add_manpower = -970000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+		}
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+
+	purify_mexico_city = {		
+		available = {		
+		AND = {
+				478 = { is_owned_and_controlled_by = ROOT }
+			
+				277 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		visible = {			
+			has_country_flag = purify_mexico
+		}	
+		cost = 500
+		complete_effect = {
+			add_state_core = 478
+			478 = { add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 277
+			277 = { add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000	
+				add_manpower = -2000000
+				add_manpower = -2000000			
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+
+}
+
+purify_caribbean = {		
+		available = {		
+		AND = {
+				
+				690 = { is_owned_and_controlled_by = ROOT }				
+	
+				693 = { is_owned_and_controlled_by = ROOT }
+
+				315 = { is_owned_and_controlled_by = ROOT }				
+			
+				1031 = { is_owned_and_controlled_by = ROOT }
+			
+				1032 = { is_owned_and_controlled_by = ROOT }
+			
+				689 = { is_owned_and_controlled_by = ROOT }
+				
+				318 = { is_owned_and_controlled_by = ROOT }
+				
+				319 = { is_owned_and_controlled_by = ROOT }
+					
+				694 = { is_owned_and_controlled_by = ROOT }
+				
+				833 = { is_owned_and_controlled_by = ROOT }
+				
+				308 = { is_owned_and_controlled_by = ROOT }
+
+				831 = { is_owned_and_controlled_by = ROOT }
+
+				830 = { is_owned_and_controlled_by = ROOT }
+				
+				692 = { is_owned_and_controlled_by = ROOT }
+				
+				829 = { is_owned_and_controlled_by = ROOT }
+
+				691 = { is_owned_and_controlled_by = ROOT }
+			
+				
+			}
+		}
+		visible = {			
+			has_country_flag = purify_caribean
+		}	
+		cost = 500
+		complete_effect = {
+			add_state_core = 690
+			690 = { add_manpower = -200000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 693 
+			693 = { add_manpower = -80000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 315 
+			315 = { add_manpower = -2000000	
+				add_manpower = -1800000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 1031 
+			1031 = { 
+				add_manpower = -200000	
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 1032 
+			1032 = { add_manpower = -2000000
+				 add_manpower = -2000000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 689 
+			689 = { add_manpower = -2000000
+				add_manpower = -500000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 318
+				318= { add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -2000000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 319
+			319= { add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -2000000
+				add_manpower = -500000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }	
+			add_state_core = 694 
+			694 = { add_manpower = -400000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 833 
+			833 = { add_manpower = -82000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 308 
+			308 = { add_manpower = -62000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 831 
+			831 = { add_manpower = -97000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 830
+			830 = { add_manpower = -99000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 692 
+			692 = { add_manpower = -199000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 829 
+			829 = { add_manpower = -94000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+			add_state_core = 691 
+			691 = { add_manpower = -940000
+				add_building_construction = {
+					type = industrial_complex
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = -10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = -10
+					instant_build = yes
+				}
+			 }
+	
+		}
+		ai_will_do = {	
+			factor = 320			
+		}
+	}
+
+
+
+
+
+
+}
+
+
+

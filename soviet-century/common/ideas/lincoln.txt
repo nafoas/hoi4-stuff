@@ -1,0 +1,661 @@
+ideas = {
+
+    country = {
+	idea_LIN_destroy_montana = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+		modifier = {
+			war_support_factor = 0.20
+			army_morale_factor = 0.10
+			stability_factor = -0.05
+		}
+		targeted_modifier = {
+			tag = MOT
+			defense_bonus_against = 0.10
+			defense_attack_against = 0.10
+			}
+		}
+idea_lin_reopened_canal = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				trade_opinion_factor = 0.1
+			}
+		}
+	idea_lin_inuit_work_camps = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.20
+			}
+		}
+	idea_lin_cartel_protection = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.10
+				conscription = 0.005
+				army_core_defence_factor = 0.05
+			}
+		}
+	idea_lin_anti_spencer_dissent = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.10
+				national_bolshevik_drift = -0.01
+			}
+		}
+
+	idea_lin_seceret_police = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.25
+			}
+		}
+	idea_lin_militia_crackdown = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.20
+				political_power_gain = -0.05
+			}
+		}
+	idea_lin_spencers_militia = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = corrupt_military
+
+			modifier = {
+				conscription = 0.005
+				army_morale_factor = -0.1
+				army_core_defence_factor = 0.10
+				army_attack_factor = -0.05
+				training_time_factor = -0.05
+			}
+		}
+	idea_lin_spencers_militia_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = corrupt_military
+
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = -0.1
+				army_core_defence_factor = 0.10
+				army_attack_factor = -0.05
+				training_time_factor = -0.10
+			}
+		}
+	idea_lin_spencers_militia_3 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = corrupt_military
+
+			modifier = {
+				conscription = 0.002
+				army_morale_factor = -0.02
+				army_core_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+	idea_lin_spencers_militia_4 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = corrupt_military
+
+			modifier = {
+				conscription = 0.015
+				army_morale_factor = 0.005
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				training_time_factor = -0.10
+			}
+		}
+	idea_lin_nonexsistant_economy = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture =  great_depression
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = -0.1
+				production_speed_infrastructure_factor = -0.1
+				industrial_capacity_factory = -0.2
+			}
+		}
+	idea_lin_agricultural_economy = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture =  great_depression
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				production_speed_infrastructure_factor = 0.05
+				industrial_capacity_factory = -0.1
+			}
+		}
+		idea_lin_industrial_economy = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture =  great_depression
+
+			modifier = {
+				consumer_goods_factor = 0.08
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = -0.1
+				industrial_capacity_factory = -0.05
+			}
+		}
+		idea_lin_self_sufficiency = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture =  great_depression
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				research_speed_factor = 0.02
+				line_change_production_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+				mobilization_laws_cost_factor = -0.10
+				production_speed_synthetic_refinery_factor = 0.05
+			}
+		}
+
+	idea_lin_expeled_dissent = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = 0.05
+				national_bolshevik_drift = 0.05
+				weekly_manpower = -500
+			}
+		}
+
+	idea_lin_for_white_only = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				army_morale_factor = 0.05
+				conscription_factor = -0.05
+
+			}
+		}
+	idea_lin_blood_and_soil = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				army_core_defence_factor = 0.10
+				MONTHLY_POPULATION = 0.10
+			}
+		}
+	idea_lin_the_ethnostate = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				army_morale_factor = 0.10
+				conscription_factor = -0.15
+				consumer_goods_factor = -0.10
+				stability_factor = 0.20
+				national_bolshevik_drift = 0.01
+			}
+		}
+	idea_lin_secure_our_existence = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				army_morale_factor = 0.10
+				conscription = 0.01
+				army_attack_factor = 0.10
+			}
+		}
+	idea_lin_finish_the_job = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				line_change_production_efficiency_factor = 0.10
+				production_speed_buildings_factor = 0.1
+			}
+		}
+	idea_lin_death_squads = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_weekly_factor = 0.005
+				political_power_gain = -0.10
+				communist_drift = -0.05
+				liberal_drift = -0.05
+				fascist_drift = -0.05
+				national_conservative_drift = -0.05
+				weekly_manpower = -500
+			}
+		}
+	idea_lin_peoples_storm = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				army_morale_factor = -0.05
+				conscription_factor = 0.15
+			}
+		}
+	idea_lin_labour_camps = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.25 
+			}
+		}
+	idea_lin_absolute_statism = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_synthetic_refinery_factor = 0.05
+				industrial_capacity_factory = 0.10
+			}
+		}
+	idea_lin_defence_force = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = corrupt_military
+
+			modifier = {
+				army_defence_factor = 0.10
+				army_attack_factor = 0.05
+				training_time_factor = -0.10
+			}
+		}
+	idea_lin_protection_squadron = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+				national_bolshevik_drift = 0.01
+				drift_defence_factor = 0.20
+				conscription = 0.005
+			}
+		}
+	idea_lin_spencers_youth = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				war_support_factor = 0.10
+				conscription = 0.01
+			}
+		}
+
+	idea_lin_expand_the_ethnostate = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				justify_war_goal_time = -0.20
+			}
+		}
+	idea_lin_protect_whats_ours = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = corrupt_military
+
+			modifier = {
+				army_core_defence_factor = 0.10
+			}
+		}
+	idea_lin_closed_border = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = -0.15
+			}
+		}
+	idea_lin_new_coast_guard = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+	idea_lin_deported_natives  = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+				MONTHLY_POPULATION = -0.15
+				weekly_manpower = -500
+			}
+		}
+	idea_lin_deported_inuit   = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+				MONTHLY_POPULATION = -0.15
+				weekly_manpower = -500
+			}
+		}
+	idea_lin_minorty_rescitance  = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.10
+				MONTHLY_POPULATION = -0.15
+				line_change_production_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.1
+			}
+		}
+	idea_lin_minorty_rescitance_2  = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.10
+				MONTHLY_POPULATION = -0.10
+				line_change_production_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+	idea_lin_minorty_rescitance_3  = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = 0.10
+				MONTHLY_POPULATION = -0.40
+				line_change_production_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+	idea_lin_minorty_rescitance_4  = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = nation_chaos
+
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = -0.05
+			}
+		}
+
+
+
+	}
+second_in_command = {
+
+		lin_tim_mcveigh = {
+			allowed = {
+					original_tag = LIN
+			}
+			available = {
+				OR = {
+					has_government = national_bolshevik
+				}
+				cannot_change_second_in_command = no
+			}
+			cancel_if_invalid = no
+			traits = {
+				naive_optimist 
+			}
+		}
+
+
+	}
+
+industry_minister = {
+		lin_heimback = {
+		
+		    allowed = {
+			    original_tag = LIN
+			}
+			
+			available = {
+			    OR = {
+					has_government = national_bolshevik
+				} 
+			}
+			
+			traits = { resource_industrialist }
+		}
+		
+	}
+national_security_minister = {
+		
+		lin_randy_weaver = {
+		
+		    allowed = {
+			    original_tag = LIN
+			}
+			
+			available = {
+			    OR = {
+					has_government = national_bolshevik
+				} 
+			}
+			
+			traits = { compassionate_gentleman }			
+		}
+	}
+
+}

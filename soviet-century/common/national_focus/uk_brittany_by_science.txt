@@ -1,0 +1,16 @@
+focus_tree = {
+	id = uk_brittany_by_science
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_PATELS_EUROPE
+
+}
+
+	continuous_focus_position = {
+		x = 50
+		y = 3100
+	}

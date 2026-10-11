@@ -1,0 +1,15 @@
+focus_tree = {
+	id = british_queen_comes_in
+	country = {
+		factor = 0 
+	}
+	default = no
+	shared_focus = ENG_let_her_in
+	shared_focus = ENG_lock_her_out
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+	}
+
+	

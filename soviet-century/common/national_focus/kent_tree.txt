@@ -1,0 +1,125 @@
+focus_tree = {
+	id = kent_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SCO
+		}
+	}
+	continuous_focus_position = {
+		x = 50
+		y = 3200
+	}
+	#kent_tree#
+	default = no
+	focus = {
+	id = KET_Attack_Wessex
+	icon = attacking_wessex_icon
+	cost = 1
+	x = 5
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = WES
+		}
+	}
+}
+
+focus = {
+	id = KET_Attack_Mercia
+	icon = mercia_flag_icon
+	cost = 1
+	x = 7
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = MER
+		}
+	}
+}
+
+focus = {
+	id = KET_Attack_East_Anglia
+	icon = attack_east_anglia_iocn
+	cost = 1
+	x = 9
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = EAG
+		}
+	}
+}
+
+focus = {
+	id = KET_Take_Cornwall
+	icon = cornwall_attack_icon
+	cost = 1
+	x = 11
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = CON
+		}
+	}
+}
+
+
+focus = {
+	id = KET_Take_Northumbria
+	icon = attack_northumbria_icon
+	cost = 1
+	x = 13
+	y = 0
+	completion_reward = {
+		declare_war_on = {
+			target = NOF
+		}
+	}
+}
+
+
+focus = {
+	id = KET_Rebuild_Britian
+	icon = rebuilding_the_uk_icon
+	cost = 1
+	x = 9
+	y = 2
+
+	prerequisite = {
+		focus = KET_Attack_Wessex
+	}
+
+	prerequisite = {
+		focus = KET_Attack_Mercia
+	}
+
+	prerequisite = {
+		focus = KET_Attack_East_Anglia
+	}
+
+	prerequisite = {
+		focus = KET_Take_Cornwall
+		focus = KET_Take_Northumbria
+	}
+	available = {
+		owns_state = 128
+		owns_state = 127
+		owns_state = 125
+}
+	completion_reward = {
+		country_event = { 
+			id = britain.694 }
+		KET = {
+			set_cosmetic_tag = ENG_Patel_Empire_fascist
+		}
+
+	}
+}
+
+
+
+
+
+}

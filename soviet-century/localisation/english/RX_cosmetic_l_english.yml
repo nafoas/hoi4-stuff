@@ -1,0 +1,248 @@
+﻿l_english:
+#texas
+ TEX_goldencircle_fascist:0 "Golden Circle"
+ TEX_goldencircle_fascist_DEF:0 "The Order of the Golden Circle"
+ TEX_goldencircle_nationalist:0 "Golden Circle"
+ TEX_goldencircle_nationalist_DEF:0 "The Golden Circle"
+ TEX_goldencircle_monarchist:0 "Golden Empire"
+ TEX_goldencircle_monarchist_DEF:0 "The Empire of the Golden Circle"
+ TEX_goldencircle_national_bolshevik:0 "Golden Union"
+ TEX_goldencircle_national_bolshevik_DEF:0 "The Union of the Golden Circle"
+ TEX_goldencircle_national_conservative:0 "Golden Circle"
+ TEX_goldencircle_national_conservative_DEF:0 "The Republic of the Golden Circle"
+ TEX_goldencircle_centrist:0 "Golden Circle"
+ TEX_goldencircle_centrist_DEF:0 "The Republic of the Golden Circle"
+ TEX_goldencircle_liberal:0 "Golden Circle"
+ TEX_goldencircle_liberal_DEF:0 "The Republic of the Golden Circle"
+ TEX_goldencircle_new_democrat:0 "Golden Circle"
+ TEX_goldencircle_new_democrat_DEF:0 "The Republic of the Golden Circle"
+ TEX_goldencircle_moderate_socialist:0 "Golden Circle"
+ TEX_goldencircle_moderate_socialist_DEF:0 "The Republic of the Golden Circle"
+ TEX_goldencircle_revolutionary_socialist:0 "Commonwealth of the Golden Circle"
+ TEX_goldencircle_revolutionary_socialist_DEF:0 "Commonwealth of the Golden Circle"
+ TEX_goldencircle_communist:0 "Golden Union"
+ TEX_goldencircle_communist_DEF:0 "The Union of the Golden Circle"
+ TEX_goldencircle_fascist_ADJ:0 "American"
+ TEX_goldencircle_nationalist_ADJ:0 "American"
+ TEX_goldencircle_monarchist_ADJ:0 "American"
+ TEX_goldencircle_national_bolshevik_ADJ:0 "American"
+ TEX_goldencircle_national_conservative_ADJ:0 "American"
+ TEX_goldencircle_centrist_ADJ:0 "American"
+ TEX_goldencircle_liberal_ADJ:0 "American"
+ TEX_goldencircle_new_democrat_ADJ:0 "American"
+ TEX_goldencircle_moderate_socialist_ADJ:0 "American"
+ TEX_goldencircle_revolutionary_socialist_ADJ:0 "American"
+ TEX_goldencircle_communist_ADJ:0 "American"
+
+
+TEX_unionofamerica_fascist:0 "Empire of North America"
+TEX_unionofamerica_fascist_DEF:0 "The Empire of North America"
+TEX_unionofamerica_nationalist:0 "Republic of North America"
+TEX_unionofamerica_nationalist_DEF:0 "Republic of North America"
+TEX_unionofamerica_monarchist:0 "Empire of North America"
+TEX_unionofamerica_monarchist_DEF:0 "Empire of North America"
+TEX_unionofamerica_national_bolshevik:0 "Union of North America"
+TEX_unionofamerica_national_bolshevik_DEF:0 "The Union of North America"
+TEX_unionofamerica_national_conservative:0 "Republic of North America"
+TEX_unionofamerica_national_conservative_DEF:0 "The Republic of North America"
+TEX_unionofamerica_centrist:0 "Republic of North America"
+TEX_unionofamerica_centrist_DEF:0 "The Republic of North America"
+TEX_unionofamerica_liberal:0 "Republic of North America"
+TEX_unionofamerica_liberal_DEF:0 "The Republic of North America"
+TEX_unionofamerica_new_democrat:0 "Republic of North America"
+TEX_unionofamerica_new_democrat_DEF:0 "The Republic of North America"
+TEX_unionofamerica_moderate_socialist:0 "Republic of North America"
+TEX_unionofamerica_moderate_socialist_DEF:0 "The Republic of North America"
+TEX_unionofamerica_revolutionary_socialist:0 "Commonwealth of North America"
+TEX_unionofamerica_revolutionary_socialist_DEF:0 "The Commonwealth of North America"
+TEX_unionofamerica_communist:0 "Union of North America"
+TEX_unionofamerica_communist_DEF:0 "The Union of North America"
+TEX_unionofamerica_fascist_ADJ:0 "American"
+TEX_unionofamerica_nationalist_ADJ:0 "American"
+TEX_unionofamerica_monarchist_ADJ:0 "American"
+TEX_unionofamerica_national_bolshevik_ADJ:0 "American"
+TEX_unionofamerica_national_conservative_ADJ:0 "American"
+TEX_unionofamerica_centrist_ADJ:0 "American"
+TEX_unionofamerica_liberal_ADJ:0 "American"
+TEX_unionofamerica_new_democrat_ADJ:0 "American"
+TEX_unionofamerica_moderate_socialist_ADJ:0 "American"
+TEX_unionofamerica_revolutionary_socialist_ADJ:0 "American"
+TEX_unionofamerica_communist_ADJ:0 "American"
+
+#lincoln
+
+LIN_4thriech_national_bolshevik:0 "The 4th Reich"
+LIN_4thriech_national_bolshevik_DEF:0 "The 4th Reich"
+LIN_4thriech_national_bolshevik_ADJ:0 "American"
+
+ USS_spencer_fascist:0 "National State of America"
+ USS_spencer_fascist_DEF:0 "The National State of America"
+ USS_spencer_nationalist:0 "National State of America"
+ USS_spencer_nationalist_DEF:0 "The National State of America"
+ USS_spencer_monarchist:0 "National Empire of America"
+ USS_spencer_monarchist_DEF:0 "The National Empire of America"
+ USS_spencer_national_bolshevik:0 "American Realm"
+ USS_spencer_national_bolshevik_DEF:0 "The American Realm"
+ USS_spencer_national_conservative:0 "National Republic of America"
+ USS_spencer_national_conservative_DEF:0 "The National Republic of America"
+ USS_spencer_centrist:0 "National Republic of America"
+ USS_spencer_centrist_DEF:0 "The National Republic of America"
+ USS_spencer_liberal:0 "National Republic of America"
+ USS_spencer_liberal_DEF:0 "The National Republic of America"
+ USS_spencer_new_democrat:0 "National Republic of America"
+ USS_spencer_new_democrat_DEF:0 "The National Republic of America"
+ USS_spencer_moderate_socialist:0 "National Republic of America"
+ USS_spencer_moderate_socialist_DEF:0 "The National Republic of America"
+ USS_spencer_revolutionary_socialist:0 "National Commonwealth of America"
+ USS_spencer_revolutionary_socialist_DEF:0 "The National Commonwealth of America"
+ USS_spencer_communist:0 "National Union of America"
+ USS_spencer_communist_DEF:0 "The National Union of American"
+ USS_spencer_fascist_ADJ:0 "American"
+ USS_spencer_nationalist_ADJ:0 "American"
+ USS_spencer_monarchist_ADJ:0 "American"
+ USS_spencer_national_bolshevik_ADJ:0 "American"
+ USS_spencer_national_conservative_ADJ:0 "American"
+ USS_spencer_centrist_ADJ:0 "American"
+ USS_spencer_liberal_ADJ:0 "American"
+ USS_spencer_new_democrat_ADJ:0 "American"
+ USS_spencer_moderate_socialist_ADJ:0 "American"
+ USS_spencer_revolutionary_socialist_ADJ:0 "American"
+ USS_spencer_communist_ADJ:0 "American"
+#england#
+
+ENG_juche_uk:0 "Democratic Peoples Republic Of Britian"
+ENG_juche_uk_DEF:0 "Democratic Peoples Republic Of Britian"
+ENG_juche_uk_ADJ:0 "Democratic Peoples Republic Of Britian"
+
+PhoenixNew_fascist:0 "Britain"
+PhoenixNew_fascist_DEF:0 "Britain"
+PhoenixNew_fascist_ADJ:0 "Britain"
+
+ENG_PhoenixHopkins_facist:0 "Britain"
+ENG_PhoenixHopkins_facist_DEF:0 "Britain"
+ENG_PhoenixHopkins_facist_ADJ:0 "Britain"
+
+ENG_NewToryParty_national_conservative:0 "United Kingdom"
+ENG_NewToryParty_national_conservative_DEF:0 "United Kingdom"
+ENG_NewToryParty_national_conservative_ADJ:0 "United Kingdom"
+
+BUU_fascist:0 "The British European Empire"
+BUU_fascist_DEF:0 "The British European Empire"
+BUU_fascist_ADJ:0 "The British European Empire"
+
+ENG_rebel_new_democrat:0 "The British Rebel State"
+ENG_rebel_new_democrat_DEF:0 "The British Rebel State"
+ENG_rebel_new_democrat_ADJ:0 "The British Rebel State"
+
+ENG_empire_monarchy:0 "The British Empire"
+ENG_empire_monarchy_DEF:0 "The British Empire"
+ENG_empire_monarchy_ADJ:0 "The British Empire"
+
+ENG_America_monarchy:0 "The American Kingdom"
+ENG_America_monarchy_DEF:0 "The American Kingdom"
+ENG_America_monarchy_ADJ:0 "The American Kingdom"
+
+ENG_America_Dominion_monarchy:0 "The American Dominion"
+ENG_America_Dominion_monarchy_DEF:0 "The American Dominion"
+ENG_America_Dominion_monarchy_ADJ:0 "The American Dominion"
+
+ENG_CANZUK_uk:0 "United Kingdom"
+ENG_CANZUK_uk_DEF:0 "United Kingdom"
+ENG_CANZUK_uk_ADJ:0 "United Kingdom"
+
+ENG_CANZUK_imfed:0 "United Kingdom"
+ENG_CANZUK_imfed_DEF:0 "United Kingdom"
+ENG_CANZUK_imfed_ADJ:0 "United Kingdom"
+
+ENG_CANZUK_imperial:0 "United Kingdom"
+ENG_CANZUK_imperial_DEF:0 "United Kingdom"
+ENG_CANZUK_imperial_ADJ:0 "United Kingdom"
+
+ENG_hopkins_party:0 "Great Britain"
+ENG_hopkins_party_DEF:0 "Great Britain"
+ENG_hopkins_party_ADJ:0 "Great Britain"
+
+ENG_Patel_Empire_fascist:0 "Empire Of Britain"
+ENG_Patel_Empire_fascist_DEF:0 "Empire Of Britain"
+ENG_Patel_Empire_fascist_ADJ:0 "Empire Of Britain"
+
+NCS_Northern_north_Communist_State:0 "Nothern Communist State"
+NCS_Northern_north_Communist_State_DEF:0 "Nothern Communist State"
+NCS_Northern_north_Communist_State_ADJ:0 "Nothern Communist State"
+
+MCS_communist:0 "Merseyside Communist State"
+MCS_communist_DEF:0 "Merseyside Communist State"
+MCS_communist_ADJ:0 "Merseyside Communist State"
+
+ABS_communist:0 "Aberdeenshire Workers State"
+ABS_communist_DEF:0 "Aberdeenshire Workers State"
+ABS_communist_ADJ:0 "Aberdeenshire Workers State"
+
+eng_fascist_flag:0 "Britain"
+eng_fascist_flag_DEF:0 "Britain"
+eng_fascist_flag_ADJ:0 "Britain"
+
+
+#Scotland#
+
+SCO_Clan_flag_green:0 "The Clans Of Scotland"
+SCO_Clan_flag_green_DEF:0 "The Clans Of Scotland"
+SCO_Clan_flag_green_ADJ:0 "The Clans Of Scotland"
+
+SCO_royal_flag:0 "Kingdom Of Scotland"
+SCO_royal_flag_DEF:0 "Kingdom Of Scotland"
+SCO_royal_flag_ADJ:0 "Kingdom Of Scotland"
+
+SCO_communist_flag:0 "Commune Of Scotland"
+SCO_communist_flag_DEF:0 "Commune Of Scotland"
+SCO_communist_flag_ADJ:0 "Commune Of Scotland"
+
+SCO_marie_flag:0 "The Scottish Empire"
+SCO_marie_flag_DEF:0 "The Scottish Empire"
+SCO_marie_flag_ADJ:0 "The Scottish Empire"
+
+SCO_celtic_union_flag:0 "The Celtic Union"
+SCO_celtic_union_flag_DEF:0 "The Celtic Union"
+SCO_celtic_union_flag_ADJ:0 "The Celtic Union"
+
+##Wales##
+
+WAL_the_welsh_kingdom_flag:0 "The Kingdom Of Wales"
+WAL_the_welsh_kingdom_flag_DEF:0 "The Kingdom Of Wales"
+WAL_the_welsh_kingdom_flag_ADJ:0 "The Kingdom Of Wales"
+
+WAL_welsh_england_puppet_flag:0 "The State Of Welsh England"
+WAL_welsh_england_puppet_flag_DEF:0 "The State Of Welsh England"
+WAL_welsh_england_puppet_flag_ADJ:0 "The State Of Welsh England"
+
+WAL_welsh_celtic:0 "Welsh Celtic Union"
+WAL_welsh_celtic_DEF:0 "Welsh Celtic Union"
+WAL_welsh_celtic_ADJ:0 "Welsh Celtic Union"
+
+
+##Ireland##
+IRE_United_Ireland:0 "United Ireland"
+IRE_United_Ireland_DEF:0 "United Ireland"
+IRE_United_Ireland_ADJ:0 "United Ireland"
+
+#France#
+BON_monarchist:0 "The Kingdom Of France"
+BON_monarchist_DEF:0 "The Kingdom Of France"
+BON_monarchist_ADJ:0 "The Kingdom Of France"
+
+ORH_monarchist:0 "The Kingdom Of France"
+ORH_monarchist_DEF:0 "The Kingdom Of France"
+ORH_monarchist_ADJ:0 "The Kingdom Of France"
+
+
+FRA_liberal:0 "France"
+FRA_liberal_DEF:0 "France"
+FRA_liberal_ADJ:0 "France"
+
+FRA_provisional_authority:0 "The Impterial Provisional Authority"
+FRA_provisional_authority_DEF:0 "The Impterial Provisional Authority"
+FRA_provisional_authority_ADJ:0 "The Impterial Provisional Authority"
+
+
+
+

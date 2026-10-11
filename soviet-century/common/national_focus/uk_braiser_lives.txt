@@ -1,0 +1,17 @@
+focus_tree = {
+	id = british_braiser_lives_tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_Blockade_France
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+}
+
+	

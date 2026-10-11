@@ -1,0 +1,17 @@
+focus_tree = {
+	id = uk_civilwar_british_tree
+	country = {
+		factor = 0
+
+	}
+	default = no
+
+	shared_focus = ENG_A_Day_Of_Mourning
+continuous_focus_position = {
+		x = 50
+		y = 5100
+	}
+
+}
+
+	

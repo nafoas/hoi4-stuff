@@ -1,0 +1,53 @@
+focus_tree = {
+	id = texas_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = TEX
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+	shared_focus = TEX_review_the_arm_forces
+	shared_focus = TEX_2010_election
+	shared_focus = TEX_texan_senate_attack
+	shared_focus = TEX_a_great_victory
+
+
+}
+focus_tree = {
+	id = texas_cult_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = TEX
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+	shared_focus = TEX_review_the_arm_forces
+	shared_focus = TEX_the_cult_prevail
+	shared_focus = TEX_texan_senate_attack
+	shared_focus = TEX_end_of_the_republic
+}
+focus_tree = {
+	id = texas_burr_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = TEX
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+	shared_focus = TEX_the_conspiracy_succeeds
+	shared_focus = TEX_review_the_arm_forces
+	shared_focus = TEX_down_with_the_republic
+	shared_focus = TEX_texan_senate_attack
+	shared_focus = TEX_the_empire_rises
+
+
+}

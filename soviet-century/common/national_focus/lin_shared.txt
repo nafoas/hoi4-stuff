@@ -1,0 +1,3153 @@
+#start of tree
+
+	shared_focus = {
+		id = LIN_issues_of_today
+		icon = issues_of_today
+		cost = 2.2
+		x = 10
+		y = 1
+		available = {
+		
+		}
+		completion_reward = {
+			set_country_flag = richard_spencer
+			 country_event = { id = lin.1}
+		}
+
+	}
+	#dissent
+	shared_focus = {
+		id = LIN_adressing_the_dissent
+		icon = address_the_dissent
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_issues_of_today
+		}
+		
+		x = -5
+		y = 1
+		relative_position_id = LIN_issues_of_today
+		completion_reward = {
+		  	add_stability = 0.05
+		}
+
+	}
+	shared_focus = {
+		id = LIN_expand_the_seceret_police
+		icon = seceret_police
+		cost = 2.2
+		prerequisite = {
+			focus = LIN_adressing_the_dissent
+		}
+		mutually_exclusive = {
+			focus = LIN_send_in_the_militia
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_adressing_the_dissent
+		completion_reward = { 
+			set_country_flag = seceret_police
+			swap_ideas = {
+				remove_idea = idea_lin_anti_spencer_dissent 
+				add_idea = idea_lin_seceret_police 
+			}
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_send_in_the_militia
+		icon = send_in_the_militias
+		cost = 2.2
+		prerequisite = {
+			focus = LIN_adressing_the_dissent
+		}
+		mutually_exclusive = {
+			focus = LIN_expand_the_seceret_police
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_adressing_the_dissent
+		completion_reward = {
+			set_country_flag = sent_militia
+		  	 swap_ideas = {
+				remove_idea = idea_lin_anti_spencer_dissent 
+				add_idea = idea_lin_militia_crackdown 
+			}
+		}
+
+	}
+	#Miltia
+	shared_focus = {
+		id = LIN_adressing_the_miltia
+		icon = address_the_militia
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_issues_of_today
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_issues_of_today
+		completion_reward = {
+		  	army_experience = 10
+		}
+
+	}
+	shared_focus = {
+		id = LIN_expand_the_miltias
+		icon = expand_the_militia
+		cost = 2.2
+		prerequisite = {
+			focus = LIN_adressing_the_miltia
+		}
+		mutually_exclusive = {
+			focus = LIN_reform_the_miltias
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_adressing_the_miltia
+		completion_reward = {
+		  	 swap_ideas = {
+				remove_idea = idea_lin_spencers_militia 
+				add_idea = idea_lin_spencers_militia_2 
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_reform_the_miltias
+		icon = reform_the_militia
+		cost = 2.2
+		prerequisite = {
+			focus = LIN_adressing_the_miltia
+		}
+		mutually_exclusive = {
+			focus = LIN_expand_the_miltias
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_adressing_the_miltia
+		completion_reward = {
+		  	 swap_ideas = {
+				remove_idea = idea_lin_spencers_militia 
+				add_idea = idea_lin_spencers_militia_3 
+			}
+		}
+
+	}
+	#economy
+	shared_focus = {
+		id = LIN_adressing_the_economy
+		icon = addressing_the_economy
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_issues_of_today
+		}
+		x = 5
+		y = 1
+		relative_position_id = LIN_issues_of_today
+		completion_reward = {
+		  	 random_owned_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_focus_on_agriculture
+		icon = focus_on_agriculture
+		cost = 2.2
+		prerequisite = {
+			focus = LIN_adressing_the_economy
+		}
+		mutually_exclusive = {
+			focus = LIN_focus_on_industy
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_adressing_the_economy
+		completion_reward = {
+		  	 swap_ideas = {
+				remove_idea = idea_lin_nonexsistant_economy 
+				add_idea = idea_lin_agricultural_economy 
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_focus_on_industy
+		icon = focus_on_industry
+		cost = 2.2
+		prerequisite = {
+			focus = LIN_adressing_the_economy
+		}
+		mutually_exclusive = {
+			focus = LIN_focus_on_agriculture
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_adressing_the_economy
+		completion_reward = {
+		  	 swap_ideas = {
+				remove_idea = idea_lin_nonexsistant_economy 
+				add_idea = idea_lin_industrial_economy 
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_speach_from_spokane
+		icon = speach_from_spokane
+		cost = 2.2
+		prerequisite = {
+			focus = LIN_focus_on_industy
+			focus = LIN_focus_on_agriculture
+		}
+		prerequisite = {
+			focus = LIN_expand_the_miltias
+			focus = LIN_reform_the_miltias
+		}
+		prerequisite = {
+			focus = LIN_send_in_the_militia
+			focus = LIN_expand_the_seceret_police
+		}
+		x = 1
+		y = 2
+		relative_position_id = LIN_expand_the_miltias
+		completion_reward = {
+		  	country_event = { id = lin.2}
+		}
+
+	}
+	#spencers speach goes smoothy
+	shared_focus = {
+		id = LIN_time_for_action
+		icon = military_salute
+		cost = 2.2
+		x = 10
+		y = 1
+		available = {
+		}
+		completion_reward = {
+			country_event = { id = lin.3}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_military_buildup
+		icon = military_factory
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_time_for_action
+		}
+		
+		x = -1
+		y = 1
+		relative_position_id = LIN_time_for_action
+		completion_reward = {
+		  	random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	#economy tree
+	shared_focus = {
+		id = LIN_economic_advancements
+		icon = focus_on_industry
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_military_buildup
+		}
+		
+		x = -3
+		y = 1
+		relative_position_id = LIN_military_buildup
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_commision_more_workshops 
+		icon = industry_generic_focus
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_economic_advancements
+		}
+		
+		x = 1
+		y = 1
+		relative_position_id = LIN_economic_advancements
+		completion_reward = {
+		  	 random_owned_state = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_increase_self_sufficiency
+		icon = generic_electric
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_economic_advancements
+		}
+		
+		x = -1
+		y = 1
+		relative_position_id = LIN_economic_advancements
+		completion_reward = {
+		  	add_ideas = idea_lin_self_sufficiency
+		}
+
+	}
+
+	shared_focus = {
+		id = LIN_mobilize_the_economy
+		icon = generic_welfare_focus
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_increase_self_sufficiency
+		}
+		prerequisite = {
+			focus = LIN_commision_more_workshops
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_increase_self_sufficiency
+		completion_reward = {
+		  	 add_ideas = war_economy
+			add_research_slot = 1
+		}
+
+	}
+	shared_focus = {
+		id = LIN_raise_the_militia
+		icon = send_in_the_militias
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_time_for_action
+		}
+		
+		x = 1
+		y = 1
+		relative_position_id = LIN_time_for_action
+		completion_reward = {
+		  	division_template = {
+					name = "Spencer's militia"
+					division_names_group = LIN_INF_03
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+				
+		    	   		infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+			random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "division_template = \"Spencer's militia\"start_experience_factor = 0.5" 
+						owner = LIN
+						allow_spawning_on_enemy_provs = yes
+						count = 5
+					}
+				}
+		}
+
+	}
+	#military tree
+	shared_focus = {
+		id = LIN_military_advancements
+		icon = military_academy
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_raise_the_militia
+		}
+		
+		x = 3
+		y = 1
+		relative_position_id = LIN_raise_the_militia
+		completion_reward = {
+		  	army_experience = 25
+		
+
+
+		}
+
+	}
+	shared_focus = {
+		id = LIN_better_guns
+		icon = guns_blue
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_military_advancements
+		}
+		
+		x = -1
+		y = 1
+		relative_position_id = LIN_military_advancements
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_improved_tatics
+		icon = military_drill
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_military_advancements
+		}
+		
+		x = 1
+		y = 1
+		relative_position_id = LIN_military_advancements
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}	
+	shared_focus = {
+		id = LIN_requisition_killdozer
+		icon = tanks
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_improved_tatics
+		}
+		prerequisite = {
+			focus = LIN_better_guns
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_better_guns
+		completion_reward = {
+		  	if = {
+			limit = {LIN = {has_idea = idea_lin_spencers_militia_3}} 
+			swap_ideas = {add_idea = idea_lin_spencers_militia_4  remove_idea = idea_lin_spencers_militia_3}
+
+			}
+		if = {
+			limit = {LIN = {has_idea = idea_lin_spencers_militia_2}} 
+			swap_ideas = {add_idea = idea_lin_spencers_militia_4  remove_idea = idea_lin_spencers_militia_2}
+
+			}
+		}
+
+	}
+	#war tree
+	shared_focus = {
+		id = LIN_build_western_fortifications
+		icon = fortify_city
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_raise_the_militia
+		}
+		prerequisite = {
+			focus = LIN_military_buildup
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_military_buildup
+		completion_reward = {
+		  	890 = {
+				add_building_construction = { type = bunker province = 10693 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 1690 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 12673 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 4747 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 10690 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 7865 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 4826 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 4826 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 10305 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 10625 level = 2 instant_build = yes }
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_war_propoganda
+		icon = information_campaign_generic
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_build_western_fortifications
+		}
+		
+		x = 1
+		y = 1
+		relative_position_id = LIN_build_western_fortifications
+		completion_reward = {
+		  	add_war_support = 0.15
+		}
+
+	}
+	shared_focus = {
+		id = LIN_arms_for_the_machine
+		icon = GFX_red_star_ak47
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_build_western_fortifications
+		}
+		
+		x = -1
+		y = 1
+		relative_position_id = LIN_build_western_fortifications
+		completion_reward = {
+		  	add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3000 }
+		}
+
+	}	
+	shared_focus = {
+		id = LIN_end_the_false_fascist
+		icon = midwest_attack
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_war_propoganda
+		}
+		prerequisite = {
+			focus = LIN_arms_for_the_machine
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_arms_for_the_machine
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = MOT
+		    }
+		}
+
+	}
+	#reclaiming america	
+	shared_focus = {
+		id = LIN_victory_at_great_falls
+		icon = victory_at_great_falls
+		cost = 7.2
+		available = {
+			AND = {
+				1016 = { is_owned_and_controlled_by = ROOT }
+				388 = { is_owned_and_controlled_by = ROOT }
+				1017 = { is_owned_and_controlled_by = ROOT }
+				381 = { is_owned_and_controlled_by = ROOT }
+				1018 = { is_owned_and_controlled_by = ROOT }
+				389 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = LIN_end_the_false_fascist
+		completion_reward = {
+		  	core_MOT = yes
+		}
+
+	}
+	shared_focus = {
+		id = LIN_the_northwest_dream
+		icon = north_west_dream
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_victory_at_great_falls
+		}
+		mutually_exclusive = {
+			focus = LIN_white_emancipation_campaign
+		}
+		x = -3
+		y = 1
+		relative_position_id = LIN_victory_at_great_falls
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_expel_all_dissent
+		icon = expel_dissent
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_northwest_dream
+		}
+		
+		x = -1
+		y = 1
+		relative_position_id = LIN_the_northwest_dream
+		completion_reward = {
+			add_timed_idea = { idea = idea_lin_expeled_dissent  days = 60 }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_northwest_for_whites_only
+		icon = white_only
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_northwest_dream
+		}
+		
+		x = 1
+		y = 1
+		relative_position_id = LIN_the_northwest_dream
+		completion_reward = {
+		  	add_ideas = idea_lin_for_white_only 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_blood_and_soil
+		icon = blood_and_soil
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_northwest_for_whites_only
+		}
+		prerequisite = {
+			focus = LIN_expel_all_dissent
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_northwest_for_whites_only
+		completion_reward = {
+		  	add_ideas = idea_lin_blood_and_soil 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_the_ethnostate
+		icon = ethnostate
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_blood_and_soil
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_blood_and_soil
+		completion_reward = {
+		  	 swap_ideas = {
+				remove_idea = idea_lin_for_white_only
+				add_idea = idea_lin_the_ethnostate 
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_a_place_for_our_people
+		icon = a_place_for_our_people
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_blood_and_soil
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_blood_and_soil
+		completion_reward = {
+			add_political_power = 100
+		  	add_manpower = 10000
+			add_stability = 0.10
+		}
+
+	}
+	#reunite america path
+	shared_focus = {
+		id = LIN_white_emancipation_campaign
+		icon = white_emancipation_campaign
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_victory_at_great_falls
+		}
+		mutually_exclusive = {
+			focus = LIN_white_emancipation_campaign
+		}
+		x = 3
+		y = 1
+		relative_position_id = LIN_victory_at_great_falls
+		completion_reward = {
+		  	enable_unification_decisions = yes
+		}
+
+	}
+	shared_focus = {
+		id = LIN_secure_our_existence
+		icon = secure_our_existance
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_white_emancipation_campaign
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_white_emancipation_campaign
+		completion_reward = {
+		  	add_timed_idea = { idea = idea_lin_secure_our_existence days = 200 }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_jobs_not_done
+		icon = jobs_not_done
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_white_emancipation_campaign
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_white_emancipation_campaign
+		completion_reward = {
+		  	add_timed_idea = { idea = idea_lin_finish_the_job days = 200 }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_end_the_mormons
+		icon = end_the_mormons
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_secure_our_existence
+		}
+		prerequisite = {
+			focus = LIN_jobs_not_done
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_jobs_not_done
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = UTA
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_secure_arizona
+		icon = take_ari
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_end_the_mormons
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_end_the_mormons
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = ARI
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_secure_the_lakes
+		icon = glr_attack
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_secure_arizona
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_secure_arizona
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = GRL
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_end_the_midwest
+		icon = end_the_midwest
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_end_the_mormons
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_end_the_mormons
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = MWA
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_secure_illinois
+		icon = illinois_attack
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_end_the_midwest
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_end_the_midwest
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = ILL
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_purge_the_degenerates
+		icon = purge_the_degens
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_secure_illinois
+		}
+		prerequisite = {
+			focus = LIN_secure_the_lakes
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_secure_the_lakes
+		completion_reward = {
+		core_UTA = yes
+            	core_ARI = yes
+		core_ILL = yes
+		core_GRL = yes
+		core_MWA = yes
+		}
+
+	}
+	shared_focus = {
+		id = LIN_death_of_the_republic
+		icon = death_of_the_republic
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purge_the_degenerates
+		}
+		mutually_exclusive = {
+			focus = LIN_friends_in_the_republic
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_purge_the_degenerates
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = USA
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = TEX
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_friends_in_the_republic
+		icon = friends_in_the_republic
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purge_the_degenerates
+		}
+		available = {
+		    USA = { exists = yes has_country_flag = david_duke_elected}
+		}
+		mutually_exclusive = {
+			focus = LIN_death_of_the_republic
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_purge_the_degenerates
+		completion_reward = {
+		  	USA = { country_event = { id = lin.7} }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_end_the_socialist
+		icon = end_the_socalist
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_friends_in_the_republic
+			focus = LIN_death_of_the_republic
+		}
+		x = -1
+		y = 2
+		relative_position_id = LIN_purge_the_degenerates
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = NEA
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMC
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMS
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = GAU
+		    }
+
+		}
+
+	}
+	shared_focus = {
+		id = LIN_end_the_communist
+		icon = end_the_communist
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_friends_in_the_republic
+			focus = LIN_death_of_the_republic
+		}
+		x = 1
+		y = 2
+		relative_position_id = LIN_purge_the_degenerates
+		completion_reward = {
+		  create_wargoal = {
+			    type = annex_everything
+			    target = PCA
+		    }	
+		}
+
+	}
+
+	shared_focus = {
+		id = LIN_end_all_the_oppose
+		icon = end_all_opposition
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_end_the_socialist
+		}
+		prerequisite = {
+			focus = LIN_end_the_communist
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_end_the_socialist
+		completion_reward = {
+		  	core_NEA = yes
+			core_PCA = yes
+			  core_USA = yes
+			core_TEX = yes
+		}
+
+	}
+	shared_focus = {
+		id = LIN_sieze_cascadia
+		icon = sieze_cas
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_white_emancipation_campaign
+			focus = LIN_the_northwest_dream
+		}
+		available = {
+		    OR = {
+				is_neighbor_of = CSD
+				CSD = {
+					exists = yes
+				}
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = LIN_victory_at_great_falls
+		completion_reward = {
+		  	 create_wargoal = {
+                type = annex_everything
+                target = CSD
+            }
+		}
+
+	}
+	#normal spencer post unification
+	shared_focus = {
+		id = LIN_a_white_america
+		icon = white_america
+		cost = 7.2
+		available = {
+			has_country_flag = the_united_states_are_back
+		}
+		x = 12
+		y = 3
+		relative_position_id = LIN_end_the_false_fascist
+		completion_reward = {
+		  	 country_event = { id = lin.10}
+			remove_idea = idea_america_neutrality_statelet
+		}
+
+	}
+	#expansion
+	shared_focus = {
+		id = LIN_expand_the_ethnostate
+		icon = ethnostate
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_a_white_america
+		}
+		mutually_exclusive = {
+			focus = LIN_protect_whats_ours
+		}
+		x = 3
+		y = 1
+		relative_position_id = LIN_a_white_america
+		completion_reward = {
+		  	add_ideas = idea_lin_expand_the_ethnostate 
+		}
+	}
+	shared_focus = {
+		id = LIN_the_white_north
+		icon = white_north
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_expand_the_ethnostate
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_expand_the_ethnostate
+		completion_reward = {
+		  	 create_wargoal = {
+                type = annex_everything
+                target = CAN
+            }
+		}
+	}
+	shared_focus = {
+		id = LIN_tackle_canadian_resistance
+		icon = tackle_canadian_resistance
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_white_north
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_the_white_north
+		completion_reward = {
+		  	custom_effect_tooltip = core_CAN_tt
+			set_country_flag = core_canada
+		}
+	}
+	#shared
+	shared_focus = {
+		id = LIN_unawnsered_questions
+		icon = unanswered_questiosn
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_expand_the_ethnostate
+			focus = LIN_protect_whats_ours
+		}
+		x = 0
+		y = 2
+		relative_position_id = LIN_a_white_america
+		completion_reward = {
+		  	country_event = { id = lin.25}
+		}
+	}
+	shared_focus = {
+		id = LIN_the_native_question
+		icon = native_question
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_unawnsered_questions
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_unawnsered_questions
+		completion_reward = {
+		  	country_event = { id = lin.26}
+		}
+	}
+	shared_focus = {
+		id = LIN_the_quebecois_question
+		icon = quebec_question
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_unawnsered_questions
+		}
+		prerequisite = {
+			focus = LIN_the_white_north
+		}
+		available = {
+			AND = {
+		   	466 = { is_owned_and_controlled_by = ROOT }
+			468 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_unawnsered_questions
+		completion_reward = {
+		  	country_event = { id = lin.27}
+		}
+	}
+	shared_focus = {
+		id = LIN_execute_the_resistance
+		icon = execute_the_resistance
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_tackle_canadian_resistance
+		}
+		prerequisite = {
+			focus = LIN_the_quebecois_question
+		}
+		available = {
+		
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_the_quebecois_question
+		completion_reward = {
+		  	every_owned_state = { add_resistance_target = -10}
+		}
+	}
+	shared_focus = {
+		id = LIN_the_new_north
+		icon = allies_infantry
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_execute_the_resistance
+		}
+		prerequisite = {
+			focus = LIN_the_inuit_question
+		}
+		available = {
+		
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_execute_the_resistance
+		completion_reward = {
+		  	country_event = { id = lin.29}
+		}
+	}
+	shared_focus = {
+		id = LIN_the_inuit_question
+		icon = inuit_question
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_native_question
+		}
+		prerequisite = {
+			focus = LIN_the_quebecois_question
+		}
+		available = {
+		
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_the_quebecois_question
+		completion_reward = {
+		  	country_event = { id = lin.28}
+		}
+	}
+	shared_focus = {
+		id = LIN_end_the_white_threat
+		icon = soviet_attack
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_new_north
+		}
+		available = {
+		
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_the_new_north
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = SOV
+		    }
+		}
+	}
+	#isolationism
+	shared_focus = {
+		id = LIN_protect_whats_ours
+		icon = allies_infantry
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_a_white_america
+		}
+		mutually_exclusive = {
+			focus = LIN_expand_the_ethnostate
+		}
+		x = -3
+		y = 1
+		relative_position_id = LIN_a_white_america
+		completion_reward = {
+		  	add_ideas = idea_lin_protect_whats_ours 
+		}
+	}
+
+	shared_focus = {
+		id = LIN_close_the_border
+		icon = close_the_border
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_protect_whats_ours
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_protect_whats_ours
+		completion_reward = {
+		  	add_ideas = idea_lin_closed_border 
+		}
+	}
+	shared_focus = {
+		id = LIN_the_new_coast_guard
+		icon = new_coastguard
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_protect_whats_ours
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_protect_whats_ours
+		completion_reward = {
+		  	add_ideas = idea_lin_new_coast_guard 
+		}
+	}
+	shared_focus = {
+		id = LIN_expand_our_airbases
+		icon = expand_airfields
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_new_coast_guard
+		}
+		prerequisite = {
+			focus = LIN_close_the_border
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_the_new_coast_guard
+		completion_reward = {
+		  	random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = air_base
+				level = 4
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = air_base
+				level = 4
+				instant_build = yes
+			}
+		}
+
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = air_base
+				level = 4
+				instant_build = yes
+			}
+		}
+
+
+		}
+	}
+#fake anti_spencer tree
+	shared_focus = {
+		id = LIN_down_with_the_nazi
+		icon = purge_the_jonesist
+		cost = 2.2
+		x = 10
+		y = 1
+		available = {
+		}
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = LIN_communist_loyalist
+		icon = second_three_year_plan
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_down_with_the_nazi
+		}
+		available = {
+		   has_country_flag = communist_take_control
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_down_with_the_nazi
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_purge_the_reactionarys
+		icon = red_brigades
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_communist_loyalist
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_communist_loyalist
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_return_to_the_west
+		icon = GFX_a_visit_to_la
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purge_the_reactionarys
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_purge_the_reactionarys
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_the_liberty_front
+		icon = focus_ideology_national_conservative
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_down_with_the_nazi
+		}
+		available = {
+		   has_country_flag = liberty_front_takes_control
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_down_with_the_nazi
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_expel_the_extremist
+		icon = territory_or_war
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_liberty_front
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = LIN_the_liberty_front
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_democracy_previals
+		icon = democracy
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_expel_the_extremist
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = LIN_expel_the_extremist
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_montana_loyalist
+		icon = hutaree_montana
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_down_with_the_nazi
+		}
+		available = {
+		   has_country_flag = montana_loyalist_take_control
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_down_with_the_nazi
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_execute_the_opposition
+		icon = gun_barrel_governance
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_montana_loyalist
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = LIN_montana_loyalist
+		completion_reward = {
+		  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_return_to_montana
+		icon = hutaree_no_montana
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_execute_the_opposition
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = LIN_execute_the_opposition
+		completion_reward = {
+		  	
+		}
+
+	}
+#ss spencer
+	shared_focus = {
+		id = LIN_regain_control
+		icon = military_salute
+		cost = 1
+		x = 10
+		y = 1
+		available = {
+		}
+		completion_reward = {
+			 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_establish_death_squads
+		icon = send_in_the_militias
+		cost = 4.3
+		prerequisite = {
+			focus = LIN_regain_control
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_regain_control
+		completion_reward = {
+		  	country_event = { id = lin.13}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_the_4th_riech
+		icon = the_4th_riech
+		cost = 4.3
+		prerequisite = {
+			focus = LIN_establish_death_squads
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_establish_death_squads
+		completion_reward = {
+		  	country_event = { id = lin.14}
+			set_country_flag = 4thRiech
+		}
+
+	}
+	shared_focus = {
+		id = LIN_the_spencer_line
+		icon = spencer_line
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_4th_riech
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_the_4th_riech
+		completion_reward = {
+		  	890 = {
+				add_building_construction = { type = bunker province = 10693 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 1690 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 12673 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 4747 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 10690 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 7865 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 4826 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 4826 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 10305 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 10625 level = 2 instant_build = yes }
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_establish_antiair
+		icon = establish_antiair
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_spencer_line
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_the_spencer_line
+		completion_reward = {
+		  	890 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			387 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_peoples_storm
+		icon = peoples_storm
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_antiair
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_establish_antiair
+		completion_reward = {
+		  	add_ideas = idea_lin_peoples_storm 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_establish_camps
+		icon = the_camps
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_4th_riech
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_the_4th_riech
+		completion_reward = {
+		  	add_ideas = idea_lin_labour_camps 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_militarize_the_economy
+		icon = military_factory
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_camps
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_establish_camps
+		completion_reward = {
+		  	random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_all_for_the_state
+		icon = allies_infantry
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_militarize_the_economy
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_militarize_the_economy
+		completion_reward = {
+			if = {
+			limit = {LIN = {has_idea = idea_lin_agricultural_economy}} 
+			swap_ideas = {add_idea = idea_lin_absolute_statism  remove_idea = idea_lin_agricultural_economy}
+
+			}
+		if = {
+			limit = {LIN = {has_idea = idea_lin_industrial_economy}} 
+			swap_ideas = {add_idea = idea_lin_absolute_statism  remove_idea = idea_lin_industrial_economy}
+
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_seize_civilian_guns
+		icon = by_your_side
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_all_for_the_state
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_all_for_the_state
+		completion_reward = {
+		  	add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3000 }
+		}
+	}
+	
+	shared_focus = {
+		id = LIN_establish_a_real_army
+		icon = expand_the_militia
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_the_4th_riech
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_the_4th_riech
+		completion_reward = {
+			 if = {
+			limit = {LIN = {has_idea = idea_lin_spencers_militia_2}} 
+			swap_ideas = {add_idea = idea_lin_defence_force  remove_idea = idea_lin_spencers_militia_2}
+
+			}
+		if = {
+			limit = {LIN = {has_idea = idea_lin_spencers_militia_3}} 
+			swap_ideas = {add_idea = idea_lin_defence_force  remove_idea = idea_lin_spencers_militia_3}
+
+			}	
+	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_an_ss_of_our_own
+		icon = ss_of_our_own
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_real_army
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_establish_a_real_army
+		completion_reward = {
+		  	add_ideas = idea_lin_protection_squadron 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_spencer_youth
+		icon = spencer_youth
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_an_ss_of_our_own
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_an_ss_of_our_own
+		completion_reward = {
+		  	add_ideas = idea_lin_spencers_youth 
+		}
+
+	}
+shared_focus = {
+		id = LIN_call_forth_terrorist
+		icon = expand_the_militia
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_spencer_youth
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_spencer_youth
+		completion_reward = {
+		  	add_manpower = 10000
+		}
+	}
+	shared_focus = {
+		id = LIN_total_war
+		icon = total_war
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_spencer_youth
+		
+			focus = LIN_all_for_the_state
+		
+			focus = LIN_peoples_storm
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_all_for_the_state
+		completion_reward = {
+		  	add_ideas = tot_economic_mobilisation
+			add_ideas = service_by_requirement
+			add_research_slot = 1
+			enable_unification_decisions = yes
+		}
+
+	}
+	shared_focus = {
+		id = LIN_operation_fall
+		icon = operation_fall
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_total_war
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_total_war
+		completion_reward = {
+			add_ideas = idea_LIN_destroy_montana 
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = MOT
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_fate_of_montana
+		icon = question_of_montana
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_fall
+		}
+		available = {
+			AND = {
+				1016 = { is_owned_and_controlled_by = ROOT }
+				388 = { is_owned_and_controlled_by = ROOT }
+				1017 = { is_owned_and_controlled_by = ROOT }
+				381 = { is_owned_and_controlled_by = ROOT }
+				1018 = { is_owned_and_controlled_by = ROOT }
+				389 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_operation_fall
+		completion_reward = {
+			remove_ideas = idea_LIN_destroy_montana 
+		  	country_event = { id = lin.15}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_exploit_montana
+		icon = question_of_montana
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_fate_of_montana
+		}
+		available = {
+			AND = {
+				1016 = { is_owned_and_controlled_by = ROOT }
+				388 = { is_owned_and_controlled_by = ROOT }
+				1017 = { is_owned_and_controlled_by = ROOT }
+				381 = { is_owned_and_controlled_by = ROOT }
+				1018 = { is_owned_and_controlled_by = ROOT }
+				389 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_fate_of_montana
+		completion_reward = {
+			random_owned_state = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_operation_corn
+		icon = operation_corn
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_fall
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_operation_fall
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = GRL
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = MWA
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = ILL
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_fate_of_the_midwest
+		icon = midwest_questions
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_corn
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_operation_corn
+		completion_reward = {
+		  	country_event = { id = lin.17}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_operation_13
+		icon = operation_13
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_corn
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_operation_corn
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = NEA
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMC
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = AMS
+		    }
+            create_wargoal = {
+			    type = annex_everything
+			    target = GAU
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = USA
+		    }	
+		create_wargoal = {
+			    type = annex_everything
+			    target = TEX
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_operation_lake
+		icon = operation_lake
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_fall
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_operation_fall
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = UTA
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = ARI
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_fate_of_the_west
+		icon = allies_infantry
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_lake
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_operation_lake
+		completion_reward = {
+		  	country_event = { id = lin.16}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_operation_gold_rush
+		icon = operation_gold
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_lake
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_operation_lake
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = PCA
+		    }	
+			create_wargoal = {
+                type = annex_everything
+                target = CSD
+            }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_ultimate_victory
+		icon = ultimate_victory
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_gold_rush
+		}
+		prerequisite = {
+			focus = LIN_operation_13
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_operation_gold_rush
+		completion_reward = {
+		  	country_event = { id = lin.18}
+			remove_idea = idea_america_neutrality_statelet
+		}
+
+	}
+	shared_focus = {
+		id = LIN_more_living_space
+		icon = more_living_space
+		cost = 7.2
+		available = {
+			has_country_flag = the_united_states_are_back
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_ultimate_victory
+		completion_reward = {
+		  	country_event = { id = lin.19}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_operation_red
+		icon = moving_north
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_more_living_space
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_more_living_space
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = CAN
+		    }	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_purify_canada
+		icon = purify_canada
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_red
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_operation_red
+		completion_reward = {
+		  	create_country_flag = purify_canada
+			custom_effect_tooltip = purify_CAN_tt
+		}
+
+	}
+	shared_focus = {
+		id = LIN_exploit_its_land
+		icon = exploit_its_resources
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_canada
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_purify_canada
+		completion_reward = {
+			add_resource = { type = oil amount = 6 state = 469 }
+            add_resource = { type = steel amount = 10 state = 469 } 		
+            add_resource = { type = tungsten amount = 12 state = 469 } 		
+            add_resource = { type = chromium amount = 10 state = 469 }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_put_the_inuit_to_work
+		icon = inuit_to_work
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_canada
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_purify_canada
+		completion_reward = {
+		  	add_ideas = idea_lin_inuit_work_camps 
+		}
+
+	}
+
+	shared_focus = {
+		id = LIN_operation_green
+		icon = moving_south
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_more_living_space
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_more_living_space
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = MEX
+		    }	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_purify_mexico
+		icon = purify_mexico
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_green
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_operation_green
+		completion_reward = {
+		  		create_country_flag = purify_mexico
+				custom_effect_tooltip = purify_MEX_tt
+		}
+
+	}
+	shared_focus = {
+		id = LIN_exploit_the_workforce
+		icon = exploit_the_workers
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_mexico
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_purify_mexico
+		completion_reward = {
+			add_ideas = idea_lin_exploited_mexican_workers 
+			484 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			483 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			482 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			481 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			480 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			479 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			478 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			477 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			476 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			485 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			277 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			475 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			474 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_cartels_to_protection_sqauds
+		icon = cartels_to_protection_squad
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_mexico
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_purify_mexico
+		completion_reward = {
+		  	add_ideas = idea_lin_cartel_protection 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_take_the_caribean
+		icon = taking_the_carib
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_red
+		}
+		prerequisite = {
+			focus = LIN_operation_green
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_operation_red
+		completion_reward = {
+		  	create_wargoal = {
+			    type = annex_everything
+			    target = CUB
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = BHM
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = JAM
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = HAI
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = DOM
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = ANT
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = DMN
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = STL
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = STV
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = BRB
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = GND
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = TAT
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_purify_the_caribean
+		icon = purify_caribean
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_take_the_caribean
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_take_the_caribean
+		completion_reward = {
+		  	create_country_flag = purify_caribean
+			custom_effect_tooltip = purify_CAR_tt
+		}
+
+	}
+	shared_focus = {
+		id = LIN_new_sugar_plantations
+		icon = new_sugar_plantations
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_the_caribean
+		}
+		available = {
+		AND = {
+			319 = { is_owned_and_controlled_by = ROOT }
+			318 = { is_owned_and_controlled_by = ROOT }
+			315 = { is_owned_and_controlled_by = ROOT }
+		}
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_purify_the_caribean
+		completion_reward = {
+		  	 319 = {
+		  	add_extra_state_shared_building_slots = 2
+			}
+			318 = {
+		  	add_extra_state_shared_building_slots = 2
+			}
+			315 = {
+		  	add_extra_state_shared_building_slots = 2
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_establish_prison_colonies
+		icon = establish_prison_colonys
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_the_caribean
+		}
+		available = {
+		AND = {
+				830 = { is_owned_and_controlled_by = ROOT }
+				691 = { is_owned_and_controlled_by = ROOT }
+				829 = { is_owned_and_controlled_by = ROOT }
+				692 = { is_owned_and_controlled_by = ROOT }
+				831 = { is_owned_and_controlled_by = ROOT }
+				694 = { is_owned_and_controlled_by = ROOT }
+				308 = { is_owned_and_controlled_by = ROOT }
+				686 = { is_owned_and_controlled_by = ROOT }
+				690 = { is_owned_and_controlled_by = ROOT }
+				693 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_purify_the_caribean
+		completion_reward = {
+		 	 830 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			691 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			829 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			692 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			831 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			 694 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			308 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			686 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			690 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			693 = {
+		  	add_extra_state_shared_building_slots = 1
+			}			
+		}
+
+	}
+	shared_focus = {
+		id = LIN_operation_banana
+		icon = operation_banana
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_the_caribean
+		}
+		x = 0
+		y = 2
+		relative_position_id = LIN_purify_the_caribean
+		completion_reward = {	
+			 create_wargoal = {
+			    type = annex_everything
+			    target = GUA
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = BLZ
+		    }
+		create_wargoal = {
+			    type = annex_everything
+			    target = CEA
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = PAN
+		    }	  	
+		}
+
+	}
+	shared_focus = {
+		id = LIN_reopen_the_canal
+		icon = open_the_canal
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_banana
+		}
+		available = {
+			685 = { is_owned_and_controlled_by = ROOT }
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_operation_banana
+		completion_reward = {
+		  	add_ideas = idea_lin_reopened_canal 
+		}
+
+	}
+	shared_focus = {
+		id = LIN_new_banana_plantations
+		icon = banana_plantation
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_banana
+		}
+		available = {
+			AND = {
+				313 = { is_owned_and_controlled_by = ROOT }
+				311 = { is_owned_and_controlled_by = ROOT }
+				314 = { is_owned_and_controlled_by = ROOT }
+				312 = { is_owned_and_controlled_by = ROOT }
+				317 = { is_owned_and_controlled_by = ROOT }
+				316 = { is_owned_and_controlled_by = ROOT }
+				304 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_operation_banana
+		completion_reward = {
+		  	313 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			311 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			314 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			312 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			317 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			316 = {
+		  	add_extra_state_shared_building_slots = 1
+			}
+			304 = {
+		  	add_extra_state_shared_building_slots = 1
+			}		
+		}
+
+	}
+	shared_focus = {
+		id = LIN_purify_central_america
+		icon = purify_central_america
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_operation_banana
+		}
+		x = 0
+		y = 2
+		relative_position_id = LIN_operation_banana
+		completion_reward = {
+		  		create_country_flag = purify_centralA
+				custom_effect_tooltip = purify_CAA_tt
+		}
+
+	}
+	shared_focus = {
+		id = LIN_north_to_south
+		icon = north_to_south
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_central_america
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_purify_central_america
+		completion_reward = {
+		  	 create_wargoal = {
+			    type = annex_everything
+			    target = COL
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = VEN
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = GUY
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = ECU
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = PRU
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = BRA
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = BOL
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = PAR
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = CHL
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = ARG
+		    }
+			create_wargoal = {
+			    type = annex_everything
+			    target = URG
+		    }
+		}
+
+	}
+	shared_focus = {
+		id = LIN_a_new_land_for_whites
+		icon = a_new_land_for_whites
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_purify_central_america
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_purify_central_america
+		completion_reward = {
+		  	
+		}
+
+	}
+
+	#shared airforce
+	shared_focus = {
+		id = LIN_establish_a_new_airforce
+		icon = air_icon
+		cost = 7.2
+		x = 20
+		y = 1
+		completion_reward = {
+		  	 air_experience = 25
+		}
+
+	}
+	shared_focus = {
+		id = LIN_establish_a_doctrine
+		icon = air_doctrine
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_airforce
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_establish_a_new_airforce
+		completion_reward = {
+		  	 air_experience = 20
+		}
+
+	}
+	shared_focus = {
+		id = LIN_total_destruction
+		icon = drone
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_doctrine
+		}
+		mutually_exclusive = {
+			focus = LIN_anti_persenel_doctrine
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_establish_a_doctrine
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = strategic_destruction_tree
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_anti_persenel_doctrine
+		icon = close_air_support
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_doctrine
+		}
+		mutually_exclusive = {
+			focus = LIN_total_destruction
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_establish_a_doctrine
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = battlefield_support_tree
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_air_propoganda
+		icon = eagle_air
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_anti_persenel_doctrine
+			focus = LIN_total_destruction
+		}
+		x = 3
+		y = 1
+		relative_position_id = LIN_better_fighters
+		completion_reward = {
+		  	add_ideas = idea_tex_air_force_recruitment_campaign
+		}
+
+	}
+	shared_focus = {
+		id = LIN_new_fighters
+		icon = generic_fighter
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_airforce
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_establish_a_new_airforce
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_better_fighters
+		icon = generic_fighter_2
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_new_fighters
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_new_fighters
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_close_air_support
+		icon = generic_bomber
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_better_fighters
+			}
+		prerequisite = {
+			focus = LIN_anti_persenel_doctrine
+			focus = LIN_total_destruction
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_better_fighters
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = cas_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+				}
+		
+		}
+
+	}
+	shared_focus = {
+		id = LIN_new_bombers
+		icon = plane_art
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_airforce
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_establish_a_new_airforce
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = tactical_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_better_bombers
+		icon = red_air
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_new_bombers
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_new_bombers
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = cat_strategic_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_naval_bombers
+		icon = naval_bomber
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_better_bombers
+			}
+		prerequisite = {
+			focus = LIN_anti_persenel_doctrine
+			focus = LIN_total_destruction
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_better_bombers
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = naval_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_bomber
+			}
+		}
+
+	}
+	#shared navy
+	shared_focus = {
+		id = LIN_establish_a_new_navy
+		icon = naval_occupation
+		cost = 7.2
+		x = 28
+		y = 1
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+			}
+		}
+		completion_reward = {
+		  	 navy_experience = 25
+		}
+
+	}
+	shared_focus = {
+		id = LIN_establish_ports
+		icon = naval_dockyard
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_navy
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_establish_a_new_navy
+		completion_reward = {
+		  	random_owned_state = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_submarine_work
+		icon = submarine
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_ports
+		}
+		prerequisite = {
+			focus = LIN_cruiser_work
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_establish_ports
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = ss_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_destroyer_work
+		icon = build_navy
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_navy
+		}
+		x = -4
+		y = 1
+		relative_position_id = LIN_establish_a_new_navy
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = dd_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_small_gun_work
+		icon = cruiser
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_destroyer_work
+		}
+		prerequisite = {
+			focus = LIN_cruiser_work
+		}
+		x = 1
+		y = 1
+		relative_position_id = LIN_destroyer_work
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = tech_bonus
+				bonus = 0.8
+				uses = 2
+				category = naval_equipment
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_cruiser_work
+		icon = navy_doctrine
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_navy
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_establish_a_new_navy
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 0.8
+				uses = 2
+				category = cl_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_battleship_work
+		icon = battleship
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_navy
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_establish_a_new_navy
+		completion_reward = {
+		  	  add_tech_bonus = {
+				name = bc_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_big_gun_work
+		icon = wolf_pack
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_cruiser_work
+		}
+		prerequisite = {
+			focus = LIN_battleship_work
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_battleship_work
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = tech_bonus
+				bonus = 0.8
+				uses = 2
+				category = naval_equipment
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_carrier_work
+		icon = carrier
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_establish_a_new_navy
+		}
+		x = 4
+		y = 1
+		relative_position_id = LIN_establish_a_new_navy
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = cv_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_airal_work
+		icon = plane_art
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_carrier_work
+		}
+		prerequisite = {
+			focus = LIN_battleship_work
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_carrier_work
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = naval_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_bomber
+			}
+		}
+
+	}
+	#shared army
+	shared_focus = {
+		id = LIN_estabish_a_army
+		icon = military_salute
+		cost = 7.2
+		x = 25
+		y = 5
+		completion_reward = {
+		  	army_experience = 25
+		}
+
+	}
+	shared_focus = {
+		id = LIN_special_forces
+		icon = special_forces
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_estabish_a_army
+		}
+		x = 0
+		y = 1
+		relative_position_id = LIN_estabish_a_army
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.25
+				category = mountaineers_tech
+				category = marine_tech
+				category = para_tech
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_support_work
+		icon = allies_infantry
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_estabish_a_army
+		}
+		x = -4
+		y = 1
+		relative_position_id = LIN_estabish_a_army
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.25
+				category = support_tech
+				
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_support_company_work
+		icon = army_reform
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_infanty_work
+		}
+		prerequisite = {
+			focus = LIN_support_work
+		}
+		x = -3
+		y = 1
+		relative_position_id = LIN_special_forces
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.25
+				category = support_tech
+				
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_infanty_work
+		icon = military_drill
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_estabish_a_army
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIN_estabish_a_army
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_mechanized_work
+		icon = new_zealand_armor
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_infanty_work
+		}
+		prerequisite = {
+			focus = LIN_special_forces
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_special_forces
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = cat_mechanized_equipment_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_arty_work
+		icon = artillery_2
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_estabish_a_army
+		}
+		x = 2
+		y = 1
+		relative_position_id = LIN_estabish_a_army
+		completion_reward = {
+		  	 add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_tank_work
+		icon = tanks
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_estabish_a_army
+		}
+		x = 4
+		y = 1
+		relative_position_id = LIN_estabish_a_army
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_anti_tank_work
+		icon = artillery
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_tank_work
+		}
+		prerequisite = {
+			focus = LIN_arty_work
+		}
+		x = -1
+		y = 1
+		relative_position_id = LIN_tank_work
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+
+	}
+	shared_focus = {
+		id = LIN_anti_air_work
+		icon = air_defense
+		cost = 7.2
+		prerequisite = {
+			focus = LIN_special_forces
+		}
+		prerequisite = {
+			focus = LIN_arty_work
+		}
+		x = -3
+		y = 1
+		relative_position_id = LIN_tank_work
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+
+	}
