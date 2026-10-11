@@ -1184,7 +1184,6 @@
 		completion_reward = {
 			division_template = {
 					name = "Texan militia"
-					division_names_group = TEX_INF_03
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -1595,7 +1594,7 @@
 		icon = commonwealth
 		cost = 7
 		available = {
-		OR {
+		OR = {
 		   NEA = {	
 			has_government = moderate_socialist
  		   }

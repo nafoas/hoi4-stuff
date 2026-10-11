@@ -1,0 +1,63 @@
+# Soviet Century: ideas that the submod's focuses and events grant but that were never defined
+# in the original submod (they produced "Invalid idea" errors). Kept deliberately modest.
+ideas = {
+	country = {
+		idea_state_investment = {
+			picture = generic_loans
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		idea_building_business_centers = {
+			picture = generic_meeting
+			allowed = { always = no }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+		idea_introduce_minimum_wage = {
+			picture = generic_worker
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		idea_send_in_the_army = {
+			picture = generic_loyal_military
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.03
+			}
+		}
+		idea_return_of_corbyn = {
+			picture = generic_welfare_state
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				moderate_socialist_drift = 0.02
+				political_power_gain = 0.10
+			}
+		}
+		idea_lin_exploited_mexican_workers = {
+			picture = generic_worker
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				stability_factor = -0.02
+			}
+		}
+		idea_lin_inuit_autonomy = {
+			picture = generic_government
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+	}
+}

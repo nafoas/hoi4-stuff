@@ -525,9 +525,9 @@ idea_woamn_in_stem = {
 		consumer_goods_factor = 0.10
 		industrial_capacity_factory = 0.025
 		production_speed_buildings_factor = 0.30
-		research_bonus = {
-			computing_tech = -0.05
-		}
+	}
+	research_bonus = {
+		computing_tech = -0.05
 	}
 }
 

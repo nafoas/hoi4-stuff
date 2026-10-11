@@ -601,10 +601,11 @@ purify_north_mexico = {
 					instant_build = yes
 				}
 			 }
+		
+	}
 		ai_will_do = {	
 			factor = 320			
 		}
-	}
 }
 	purify_south_mexico = {		
 		available = {		
@@ -726,10 +727,11 @@ purify_north_mexico = {
 				}
 			 }
 
+		
+	}
 		ai_will_do = {	
 			factor = 320			
 		}
-	}
 
 }
 purify_central_america = {		
@@ -1074,10 +1076,11 @@ purify_central_america = {
 				}
 			 }
 			
+		
+	}
 		ai_will_do = {	
 			factor = 320			
 		}
-	}
 
 }
 

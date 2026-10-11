@@ -596,17 +596,13 @@ country_event = {
 		name = texas.16.o1
 		if = {
 			limit = {
-				has_idea = {
-					name = idea_tex_remember_the_alamo 
-				}
+				has_idea = idea_tex_remember_the_alamo
 			}
 			remove_ideas = idea_tex_remember_the_alamo 
 		}
 		if = {
 			limit = {
-				has_idea = {
-					name = idea_tex_desperate_defence
-				}
+				has_idea = idea_tex_desperate_defence
 			}
 			remove_ideas = idea_tex_desperate_defence
 		}

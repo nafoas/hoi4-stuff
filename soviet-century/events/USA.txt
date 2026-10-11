@@ -135,7 +135,6 @@ country_event = {
 			add_ideas = usa_lindsey_graham
 			add_ideas = usa_fom_jeff_sessions
 			add_ideas = usa_ind_neil_bush
-			add_ideas = usa_nsm_robert_gates
 			add_ideas = usa_inm_gina_haspel
 		}
 		custom_effect_tooltip = tooltip_blank_line
@@ -5613,7 +5612,7 @@ country_event = {
 		ideology = national_conservative
 		popularity = 0.2
 		}
-		USA_william_mcraven = {
+		usa_william_mcraven = {
 			promote_character = american_conservative
 		}
 		set_politics = {

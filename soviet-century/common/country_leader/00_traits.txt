@@ -7,13 +7,10 @@
 @tier3_cp_cost = 0
 
 @experience_gain_low = 0.10
-	0.03
 
 @experience_gain_medium = 0.20
-	0.06
 
 @experience_gain_high = 0.30
-	0.08
 
 
 @chief_experience_gain_low = 0.20

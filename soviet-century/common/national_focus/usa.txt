@@ -3764,7 +3764,7 @@ focus_tree = {
 			focus = USA_traitors_of_the_great_lakes
 		}
 		available = {
-		    Or ={
+		    OR = {
 				is_neighbor_of = MWA
 				MWA = {
 					exists = no

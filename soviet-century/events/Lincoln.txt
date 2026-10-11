@@ -232,8 +232,8 @@ country_event = {
 	#yes
 	option = {
 		name = lin.13.o1
-			remove_idea = idea_lin_seceret_police
-			remove_idea = idea_lin_militia_crackdown 
+			remove_ideas = idea_lin_seceret_police
+			remove_ideas = idea_lin_militia_crackdown 
 			add_timed_idea = { idea = idea_lin_death_squads days = 60 }
 	}
 
@@ -582,7 +582,7 @@ country_event = {
 	#yes
 	option = {
 		name = lin.28.o1
-		add_idea = idea_lin_inuit_autonomy 
+		add_ideas = idea_lin_inuit_autonomy 
 	}
 	option = {
 		name = lin.28.o2
@@ -611,8 +611,7 @@ country_event = {
 	id = lin.31
 	title = lin.31.t
 	desc = lin.31.d
-	picture = 
-	
+	picture = GFX_report_event_generic_read_write
 	fire_only_once = yes
 	
 	is_triggered_only = yes
@@ -628,8 +627,7 @@ country_event = {
 	id = lin.32
 	title = lin.32.t
 	desc = lin.32.d
-	picture = 
-	
+	picture = GFX_report_event_generic_read_write
 	fire_only_once = yes
 	
 	is_triggered_only = yes

@@ -4,6 +4,74 @@ The mod lives in `soviet-century/`. Copy that folder (with `descriptor.mod`) int
 `Documents/Paradox Interactive/Hearts of Iron IV/mod/`, add a matching `.mod` file
 pointing at it, and load it after **Red World: Alien Nation**.
 
+## Installing (important)
+Delete any previous copy of Soviet Century before installing, and don't extract a
+new copy over an old one: files removed in an update would stay behind. The crash log
+you sent came from a copy that still had `left_extended_tree.txt`, which defined 66 UK
+focuses a second time. Install it as a local mod rather than inside the Steam Workshop
+folder of the original (ugc_3081106259), because Steam can quietly restore the old
+1.13 version there:
+1. Unsubscribe from the original Soviet Century on the Workshop.
+2. Put the `Soviet Century` folder in `Documents/Paradox Interactive/Hearts of Iron IV/mod/`.
+3. Next to it, create `Soviet Century.mod` with the contents of `descriptor.mod`, plus
+   the line `path="mod/Soviet Century"`.
+4. Enable it in the launcher after Red World: Alien Nation.
+
+## Crash autopsy (1.19.3, crash at the end of loading)
+Most likely cause: the start-screen bookmark listed two UK focuses that no longer
+exist (ENG_the_phoenix_front_craze, ENG_storm_buckingham_palace). The bookmark screen
+is built right after the database finishes loading, which is where the game died.
+They're now ENG_the_phoenix_front / ENG_lock_her_out. Everything else the log showed
+from Soviet Century was fixed too, along with the same kinds of problems found by a new
+context-aware check against the 1.19 documentation:
+- 66 focus hash collisions: a duplicate tree file, already removed in the latest build.
+- `00_traits.txt` parse errors: caused by my merge tool, which spliced old values into
+  the fork's @constants. Fixed.
+- A focus depending on a fork UK focus that no longer exists (ENG_The_Torch_Of_Democracy).
+- Effects stranded inside the wrong block, mostly missing closing braces:
+  - inside `country_event = {}` (britain.304/357/675 callers),
+  - inside `add_popularity`, `add_timed_idea` or `create_country_leader`,
+  - written after `completion_reward` had already closed (seven UK focuses),
+  - `option` nested inside `option` (britain.644),
+  - `ai_will_do` inside `complete_effect` (three Lincoln decisions).
+- Triggers used as effects or written as stray fields: num_of_nukes,
+  surrender_progress, free_building_slots, has_country_leader, date.
+- Wrong keywords: remove_idea/add_idea → remove_ideas/add_ideas, `IF`/`Or`/`OR {`,
+  `has_idea = { name = }`, an empty `picture =`, and a mis-cased character name
+  (usa_william_mcraven).
+- Scope errors:
+  - Building effects at country level, now in an owned state.
+  - Bunkers given state IDs as province IDs, now the state's provinces (state 230
+    isn't British in the fork, so London is used).
+  - `add_compliance` at country level, now on occupied states.
+  - `add_core_of` → `add_state_core`.
+  - Nested random_owned_state.
+- Invalid references:
+  - war goal take_state_focus without a state list → annex_everything.
+  - opinion modifier `-25` → declaration_of_hostility.
+  - `EU` (no such country; the fork's EUU is only a cosmetic tag): that opinion
+    modifier was removed.
+  - tech category cl_tech → ca_tech.
+  - division name groups LIN_INF_03 / TEX_INF_03.
+  - militia_tech (the fork's technologies remove it).
+- Sub-ideologies used where a main ideology is required (Scotland's add_popularity).
+- `research_bonus` written inside a `modifier` (Scotland idea).
+- britain.543 re-fired itself every 30 days forever. It now ends the chain, because
+  the funeral event it should lead to (545) doesn't exist.
+- Seven ideas the focuses/events grant but the original never defined now exist as
+  small national spirits (`common/ideas/soviet_century_restored_ideas.txt`).
+- 485 shine sprites for old-fork France/Italy icons whose images exist in neither mod
+  were removed (505 texture errors); 20 shine paths were corrected.
+- The cosmetic tag ENG_PhoenixNew got names.
+
+Left as-is (not crash-relevant, already present in the original):
+- Three Lincoln faction focuses (communist / Liberty Front / Montana loyalist) check
+  flags nothing sets, so they can't be picked.
+- Some Texas/Britain/Lincoln events have no text.
+
+The remaining errors in your log belong to Red World: Alien Nation itself, for example
+equipment graphics, the music trigger, and doctrine files.
+
 ## How the two mods were combined
 - For every file both mods ship, the fork's current version is the base, and Soviet
   Century's content is layered back on top. Nothing is blanket-overwritten.

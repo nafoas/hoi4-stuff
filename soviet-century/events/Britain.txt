@@ -1783,7 +1783,7 @@ country_event = {
 	
 	option = {   
 		name = britain.44.o1
-		IF = {
+		if = {
 			limit = {
 				NEA = {
 					is_faction_leader = no
@@ -1803,7 +1803,7 @@ country_event = {
 				}
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NEA = {
 					is_faction_leader = yes
@@ -8471,7 +8471,6 @@ country_event = { #PM Benn resigns
 			promote_character = labourist
 		}
 		hidden_effect = {
-			remove_ideas = britain_sic_jo_cox
 		}
 		add_ideas = britain_sic_angela_eagle
 		set_country_flag = ENG_benn_retires_pm
@@ -9774,7 +9773,7 @@ country_event = { #Queen's Apology
 			name = britain.340.o1
 			COW = {
 				transfer_state = 123
-				add_core_of =  123
+				add_state_core = 123
 
 			}
 			}
@@ -10850,7 +10849,7 @@ country_event = { #Queen's Apology
 			is_triggered_only = yes
 			option = {
 				name = britain.408.o1
-				available = { annex_country = BRI }
+				annex_country = { target = BRI transfer_troops = yes }
 			}
 		}
 	country_event = {
@@ -11408,7 +11407,7 @@ country_event = { #Queen's Apology
 			option = {
 				name = britain.448.o1
 				IRE = {
-					annex_country = { target = ULS type = annex_everything }
+					annex_country = { target = ULS transfer_troops = yes }
 					set_cosmetic_tag = IRE_United_Ireland
 
 				}
@@ -11462,8 +11461,6 @@ country_event = { #Queen's Apology
 			desc = britain.453.d
 			picture = football_came_home
 			is_triggered_only = yes
-			date > 2011.7.1
-			date < 2011.7.30
 			option = {
 				name = britain.453.o1
 				
@@ -12120,11 +12117,11 @@ country_event = { #Queen's Apology
 						name = "George Galloway"
 						picture = "Portrait_ENG_George_Galloway.dds"
 						ideology = revolutionary_socialist_ideology 
-						add_popularity = {
+						}
+				add_popularity = {
 							ideology = revolutionary_socialist 
 							popularity = 0.05
 						}
-				}
 				ENG = {
 					country_event = { days = 10 id = britain.515 } 
 				}
@@ -12188,10 +12185,6 @@ country_event = { #Queen's Apology
 				option = {
 					name = britain.557.o1
 					ENG = {	
-						has_country_leader = {
-						name = "Nick Griffin"
-						ruling_only = yes
-					}
 						country_event = { days = 30 id = britain.561 } 
 					}
 
@@ -13264,9 +13257,6 @@ country_event = { #Queen's Apology
 				is_triggered_only = yes
 				option = {
 					name = britain.543.o1
-					ENG = {
-						country_event = { days = 30 id = britain.543 } 
-					}
 				}
 				
 			}
@@ -13287,11 +13277,10 @@ country_event = { #Queen's Apology
 				CAN = {
 					add_to_faction = ULS
 				}
+				}
 				option = {
 					name = britain.644.o2
 				}
-				
-			}
 		}
 	country_event = {
 			id = britain.645
@@ -14205,15 +14194,15 @@ country_event = { #Queen's Apology
 				create_country_leader = {
 					name = "John Mcdonnell"
 					picture = "john_mcdonnell2.dds"
-					ideology = democratic_socialist 
-					add_popularity = {
+					ideology = democratic_socialist
+				}
+				add_popularity = {
 						ideology = moderate_socialist
 						popularity = 0.05
 					}
-					ENG = {
+ENG = {
 						country_event = { days = 20 id = britain.520 } 
 					}
-				}
 			}
 			
 		}
@@ -14228,10 +14217,6 @@ country_event = { #Queen's Apology
 				ENG = {
 					country_event = { days = 10 id = britain.521 } 
 				}
-			}
-			has_country_leader = {
-				name = "George Galloway"
-				ruling_only = yes
 			}
 		}
 	country_event = {
@@ -14427,12 +14412,12 @@ country_event = { #Queen's Apology
 				create_country_leader = {
 					name = "John Mcdonnell"
 					picture = "john_mcdonnell2.dds"
-					ideology = democratic_socialist 
-					add_popularity = {
+					ideology = democratic_socialist
+				}
+				add_popularity = {
 						ideology = moderate_socialist
 						popularity = 0.05
 					}
-				}
 				name = britain.721.o1
 				ENG = {
 					country_event = { days = 40 id = britain.520 } 
@@ -14806,11 +14791,7 @@ country_event = { #Queen's Apology
 				name = britain.567.o1
 				ENG = {
 					country_event = { days = 20 id = britain.568 } 
-					has_country_leader = {
-						name = "Nick Griffin"
-						ruling_only = yes
 					}
-				}
 			}
 			
 		}
@@ -14822,10 +14803,6 @@ country_event = { #Queen's Apology
 			is_triggered_only = yes
 			option = {
 				name = britain.565.o1
-			}
-			has_country_leader = {
-				name = "Paul Golding"
-				ruling_only = yes
 			}
 		}
 	country_event = {

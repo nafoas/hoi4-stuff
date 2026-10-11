@@ -97,7 +97,7 @@ country_event = {
 			name = scotland.4.o2
 		
 			add_popularity = {
-				ideology = absolute_monarchist
+				ideology = monarchist
 				popularity = 0.32
 			}
 			
@@ -155,7 +155,7 @@ country_event = {
 				ideology = leninist
 			}
 			add_popularity = {
-				ideology = leninist
+				ideology = communist
 				popularity = 0.05
 			}
 			hidden_effect = {

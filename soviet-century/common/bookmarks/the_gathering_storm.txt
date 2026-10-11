@@ -104,8 +104,8 @@ bookmarks = {
 				idea_prime_minister_owen
 			}
 			focuses = {
-				ENG_the_phoenix_front_craze
-				ENG_storm_buckingham_palace
+				ENG_the_phoenix_front
+				ENG_lock_her_out
 				ENG_let_her_in
 			}
 		}

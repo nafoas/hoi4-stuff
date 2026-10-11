@@ -361,7 +361,7 @@
 		completion_reward = {
 		  	division_template = {
 					name = "Spencer's militia"
-					division_names_group = LIN_INF_03
+					division_names_group = LIN_INF_01
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -1009,7 +1009,7 @@
 		relative_position_id = LIN_end_the_false_fascist
 		completion_reward = {
 		  	 country_event = { id = lin.10}
-			remove_idea = idea_america_neutrality_statelet
+			remove_ideas = idea_america_neutrality_statelet
 		}
 
 	}
@@ -1961,7 +1961,7 @@ shared_focus = {
 		relative_position_id = LIN_operation_gold_rush
 		completion_reward = {
 		  	country_event = { id = lin.18}
-			remove_idea = idea_america_neutrality_statelet
+			remove_ideas = idea_america_neutrality_statelet
 		}
 
 	}
@@ -2760,11 +2760,11 @@ shared_focus = {
 		relative_position_id = LIN_establish_a_new_navy
 		completion_reward = {
 		  	random_owned_state = {
-					free_building_slots = {
+				limit = { free_building_slots = {
 						building = dockyard
 						size > 1
 						include_locked = yes
-					}
+					} }
 				add_building_construction = {
 					type = dockyard
 					level = 2
@@ -2855,7 +2855,7 @@ shared_focus = {
 				name = tech_bonus
 				bonus = 0.8
 				uses = 2
-				category = cl_tech
+				category = ca_tech
 			}
 		}
 
